@@ -1,0 +1,66 @@
+// Typography
+h1, h2, h3, h4, h5, h6, p, body, textarea, input, select {
+    font-family: $baseFontFamily;
+    font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    margin: $baseFontSize 0 $baseFontSize;
+    color: $headingsColor;
+    &.splash {
+        font-weight: bold;
+        text-shadow: 2px 2px 3px rgba(145, 193, 68, 0.13);
+    }
+}
+
+body {
+    // conditional style sheet for IE
+    // font-size:100%; 
+    font-size: $baseFontSize; 
+    line-height: $baseLineHeight;
+    color: $textColor;
+}
+
+h1, h2 {
+    line-height: 2*$baseLineHeight;
+}
+h4, h5, h6, p {
+    line-height: $baseLineHeight;
+}   
+h1 { 
+    font-size: $h1Size;
+    &.splash {
+        font-size: $baseFontSize * $golden * $golden * $golden;
+        margin: 2 * $baseFontSize 0 2 * $baseFontSize;
+    }
+}
+h2 { 
+    font-size: $h2Size;
+}
+h3 {
+    line-height: $baseLineHeight * $golden;
+    font-size: $h3Size;
+}
+h4 { 
+    font-size: $h4Size;
+}
+h5 { 
+    font-size: $h5Size;
+}
+h6 { 
+    font-size: $h6Size;
+    text-transform:uppercase;
+    font-weight:bold;
+    margin:2px 0;
+}
+p  { 
+    font-size: $baseFontSize;
+    margin: 0 0 $baseFontSize;
+}
+info { 
+    font-size: $baseFontSize * (1/$golden + (1 - 1 / $golden) * 1/$golden) ; 
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

@@ -1,0 +1,264 @@
+@import "variables";
+@import "mixins";
+@import "compass/css3";
+
+#dashboard {
+    @include clearfix();
+    height: 230px;
+    .display-pic {
+        top: 50%;
+        margin: -90px $baseLineHeight $baseLineHeight 0;
+        float: left;
+    }
+}
+.display-pic {
+    position: relative;
+    display:block;
+    width: 180px;
+    height: 180px;
+    @include box-shadow(1px);
+}
+#info {
+    position: relative;
+    padding: $baseLineHeight;
+    display: block;
+    float: left;
+    height: 100%;
+    @include box-sizing('border-box');
+    h1 {
+        font-size: 60px;
+        line-height: 96px;
+        margin-top: 0;
+        color: $gray;
+    }
+    h4 {
+        margin-top: $baseLineHeight;
+    }
+}
+#apps-wrapper {
+    width: 960px;
+    height: 500px;
+    margin-top: $baseLineHeight/2;
+}
+#apps-list {
+    display: block;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        margin: 5px;
+        padding: 0;
+        display: block;
+        height: 150px;
+        width: 150px;
+        float: left;
+        .app-display-pic {
+            position: relative;
+            top: 50%;
+            margin: 0 auto;
+        }
+        span {
+            margin-top: 5px;
+            position: relative;
+            display: block;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+
+#sidebar {
+    margin-top: $baseLineHeight;
+    text-align: center;
+    .display-pic {
+        margin: 0 auto;
+    }
+    h2 {
+        color: $gray;
+    }
+}
+#tag-list {
+    margin: $baseLineHeight 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+    li {
+        margin: 0;
+        padding: 0 $baseLineHeight/2;
+        display: block;
+        line-height: 3em;
+        &:hover {
+            background-color: $greenLighter;
+        }
+    }
+}
+
+#search-wrapper {
+    font-size: $h5Size;
+    margin-top: $baseLineHeight;
+    span {
+        position: relative;
+        float: left;
+        line-height: 31px;
+    }
+    input {
+        font-size: $h5Size;
+    }
+}
+
+#results-wrapper {
+    height: 400px;
+    
+}
+#search-results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        margin: $baseLineHeight 0 0;
+        padding: 0;
+        @include clearfix();
+    }
+}
+
+#sort-bar {
+    float: left;
+    .links-nav {
+        float: left;
+    }
+}
+
+.links-nav {
+    @include clearfix();
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    li {
+        margin: 0;
+        padding: 0;
+        float: left;
+        a {
+            display: block;
+            padding: $baseLineHeight/4 $baseLineHeight/2;
+            @include button-interaction();
+            &:hover {
+                text-decoration: underline;
+                color: #4DA9D4;
+            }
+            &.active {
+                text-decoration: underline;
+                font-weight: bold;
+                color: $green;
+            }
+            
+        }
+    }
+}
+
+.app-result {
+    width: 100%;
+    float: left;
+    position: relative;
+    .app-display-pic {
+        margin: $baseLineHeight auto;
+    }
+    .app-info {
+        margin: $baseLineHeight $baseLineHeight $baseLineHeight 140px;
+        h4 {
+            color: $gray;
+            font-weight: bold;
+        }
+    }
+    .app-display-pic-wrapper {
+        height: 100%;
+        float: left;
+    }
+    &:hover {
+        .app-info h4 {
+            color: $greenDark;
+        }
+    }
+    .play-button {
+        position: absolute;
+        top: $baseLineHeight;
+        right: 2*$baseLineHeight;
+        text-transform: uppercase;
+        padding: 0 10px;
+        background-color: #4DA9D4;
+        color: #FFF;
+    }
+}
+
+.app-display-pic {
+    display: block;
+    width: 120px;
+    height: 120px;
+    @include button-interaction();
+}
+
+.mini-legend {
+    display: block;
+    width: 100%;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid $grayLighter;
+}
+
+#playlist-tab {
+    width: 100%;
+    position:relative;
+    display: block;
+    border-bottom: 1px solid $grayLighter;
+    @include clearfix();
+    ul {
+        list-style: none;
+        left: 50%;
+        margin: 0;
+        padding: 0;
+        display: block;
+        float: left;
+        li {
+            margin-right: 20px;
+            display:block;
+            float: left;
+            width: 80px;
+            @include box-sizing('border-box');
+
+            a {
+                display: block;
+                padding: 6.5px 0 14.5px;
+                @include button-interaction();
+                border-top: 2px solid $grayLight;
+                &.current,  {
+                    border-top: 2px solid $green;
+                    font-weight: bold;
+                }
+                &:hover {
+                    border-top: 2px solid $playlyfe;
+                }
+            }
+        }
+    }
+}
+.no-result {
+    padding: 21px 0; 
+    a {
+        color: #4782FC;
+        text-decoration: none;
+    }
+}
+
+#apps-list a {
+    display: block;
+    text-decoration: none;
+    color: $gray;
+    &:hover {
+        color: #4782FC;
+    }
+}

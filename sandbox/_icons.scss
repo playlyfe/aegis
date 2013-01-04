@@ -1,0 +1,117 @@
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  @include ie7-restore-right-whitespace();
+  line-height: 16px;
+  vertical-align: text-top;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+[class^="icon-16"],
+[class*=" icon-16"] {
+  width: 16px;
+  height: 16px;
+}
+[class^="icon-32"],
+[class*=" icon-32"] {
+  width: 32px;
+  height: 32px;
+}
+[class^="icon-64"],
+[class*=" icon-64"] {
+  width: 64px;
+  height: 64px;
+}
+[class^="icon-24"],
+[class*=" icon-24"] {
+  width: 24px;
+  height: 24px;
+}
+
+[class^="icon-button"], 
+[class*=" icon-button"] {
+    background-image: url('icon/core-icons.png');
+    background-repeat: no-repeat;
+    display: block;
+}
+[class^="icon-button-32"],
+[class*=" icon-button-32"] {
+    height: 32px;
+    width: 32px;
+}
+
+
+[class$="-action-icon"] {
+    background-image: url('icon/core-actions.png');
+    background-repeat: no-repeat;
+    @include inline-block();
+    width:16px;
+    height:16px;
+}
+[class^="do"] { background-position:-0px -48px;
+    &:hover { background-position:-16px -48px; }
+}
+[class^="new"] { background-position:-96px -128px;
+    &:hover { background-position:-80px -128px; }
+}
+[class^="edit"] { background-position:-32px -160px;
+    &:hover { background-position:-112px -144px; }
+}
+[class^="delete"] { background-position:-32px -16px;
+    &:hover { background-position:-48px -16px; }
+}
+[class^="list"] { background-position:-32px -64px;
+    &:hover { background-position:-48px -64px; }
+}
+[class^="calendar"] { background-position:-0px -32px;
+    &:hover { background-position:-16px -32px; }
+}
+[class^="expand"] { background-position:-64px -144px;
+    &:hover { background-position:-48px -144px; }
+}
+[class^="contract"] { background-position:-48px -160px;
+    &:hover { background-position:-32px -240px; }
+}
+[class^="warning"] { background-position:-32px -48px;
+    &:hover { background-position:-48px -48px; }
+}
+[class^="error"] { background-position:-32px -0px;
+    &:hover { background-position:-48px -0px; }
+}
+
+
+// action classes, applies on buttons or other elements 
+// whose have the *-icon images as their children
+[class~="action"] {
+    & [class$="-icon-16"], & [class$="-icon"] {   // ends with -icon
+        background-image: url('icon/core-actions.png');
+        background-repeat: no-repeat;
+        @include inline-block();
+        width:16px; height:16px;
+        margin:1px 2px 4px 0;
+    }
+    & [class^="do"] { background-position:-0px -48px; }  
+    & [class^="new"] { background-position:-0px -64px; }
+    & [class^="edit"] { background-position:-32px -160px; }
+    & [class^="delete"] { background-position:-32px -16px; }
+    & [class^="list"] { background-position:-32px -64px; }
+    & [class^="calendar"] { background-position:-0px -32px; }
+    & [class^="expand"] { background-position:-0px -0px; }
+    & [class^="contract"] { background-position:-32px -32px; }
+    & [class^="warning"] { background-position:-32px -48px; }
+    & [class^="error"] { background-position:-32px -0px; }
+
+    // hover class for .action
+    &:hover {
+        & [class^="do"] { background-position:-16px -48px; }  
+        & [class^="new"] { background-position:-16px -64px; }
+        & [class^="edit"] { background-position:-112px -144px; }
+        & [class^="delete"] { background-position:-48px -16px; }
+        & [class^="list"] { background-position:-48px -64px; }
+        & [class^="calendar"] { background-position:-16px -32px; }
+        & [class^="expand"] { background-position:-16px -0px; }
+        & [class^="contract"] { background-position:-48px -32px; }
+        & [class^="warning"] { background-position:-48px -48px; }
+        & [class^="error"] { background-position:-48px -0px; }
+    }
+}

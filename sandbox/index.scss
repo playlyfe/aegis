@@ -1,0 +1,15 @@
+@import "variables";
+@import "compass/css3";
+
+#banner-container { height:100%; display:table; text-align:center; margin: 0 auto; padding: 25% 0;}
+#banner { display:table-cell; vertical-align:middle; }
+#tagline { cursor: default; list-style: none; margin: 10px auto; padding: 0;
+    li { position: relative; @include inline-block; color: $playlyfe; font-size: 20px;
+        span { position: absolute; float: left; width: 960px; text-shadow: 0px 0px; display: none; margin-top: 20px; color: $gray; font-family: serif; font-style: italic; font-size: 16px; }
+        &:hover span { display: block;}
+    }
+}
+#purpose span { margin-left: -376px; }
+#passion span { margin-left: -460px; }
+#play span { margin-left: -540px; }
+
