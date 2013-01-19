@@ -1,4 +1,35 @@
 // Typography
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: bold;
+  font-weight: 700;
+  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidserif/v3/QQt14e8dY39u-eYBZmppwTqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Serif'), local('DroidSerif'), url(http://themes.googleusercontent.com/static/fonts/droidserif/v3/0AKsP294HTD-nvJgucYTaIbN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: bold;
+  font-weight: 700;
+  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/EFpQQyG9GqCrobXxL-KRMQFhaRv2pGgT5Kf0An0s4MM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Sans Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans Mono'), local('DroidSansMono'), url(http://themes.googleusercontent.com/static/fonts/droidsansmono/v4/ns-m2xQYezAtqh7ai59hJUYuTAAIFFn5GTWtryCmBQ4.woff) format('woff');
+}
+
 h1, h2, h3, h4, h5, h6, p, body, textarea, input, select {
     font-family: $baseFontFamily;
     font-weight: normal;
@@ -15,8 +46,8 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     // conditional style sheet for IE
-    // font-size:100%; 
-    font-size: $baseFontSize; 
+    // font-size:100%;
+    font-size: $baseFontSize;
     line-height: $baseLineHeight;
     color: $textColor;
 }
@@ -26,39 +57,39 @@ h1, h2 {
 }
 h4, h5, h6, p {
     line-height: $baseLineHeight;
-}   
-h1 { 
+}
+h1 {
     font-size: $h1Size;
     &.splash {
         font-size: $baseFontSize * $golden * $golden * $golden;
         margin: 2 * $baseFontSize 0 2 * $baseFontSize;
     }
 }
-h2 { 
+h2 {
     font-size: $h2Size;
 }
 h3 {
     line-height: $baseLineHeight * $golden;
     font-size: $h3Size;
 }
-h4 { 
+h4 {
     font-size: $h4Size;
 }
-h5 { 
+h5 {
     font-size: $h5Size;
 }
-h6 { 
+h6 {
     font-size: $h6Size;
     text-transform:uppercase;
     font-weight:bold;
     margin:2px 0;
 }
-p  { 
+p  {
     font-size: $baseFontSize;
     margin: 0 0 $baseFontSize;
 }
-info { 
-    font-size: $baseFontSize * (1/$golden + (1 - 1 / $golden) * 1/$golden) ; 
+info {
+    font-size: $baseFontSize * (1/$golden + (1 - 1 / $golden) * 1/$golden) ;
 }
 
 .uppercase {

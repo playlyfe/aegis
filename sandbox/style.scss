@@ -14,13 +14,13 @@
 @import "buttons";
 @import "panels";
 @import "dropdown";
-@import "navigation";
+//@import "navigation";
 @import "modal";
 @import "map";
 @import "icons";
 @import "tooltips";
 // Reset
-// HTML 5 
+// HTML 5
 body {
     margin:0;
     padding:0;
@@ -198,7 +198,3 @@ a.button {
         color: $white;
     }
 }
-input.search {
-
-}
-
