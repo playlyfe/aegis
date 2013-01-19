@@ -1,0 +1,73 @@
+@import "compass/css3";
+
+nav#side-menu-bar {
+  width: 200px;
+  position: fixed;
+  float: left;
+  background: #404040;
+  border-right:1px solid #202020;
+  font-size:13px;
+  height: 100%;
+  @include box-shadow(#202020 0px 0px 10px -1px inset);
+
+  img {
+    width: 160px;
+    height: 160px;
+    margin:20px 20px 0;
+    background: #8a8a8a;
+  }
+  img+div {
+    font-size: 16px;
+    padding-left: 20px;
+    margin-bottom:20px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    color: #a0a0a0;
+    padding: 0;
+  }
+
+  #sidewinder>li {
+    div {
+      color: #c0c0c0;
+      height: 31px;
+      .arrow {
+        @include transition(transform, 2.5s, ease, 0.4s);
+        display: block;
+        position: relative;
+        top:-20px; left:180px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid #c0c0c0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+      }
+      &.unwound {
+        background-color: #242424;
+        .arrow {
+          @include transition(transform, 2.5s, ease, 0.4s);
+          @include rotateZ(90deg);
+        }
+      }
+    }
+    a {
+      padding: 5px 0 5px 10px;
+      display: block;
+      color: #c0c0c0;
+      text-decoration: none;
+      &:hover {
+        background-color: #242424;
+        color: #e0e0e0;
+      }
+    }
+    // sub-lists
+    li {
+      a {
+        background-color: #303030;
+        padding-left: 20px;
+      }
+    }
+  }
+}
