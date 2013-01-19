@@ -1,6 +1,6 @@
 @import "compass/css3";
 
-nav#side-menu-bar {
+nav#sidewinder {
   width: 200px;
   position: fixed;
   float: left;
@@ -29,7 +29,7 @@ nav#side-menu-bar {
     padding: 0;
   }
 
-  #sidewinder>li {
+  ul.toplevel>li {
     div {
       color: #c0c0c0;
       height: 31px;
