@@ -1,0 +1,36 @@
+// A stylesheet to convert the ribbon-style navbar
+// to a hanging tab on the right side
+@import "sandbox/_variables";
+$navtab-tier-height:40px;
+
+.navbar {
+    position:fixed;
+    background-color: $navbarBackground;
+    border:1px solid $navbarBorder;
+    // CSSTODO: fix the alignment cleanly
+    top:0;
+    margin-left:700px;
+    width: 200px;
+    z-index:10000;
+}
+
+.navbar-inner {
+    .tier {
+        padding:2px 5px;
+        height:$navtab-tier-height;
+        &.top {
+            border-bottom:1px solid $navbarBorder;
+        }
+    }
+}
+
+.emblem {
+    float: left;
+    display: block;
+    $elementHeight: 28px;
+    padding-top:($navtab-tier-height - $elementHeight) / 2 - 1;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1;
+    color: $navbarEmblemColor;
+}
