@@ -7,6 +7,7 @@ $navtab-tier-height:40px;
     position:fixed;
     background-color: $navbarBackground;
     border:1px solid $navbarBorder;
+    border-top:none;
     // CSSTODO: fix the alignment cleanly
     top:0;
     margin-left:700px;

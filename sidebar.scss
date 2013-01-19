@@ -38,6 +38,12 @@ nav#side-menu-bar {
         background-color: #242424;
         color: #e0e0e0;
       }
+      &:after {
+        content:"";
+        width:10px;
+        height:10px;
+        display: block;
+      }
     }
     // sub-lists
     li {
