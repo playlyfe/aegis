@@ -1,0 +1,47 @@
+// navigation partial
+// Aegis UI (derived from Playlyfe Sandbox)
+// Kumar Harsh
+// 20.Jan.2013
+
+
+// Instead of the ribbon-style navbar
+// you get a hanging tab on the right side
+.navbar {
+    position:fixed;
+    background-color: $navbar-bg;
+    top:0;
+    z-index:10000;
+    .tier {
+        border:1px solid $navbar-border;
+        border-top:none;
+        height:$navigator-tier-height;
+        li>a {
+            color: $navbar-text-color;
+            line-height: $navigator-tier-height;
+            padding: 0 10px;
+            &:hover {
+                background-color: $navbar-bg-hl;
+            }
+        }
+    }
+}
+
+ul.nav {
+    margin: 0; padding: 0;
+    list-style-type: none;
+    &>li {
+        a {
+            display: block;
+            text-decoration: none;
+        }
+    }
+}
+
+.emblem {
+    float:left;
+    display: block;
+    padding:($navigator-tier-height - $emblem-height) / 2 - 1 10px 0;
+    font-size: 14px;
+    line-height: 1em;
+    color: $navbar-text-color;
+}

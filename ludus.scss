@@ -1,0 +1,46 @@
+@import "compass";
+@import "aegis/constants";
+@import "aegis/page";
+@import "aegis/navigation";
+@import "aegis/sidebar";
+
+
+// A neu beginning to the sandbox project for playlyfe
+#content.container {
+    margin-top:0;
+}
+#workbench {
+  margin-left:201px;
+  padding:1px 10px;
+}
+
+#navigator {
+    width: 300px;
+    margin-left:660px;
+    li {
+      @include inline-block();
+    }
+}
+
+nav#sidewinder {
+  width: 200px;
+  img {
+    width: 160px;
+    height: 160px;
+    margin:20px 20px 0;
+    &+div {
+      font-size: 16px;
+      padding-left: 20px;
+      margin-bottom:20px;
+      color: $sidebar-text-color-hl;
+    }
+  }
+  ul.toplevel {
+      a       { @include transition(background, 0.6s, ease, 0.3s); }
+      a:hover { @include transition(background, 0.3s, ease, 0.1s); }
+    .sub-menu {
+      .arrow { @include transition(transform, 1.0s, ease, 0.1s); }
+      &.unwound .arrow { @include transition(transform, 1.0s, ease, 0.1s); }
+    }
+  }
+}

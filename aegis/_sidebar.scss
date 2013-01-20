@@ -1,0 +1,53 @@
+// sidebar partial
+// Aegis UI (derived from Playlyfe Sandbox)
+// Kumar Harsh
+// 20.Jan.2013
+
+.sidebar {
+  position: fixed;
+  float: left;
+  background: $sidebar-bg;
+  border-right:1px solid $sidebar-border;
+  font-size:$sidebar-text-size;
+  height: 100%;
+  @include box-shadow($sidebar-border 0px 0px 10px -1px inset);
+
+  ul.nav {
+    color: $sidebar-text-color-hl;
+  }
+
+  ul.toplevel > li {
+    li > a {      // sub-lists
+      background-color: $sidebar-submenu-bg;
+      padding-left: 20px;
+    }
+    .sub-menu {
+      color: $sidebar-text-color;
+      height: 31px;
+      .arrow {
+        display: block;
+        position: relative;
+        top:-20px; left:180px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid $sidebar-text-color;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+      }
+      &.unwound {
+        background-color: $sidebar-hover-bg;
+        .arrow {
+          @include rotateZ(90deg);
+        }
+      }
+    }
+    a {
+      padding: 5px 0 5px 10px;
+      color: $sidebar-text-color;
+      &:hover {
+        background-color: $sidebar-hover-bg;
+        color: $sidebar-text-color-hl;
+      }
+    }
+  }
+}

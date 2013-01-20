@@ -1,0 +1,63 @@
+// constants partial
+// Aegis UI (derived from Playlyfe Sandbox)
+// Kumar Harsh / Johny Jose
+// 20.Jan.2013
+
+$golden : 1.618;  // the golden ratio
+
+/**
+ * Colours
+ */
+$playlyfe : #95d905;
+
+  // Grays (tinted)
+  $black:             #000 !default;
+  $gray-darker:        #222;
+  $gray-dark:          #333;
+  $gray:               #555;
+  $gray-light:         #888;
+  $gray-lighter:       #bbb;
+  $gray-lightest:      #eee;
+  $white:              #fff !default;
+
+  // Greens
+  // TODOKHS: normalize the colours;
+  $green:                  desaturate($playlyfe, $golden * 10);
+  $green-darkest:          mix($black, $green, 100% / $golden);
+  $green-darker:           mix($black, $green, 30%);
+  $green-dark:        mix($black, $green, 10%);
+  $green-highlight:        lighten($green, 100% / ( $golden * $golden * $golden));
+  $green-light:            mix($white, $green, 100% / ( $golden * $golden * $golden) );
+  $green-lighter:          mix($white, $green, 70%);
+  $green-lightest:         mix($white, $green, 85%);
+  $green-gray:             #667755;
+
+  // Accents
+  // TODOKHS: Add tints, normalize the colours;
+  $blue:                  #1b5ddf !default;
+  $navy:                  #023c7c !default;
+  $green:                 #95d905 !default;
+  $red:                   #e20000 !default;
+  $yellow:                #ffcc00 !default;
+  $orange:                #d15a00 !default;
+  $gold:                  #d19c10 !default;
+
+
+$navbar-bg: $green;
+$navbar-bg-hl: $green-dark;
+$navbar-border: $green-dark;
+$navbar-text-color: $white;
+
+$sidebar-bg: #404040;
+$sidebar-border: #202020;
+$sidebar-text-size: 13px;
+$sidebar-text-color: $gray-lighter;
+$sidebar-text-color-hl: $gray-lightest;
+$sidebar-hover-bg: #242424;
+$sidebar-submenu-bg: #303030;
+
+
+
+// Layouts
+$navigator-tier-height:40px;
+$emblem-height: 28px;
