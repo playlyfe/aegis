@@ -105,6 +105,7 @@ table {
   margin: 0 auto;
   li {
     @include inline-block();
+    @include button-interaction();
     a {
       @include transition(background-color, 0.6s, ease, 0.3s);
       color: $gray-dark;
