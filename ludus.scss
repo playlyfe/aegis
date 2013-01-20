@@ -3,23 +3,48 @@
 @import "aegis/page";
 @import "aegis/navigation";
 @import "aegis/sidebar";
-
+@import "aegis/typography";
 
 // A neu beginning to the sandbox project for playlyfe
 #content.container {
-    margin-top:0;
+  margin-top:0;
 }
-#workbench {
+#wrapper {
   margin-left:201px;
-  padding:1px 10px;
+  // fix for the page shifting down due to
+  // accidental top-margins on top-most elements
+  padding:1px 0;
+}
+section#sticky {
+  padding:25px 0 0 25px;
+  width:735px;
+  position: fixed;
+  top:0;
+  background-color: $white;
+  h4 {
+    margin:0;
+  }
+  span.sub {
+    font-size:14px;
+  }
+  &.stuck {
+    border-bottom: 1px solid $gray-lightest;
+    @include box-shadow($gray 0px 5px 10px -10px);
+    @include transition(box-shadow, 0.6s, ease, 0.3s);
+    @include transition(border-bottom, 0.6s, ease, 0.3s);
+  }
+}
+#content {
+  padding-left:25px;
+  margin-top: 80px;
 }
 
 #navigator {
-    width: 300px;
-    margin-left:660px;
-    li {
-      @include inline-block();
-    }
+  width: 300px;
+  margin-left:660px;
+  li {
+    @include inline-block();
+  }
 }
 
 nav#sidewinder {
@@ -36,11 +61,63 @@ nav#sidewinder {
     }
   }
   ul.toplevel {
-      a       { @include transition(background, 0.6s, ease, 0.3s); }
-      a:hover { @include transition(background, 0.3s, ease, 0.1s); }
+    a       { @include transition(background, 0.6s, ease, 0.3s); }
+    a:hover { @include transition(background, 0.3s, ease, 0.1s); }
     .sub-menu {
       .arrow { @include transition(transform, 1.0s, ease, 0.1s); }
       &.unwound .arrow { @include transition(transform, 1.0s, ease, 0.1s); }
+    }
+  }
+}
+
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  thead {
+    background-color: $table-head-bg;
+    th {
+      color: $table-head-text-color;
+      text-align: left;
+      font-size: 16px;
+      padding: 5px 10px;
+    }
+  }
+  tbody {
+    tr { border-bottom: $gray-lighter 1px solid;
+      &:hover { cursor:pointer; color: $white; background-color: $green-dark; }
+    }
+    td { padding: 10px; }
+  }
+  tfoot {
+    background-color: $table-foot-bg;
+    td { text-align: center; padding: 15px 0;}
+  }
+  &.sparse {
+    td, th { padding: $base-line-height / ($golden); }
+  }
+}
+
+.pagination-wrapper {
+  margin: 0 auto;
+  li {
+    @include inline-block();
+    a {
+      @include transition(background-color, 0.6s, ease, 0.3s);
+      color: $gray-dark;
+      padding: 5px 15px;
+      &.current {
+        background-color: $yellow;
+        border: 1px solid $gold;
+        &:hover {
+          border-color: $green-darker;
+        }
+      }
+      &:hover {
+        @include transition(background-color, 0.3s, ease, 0.1s);
+        background-color: $green-dark;
+        color: $white;
+      }
     }
   }
 }

@@ -1,0 +1,99 @@
+// Typography
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: bold;
+  font-weight: 700;
+  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidserif/v3/QQt14e8dY39u-eYBZmppwTqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Serif'), local('DroidSerif'), url(http://themes.googleusercontent.com/static/fonts/droidserif/v3/0AKsP294HTD-nvJgucYTaIbN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: bold;
+  font-weight: 700;
+  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/EFpQQyG9GqCrobXxL-KRMQFhaRv2pGgT5Kf0An0s4MM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Sans Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans Mono'), local('DroidSansMono'), url(http://themes.googleusercontent.com/static/fonts/droidsansmono/v4/ns-m2xQYezAtqh7ai59hJUYuTAAIFFn5GTWtryCmBQ4.woff) format('woff');
+}
+
+h1, h2, h3, h4, h5, h6, p, body, textarea, input, select {
+    font-family: $base-font-family;
+    font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    margin: $base-font-size 0 $base-font-size;
+    &.no-bottom { margin-bottom: 0; }
+    &.no-margin { margin: 0; }
+    color: $heading-color;
+    &.splash {
+        font-weight: bold;
+        text-shadow: 2px 2px 3px rgba(145, 193, 68, 0.13);
+    }
+}
+
+body {
+    // conditional style sheet for IE
+    // font-size:100%;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $text-color;
+}
+h1, h2 {
+    line-height: 2 * $base-line-height;
+}
+h4, h5, h6, p {
+    line-height: $base-line-height;
+}
+
+h1 {
+    font-size: $h1-size;
+    &.splash {
+        font-size: 55px;
+        margin: 2*$base-font-size 0;
+    }
+}
+h2 {
+    font-size: $h2-size;
+}
+h3 {
+    line-height: $base-line-height * $golden;
+    font-size: $h3-size;
+}
+h4 {
+    font-size: $h4-size;
+}
+h5 {
+    font-size: $h5-size;
+}
+h6 {
+    font-size: $h6-size;
+    text-transform:uppercase;
+    font-weight:bold;
+    margin:2px 0;
+}
+p  {
+    font-size: $base-font-size;
+    margin: 0 0 $base-font-size;
+}
+info {
+    font-size: $base-font-size * (1/$golden + (1 - 1 / $golden) * 1/$golden) ;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

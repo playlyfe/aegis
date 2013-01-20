@@ -25,7 +25,7 @@ $playlyfe : #95d905;
   $green:                  desaturate($playlyfe, $golden * 10);
   $green-darkest:          mix($black, $green, 100% / $golden);
   $green-darker:           mix($black, $green, 30%);
-  $green-dark:        mix($black, $green, 10%);
+  $green-dark:             mix($black, $green, 10%);
   $green-highlight:        lighten($green, 100% / ( $golden * $golden * $golden));
   $green-light:            mix($white, $green, 100% / ( $golden * $golden * $golden) );
   $green-lighter:          mix($white, $green, 70%);
@@ -56,7 +56,9 @@ $sidebar-text-color-hl: $gray-lightest;
 $sidebar-hover-bg: #242424;
 $sidebar-submenu-bg: #303030;
 
-
+$table-head-bg: $white;
+$table-head-text-color: $gray-light;
+$table-foot-bg: $white;
 
 // Layouts
 $navigator-tier-height:40px;
