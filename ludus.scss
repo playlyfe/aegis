@@ -1,6 +1,7 @@
 @import "compass";
 @import "aegis/constants";
 @import "aegis/page";
+@import "aegis/mixins";
 @import "aegis/navigation";
 @import "aegis/sidebar";
 @import "aegis/typography";
@@ -9,7 +10,7 @@
 #content.container {
   margin-top:0;
 }
-#wrapper {
+#workspace {
   margin-left:201px;
   // fix for the page shifting down due to
   // accidental top-margins on top-most elements
@@ -23,9 +24,11 @@ section#sticky {
   background-color: $white;
   h4 {
     margin:0;
+    text-transform: capitalize;
   }
   span.sub {
     font-size:14px;
+    text-transform: lowercase;
   }
   &.stuck {
     border-bottom: 1px solid $gray-lightest;
@@ -34,7 +37,7 @@ section#sticky {
     @include transition(border-bottom, 0.6s, ease, 0.3s);
   }
 }
-#content {
+#workbench {
   padding-left:25px;
   margin-top: 80px;
 }
