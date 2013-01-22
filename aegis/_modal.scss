@@ -1,0 +1,44 @@
+.mask {
+    display: block;
+    z-index: $mask-z;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $white;
+    opacity: 0.70;
+}
+.modal {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    z-index: $modal-z;
+    overflow: visible;
+    padding: $base-line-height;
+    background: $white;
+    border: $playlyfe 2px solid;
+    @include box-shadow(1px 2px 7px rgba(0,0,0,0.15));
+    @include background-clip(padding-box);
+    .close-button {
+        @include button-interaction();
+        position: absolute;
+        font-size: 25px;
+        top: 5px;
+        right: 6px;
+    }
+}
+.dialog {
+    @include clearfix();
+    padding-top: $base-line-height;
+    span, div {
+        float: left;
+    }
+    .actions {
+        clear: both;
+        padding-left: 0;
+    }
+    .button-group, .button {
+            float: left;
+    }
+}

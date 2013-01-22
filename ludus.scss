@@ -1,8 +1,8 @@
 @import "compass";
 @import "aegis/constants";
-@import "aegis/page";
 @import "aegis/mixins";
 @import "aegis/navigation";
+@import "aegis/modal";
 @import "aegis/sidebar";
 @import "aegis/typography";
 
@@ -10,24 +10,36 @@
 #content.container {
   margin-top:0;
 }
+
 #workspace {
   margin-left:261px;
   // fix for the page shifting down due to
   // accidental top-margins on top-most elements
   padding:1px 0;
+  &.controls {
+    #workbench {
+      margin-top:147px;
+    }
+    #sticky {
+      height:147px;
+    }
+  }
 }
+
 #workbench {
   padding-left:25px;
-  margin-top: 80px;
+  margin-top: 105px;
 }
 
 section#sticky {
-  padding:20px 0 15px 25px;
+  padding:21px 0 21px 25px;
+  height:105px;
   width:635px;
   position: fixed;
   top:0;
   background-color: $white;
-  h4 {
+  @include box-sizing('border-box');
+  h2 {
     margin:0;
     text-transform: capitalize;
   }
