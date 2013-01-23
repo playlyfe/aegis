@@ -5,6 +5,7 @@
 @import "aegis/modal";
 @import "aegis/sidebar";
 @import "aegis/typography";
+@import "aegis/forms";
 
 // A neu beginning to the sandbox project for playlyfe
 #content.container {
@@ -122,7 +123,7 @@ table {
     tr {
       border-bottom: $gray-lighter 1px solid;
       .row-action {
-        visibility: hidden;
+        visibility: hidden; display: none;
         a { cursor: pointer;
           &:hover {
             text-decoration: underline;
@@ -133,12 +134,11 @@ table {
           }
         }
       }
-
       &:hover {
         cursor:pointer;
-        color: $white;
-        background-color: $green-dark;
-        .row-action { visibility: visible; }
+        color: $green-dark;
+        border-bottom: 1px solid $green;
+        .row-action { visibility: visible; display: block; }
       }
     }
   }
