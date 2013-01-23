@@ -60,6 +60,12 @@ section#sticky {
   margin-left:660px;
   li {
     @include inline-block();
+    &>a {
+      padding: 0 10px;
+    }
+    &>a[class^="iconic"] {
+      padding: 0;
+    }
   }
 }
 
@@ -74,6 +80,13 @@ nav#sidewinder {
       text-align: center;
       margin-bottom:20px;
       color: $sidebar-text-color-hl;
+      &+.about {
+        padding: 0 10px 20px;
+        font-size: 12px;
+        font-variant: italic;
+        color: $sidebar-text-color;
+        word-wrap: suppress;
+      }
     }
   }
   ul.toplevel {
@@ -87,7 +100,9 @@ nav#sidewinder {
 }
 
 table {
-  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
   &.expand {
     width: 670px;
   }
@@ -103,10 +118,29 @@ table {
     }
   }
   tbody {
-    tr { border-bottom: $gray-lighter 1px solid;
-      &:hover { cursor:pointer; color: $white; background-color: $green-dark; }
-    }
     td { padding: 10px; }
+    tr {
+      border-bottom: $gray-lighter 1px solid;
+      .row-action {
+        visibility: hidden;
+        a { cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+            color: $green;
+          }
+          &.delete:hover, &.delete {
+            color: adjust_hue($green, 290);
+          }
+        }
+      }
+
+      &:hover {
+        cursor:pointer;
+        color: $white;
+        background-color: $green-dark;
+        .row-action { visibility: visible; }
+      }
+    }
   }
   tfoot {
     background-color: $table-foot-bg;

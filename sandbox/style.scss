@@ -45,51 +45,8 @@ body > .container.fluid {
 // Notifications
 // Typeahead
 
-// Tables
-table {
-    max-width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+// Table
 
-.table {
-    margin: 0 0 $baseLineHeight;
-    td, th {
-        border: $grayLighter 1px solid;
-        padding: $baseLineHeight/ ($golden*$golden);
-    }
-    &.spaced {
-        td, th {
-            padding: $baseLineHeight/ ($golden);
-        }
-    }
-    &.condensed {
-        td, th {
-            padding: $baseLineHeight/ ($golden*$golden*$golden);
-        }
-    }
-    tr {
-    }
-    thead {
-    }
-}
-
-tr:hover .row-action {
-    visibility: visible;
-}
-.row-action {
-    visibility: hidden;
-    a {
-        cursor: pointer;
-    }
-    a:hover {
-        text-decoration: underline;
-        color: $green;
-    }
-    a.delete:hover, a.delete {
-        color: adjust_hue($green, 290);
-    }
-}
 //@TODO: Work in progress for scroll bars
 .bar {
     background-color: $greenDarker;
