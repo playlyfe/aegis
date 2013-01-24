@@ -24,3 +24,15 @@
     @include no-select();
     cursor: pointer;
 }
+
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted #333;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.clearfix {
+  @include clearfix();
+}

@@ -25,22 +25,20 @@
     }
 }
 
-ul.nav {
+.nav {
     margin: 0; padding: 0;
     list-style-type: none;
-    &>li {
-        a {
-            display: block;
-            text-decoration: none;
-        }
+    a {
+        display: block;
+        text-decoration: none;
     }
 }
 
 .emblem {
     float:left;
     display: block;
-    padding:($navigator-tier-height - $emblem-height) / 2 - 1 10px 0;
-    font-size: 14px;
+    padding:5px 10px 0;
+    font-size: 1em;
     line-height: 1em;
     color: $navbar-text-color;
 }

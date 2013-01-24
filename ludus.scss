@@ -7,45 +7,89 @@
 @import "aegis/typography";
 @import "aegis/forms";
 
+
+// TODOKHS : MEDIA QUERIES
+// TODOKHS : SIDEBARS FOR LOWER RES MONITORS
+// TODOKHS : AUTO-RECONFIGURING LAYOUT
+
 // A neu beginning to the sandbox project for playlyfe
-#content.container {
-  margin-top:0;
+#content.container, #content.container-fluid {
+  margin:0 auto;
+}
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
+#sidewinder {
+  top:0;
+  left:0;
+  z-index: $sidebar-z;
+  float:none;
+  * { @include no-select(); }
+  img {
+    width: 60%;
+    margin:#{20px/$base}em 20% 0;
+  }
+  #game-name {
+    font-size: #{16px/$base}em;
+    text-align: center;
+    margin-bottom:0.12%;
+    color: $sidebar-text-color-hl;
+  }
+  #game-about {
+    padding: 0 5% 0.12%;
+    font-size: #{12px/$base}em;
+    font-variant: italic;
+    color: $sidebar-text-color;
+    word-wrap: suppress;
+  }
+  .toplevel {
+    a       { @include transition(background, 0.6s, ease, 0.3s); }
+    a:hover { @include transition(background, 0.3s, ease, 0.1s); }
+    .sub-menu {
+      .arrow { top: #{-20px/$base}em; left:90%; @include transition(transform, 1.0s, ease, 0.1s); }
+      &.unwound .arrow { @include transition(transform, 1.0s, ease, 0.1s); }
+    }
+  }
+}
+
+
 #workspace {
-  margin-left:261px;
+  // margin-left:261px;
   // fix for the page shifting down due to
   // accidental top-margins on top-most elements
   padding:1px 0;
   &.controls {
     #workbench {
-      margin-top:147px;
+      margin-top:#{151px/$base}em;
     }
     #sticky {
-      height:147px;
+      height: #{151px/$base}em;
     }
   }
 }
 
 #workbench {
-  padding-left:25px;
-  margin-top: 105px;
+  margin-top: #{126px/$base}em;
 }
 
-section#sticky {
-  padding:21px 0 21px 25px;
-  height:105px;
-  width:699px;
+#sticky {
+  height:#{65px/$base}em;
   position: fixed;
+  padding:#{21px/$base}em 0 0 #{42px/$base}em;
+  left:14.667%;
   top:0;
   background-color: $white;
   @include box-sizing('border-box');
+  z-index: $sticky-z;
   h2 {
     margin:0;
     text-transform: capitalize;
   }
   span.sub {
-    font-size:12px;
+    font-size:#{12px/$base}em;
     text-transform: lowercase;
   }
   &.stuck {
@@ -57,8 +101,6 @@ section#sticky {
 }
 
 #navigator {
-  width: 300px;
-  margin-left:660px;
   li {
     @include inline-block();
     &>a {
@@ -70,60 +112,42 @@ section#sticky {
   }
 }
 
-nav#sidewinder {
-  width: 260px;
-  img {
-    width: 160px;
-    height: 160px;
-    margin:10px 50px 0;
-    &+div {
-      font-size: 16px;
-      text-align: center;
-      margin-bottom:20px;
-      color: $sidebar-text-color-hl;
-      &+.about {
-        padding: 0 10px 20px;
-        font-size: 12px;
-        font-variant: italic;
-        color: $sidebar-text-color;
-        word-wrap: suppress;
-      }
-    }
-  }
-  ul.toplevel {
-    a       { @include transition(background, 0.6s, ease, 0.3s); }
-    a:hover { @include transition(background, 0.3s, ease, 0.1s); }
-    .sub-menu {
-      .arrow { top:-20px; left:240px; @include transition(transform, 1.0s, ease, 0.1s); }
-      &.unwound .arrow { @include transition(transform, 1.0s, ease, 0.1s); }
-    }
-  }
-}
+
 
 table {
   max-width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   &.expand {
-    width: 670px;
+    width: #{670px/$base}em;
   }
-  border-collapse: collapse;
-  border-spacing: 0;
   thead {
     background-color: $table-head-bg;
     th {
       color: $table-head-text-color;
       text-align: left;
-      font-size: 16px;
-      padding: 5px 10px;
+      font-size: #{16px/$base}em;
+      padding: #{5px/$base}em #{10px/$base}em;
+    }
+    .ops-head {
+      width:52px;
+      box-sizing:border-box;
     }
   }
   tbody {
-    td { padding: 10px; }
-    tr {
+    td {
+      padding: #{10px/$base}em; vertical-align: top;
       border-bottom: $gray-lighter 1px solid;
+    }
+    .ops {
+      border:none;
+      padding:0;
+      vertical-align:middle;
+    }
+    tr {
       .row-action {
-        visibility: hidden; display: none;
+        display: block;
+        visibility: hidden;
         a { cursor: pointer;
           &:hover {
             text-decoration: underline;
@@ -138,16 +162,13 @@ table {
         cursor:pointer;
         color: $green-dark;
         border-bottom: 1px solid $green;
-        .row-action { visibility: visible; display: block; }
+        .row-action { visibility: visible; }
       }
     }
   }
   tfoot {
     background-color: $table-foot-bg;
-    td { text-align: center; padding: 15px 0;}
-  }
-  &.sparse {
-    td, th { padding: $base-line-height / ($golden); }
+    td { text-align: center; padding: #{15px/$base} 0;}
   }
 }
 
@@ -159,7 +180,7 @@ table {
     a {
       @include transition(background-color, 0.6s, ease, 0.3s);
       color: $gray-dark;
-      padding: 5px 15px;
+      padding: #{5px/$base}em #{15px/$base}em;
       &.current {
         background-color: $yellow;
         border: 1px solid $gold;
