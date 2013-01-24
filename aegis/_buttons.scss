@@ -1,0 +1,110 @@
+// forms partial
+// Aegis UI (derived from Playlyfe Sandbox)
+// Kumar Harsh / Johny Jose
+// 24.Jan.2013
+
+.button {
+  &~.button {
+    margin-left:#{10px/$base}em;
+  }
+  @include inline-block();
+  @include no-select();
+  padding: #{4px/$base}em #{20px/$base}em;
+  margin: 0;
+
+  font-size: #{14px/$base}em;
+  line-height: #{21px/$base}em;
+  *line-height: #{21px/$base}em;
+  height: #{30px/$base}em;
+
+  text-align: center;
+  // text-shadow: 0 1px 0 rgba(255,255,255,.75);
+  vertical-align: middle;
+  cursor: pointer;
+
+  color: $button-text;
+  background-color: $button-bg;
+  border: 1px solid $button-border;
+  *border: 0; // Remove the border to prevent IE7's black border on input:focus
+
+  // @include box-shadow(inset 0 0 3px rgba(255,255,255,.8));
+  @include box-sizing(border-box);
+  &:hover {
+    text-decoration: none;
+    color: $gray-darker;
+    background-color: darken($button-bg,10%);
+    @include transition(background 0.2s ease 0.1s,
+                        color 0.1s ease 0.1s,
+                        border 0.6s ease 0.1s);
+
+    &.primary {
+      background-color: $green; color: $white; border-color: $green-dark;
+    }
+    &.cancel {
+      border-color: darken($button-border,5%);
+    }
+    &.delete {
+      background-color: $red; color: $white; border-color: darken($red,10%);
+    }
+  }
+  &:focus {
+    @include tab-focus();
+  }
+}
+
+
+// .button.active, .button:active {
+//     background-color: $btnBackground;
+//     background-image: none;
+//     outline: 0;
+//     @include box-shadow(#{inset 0 1px 2px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)});
+// }
+// .button.disabled, .button[disabled] {
+//     cursor: default;
+//     background-color: darken($white, 10%);
+//     background-image: none;
+//     @include opacity(0.65);
+//     @include box-shadow(none);
+// }
+
+// .button-group {
+//     @include clearfix();
+//     .button {
+//         float: left;
+//         @include border-radius(0px);
+//         &:first-child {
+//             @include border-left-radius($btnBorderRadius);
+//         }
+//         &:last-child {
+//             @include border-right-radius($btnBorderRadius);
+
+//         }
+//     }
+// }
+// .primary, .primary:hover,
+// .secondary, .secondary:hover,
+// .alert, .alert:hover {
+//   color: $white;
+//   text-shadow: 0 1px 0 rgba(0,0,0,.25);
+// }
+// .primary {
+//     @include buttonBackground($playlyfe, $greenDark);
+// }
+// .secondary {
+//     @include buttonBackground(adjust_hue($playlyfe,120), adjust_hue($greenDark,120));
+// }
+// .alert {
+//     @include buttonBackground(adjust_hue($playlyfe,290), adjust_hue($greenDark,290));
+// }
+// .button.large {
+//     font-size: 18px;
+//     line-height: 28px;
+//     padding: 10px;
+//     height: auto;
+// }
+// .button.small {
+//     font-size:11px;
+//     line-height:13px;
+//     padding:2px 4px;
+//     height:auto;
+// }
