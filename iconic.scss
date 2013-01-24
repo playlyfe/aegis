@@ -1,7 +1,7 @@
 @import "compass/css3";
 
 .iconic-16{
-  background:url("sprites/iconic-core.png") top left no-repeat;
+  background:url("../images/sprites/iconic-core.png") top left no-repeat;
   width: 16px;
   height: 16px;
   @include inline-block();
