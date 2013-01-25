@@ -323,6 +323,20 @@ input[type="map"] {
     background-color: $green-lightest;
     position: relative;
     @include text-shadow(0 1px 0 rgba(255, 255, 255, 0.75));
+
+    &.error , &.error:hover {
+        border: darken($red, 5%) 1px solid;
+        color: $white;
+        background-color: $red;
+        @include text-shadow(0 1px 0 lighten($red,5%));
+        @include transition(color, 0.5s, ease, 0.1s);
+        @include transition(background-color, 0.5s, ease, 0.1s);
+        .delete {
+            color: darken($red, 15%);
+        }
+
+    }
+
     .delete {
         position: absolute;
         top: 0px;
