@@ -114,11 +114,12 @@ body {
 
 
 table {
-  max-width: 100%;
+  // max-width: 85%;
   border-collapse: collapse;
   border-spacing: 0;
   &.expand {
-    width: #{670px/$base}em;
+    width: 100%;
+    min-width: 670px;
   }
   thead {
     background-color: $table-head-bg;
@@ -127,10 +128,14 @@ table {
       text-align: left;
       font-size: #{16px/$base}em;
       padding: #{5px/$base}em 0;
-    }
-    .ops-head {
-      width:65px;
-      box-sizing:border-box;
+      @include box-sizing('border-box');
+      .col-xs { width: 5%; }
+      .col-s { width: 10%; }
+      .col-m { width:20%; }
+      .col-l { width:30%; }
+      .col-xl { width:40%; }
+      .col-xxl { width:50%; }
+      .col-ops { width:65px; }
     }
   }
   tbody {
@@ -145,7 +150,7 @@ table {
     .extra-info {
       font-style: italic;
       font-size: #{12px/$base}em;
-      max-width: 200px;
+      max-width: 500px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;

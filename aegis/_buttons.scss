@@ -48,7 +48,7 @@
     &.delete {
       background-color: $red; color: $white; border-color: darken($red,10%);
     }
-    &.retract {
+    &.back {
       background-color: $sky; color: $white; border-color: $blue;
     }
   }
