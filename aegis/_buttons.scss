@@ -42,13 +42,13 @@
     &.primary {
       background-color: $green; color: $white; border-color: $green-dark;
     }
-    &.cancel {
+    &.cancel, &.reset {
       border-color: darken($button-border,5%);
     }
     &.delete {
       background-color: $red; color: $white; border-color: darken($red,10%);
     }
-    &.utility {
+    &.retract {
       background-color: $sky; color: $white; border-color: $blue;
     }
   }
