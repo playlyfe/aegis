@@ -18,8 +18,7 @@
   margin:0 auto;
 }
 body {
-  margin: 0;
-  padding: 0;
+  @extend .no-space;
   border: 0;
 }
 
@@ -79,7 +78,7 @@ body {
 #sticky {
   height:#{65px/$base}em;
   position: fixed;
-  padding:#{21px/$base}em 0 0 #{42px/$base}em;
+  padding:#{21px/$base}em 0 0 2.71%;
   left:14.667%;
   top:0;
   background-color: $white;
@@ -114,7 +113,6 @@ body {
 }
 
 
-
 table {
   max-width: 100%;
   border-collapse: collapse;
@@ -128,39 +126,47 @@ table {
       color: $table-head-text-color;
       text-align: left;
       font-size: #{16px/$base}em;
-      padding: #{5px/$base}em #{10px/$base}em;
+      padding: #{5px/$base}em 0;
     }
     .ops-head {
-      width:52px;
+      width:65px;
       box-sizing:border-box;
     }
   }
   tbody {
     td {
-      padding: #{10px/$base}em; vertical-align: top;
+      padding: #{10px/$base}em 0;
+      vertical-align: top;
       border-bottom: $gray-lighter 1px solid;
     }
     .ops {
-      border:none;
-      padding:0;
-      vertical-align:middle;
+      padding:6px 0;
+    }
+    .extra-info {
+      font-style: italic;
+      font-size: #{12px/$base}em;
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     tr {
       .row-action {
         display: block;
         visibility: hidden;
-        a { cursor: pointer;
-          &:hover {
-            text-decoration: underline;
-            color: $green;
-          }
-          &.delete:hover, &.delete {
-            color: adjust_hue($green, 290);
-          }
-        }
+        a { cursor: pointer; }
+      }
+      .action-item {
+        @extend .icon-group;
       }
       &:hover {
-        cursor:pointer;
+        .ref {
+          color: $sky;
+          @include transition(color 0.3s ease 0.1s);
+          &:hover {
+            @extend .ref:hover;
+          }
+        }
         color: $green-dark;
         border-bottom: 1px solid $green;
         .row-action { visibility: visible; }
@@ -171,6 +177,26 @@ table {
     background-color: $table-foot-bg;
     td { text-align: center; padding: #{15px/$base} 0;}
   }
+}
+
+.ref {
+  @extend .no-anchor;
+  cursor:pointer;
+  padding:#{2px/$base}em #{8px/$base}em;
+  color: $gray;
+  &:hover {
+    @include transition(color 0.3s ease 0.1s);
+    background: $gray-lightest;
+    color: $blue;
+  }
+}
+// styles for the descriptive icons
+.icon-group {
+  margin: 0 0.5em;
+}
+.attr-group {
+  cursor: help;
+  @extend .icon-group;
 }
 
 .pagination-wrapper {

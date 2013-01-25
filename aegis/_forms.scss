@@ -1,6 +1,6 @@
 // forms partial
 // Aegis UI (derived from Playlyfe Sandbox)
-// Johny Jose/Kumar Harsh
+// Johny Jose / Kumar Harsh
 // 23.Jan.2013
 
 form {
@@ -529,7 +529,6 @@ form.multi-screen {
 
 
 
-
 .form-search input,
 .form-inline input,
 .form-horizontal input,
@@ -590,9 +589,12 @@ legend + .field-wrapper {
   *padding-left: 20px;
   margin-left: 180px;
   *margin-left: 0;
-}
-.form-horizontal .input-wrapper:first-child {
-  *padding-left: 180px;
+  &.pad {
+    padding-top:6px;
+  }
+  &:first-child {
+   *padding-left: 180px;
+  }
 }
 
 // .form-search .hide,

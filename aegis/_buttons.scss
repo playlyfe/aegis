@@ -4,9 +4,11 @@
 // 24.Jan.2013
 
 .button {
+  // space subsequent buttons
   &~.button {
-    margin-left:#{10px/$base}em;
+    margin-left:#{0.5*$base-line-height/$base}em;
   }
+
   @include inline-block();
   @include no-select();
   padding: #{4px/$base}em #{20px/$base}em;
@@ -45,6 +47,9 @@
     }
     &.delete {
       background-color: $red; color: $white; border-color: darken($red,10%);
+    }
+    &.utility {
+      background-color: $sky; color: $white; border-color: $blue;
     }
   }
   &:focus {

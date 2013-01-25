@@ -26,11 +26,11 @@
 }
 
 .nav {
-    margin: 0; padding: 0;
-    list-style-type: none;
+    @extend .no-list;
+    @extend .no-space;
     a {
+        @extend .no-anchor;
         display: block;
-        text-decoration: none;
     }
 }
 
@@ -42,3 +42,5 @@
     line-height: 1em;
     color: $navbar-text-color;
 }
+
+
