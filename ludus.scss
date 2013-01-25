@@ -22,11 +22,25 @@ body {
   border: 0;
 }
 
+#navigator {
+  @include no-select();
+  li {
+    @include inline-block();
+    &>a {
+      padding: 0 10px;
+    }
+    &>a[class^="iconic"] {
+      padding: 0;
+    }
+  }
+}
+
 #sidewinder {
   top:0;
   left:0;
   z-index: $sidebar-z;
   float:none;
+  @include no-select();
   * { @include no-select(); }
   img {
     width: 60%;
@@ -53,8 +67,8 @@ body {
       &.unwound .arrow { @include transition(transform, 1.0s, ease, 0.1s); }
     }
   }
+  a { cursor: pointer; }
 }
-
 
 #workspace {
   // margin-left:261px;
@@ -76,6 +90,7 @@ body {
 }
 
 #sticky {
+  width:84.333%;
   height:#{65px/$base}em;
   position: fixed;
   padding:#{21px/$base}em 0 0 2.71%;
@@ -98,16 +113,35 @@ body {
     @include transition(box-shadow, 0.6s, ease, 0.3s);
     @include transition(border-bottom, 0.6s, ease, 0.3s);
   }
+  #sticky-controls {
+    position: relative;
+    width:100%;
+  }
 }
 
-#navigator {
+.pagination-wrapper {
+  position: absolute;
+  right: 0;
+  @include inline-block();
   li {
     @include inline-block();
-    &>a {
-      padding: 0 10px;
-    }
-    &>a[class^="iconic"] {
-      padding: 0;
+    @include button-interaction();
+    a {
+      @include transition(background-color, 0.6s, ease, 0.3s);
+      color: $gray-dark;
+      padding: #{5px/$base}em #{15px/$base}em;
+      &.current {
+        background-color: $yellow;
+        border: 1px solid $gold;
+        &:hover {
+          border-color: $green-darker;
+        }
+      }
+      &:hover {
+        @include transition(background-color, 0.3s, ease, 0.1s);
+        background-color: $green-dark;
+        color: $white;
+      }
     }
   }
 }
@@ -202,29 +236,4 @@ table {
 .attr-group {
   cursor: help;
   @extend .icon-group;
-}
-
-.pagination-wrapper {
-  margin: 0 auto;
-  li {
-    @include inline-block();
-    @include button-interaction();
-    a {
-      @include transition(background-color, 0.6s, ease, 0.3s);
-      color: $gray-dark;
-      padding: #{5px/$base}em #{15px/$base}em;
-      &.current {
-        background-color: $yellow;
-        border: 1px solid $gold;
-        &:hover {
-          border-color: $green-darker;
-        }
-      }
-      &:hover {
-        @include transition(background-color, 0.3s, ease, 0.1s);
-        background-color: $green-dark;
-        color: $white;
-      }
-    }
-  }
 }
