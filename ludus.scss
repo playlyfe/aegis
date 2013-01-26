@@ -297,3 +297,17 @@ table {
       @include transition(all 0.4s ease 0.1s);
     }
 }
+
+// Sketch styles
+.free-flow {
+  .ring {
+    stroke-width: 2;
+    stroke-dasharray: 5,5;
+    stroke: darken($red, 5%);
+    fill: rgba(0,0,0,0);
+  }
+}
+.link {
+    stroke-width: 1;
+    stroke: $green;
+}
