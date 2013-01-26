@@ -24,7 +24,7 @@
 }
 .alpha { margin-left: 0; }
 .omega { margin-right: 0; }
-.full { @extend .alpha; @extend .omega; width:100%; }
+.alphamega { @extend .alpha; @extend .omega; }
 
 .container-fluid {
   .col-1 { width:6.333%; }

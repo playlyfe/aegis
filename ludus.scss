@@ -21,6 +21,9 @@ body {
   @extend .no-space;
   border: 0;
 }
+.container-fluid {
+  width:100%;
+}
 
 #navigator {
   @include no-select();
@@ -36,6 +39,8 @@ body {
 }
 
 #sidewinder {
+  width: 14.667%;
+  margin: 0;
   top:0;
   left:0;
   z-index: $sidebar-z;
@@ -71,7 +76,8 @@ body {
 }
 
 #workspace {
-  // margin-left:261px;
+  width: 85.333%;
+  margin-left:14.667%;
   // fix for the page shifting down due to
   // accidental top-margins on top-most elements
   padding:1px 0;
@@ -86,11 +92,12 @@ body {
 }
 
 #workbench {
-  margin-top: #{126px/$base}em;
+  margin: #{126px/$base}em 3.1758% 0;
 }
 
 #sticky {
-  width:84.333%;
+  width:85.333%;
+  margin-right: 0;
   height:#{65px/$base}em;
   position: fixed;
   padding:#{21px/$base}em 0 0 2.71%;
