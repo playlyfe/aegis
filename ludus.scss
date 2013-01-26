@@ -46,7 +46,6 @@ body {
   z-index: $sidebar-z;
   float:none;
   @include no-select();
-  * { @include no-select(); }
   img {
     width: 60%;
     margin:#{20px/$base}em 20% 0;
@@ -191,6 +190,7 @@ table {
     .extra-info {
       font-style: italic;
       font-size: #{12px/$base}em;
+      padding-left: #{8px/$base}em;
       max-width: 500px;
       white-space: nowrap;
       overflow: hidden;
@@ -243,4 +243,40 @@ table {
 .attr-group {
   cursor: help;
   @extend .icon-group;
+}
+
+.detail-row {
+  margin-bottom: #{15px/$base}em;
+  *zoom: 1;
+  &:before, &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear:both;
+  }
+  .dt {
+    float:left;
+    width:14.6573%;
+    text-align: right;
+    color: $gray-light;
+    line-height: #{31px/$base}em;
+  }
+  .dd {
+    @include inline-block();
+    margin-left:5%;
+    font-size: #{16px/$base}em;
+    color: $gray;
+    line-height: #{31px/16px + 0}em;
+    .ref {
+      color: $blue;
+      &:hover {
+        @include transition(color 0.1s ease 0.1s, background 0.4s ease);
+        background-color: $sky;
+        color: $white;
+      }
+      margin-left:-0.61538em;   // fix for misaligned links
+    }
+  }
 }
