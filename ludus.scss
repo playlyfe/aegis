@@ -91,17 +91,20 @@ body {
 }
 
 #workbench {
-  margin: #{126px/$base}em 3.1758% 0;
+  margin: #{110px/$base}em 3.1758% 0;
 }
 
 #sticky {
   width:85.333%;
-  margin-right: 0;
-  height:#{65px/$base}em;
+  height:#{110px/$base}em;
+
   position: fixed;
-  padding:#{21px/$base}em 0 0 2.71%;
-  left:14.667%;
   top:0;
+  left:14.667%;
+
+  margin-right: 0;
+  padding:#{21px/$base}em 0 0 2.71%;
+
   background-color: $white;
   @include box-sizing('border-box');
   z-index: $sticky-z;
@@ -109,7 +112,8 @@ body {
     margin:0;
     text-transform: capitalize;
   }
-  span.sub {
+  .sub {
+    min-height: $base-line-height;
     font-size:#{12px/$base}em;
     text-transform: lowercase;
   }
@@ -127,7 +131,7 @@ body {
 
 .pagination-wrapper {
   position: absolute;
-  right: 0;
+  right: 1%;
   @include inline-block();
   li {
     @include inline-block();
@@ -169,13 +173,13 @@ table {
       font-size: #{16px/$base}em;
       padding: #{5px/$base}em 0;
       @include box-sizing('border-box');
-      .col-xs { width: 5%; }
-      .col-s { width: 10%; }
-      .col-m { width:20%; }
-      .col-l { width:30%; }
-      .col-xl { width:40%; }
-      .col-xxl { width:50%; }
-      .col-ops { width:65px; }
+      &.col-xs { width: 5%; }
+      &.col-s { width: 10%; }
+      &.col-m { width:20%; }
+      &.col-l { width:30%; }
+      &.col-xl { width:40%; }
+      &.col-xxl { width:50%; }
+      &.col-ops { width:65px; }
     }
   }
   tbody {

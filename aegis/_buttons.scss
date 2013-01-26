@@ -39,17 +39,29 @@
                         color 0.1s ease 0.1s,
                         border 0.6s ease 0.1s);
 
+    // main colours
     &.primary {
       background-color: $green; color: $white; border-color: $green-dark;
     }
+    &.neutral {
+      background-color: $sky; color: $white; border-color: $blue;
+    }
+    &.anti {
+      background-color: $red; color: $white; border-color: darken($red,10%);
+    }
+
+    // derived colours
     &.cancel, &.reset {
       border-color: darken($button-border,5%);
     }
-    &.delete {
-      background-color: $red; color: $white; border-color: darken($red,10%);
-    }
     &.back {
-      background-color: $sky; color: $white; border-color: $blue;
+      @extend .neutral;
+    }
+    &.delete {
+      @extend .anti;
+    }
+    &.important {
+      @extend .primary;
     }
   }
   &:focus {
