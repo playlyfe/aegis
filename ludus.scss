@@ -284,3 +284,16 @@ table {
     }
   }
 }
+
+.snippet {
+    padding: 3px 8px 1px;
+    border: 1px dotted $green-dark;
+    @include inline-block();
+    font-weight: 700;
+    font-size: #{12px/$base}em;
+    &:hover {
+      background-color: $green;
+      color: $white;
+      @include transition(all 0.4s ease 0.1s);
+    }
+}

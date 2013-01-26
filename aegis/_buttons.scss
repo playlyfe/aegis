@@ -31,6 +31,11 @@
 
   // @include box-shadow(inset 0 0 3px rgba(255,255,255,.8));
   @include box-sizing(border-box);
+  &.inline {
+    @include inline-block();
+    float: none;
+    margin: 0 #{4px/$base}em;
+  }
   &:hover {
     text-decoration: none;
     color: $gray-darker;
@@ -68,6 +73,7 @@
     @include tab-focus();
   }
 }
+
 
 
 // .button.active, .button:active {
