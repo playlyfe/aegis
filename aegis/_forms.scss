@@ -3,6 +3,8 @@
 // Johny Jose / Kumar Harsh
 // 23.Jan.2013
 
+$input-height: 31px;
+
 form {
   @include clearfix();
 }
@@ -21,7 +23,7 @@ input[type="search"],   input[type="tel"],            input[type="color"],
   margin: 0 0 #{9px/$base}em;
   color: $gray;
   font-size: $base-font-size;
-  height: #{31px/$base}em;
+  height: #{$input-height/$base}em;
   line-height: #{$base-line-height/$base}em;
   border: 1px solid #cccccc;
   @include box-shadow(inset 0 1px 2px 0px rgba(0,0,0,0.1));
@@ -119,8 +121,8 @@ select {
   background-color: $gray-lightest;
   border: $gray-light 1px solid;
   @include border-radius(0);
-  line-height: 31px;
-  height: 31px;
+  line-height: $input-height;
+  height: $input-height;
 }
 select[multiple],
 select[size] {
@@ -285,7 +287,7 @@ input[type="color"],
     border-bottom: none;
   }
   &.below {
-    top: 31px;
+    top: $input-height;
     border-top: none;
   }
   &>p {
@@ -387,7 +389,7 @@ input[type="tags"] {
   margin: 4px 0 5px 0px;
   overflow-y: auto;
   overflow-x: visible;
-  min-height: 31px;
+  min-height: $input-height;
   max-height: 200px;
   width: auto;
   border: none;
@@ -482,7 +484,7 @@ input[type="tags"] {
 .immutable {
   cursor: help;
   font-weight: 700;
-  line-height: 31px;
+  line-height: $input-height;
 }
 
 .form-search input,
@@ -514,6 +516,7 @@ input[type="tags"] {
   margin-bottom: 0;
   vertical-align: middle;
 }
+
 .form-row {
   margin-bottom: 10px;
 }
@@ -547,9 +550,55 @@ legend + .form-row {
   *margin-left: 0;
   &.pad {
     padding-top:6px;
+    & > input:first-child {
+      // for radio and checkboxes
+      margin-left:0;
+    }
   }
   &:first-child {
    *padding-left: 180px;
+  }
+
+  // special styling for smaller controls
+  input[type="radio"],
+  input[type="checkbox"] {
+    float:none;
+    margin:-4px 5px 0 10px;
+  }
+}
+span#strength-meter {
+  float: left;
+  margin-top:0.5em;
+  .meter-wrap {
+    @include inline-block();
+    vertical-align: baseline;
+    position: relative;
+    left:20px;
+    height:5px;
+    width:50%;
+    min-width:200px;
+    background-color: $gray-lightest;
+    .meter {
+      display:block;
+      position: absolute;
+      left:0; top:0;
+      height:5px;
+      width:5%;
+      background-color: $gray-lighter;
+      @include transition(all 0.5s ease 0.2s);
+      &.pass-strong {
+        background-color: $green;
+        width:100%;
+      }
+      &.pass-med {
+        background-color: $yellow;
+        width:60%;
+      }
+      &.pass-weak {
+        background-color: $red;
+        width:20%;
+      }
+    }
   }
 }
 

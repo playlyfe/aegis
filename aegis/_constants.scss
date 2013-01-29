@@ -11,7 +11,7 @@ $golden : 1.618;  // the golden ratio
 $playlyfe : #95d905;
 
   // Grays (tinted)
-  $black:             #000 !default;
+  $black:              #000 !default;
   $gray-darker:        #222;
   $gray-dark:          #333;
   $gray:               #555;
@@ -39,9 +39,10 @@ $playlyfe : #95d905;
   $navy:                  #023c7c !default;
   $green:                 #95d905 !default;
   $red:                   #e20000 !default;
+  $purple:                #68008c !default;
   $yellow:                #ffcc00 !default;
-  $orange:                #d15a00 !default;
-  $gold:                  #d19c10 !default;
+  $orange:                #e35905 !default;
+  $gold:                  #da9100 !default;
 
 
 $navbar-bg: $green;
