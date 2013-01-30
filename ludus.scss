@@ -24,6 +24,10 @@ body {
 .container-fluid {
   width:100%;
 }
+.center-wrapper {
+  width:1000px;
+  margin:160px auto 0;
+}
 
 #navigator {
   @include no-select();

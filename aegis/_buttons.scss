@@ -9,6 +9,7 @@
     margin-left:#{0.5*$base-line-height/$base}em;
   }
 
+  @extend .no-anchor;
   @include inline-block();
   @include no-select();
   padding: #{4px/$base}em #{20px/$base}em;
@@ -36,6 +37,14 @@
     float: none;
     margin: 0 #{4px/$base}em;
   }
+
+  &.important {
+    background-color: $green; color: $white; border-color: $green-dark;
+  }
+  &.important-anti {
+    background-color: $red; color: $white; border-color: darken($red,10%);
+  }
+
   &:hover {
     text-decoration: none;
     color: $gray-darker;
@@ -66,7 +75,10 @@
       @extend .anti;
     }
     &.important {
-      @extend .primary;
+      background-color: $green-dark; color:$white; border-color: $green-darker;
+    }
+    &.important-anti {
+      background-color: darken($red,10%); color:$white; border-color: darken($red,20%);
     }
   }
   &:focus {
