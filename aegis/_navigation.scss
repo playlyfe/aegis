@@ -7,6 +7,7 @@
 // Instead of the ribbon-style navbar
 // you get a hanging tab on the right side
 .navbar {
+    overflow: hidden;
     position:fixed;
     background-color: $navbar-bg;
     top:0;
