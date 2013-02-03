@@ -315,3 +315,19 @@ table {
     stroke-width: 1;
     stroke: $green;
 }
+
+hr.dotted {
+  border: 0;
+  margin: 5px auto;
+  height: 1px;
+  border-bottom: 2px dotted $gray-lightest;
+  &.big {
+    margin: 20px auto;
+    border-width: 5px;
+  }
+  &.notop { margin-top: 0; }
+  &.nobot { margin-bottom: 0 }
+  &.dark {
+    border-color: $gray-dark;
+  }
+}
