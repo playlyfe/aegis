@@ -60,13 +60,6 @@ body {
     margin-bottom:0.12%;
     color: $sidebar-text-color-hl;
   }
-  #about-crux {
-    padding: 0 5% 0.12%;
-    font-size: #{12px/$base}em;
-    font-variant: italic;
-    color: $sidebar-text-color;
-    word-wrap: suppress;
-  }
   .toplevel {
     a       { @include transition(background, 0.6s, ease, 0.3s); }
     a:hover { @include transition(background, 0.3s, ease, 0.1s); }
