@@ -41,7 +41,7 @@
   &.important {
     background-color: $green; color: $white; border-color: $green-dark;
   }
-  &.important-anti {
+  &.hazard {
     background-color: $red; color: $white; border-color: darken($red,10%);
   }
 
@@ -53,6 +53,12 @@
                         color 0.1s ease 0.1s,
                         border 0.6s ease 0.1s);
 
+    &.important {
+      background-color: $green-dark; color:$white; border-color: $green-darker;
+    }
+    &.hazard {
+      background-color: darken($red,10%); color:$white; border-color: darken($red,20%);
+    }
     // main colours
     &.primary {
       background-color: $green; color: $white; border-color: $green-dark;
@@ -60,25 +66,11 @@
     &.neutral {
       background-color: $sky; color: $white; border-color: darken($sky,10%);
     }
-    &.anti {
+    &.alert {
       background-color: $red; color: $white; border-color: darken($red,10%);
     }
-
-    // derived colours
-    &.cancel, &.reset {
+    &.passive {
       border-color: darken($button-border,5%);
-    }
-    &.back {
-      @extend .neutral;
-    }
-    &.delete {
-      @extend .anti;
-    }
-    &.important {
-      background-color: $green-dark; color:$white; border-color: $green-darker;
-    }
-    &.important-anti {
-      background-color: darken($red,10%); color:$white; border-color: darken($red,20%);
     }
   }
   &:focus {
