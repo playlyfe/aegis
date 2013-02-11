@@ -293,14 +293,11 @@ table {
     width:14.6573%;
     text-align: right;
     color: $gray-light;
-    line-height: #{31px/$base}em;
   }
   .dd {
     @include inline-block();
     margin-left:5%;
-    font-size: #{16px/$base}em;
     color: $gray;
-    line-height: #{31px/16px + 0}em;
     .ref {
       color: $blue;
       &:hover {
