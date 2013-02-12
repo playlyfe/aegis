@@ -5,28 +5,41 @@
 
 .sidebar {
   position: fixed;
-  float: left;
+  top:0;
+  left:0;
+  margin:0;
   background: $sidebar-bg;
   border-right:1px solid $sidebar-border;
   font-size:$sidebar-text-size;
   height: 100%;
+  z-index: $sidebar-z;
   @include box-shadow($sidebar-border 0px 0px 10px -1px inset);
-
+  @include no-select();
   ul.nav {
     color: $sidebar-text-color-hl;
   }
 
   ul.toplevel > li {
-    li > a {      // sub-lists
-      background-color: $sidebar-submenu-bg;
-      padding-left: 20px;
-    }
-    .sub-menu {
+    a {
+      padding: 5px 0 5px 10px;
       color: $sidebar-text-color;
-      height: 31px;
+      @include transition(background, 0.6s, ease, 0.3s);
+      cursor: pointer;
+      &:hover {
+        @include transition(background, 0.3s, ease, 0.1s);
+        background-color: $sidebar-hover-bg;
+        color: $sidebar-text-color-hl;
+      }
+    }
+    .sidewinder-l1 {
+      color: $sidebar-text-color;
+      position: relative;
       .arrow {
+        @include transition(transform, 1.0s, ease, 0.1s);
         display: block;
-        position: relative;
+        position: absolute;
+        top:10px;
+        right:10px;
         width: 0;
         height: 0;
         border-left: 5px solid $sidebar-text-color;
@@ -36,17 +49,14 @@
       &.unwound {
         background-color: $sidebar-hover-bg;
         .arrow {
+          @include transition(transform, 1.0s, ease, 0.1s);
           @include rotateZ(90deg);
         }
       }
     }
-    a {
-      padding: 5px 0 5px 10px;
-      color: $sidebar-text-color;
-      &:hover {
-        background-color: $sidebar-hover-bg;
-        color: $sidebar-text-color-hl;
-      }
+    .sidewinder-l2 a {      // sub-lists
+      background-color: $sidebar-submenu-bg;
+      padding-left: 20px;
     }
   }
 }

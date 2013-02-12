@@ -1,6 +1,7 @@
 @import "compass";
 @import "aegis/constants";
 @import "aegis/mixins";
+@import "aegis/utilities";
 @import "aegis/navigation";
 @import "aegis/modal";
 @import "aegis/sidebar";
@@ -9,6 +10,7 @@
 @import "aegis/tabs";
 @import "aegis/lists";
 @import "aegis/buttons";
+@import "aegis/tables";
 
 
 // TODOKHS : MEDIA QUERIES
@@ -46,12 +48,6 @@ body {
 
 #sidewinder {
   width: 14.667%;
-  margin: 0;
-  top:0;
-  left:0;
-  z-index: $sidebar-z;
-  float:none;
-  @include no-select();
   img {
     width: 60%;
     margin:#{20px/$base}em 20% 0;
@@ -62,15 +58,6 @@ body {
     margin-bottom:0.12%;
     color: $sidebar-text-color-hl;
   }
-  .toplevel {
-    a       { @include transition(background, 0.6s, ease, 0.3s); }
-    a:hover { @include transition(background, 0.3s, ease, 0.1s); }
-    .sub-menu {
-      .arrow { top: #{-20px/$base}em; left:90%; @include transition(transform, 1.0s, ease, 0.1s); }
-      &.unwound .arrow { @include transition(transform, 1.0s, ease, 0.1s); }
-    }
-  }
-  a { cursor: pointer; }
 }
 
 #toolbox {
@@ -186,7 +173,6 @@ body {
 
 
 table {
-  // max-width: 85%;
   border-collapse: collapse;
   border-spacing: 0;
   &.expand {

@@ -1,0 +1,43 @@
+// table partial
+// Aegis UI (derived from Playlyfe Sandbox)
+// Kumar Harsh
+// 11.Feb.2013
+
+table.pl-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  thead {
+    background-color: $table-head-bg;
+    th {
+      color: $table-head-text-color;
+      text-align: left;
+      font-size: #{16px/$base}em;
+      padding: #{5px/$base}em 0;
+      border-bottom: 1px solid $gray-lightest;
+      @include box-sizing('border-box');
+      &.col-xs { width: 5%; }
+      &.col-s { width: 10%; }
+      &.col-m { width:20%; }
+      &.col-l { width:30%; }
+      &.col-xl { width:40%; }
+      &.col-xxl { width:50%; }
+      &.col-ops { width:65px; }
+    }
+  }
+  tbody {
+    td {
+      padding: #{10px/$base}em 0;
+      vertical-align: top;
+      border-bottom: 1px solid $gray-lightest;
+    }
+    tr {
+      &:hover {
+        border-bottom: 1px solid $green;
+      }
+    }
+  }
+  tfoot {
+    background-color: $table-foot-bg;
+    td { text-align: center; padding: #{15px/$base} 0; }
+  }
+}

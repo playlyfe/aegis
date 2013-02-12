@@ -1,0 +1,39 @@
+// forms partial
+// Aegis UI (derived from Playlyfe Sandbox)
+// Kumar Harsh
+// 11.Feb.2013
+
+
+.clearfix {
+  @include clearfix();
+}
+.no-space {
+  margin: 0; padding: 0;
+}
+.no-list {
+  @extend .no-space;
+  list-style: none;
+}
+.no-anchor {
+  text-decoration: none;
+}
+.no-float {
+  float: none;
+}
+
+// rules
+hr.dotted {
+  border: 0;
+  margin: 5px auto;
+  height: 1px;
+  border-bottom: 2px dotted $gray-lightest;
+  &.big {
+    margin: 20px auto;
+    border-width: 5px;
+  }
+  &.notop { margin-top: 0; }
+  &.nobot { margin-bottom: 0 }
+  &.dark {
+    border-color: $gray-dark;
+  }
+}
