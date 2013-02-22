@@ -652,3 +652,10 @@ span#strength-meter {
 // .form-horizontal .form-actions {
 //   padding-left: 180px;
 // }
+
+.map-input {
+  .map-row, .map-actions {
+    @include clearfix();
+    width: 100%;
+  }
+}
