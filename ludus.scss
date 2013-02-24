@@ -293,6 +293,12 @@ table {
       }
       margin-left:-0.61538em;   // fix for misaligned links
     }
+    &.json {
+      padding: 1em;
+      background-color: #FAFAFA;
+      border: 1px #DDD solid;
+      margin: 0 0 1em 5%;
+    }
   }
 }
 
