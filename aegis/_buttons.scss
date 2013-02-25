@@ -37,6 +37,9 @@
     float: none;
     margin: 0 #{4px/$base}em;
   }
+  &.publisher {
+    min-width:100px;
+  }
 
   &.important {
     background-color: $green; color: $white; border-color: $green-dark;
@@ -63,7 +66,7 @@
     &.primary {
       background-color: $green; color: $white; border-color: $green-dark;
     }
-    &.neutral {
+    &.neutral, &.secondary {
       background-color: $sky; color: $white; border-color: darken($sky,10%);
     }
     &.alert {

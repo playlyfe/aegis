@@ -201,6 +201,19 @@ table {
       padding: #{10px/$base}em 0;
       vertical-align: top;
       border-bottom: $gray-lighter 1px solid;
+
+      .info-tag {
+        padding: 2px 5px;
+        margin-right:1em;
+        &.prima {
+          background-color: lighten($sky,35%);
+          color: darken($sky,10%);
+        }
+        &.aux {
+          background-color: lighten($green,35%);
+          color: darken($green-dark,10%);
+        }
+      }
     }
     .ops {
       padding:6px 0;
@@ -235,11 +248,47 @@ table {
         border-bottom: 1px solid $green;
         .row-action { visibility: visible; }
       }
+      ul.no-list > li {
+        padding-bottom: 0em;
+      }
     }
   }
   tfoot {
     background-color: $table-foot-bg;
     td { text-align: center; padding: #{15px/$base} 0;}
+  }
+}
+
+.detail, .guide {
+  tbody {
+    tr:hover {
+      border-bottom: none;
+    }
+    td {
+      border: none;
+      padding: 1em 1.5em;
+      &:first-child {
+       text-align: right;
+      }
+      ul.no-list > li {
+        padding-bottom: 1em;
+      }
+      .ref {
+        margin-left:-0.61538em;   // fix for misaligned links
+      }
+      .warn {
+        color: $red;
+      }
+      .nudge {
+        color: $orange;
+      }
+      .json {
+        padding: 0.5em 1em 0.5em 0.75em;
+        background-color: #fafafa;
+        border: 1px #DDD solid;
+        margin: -0.5em 0 1em -1em;
+      }
+    }
   }
 }
 
@@ -263,48 +312,12 @@ table {
   @extend .icon-group;
 }
 
-.detail-row {
-  margin-bottom: #{15px/$base}em;
-  *zoom: 1;
-  &:before, &:after {
-    display: table;
-    content: "";
-    line-height: 0;
-  }
-  &:after {
-    clear:both;
-  }
-  .dt {
-    float:left;
-    width:14.6573%;
-    text-align: right;
-    color: $gray-light;
-  }
-  .dd {
-    @include inline-block();
-    margin-left:5%;
-    color: $gray;
-    .ref {
-      color: $blue;
-      &:hover {
-        @include transition(color 0.1s ease 0.1s, background 0.4s ease);
-        background-color: $sky;
-        color: $white;
-      }
-      margin-left:-0.61538em;   // fix for misaligned links
-    }
-    &.json {
-      padding: 1em;
-      background-color: #FAFAFA;
-      border: 1px #DDD solid;
-      margin: 0 0 1em 5%;
-    }
-  }
-}
-
 .snippet {
     padding: 3px 8px 1px;
-    border: 1px dotted $green-dark;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width:400px;
+    border: 1px dashed $green-dark;
     @include inline-block();
     font-weight: 700;
     font-size: #{12px/$base}em;
