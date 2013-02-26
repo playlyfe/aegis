@@ -50,13 +50,15 @@ $navbar-bg-hl: $green-dark;
 $navbar-border: $green-dark;
 $navbar-text-color: $white;
 
-$sidebar-bg: #404040;
-$sidebar-border: #202020;
+$sidebar-bg: #ffffff;
+$sidebar-border: #cccccc;
 $sidebar-text-size: 13px;
-$sidebar-text-color: $gray-lighter;
-$sidebar-text-color-hl: $gray-lightest;
-$sidebar-hover-bg: #242424;
-$sidebar-submenu-bg: #303030;
+$sidebar-text-color: $gray-dark;
+$sidebar-text-color-hl: $white;
+$sidebar-select-bg: $green-dark;
+$sidebar-hover-bg: $green;
+$sidebar-hover-bg-beta: $sky;
+$sidebar-submenu-bg: #ffffff;
 
 $table-head-bg: $white;
 $table-head-text-color: $gray-light;

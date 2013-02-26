@@ -36,6 +36,10 @@
     @include inline-block();
     float: none;
     margin: 0 #{4px/$base}em;
+    height:2em;
+    line-height: 1.9em;
+    padding-top: 0;
+    padding-bottom: 0.1em;
   }
   &.publisher {
     min-width:100px;

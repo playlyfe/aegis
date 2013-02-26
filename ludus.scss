@@ -56,7 +56,7 @@ body {
     font-size: #{16px/$base}em;
     text-align: center;
     margin-bottom:0.12%;
-    color: $sidebar-text-color-hl;
+    color: $sidebar-text-color;
   }
 }
 
@@ -105,7 +105,7 @@ body {
 }
 
 #workbench {
-  margin: #{110px/$base}em 3.1758% 0;
+  margin: #{110px/$base}em 0 0 2em;
 }
 
 #sticky {
@@ -118,7 +118,7 @@ body {
   left:14.667%;
 
   margin-right: 0;
-  padding:#{21px/$base}em 0 0 2.71%;
+  padding:#{21px/$base}em 0 0 2em;
 
   background-color: $white;
   @include box-sizing('border-box');
@@ -173,10 +173,9 @@ body {
 
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
   &.expand {
     width: 100%;
+    table-layout: fixed;
     min-width: 670px;
   }
   thead {
@@ -196,61 +195,74 @@ table {
       &.col-ops { width:65px; }
     }
   }
-  tbody {
-    td {
-      padding: #{10px/$base}em 0;
-      vertical-align: top;
-      border-bottom: $gray-lighter 1px solid;
+  td {
+    padding: #{10px/$base}em 0;
+    vertical-align: top;
+    border-bottom: $gray-lighter 1px solid;
 
-      .info-tag {
-        padding: 2px 5px;
-        margin-right:1em;
-        &.prima {
-          background-color: lighten($sky,35%);
-          color: darken($sky,10%);
-        }
-        &.aux {
-          background-color: lighten($green,35%);
-          color: darken($green-dark,10%);
-        }
-      }
-    }
-    .ops {
-      padding:6px 0;
-    }
-    .extra-info {
-      font-style: italic;
-      font-size: #{12px/$base}em;
-      padding-left: #{8px/$base}em;
-      max-width: 500px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    tr {
-      .row-action {
-        display: block;
-        visibility: hidden;
-        a { cursor: pointer; }
-      }
-      .action-item {
-        @extend .icon-group;
-      }
+    .info-tag {
+      padding: 2px 5px;
+      margin-right:1em;
+      background-color: lighten($sky,35%);
+      color: darken($sky,10%);
+      border:1px solid lighten($sky,10%);
+      cursor: pointer;
       &:hover {
-        .ref {
-          color: $sky;
-          @include transition(color 0.3s ease 0.1s);
-          &:hover {
-            @extend .ref:hover;
-          }
+        background-color: lighten($sky,20%);
+        color: darken($sky,30%);
+        @include transition(all 0.2s ease 0.1s);
+      }
+    }
+  }
+
+  td.ops {
+    padding:6px 0;
+  }
+  .extra-info {
+    font-style: italic;
+    font-size: #{12px/$base}em;
+    padding-left: #{8px/$base}em;
+    max-width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  /* to constrain the width of IDs and keys
+   * which can potentially destroy a table
+   */
+  .constraint {
+    max-width:90%;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+  }
+  /* Styles for special content types */
+  .warn { color: $red; }
+  .nudge { color: $orange; }
+
+  .no-list > li {
+    padding-bottom: 0em;
+  }
+  tbody tr {
+    .row-action {
+      display: block;
+      visibility: hidden;
+      a { cursor: pointer; }
+    }
+    .action-item {
+      @extend .icon-group;
+    }
+    &:hover {
+      .ref {
+        color: $sky;
+        @include transition(color 0.3s ease 0.1s);
+        &:hover {
+          @extend .ref:hover;
         }
-        color: $green-dark;
-        border-bottom: 1px solid $green;
-        .row-action { visibility: visible; }
       }
-      ul.no-list > li {
-        padding-bottom: 0em;
-      }
+      color: $green-dark;
+      border-bottom: 1px solid $green;
+      .row-action { visibility: visible; }
     }
   }
   tfoot {
@@ -260,36 +272,39 @@ table {
 }
 
 .detail, .guide {
-  tbody {
-    tr:hover {
-      border-bottom: none;
+  /* align the attribute labels to right */
+  & > tbody > tr > td:first-child { text-align: right; }
+  tr:hover {
+    border-bottom: none;
+  }
+  td {
+    border: none;
+    padding: 1em 1.5em;
+    .no-list > li {
+      padding-bottom: 1em;
     }
-    td {
-      border: none;
-      padding: 1em 1.5em;
-      &:first-child {
-       text-align: right;
-      }
-      ul.no-list > li {
-        padding-bottom: 1em;
-      }
-      .ref {
-        margin-left:-0.61538em;   // fix for misaligned links
-      }
-      .warn {
-        color: $red;
-      }
-      .nudge {
-        color: $orange;
-      }
-      .json {
-        padding: 0.5em 1em 0.5em 0.75em;
-        background-color: #fafafa;
-        border: 1px #DDD solid;
-        margin: -0.5em 0 1em -1em;
-      }
+    .ref {
+      margin-left:-0.61538em;   // fix for misaligned links
+    }
+    .json {
+      padding: 0.5em 1em 0.5em 0.75em;
+      background-color: #fafafa;
+      border: 1px #DDD solid;
+      margin: -0.5em 0 1em -1em;
+    }
+    .snippet, .button.inline {
+      margin-top:-0.5em;
     }
   }
+}
+.inner-table {
+  table-layout: fixed;
+  width:100%;
+  /* override the default table styles */
+  tr:hover, td { border:none;}
+  .info-tag { display: block; padding:1px 5px; }
+  td { padding: 2px 0; }
+  td.tag-holder { width:60px; }
 }
 
 .ref {
