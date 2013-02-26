@@ -268,74 +268,10 @@ input[type="color"],
     min-width: 80px;
   }
 }
+.prompt {
+  padding: 1em 0;
+}
 
-// Search box
-// .search-box {
-//   display: block;
-//   position: relative;
-//   float: inherit;
-// }
-// .results {
-//   z-index: $file-input-z + 2;
-//   display: block;
-//   background-color: $white;
-//   position: absolute;
-//   left: 0;
-//   width: 100%;
-//   border: $green-dark 1px solid;
-//   @include box-sizing('border-box');
-//   h6 {
-//     color: $gray;
-//     font-weight: bold;
-//     margin: 0;
-//     padding: 3px $base-font-size/2;
-//     display:block;
-//     width: 100%;
-//     background-color: $green-lightest;
-//     border-bottom: darken($green-lightest, 5%) 1px solid;
-//     @include box-sizing('border-box');
-//   }
-//   .result_list {
-//     margin: 0;
-//     padding: 0;
-//     li {
-//       list-style: none;
-//       margin: 0;
-//       padding: $base-font-size;
-//       @include button-interaction();
-//       &:hover {
-//         background-color: $green-dark;
-//         color: $white;
-//         text-shadow: 0 1px 0 rgba(255,255,255,.2);
-//         @include box-shadow(inset 0px 0px 10px rgba(0,0,0,0.1));
-//       }
-//     }
-//   }
-//   &.hide {
-//     display: none;
-//   }
-//   &.above {
-//     //height + margin-bottom
-//     bottom: 40px;
-//     border-bottom: none;
-//   }
-//   &.below {
-//     top: $input-height;
-//     border-top: none;
-//   }
-//   &>p {
-//     width: 100%;
-//     text-align: center;
-//     margin: $base-line-height 0;
-//     font-style: italic;
-//     color: $gray-light;
-//   }
-// }
-// Maps {
-// input[type="map"] {
-//   display: none;
-// }
-// Tags
 .tag_wrapper {
   @include clearfix();
   display: block;
@@ -551,12 +487,12 @@ input[type="tags"] {
     &:first-child {
      *padding-left: 180px;
     }
-    // special styling for smaller controls
-    input[type="radio"],
-    input[type="checkbox"] {
-      float:none;
-      margin:-4px 5px 0 10px;
-    }
+  }
+  // special styling for smaller controls
+  input[type="radio"],
+  input[type="checkbox"] {
+    float:none;
+    margin:-4px 5px 0 10px;
   }
 }
 
