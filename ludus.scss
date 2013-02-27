@@ -48,15 +48,17 @@ body {
 
 #sidewinder {
   width: 14.667%;
-  img {
-    width: 60%;
-    margin:#{20px/$base}em 20% 0;
-  }
-  #crux {
-    font-size: #{16px/$base}em;
-    text-align: center;
-    margin-bottom:0.12%;
-    color: $side-color;
+  .metawinder {
+    img {
+      width: 60%;
+      margin:#{20px/$base}em 20% 0;
+    }
+    #crux {
+      font-size: #{16px/$base}em;
+      text-align: center;
+      margin-bottom:0.12%;
+      color: $side-color;
+    }
   }
 }
 

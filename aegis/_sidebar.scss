@@ -16,75 +16,75 @@
   @include box-shadow($side-border 0px 0px 10px -1px);
   @include no-select();
 
-  .toplevel > li {
-    a {
-      padding: 5px 0 5px 10px;
-      margin-left: 10px;
-      cursor: pointer;
-      border: none;
-      border-left: 8px solid white;
-      @include transition(background, 0.3s, ease, 0.3s);
-      color: $side-color;
-      &:hover {
-        color: $side-color-hl;
-        @include transition(border-color, 0.3s, ease, 0.2s);
+  a {
+    border: none;
+    border-left: 5px solid white;
+    color: $side-color;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 5px 0 5px 10px;
+    @include transition(background, 0.3s, ease, 0.3s);
+    &:hover {
+      color: $side-color-hl;
+      @include transition(border-color, 0.3s, ease, 0.2s);
+    }
+  }
+
+  .main-label {
+    position: relative;
+    .arrow {
+      display: block;
+      position: absolute;
+      top:10px; right:15px;
+      width: 0; height: 0;
+      border-left: 5px solid $side-color;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      @include transition(transform, 1.0s, ease, 0.1s);
+    }
+    & > a { border-left-color: $side-border-menu; }
+    &:hover {
+      .arrow { border-left-color: $side-bg-hl; }
+      & > a { border-left-color: $side-bg-hl; color: $side-color-hl; }
+    }
+  }
+
+  .unwound .main-label {
+    & > a {
+      font-weight: bold;
+    }
+    .arrow {
+      @include transition(transform, 1.0s, ease, 0.1s);
+      @include rotateZ(90deg);
+    }
+    &:hover {
+      & > a, .arrow {
+        border-left-color: $side-bg-hl;
       }
     }
-    .sidewinder-l1 {
-      position: relative;
-      .arrow {
-        @include transition(transform, 1.0s, ease, 0.1s);
-        display: block;
-        position: absolute;
-        top:10px;
-        right:15px;
-        width: 0;
-        height: 0;
-        border-left: 5px solid $side-color;
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-      }
-      &:hover {
-        .arrow { border-left-color: $side-bg-hl; }
-        a { border-left-color: $side-bg-hl; color: $side-color-hl; }
-      }
-      &.unwound {
-        & > a {
-          border-left-color: $side-border-menu;
-          font-weight: bold;
-        }
-        .arrow {
-          border-left-color: $side-bg-select;
-          @include transition(transform, 1.0s, ease, 0.1s);
-          @include rotateZ(90deg);
-        }
-        &:hover {
-          & > a, .arrow {
-            border-left-color: $side-bg-hl;
-          }
-        }
-      }
-      &.live-main {
-        & > a {
-          color: $side-color-select;
-          border-left-color: $side-bg-select;
-        }
-      }
+  }
+
+  .live-l1 .main-label {
+    & > a {
+      color: $side-color-select;
+      border-left-color: $side-bg-select;
     }
-    .sidewinder-l2 {      // sub-lists
-      a {
-        border-left: 4px solid $side-border-menu;
-        margin-left: 14px;
-        &:hover {
-          color: $side-color-submenu-hl;
-          border-left-color: $side-bg-submenu-hl;
-        }
-      }
-      .live-sub > a {
-        border-left-color: $side-bg-submenu-select;
-        color: $side-color-submenu-select;
-        font-weight: bold;
-      }
+    & > .arrow {
+      border-left-color: $side-bg-select;
     }
+  }
+
+  .sub-label > a {
+    border-left: 2px solid $side-border-menu;
+    margin-left: 13px;
+    &:hover {
+      color: $side-color-submenu-hl;
+      border-left-color: $side-bg-submenu-hl;
+    }
+  }
+  .live-l2 > a {
+    border-left-color: $side-bg-submenu-select;
+    color: $side-color-submenu-select;
+    font-weight: bold;
   }
 }
