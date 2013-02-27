@@ -50,15 +50,26 @@ $navbar-bg-hl: $green-dark;
 $navbar-border: $green-dark;
 $navbar-text-color: $white;
 
-$sidebar-bg: #ffffff;
-$sidebar-border: #cccccc;
-$sidebar-text-size: 13px;
-$sidebar-text-color: $gray-dark;
-$sidebar-text-color-hl: $white;
-$sidebar-select-bg: $green-dark;
-$sidebar-hover-bg: $green;
-$sidebar-hover-bg-beta: $sky;
-$sidebar-submenu-bg: #ffffff;
+
+// SIDEBAR RULES
+$side-text-size: 13px;
+
+$side-color: $gray-dark;
+$side-color-hl: $green;
+$side-color-select: $green-dark;
+$side-color-submenu-hl: $sky;
+$side-color-submenu-select: $sky;
+
+$side-border: #dddddd;
+$side-border-menu: #dddddd;
+
+$side-bg: #ffffff;
+$side-bg-select: $green-dark;
+$side-bg-hl: $green;
+$side-bg-submenu-hl: lighten($sky,10%);
+$side-bg-submenu-select: $sky;
+
+
 
 $table-head-bg: $white;
 $table-head-text-color: $gray-light;

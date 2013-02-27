@@ -8,55 +8,83 @@
   top:0;
   left:0;
   margin:0;
-  background: $sidebar-bg;
-  border-right:1px solid $sidebar-border;
-  font-size:$sidebar-text-size;
+  background: $side-bg;
+  border-right:1px solid $side-border;
+  font-size:$side-text-size;
   height: 100%;
   z-index: $sidebar-z;
-  @include box-shadow($sidebar-border 0px 0px 10px -1px inset);
+  @include box-shadow($side-border 0px 0px 10px -1px);
   @include no-select();
-  ul.nav {
-    color: $sidebar-text-color-hl;
-  }
 
-  ul.toplevel > li {
+  .toplevel > li {
     a {
       padding: 5px 0 5px 10px;
-      color: $sidebar-text-color;
-      @include transition(background, 0.6s, ease, 0.3s);
+      margin-left: 10px;
       cursor: pointer;
+      border: none;
+      border-left: 8px solid white;
+      @include transition(background, 0.3s, ease, 0.3s);
+      color: $side-color;
       &:hover {
-        @include transition(background, 0.3s, ease, 0.1s);
-        background-color: $sidebar-hover-bg;
-        color: $sidebar-text-color-hl;
+        color: $side-color-hl;
+        @include transition(border-color, 0.3s, ease, 0.2s);
       }
     }
     .sidewinder-l1 {
-      color: $sidebar-text-color;
       position: relative;
       .arrow {
         @include transition(transform, 1.0s, ease, 0.1s);
         display: block;
         position: absolute;
         top:10px;
-        right:10px;
+        right:15px;
         width: 0;
         height: 0;
-        border-left: 5px solid $sidebar-text-color;
+        border-left: 5px solid $side-color;
         border-top: 5px solid transparent;
         border-bottom: 5px solid transparent;
       }
+      &:hover {
+        .arrow { border-left-color: $side-bg-hl; }
+        a { border-left-color: $side-bg-hl; color: $side-color-hl; }
+      }
       &.unwound {
-        background-color: $sidebar-hover-bg;
+        & > a {
+          border-left-color: $side-border-menu;
+          font-weight: bold;
+        }
         .arrow {
+          border-left-color: $side-bg-select;
           @include transition(transform, 1.0s, ease, 0.1s);
           @include rotateZ(90deg);
         }
+        &:hover {
+          & > a, .arrow {
+            border-left-color: $side-bg-hl;
+          }
+        }
+      }
+      &.live-main {
+        & > a {
+          color: $side-color-select;
+          border-left-color: $side-bg-select;
+        }
       }
     }
-    .sidewinder-l2 a {      // sub-lists
-      background-color: $sidebar-submenu-bg;
-      padding-left: 20px;
+    .sidewinder-l2 {      // sub-lists
+      a {
+        border-left: 4px solid $side-border-menu;
+        margin-left: 14px;
+        &:hover {
+          color: $side-color-submenu-hl;
+          border-left-color: $side-bg-submenu-hl;
+        }
+      }
+      .live-sub > a {
+        border-left-color: $side-bg-submenu-select;
+        color: $side-color-submenu-select;
+        font-weight: bold;
+      }
     }
   }
 }
