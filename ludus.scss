@@ -166,7 +166,6 @@ body {
   }
 }
 
-
 .uniview-list {
   @extend .no-list;
   @extend .no-space;
@@ -190,6 +189,17 @@ body {
     width:140px;
     height:140px;
     background-color: $gray-lightest;
+  }
+  .new-app {
+    background-color: $gray-lightest;
+    border: 1px dashed $gray;
+  }
+  .new-app-overlay {
+    top: 0;
+    position: absolute;
+    text-align: center;
+    line-height: 1.62em;
+    font-size: 11px;
   }
   .overlay-button {
     visibility: hidden;
@@ -644,6 +654,12 @@ hr.dotted {
     .button.hazard {
       background-color: $red;
       &, a { color: $white; }
+    }
+
+    ul {
+      list-style-type: disc;
+      margin: 1em 0;
+      li { font-weight: bold; }
     }
   }
 }
