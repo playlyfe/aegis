@@ -70,7 +70,14 @@ $side-bg-submenu-hl: lighten($sky,10%);
 $side-bg-submenu-select: $sky;
 
 
+// UNINAV RULES
+$uninav-color: $side-color;
+$uninav-color-hl: $side-color-submenu-hl;
+$uninav-color-select: $side-color-select;
+$uninav-color-select-hl: $side-color-hl;
+$uninav-border: $side-border-menu;
 
+// TABLE
 $table-head-bg: $white;
 $table-head-text-color: $gray-light;
 $table-foot-bg: $white;
