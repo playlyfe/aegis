@@ -28,9 +28,13 @@ body {
 .container-fluid {
   width:100%;
 }
-.wrapper {
+.container {
   width: 90%;
-  margin: 50px auto 0;
+  margin: 0 auto;
+}
+.wrapper {
+  @extend .container;
+  margin: 5em auto 0;
 }
 .center-wrapper {
   width:1000px;
@@ -39,24 +43,17 @@ body {
 
 #navigator {
   @include no-select();
-  li {
-    @include inline-block();
-    &>a {
-      padding: 0 10px;
-    }
-    &>a[class^="iconic"] {
-      padding: 0;
-    }
-  }
+  width: 100%;
 }
-
 
 
 /*
  * Profile CSS
  */
+#uni-wrap {
+  width:100%;
+}
 #user-hud {
-  width: 80%;
   min-width: 640px;
   position: relative;
 }
@@ -98,11 +95,13 @@ body {
 }
 
 #unispace {
-  width:80%;
   min-width: 640px;
-  padding-top:4em;
+  margin-top:4em;
+  border-top:1px solid $gray-lightest;
 }
 #uninav {
+  position: relative;
+  top: -23px;
   @include clearfix();
   .uninav-item {
     display: block;
@@ -139,8 +138,34 @@ body {
 }
 
 #uniview {
+  position: relative;
+  .centered {
+    text-align: center;
+  }
 
 }
+.centered {
+  margin: 5em auto;
+  .callout {
+    color: $gray-light;
+  }
+  .callout-action {
+
+  }
+}
+
+.uniview-list-detailed {
+  @extend .no-list;
+  @extend .no-space;
+  .uniview-item {
+    float:none;
+    display: block;
+    border:1px solid $gray-lightest;
+    padding: 0.4em 0.8em;
+    margin-bottom: 0.5em;
+  }
+}
+
 
 .uniview-list {
   @extend .no-list;
@@ -150,12 +175,11 @@ body {
     float: left;
     display: block;
     width: 140px;
-    margin:10px 10px 0;
+    margin:10px;
   }
   .app-wrap {
     position: relative;
     width: 140px;
-    height: 180px;
     &:hover {
       .overlay-button { visibility: visible; }
       .app-name { color: $green-dark; }
@@ -170,18 +194,37 @@ body {
   .overlay-button {
     visibility: hidden;
     position: absolute;
-    top: 119px;
-    left: 0px;
     text-align: center;
+    line-height: 1.62em;
+    height: 1.62em;
+    width: 70px;
+    cursor: pointer;
     @include transition(background 0.4s ease 0.1s);
+    i.iconic-16 { margin-right: 10px; }
     &.app-play {
+      top: 119px;
+      left: 0px;
       background-color: $green;
       &:hover { background-color: $green-dark; }
     }
-    &.app-info {
+    &.app-edit {
+      top: 119px;
+      left: 0px;
       background-color: $sky;
-      left: 71px;
       &:hover { background-color: darken($sky,10%); }
+    }
+    &.app-info {
+      top: 119px;
+      left: 71px;
+      background-color: $sky;
+      &:hover { background-color: darken($sky,10%); }
+    }
+    &.app-remove {
+      background-color: darken($red,10%);
+      top: 0; right: 0;
+      width: auto; height: auto;
+      padding: 5px;
+      &:hover { background-color: darken($red, 20%); }
     }
     &.disabled {
       background-color: $gray-lighter;
@@ -192,13 +235,9 @@ body {
       @extend .no-anchor;
       display: block;
       color: $white;
-      line-height: 1.62em;
-      height: 1.62em;
-      width: 70px;
     }
   }
   .app-name {
-    font-weight: bold;
     line-height: 1.62em;
     font-size: 1.23em;
     @include transition(color 0.2s ease 0.1s);
@@ -576,5 +615,35 @@ hr.dotted {
   &.nobot { margin-bottom: 0 }
   &.dark {
     border-color: $gray-dark;
+  }
+}
+
+.modal {
+  width: 500px;
+  margin-left: -250px;
+  .actions {
+    margin-top:3em;
+  }
+  .subheading {
+    color: $gray-lighter;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .heading {
+    margin-top: 0;
+  }
+
+  &.disrupt {
+    background-color: $green;
+    * { color: $white; }
+    .button {
+      background-color: $white;
+      &:hover { background-color: $gray-lightest; color: $gray; border-color: $gray-lighter; }
+      &, a { color: $green-dark; }
+    }
+    .button.hazard {
+      background-color: $red;
+      &, a { color: $white; }
+    }
   }
 }

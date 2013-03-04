@@ -41,6 +41,12 @@
     padding-top: 0;
     padding-bottom: 0.1em;
   }
+  &.titan {
+    font-size: #{18px/$base}em;
+    height: 3em;
+    line-height: 2.8em;
+    padding: 0 #{20px/$base}em;
+  }
   &.publisher {
     min-width:100px;
   }

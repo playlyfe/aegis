@@ -140,7 +140,7 @@
 .delete {
   &.light {
     background-position:0 -272px;
-    &:hover { background-position:-16px -272px; background-color: #cc0000; }
+    &:hover { background-position:-16px -272px; }
   }
   &.dark {
     background-position:0 -192px;
@@ -150,7 +150,7 @@
 .edit {
   &.light {
     background-position:0 -288px;
-    &:hover { background-position:-16px -288px; background-color: #598300;}
+    &:hover { background-position:-16px -288px; }
   }
   &.dark {
     background-position:0 -176px;

@@ -7,41 +7,61 @@
 // Instead of the ribbon-style navbar
 // you get a hanging tab on the right side
 .navbar {
-    overflow: hidden;
-    position:fixed;
-    background-color: $navbar-bg;
-    top:0;
-    z-index:10000;
-    .tier {
-        border:1px solid $navbar-border;
-        border-top:none;
-        height:$navigator-tier-height;
-        li>a {
-            color: $navbar-text-color;
-            line-height: $navigator-tier-height;
-            &:hover {
-                background-color: $navbar-bg-hl;
-            }
-        }
+  overflow: hidden;
+  position:fixed;
+  background-color: $navbar-bg;
+  border-bottom: 1px solid $navbar-border;
+  top:0;
+  z-index:10000;
+  @include box-sizing('border-box');
+  .tier {
+    height: $navbar-height;
+    .nav {
+      float: right;
     }
-}
-
-.nav {
-    @extend .no-list;
-    @extend .no-space;
-    a {
-        @extend .no-anchor;
-        display: block;
+  }
+  li {
+    $icon-height: 16px;
+    $padding: ($navbar-height - $icon-height)/2;
+    display: block;
+    float:left;
+    padding: 0 $padding;
+    &.iconified {
+      padding: $padding;
     }
-}
-
-.emblem {
+    &:hover {
+      background-color: $navbar-bg-hl;
+    }
+  }
+  a {
+    color: $navbar-text-color;
+    line-height: $navbar-height;
+    &:hover {
+      background-color: $navbar-bg-hl;
+    }
+  }
+  .emblem {
     float:left;
     display: block;
-    padding:5px 10px 0;
+    @include box-sizing('border-box');
+    height: $navbar-height;
+    padding: 6px 12px 5px;
+    margin-left: -15px;
     font-size: 1em;
     line-height: 1em;
     color: $navbar-text-color;
+    &:hover {
+      background-color: transparent;
+    }
+  }
 }
 
-
+.nav {
+  @include clearfix();
+  @extend .no-list;
+  @extend .no-space;
+  a {
+    @extend .no-anchor;
+    display: block;
+  }
+}

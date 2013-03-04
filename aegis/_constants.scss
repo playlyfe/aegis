@@ -45,6 +45,9 @@ $playlyfe : #95d905;
   $gold:                  #da9100 !default;
 
 
+// NAVBAR
+$navbar-height:40px;
+$emblem-height: 28px;
 $navbar-bg: $green;
 $navbar-bg-hl: $green-dark;
 $navbar-border: $green-dark;
@@ -82,10 +85,6 @@ $table-head-bg: $white;
 $table-head-text-color: $gray-light;
 $table-foot-bg: $white;
 
-// Layouts
-$navigator-tier-height:3em;
-$emblem-height: 28px;
-
 // Z-Index order
 $sticky-z: 50;
 $sidebar-z: 100;
@@ -96,7 +95,7 @@ $file-input-z: 300;
 
 // TYPOGRAPHY
 $base: 13px;
-$base-font-family: "Droid Sans", "sans serif";
+$base-font-family: 'Droid Sans', 'sans serif';
 $base-font-size: $base;
 $base-line-height: 21px;
 $text-color: $gray;
