@@ -82,7 +82,9 @@ body {
   left:11em; top:4em;
   margin:0 2em;
   .info-head {
-    color:$gray;
+    color:$gray-light;
+    text-transform: uppercase;
+    margin: 0.3em 0;
   }
   .info-body {
     float: left;
@@ -149,9 +151,6 @@ body {
   .callout {
     color: $gray-light;
   }
-  .callout-action {
-
-  }
 }
 
 .uniview-list-detailed {
@@ -195,7 +194,8 @@ body {
     border: 1px dashed $gray;
   }
   .new-app-overlay {
-    top: 0;
+    width: 100%;
+    top: 20%;
     position: absolute;
     text-align: center;
     line-height: 1.62em;
@@ -629,37 +629,50 @@ hr.dotted {
 }
 
 .modal {
-  width: 500px;
-  margin-left: -250px;
-  .actions {
-    margin-top:3em;
-  }
-  .subheading {
-    color: $gray-lighter;
-    text-transform: uppercase;
-    margin-bottom: 0;
-  }
-  .heading {
-    margin-top: 0;
-  }
-
-  &.disrupt {
+  .modal-head {
+    padding: 1em 2em;
+    border: 1px solid $green-dark;
+    border-bottom: none;
     background-color: $green;
     * { color: $white; }
-    .button {
-      background-color: $white;
-      &:hover { background-color: $gray-lightest; color: $gray; border-color: $gray-lighter; }
-      &, a { color: $green-dark; }
+    .heading {
+      margin-top: 0;
     }
-    .button.hazard {
-      background-color: $red;
-      &, a { color: $white; }
+    .subheading {
+      color: $green-lighter;
+      text-transform: uppercase;
+      margin: 0;
     }
-
+  }
+  .modal-foot {
+    padding: 1em 2em;
+    border: 1px solid $gray-lighter;
+    border-top: none;
+  }
+  .modal-body {
+    border: 1px solid $gray-lighter;
+    border-bottom-color: $gray-lightest;
+    border-top: none;
+    padding: 1em 2em 0;
+    background-color: $white;
     ul {
       list-style-type: disc;
       margin: 1em 0;
       li { font-weight: bold; }
+    }
+  }
+
+  /* Types of Modals: Info, Error, etc */;
+  &.dragons { /* grave warning modal */
+    .modal-head {
+      border: 1px solid darken($red,5%);
+      background-color: desaturate($red,20%);
+    }
+  }
+  &.informer {
+    .modal-head {
+      border: 1px solid darken($sky,10%);
+      background-color: desaturate($sky,20%);
     }
   }
 }

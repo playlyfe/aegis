@@ -37,6 +37,7 @@ form {
 }
 .form-actions {
   @extend .field-wrapper;
+  margin-top: 1em;
 }
 .form-help-wrapper {
   @extend .field-wrapper;
@@ -488,6 +489,9 @@ input[type="tags"] {
      *padding-left: 180px;
     }
   }
+  .form-actions {
+    margin-top: 0;
+  }
   // special styling for smaller controls
   input[type="radio"],
   input[type="checkbox"] {
@@ -540,54 +544,6 @@ span#strength-meter {
     height: 30px;
     margin: 0 0 10px 0px;
 }
-
-// .form-search .hide,
-// .form-inline .hide,
-// .form-horizontal .hide {
-//   display: none;
-// }
-// .form-search label,
-// .form-inline label,
-// .form-search .btn-group,
-// .form-inline .btn-group {
-//   display: inline-block;
-// }
-// .form-search .input-append,
-// .form-inline .input-append,
-// .form-search .input-prepend,
-// .form-inline .input-prepend {
-//   margin-bottom: 0;
-// }
-// .form-search .radio,
-// .form-search .checkbox,
-// .form-inline .radio,
-// .form-inline .checkbox {
-//   padding-left: 0;
-//   margin-bottom: 0;
-//   vertical-align: middle;
-// }
-// .form-search .radio input[type="radio"],
-// .form-search .checkbox input[type="checkbox"],
-// .form-inline .radio input[type="radio"],
-// .form-inline .checkbox input[type="checkbox"] {
-//   float: left;
-//   margin-right: 3px;
-//   margin-left: 0;
-// }
-// .form-horizontal .help-block {
-//   margin-bottom: 0;
-// }
-// .form-horizontal input + .help-block,
-// .form-horizontal select + .help-block,
-// .form-horizontal textarea + .help-block,
-// .form-horizontal .uneditable-input + .help-block,
-// .form-horizontal .input-prepend + .help-block,
-// .form-horizontal .input-append + .help-block {
-//   margin-top: 10px;
-// }
-// .form-horizontal .form-actions {
-//   padding-left: 180px;
-// }
 
 .map-input {
   .map-row, .map-actions {

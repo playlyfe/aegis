@@ -11,13 +11,13 @@
 }
 .modal {
   position: fixed;
+  width: 500px;
+  margin-left: -250px;
   top: 15%;
   left: 50%;
   z-index: $modal-z;
   overflow: visible;
-  padding: $base-line-height;
   background: $white;
-  border: $green 2px solid;
   @include box-shadow(1px 2px 7px rgba(0,0,0,0.15));
   @include background-clip(padding-box);
   .close-button {
@@ -26,19 +26,5 @@
     font-size: 25px;
     top: 5px;
     right: 6px;
-  }
-}
-.dialog {
-  @include clearfix();
-  padding-top: $base-line-height;
-  span, div {
-    float: left;
-  }
-  .actions {
-    clear: both;
-    padding-left: 0;
-  }
-  .button-group, .button {
-    float: left;
   }
 }
