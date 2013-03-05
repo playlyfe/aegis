@@ -25,22 +25,31 @@ body {
   @extend .no-space;
   border: 0;
 }
-.container-fluid {
-  width:100%;
+#main-layout {
+  margin-top: 40px;
 }
+
 .container {
   width: 90%;
   margin: 0 auto;
 }
-.wrapper {
-  @extend .container;
-  margin: 5em auto 0;
-}
-.center-wrapper {
-  width:1000px;
-  margin:160px auto 0;
+.container-fluid {
+  width:100%;
 }
 
+.wrapper {
+  @extend .container;
+  padding-top: 2em;
+}
+.center-wrapper {
+  @extend .container;
+  width:1000px;
+  margin-top:160px;
+}
+
+/*
+ * Essential page items
+ */
 #navigator {
   @include no-select();
   width: 100%;
@@ -287,17 +296,19 @@ body {
 }
 
 
-
-
-
 /*
  * End Profile CSS
  */
 
 
 
+/*
+ * Game Builder CSS
+ */
+
 #sidewinder {
   width: 14.667%;
+  top: auto;
   .metawinder {
     img {
       width: 60%;
@@ -357,7 +368,7 @@ body {
 }
 
 #workbench {
-  margin: #{110px/$base}em 0 0 2em;
+  margin: #{150px/$base}em 0 0 2em;
 }
 
 #sticky {
@@ -366,7 +377,6 @@ body {
   height:#{110px/$base}em;
 
   position: fixed;
-  top:0;
   left:14.667%;
 
   margin-right: 0;
@@ -422,7 +432,6 @@ body {
     }
   }
 }
-
 
 table {
   &.expand {
@@ -482,8 +491,9 @@ table {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  /* to constrain the width of IDs and keys
-   * which can potentially destroy a table
+  /*
+   * constrain the width of long values
+   * which can potentially destroy a layout
    */
   .constraint {
     max-width:90%;
@@ -583,20 +593,24 @@ table {
 }
 
 .snippet {
-    padding: 3px 8px 1px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width:400px;
-    border: 1px dashed $green-dark;
-    @include inline-block();
-    font-weight: 700;
-    font-size: #{12px/$base}em;
-    &:hover {
-      background-color: $green;
-      color: $white;
-      @include transition(all 0.4s ease 0.1s);
-    }
+  padding: 3px 8px 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width:400px;
+  border: 1px dashed $green-dark;
+  @include inline-block();
+  font-weight: 700;
+  font-size: #{12px/$base}em;
+  &:hover {
+    background-color: $green;
+    color: $white;
+    @include transition(all 0.4s ease 0.1s);
+  }
 }
+
+/*
+ * End Game Builder CSS
+ */
 
 // Sketch styles
 .free-flow {
@@ -629,21 +643,19 @@ hr.dotted {
 }
 
 .modal {
+  .heading { margin: 0; }
+  .preheading { text-transform: uppercase; margin: 0; }
+  .subheading { font-size: 0.92em; }
   .modal-head {
     padding: 1em 2em;
     border: 1px solid $green-dark;
     border-bottom: none;
     background-color: $green;
     * { color: $white; }
-    .heading {
-      margin-top: 0;
-    }
-    .subheading {
-      color: $green-lighter;
-      text-transform: uppercase;
-      margin: 0;
-    }
+    .preheading { color: $gray-lightest; }
+    .subheading { color: rgba($white, 0.8); }
   }
+
   .modal-foot {
     padding: 1em 2em;
     border: 1px solid $gray-lighter;
@@ -655,11 +667,13 @@ hr.dotted {
     border-top: none;
     padding: 1em 2em 0;
     background-color: $white;
-    ul {
+    .modal-list {
       list-style-type: disc;
       margin: 1em 0;
       li { font-weight: bold; }
     }
+    .preheading { color: $gray-lighter; }
+    .subheading { color: $gray-lighter; }
   }
 
   /* Types of Modals: Info, Error, etc */;
