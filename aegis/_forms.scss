@@ -9,6 +9,7 @@ form {
   @include clearfix();
 }
 .form-row {
+  position: relative;
   margin-bottom: 5px;
   *zoom: 1;
   &:before, &:after {
@@ -22,6 +23,32 @@ form {
   legend + & {
     margin-top: 20px;
     -webkit-margin-top-collapse: separate;
+  }
+  .field-tip {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 100%;
+    margin-left:10px;
+    min-width: 200px;
+    color: $gray-light;
+    background-color: lighten($sky,42%);
+    border: 1px solid lighten($sky,20%);
+    @include box-sizing('border-box');
+    padding: 0.5em 0.5em;
+    a {
+      color: $sky;
+    }
+    &:hover {
+      display: block;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .tip-list {
+    @extend .no-list;
+    @extend .no-space;
   }
 }
 .field-wrapper {
@@ -66,6 +93,15 @@ input[type="search"],   input[type="tel"],            input[type="color"],
   &.prepend {
     border-right: none;
   }
+}
+
+select, textarea, input {
+  &:focus ~ .field-tip {
+    display: block;
+  }
+}
+.CodeMirror-focused ~ .field-tip {
+  display: block;
 }
 
 label {
@@ -395,11 +431,6 @@ input[type="tags"] {
     @include inline-block();
   }
 }
-.help-text {
-  color: $gray-light;
-  display: block;
-  margin-bottom: $base-line-height;
-}
 
 .input_container {
   select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .add-on {
@@ -549,5 +580,8 @@ span#strength-meter {
   .map-row, .map-actions {
     @include clearfix();
     width: 100%;
+  }
+  .map-row {
+    position: relative;
   }
 }

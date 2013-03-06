@@ -34,6 +34,7 @@ body {
   margin: 0 auto;
 }
 .container-fluid {
+  min-width: 1000px;
   width:100%;
 }
 
@@ -307,7 +308,8 @@ body {
  */
 
 #sidewinder {
-  width: 14.667%;
+  // width: 14.667%;
+  width: 200px;
   top: auto;
   .metawinder {
     img {
@@ -323,40 +325,16 @@ body {
   }
 }
 
-#toolbox {
-  z-index: $sidebar-z;
-  position: fixed;
-  height: 100%;
-  padding-top: 3.5em;
-}
-
-#pinboard {
-  height: 30%;
-}
-#fixer {
-  position: relative;
-  height: 460px;
-  .modes {
-    position: absolute;
-    top: 40px;
-    right: 0px;
-    z-index: $sidebar-z + 1;
-  }
-  .tab > .content {
-    padding: 0;
-  }
-  .list {
-    height: 100%;
-  }
-}
-
 #workspace {
-  width: 60.383%;
+  // width: 85.333%;
+  // margin-left:14.667%;
+
+  width: 100%;
+  padding: 1px 21px 1px 221px;
+  min-width: 640px;
   @include box-sizing('border-box');
-  margin-left:14.667%;
   // fix for the page shifting down due to
   // accidental top-margins on top-most elements
-  padding:1px 0;
   &.controls {
     #workbench {
       margin-top:#{151px/$base}em;
@@ -372,15 +350,18 @@ body {
 }
 
 #sticky {
-  width:60.383%;
+  // width:85.333%;
+  // left:14.667%;
+
+  width: 100%;
+  min-width: 753px; // width - paddingLeft;
   @include box-sizing('border-box');
   height:#{110px/$base}em;
 
   position: fixed;
-  left:14.667%;
-
+  left: 0;
   margin-right: 0;
-  padding:#{21px/$base}em 0 0 2.25em;
+  padding:#{21px/$base}em 0 0 247px;
 
   background-color: $white;
   @include box-sizing('border-box');
@@ -405,6 +386,13 @@ body {
     width:100%;
   }
 }
+.wide-form {
+  width: 60%; // about ~400px
+  min-width: 500px;
+  .field-tip {
+    width: 60%;
+  }
+}
 
 .pagination-wrapper {
   position: absolute;
@@ -419,7 +407,7 @@ body {
       padding: #{5px/$base}em #{15px/$base}em;
       &.current {
         background-color: $yellow;
-        border: 1px solid $gold;
+        border: 1px solid mix($gold,$yellow,40%);
         &:hover {
           border-color: $green-darker;
         }
