@@ -664,7 +664,22 @@ hr.dotted {
     .subheading { color: $gray-lighter; }
   }
 
-  /* Types of Modals: Info, Error, etc */;
+  /* Types of Modals: Info, Error, etc */
+  &.footless {
+    .modal-body {
+      border-bottom-color: $gray-lighter;
+    }
+  }
+  &.profiler {
+    width: 700px;
+    margin-left:-350px;
+    top: 10%;
+    .modal-body { height: 28.5em; }
+    &.footless {
+      .modal-body { height: 33em; }
+    }
+  }
+
   &.dragons { /* grave warning modal */
     .modal-head {
       border: 1px solid darken($red,5%);
