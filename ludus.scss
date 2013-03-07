@@ -704,3 +704,31 @@ hr.dotted {
     }
   }
 }
+
+
+.app-auth-dialog {
+  .perms-list {
+    @extend .no-space;
+    margin: 0 0 1em 2em;
+    li * { color: $sky; }
+  }
+  .app-card {
+    margin-top: 1em;
+    .app-image {
+      width: 100px;
+      height: 100px;
+    }
+    .app-name {
+      margin-top: 0;
+      font-size: 1.38em;
+    }
+  }
+  .app-auth-form {
+    margin-top: 2em;
+  }
+  .auth-tip {
+    border: 1px solid $sky;
+    background-color: lighten($sky,42%);
+    padding: 0.5em 1em;
+  }
+}
