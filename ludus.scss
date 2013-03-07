@@ -711,3 +711,12 @@ hr.dotted {
   @include button-interaction();
   z-index: 175;
 }
+
+#loading {
+  position: fixed;
+  top:50%;
+  left: 50%;
+  margin-left: -32px;
+  margin-top: -45px;
+  text-align: center;
+}
