@@ -69,13 +69,13 @@ body {
 }
 #user-info { }
 #avatar {
-  width:12em;
-  height:12em;
-  border:1px solid $gray-lighter;
+  width:140px;
+  height:140px;
+  margin:10px;
+  background-color: mix($gray,$sky,50%);
   img {
-    width:11em;
-    height:11em;
-    margin:0.5em;
+    width:140px;
+    height:140px;
   }
 }
 #user-name {
@@ -388,9 +388,10 @@ body {
 }
 .wide-form {
   width: 60%; // about ~400px
-  min-width: 500px;
+  max-width: 600px;
   .field-tip {
-    width: 60%;
+    width: 40%;
+    max-width: 300px;
   }
 }
 
@@ -631,6 +632,7 @@ hr.dotted {
 }
 
 .modal {
+  overflow: hidden;
   .heading { margin: 0; }
   .preheading { text-transform: uppercase; margin: 0; }
   .subheading { font-size: 0.92em; }
