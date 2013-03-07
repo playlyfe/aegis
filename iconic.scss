@@ -7,173 +7,211 @@
   @include inline-block();
 }
 
-.path-seq {
+.castle {
   &.light {
-    background-position:0 0;
-    &:hover{ background-position:-16px 0; }
-  }
-  &.dark {
-    background-position:0 -432px;
-    &:hover{ background-position:-16px -432px; }
-  }
-}
-.path-parallel {
-  &.light {
-    background-position:0 -16px;
-    &:hover{ background-position:-16px -16px; }
-  }
-  &.dark {
-    background-position:0 -416px;
-    &:hover{ background-position:-16px -416px; }
-  }
-}
-.path-alt {
-  &.light {
-    background-position:0 -32px;
-    &:hover{ background-position:-16px -32px; }
-  }
-  &.dark {
-    background-position:0 -400px;
-    &:hover{ background-position:-16px -400px; }
-  }
-}
-.flow {
-  &.light {
-    background-position:0 -48px;
-    &:hover { background-position:-16px -48px; }
-  }
-  &.dark {
-    background-position:0 -384px;
-    &:hover{ background-position:-16px -384px; }
-  }
-}
-.loops {
-  &.light {
-    background-position:0 -64px;
-    &:hover { background-position:-16px -64px; }
-  }
-  &.dark {
-    background-position:0 -368px;
-    &:hover{ background-position:-16px -368px; }
-  }
-}
-.max-attempts {
-  &.light {
-    background-position:0 -80px;
-    &:hover{ background-position:-16px -80px; }
+    background-position:0 -480px;
+    &:hover { background-position:-16px -480px; }
   }
   &.dark {
     background-position:0 -448px;
     &:hover{ background-position:-16px -448px; }
   }
 }
-.approval {
-  &.light {
-    background-position:0 -96px;
-    &:hover { background-position:-16px -96px; }
+.user {
+  &.dark { background-position:0 0;
+    &:hover { background-position:-16px 0; }
   }
-  &.dark {
-    background-position:0 -464px;
-    &:hover{ background-position:-16px -464px; }
+  &.light { background-position:0 -32px;
+    &:hover { background-position:-16px -32px; }
   }
 }
-.control-exit {
-  &.light {
-    background-position:0 -112px;
-    &:hover{ background-position:-16px -112px; }
-  }
-  &.dark {
-    background-position:0 -480px;
-    &:hover{ background-position:-16px -480px; }
-  }
-}
-.control-entry {
+.path-seq {
   &.light {
     background-position:0 -128px;
     &:hover{ background-position:-16px -128px; }
   }
   &.dark {
-    background-position:0 -496px;
-    &:hover{ background-position:-16px -496px; }
+    background-position:0 -560px;
+    &:hover{ background-position:-16px -560px; }
   }
 }
-.path {
+.path-parallel {
   &.light {
     background-position:0 -144px;
-    &:hover { background-position:-16px -144px; }
+    &:hover{ background-position:-16px -144px; }
   }
   &.dark {
-    background-position:0 -512px;
-    &:hover{ background-position:-16px -512px; }
+    background-position:0 -544px;
+    &:hover{ background-position:-16px -544px; }
   }
 }
-.action {
+.path-alt {
   &.light {
     background-position:0 -160px;
-    &:hover { background-position:-16px -160px; }
+    &:hover{ background-position:-16px -160px; }
   }
   &.dark {
     background-position:0 -528px;
     &:hover{ background-position:-16px -528px; }
   }
 }
-.add {
+.flow {
   &.light {
-    background-position:0 -240px;
-    &:hover { background-position:-16px -240px; }
+    background-position:0 -176px;
+    &:hover { background-position:-16px -176px; }
   }
   &.dark {
+    background-position:0 -512px;
+    &:hover{ background-position:-16px -512px; }
+  }
+}
+.loops {
+  &.light {
+    background-position:0 -192px;
+    &:hover { background-position:-16px -192px; }
+  }
+  &.dark {
+    background-position:0 -496px;
+    &:hover{ background-position:-16px -496px; }
+  }
+}
+.max-attempts {
+  &.light {
     background-position:0 -208px;
     &:hover{ background-position:-16px -208px; }
   }
+  &.dark {
+    background-position:0 -576px;
+    &:hover{ background-position:-16px -576px; }
+  }
 }
-.close {
+.approval {
   &.light {
-    background-position:0 -256px;
-    &:hover { background-position:-16px -256px; }
+    background-position:0 -224px;
+    &:hover { background-position:-16px -224px; }
   }
   &.dark {
-    background-position:0 -224px;
-    &:hover{ background-position:-16px -224px; }
+    background-position:0 -592px;
+    &:hover{ background-position:-16px -592px; }
   }
 }
-.delete {
+.control-exit {
+  &.light {
+    background-position:0 -240px;
+    &:hover{ background-position:-16px -240px; }
+  }
+  &.dark {
+    background-position:0 -608px;
+    &:hover{ background-position:-16px -608px; }
+  }
+}
+.control-entry {
+  &.light {
+    background-position:0 -256px;
+    &:hover{ background-position:-16px -256px; }
+  }
+  &.dark {
+    background-position:0 -624px;
+    &:hover{ background-position:-16px -624px; }
+  }
+}
+.path {
   &.light {
     background-position:0 -272px;
     &:hover { background-position:-16px -272px; }
   }
   &.dark {
-    background-position:0 -192px;
-    &:hover{ background-position:-16px -192px; }
+    background-position:0 -640px;
+    &:hover{ background-position:-16px -640px; }
   }
 }
-.edit {
+.action {
   &.light {
     background-position:0 -288px;
     &:hover { background-position:-16px -288px; }
   }
   &.dark {
-    background-position:0 -176px;
-    &:hover{ background-position:-16px -176px; }
+    background-position:0 -656px;
+    &:hover{ background-position:-16px -656px; }
   }
 }
-.settings {
+.add {
   &.light {
+    background-position:0 -368px;
+    &:hover { background-position:-16px -368px; }
+  }
+  &.dark {
     background-position:0 -336px;
-    &:hover { background-position:-16px -336px; }
+    &:hover{ background-position:-16px -336px; }
+  }
+}
+.close {
+  &.light {
+    background-position:0 -384px;
+    &:hover { background-position:-16px -384px; }
+  }
+  &.dark {
+    background-position:0 -352px;
+    &:hover{ background-position:-16px -352px; }
+  }
+}
+.delete {
+  &.light {
+    background-position:0 -400px;
+    &:hover { background-position:-16px -400px; }
+  }
+  &.dark {
+    background-position:0 -320px;
+    &:hover{ background-position:-16px -320px; }
+  }
+}
+.edit {
+  &.light {
+    background-position:0 -416px;
+    &:hover { background-position:-16px -416px; }
   }
   &.dark {
     background-position:0 -304px;
     &:hover{ background-position:-16px -304px; }
   }
 }
-.castle {
+.settings {
   &.light {
-    background-position:0 -352px;
-    &:hover { background-position:-16px -352px; }
+    background-position:0 -464px;
+    &:hover { background-position:-16px -464px; }
   }
   &.dark {
-    background-position:0 -320px;
-    &:hover{ background-position:-16px -320px; }
+    background-position:0 -432px;
+    &:hover{ background-position:-16px -432px; }
+  }
+}
+.error{
+  &.light{
+    background-position:0 -48px;
+    &:hover{ background-position:-16px -48px; }
+  }
+  &.dark{
+    background-position:0 -16px;
+    &:hover{ background-position:-16px -16px; }
+  }
+}
+.warning {
+  &.light{
+    background-position:0 -80px;
+    &:hover{ background-position:-16px -80px; }
+  }
+  &.dark{
+    background-position:0 -64px;
+    &:hover{ background-position:-16px -64px; }
+  }
+}
+.inspect{
+  &.light{
+    background-position:0 -112px;
+    &:hover{ background-position:-16px -112px; }
+  }
+  &.dark{
+    background-position:0 -96px;
+    &:hover{ background-position:-16px -96px; }
   }
 }
