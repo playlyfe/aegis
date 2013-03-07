@@ -317,10 +317,13 @@ body {
  */
 
 #sidewinder {
-  // width: 14.667%;
+  padding: 0 13px;
   width: 200px;
   top: auto;
   .metawinder {
+    padding-bottom : 1em;
+    border-bottom: 1px solid $gray-lightest;
+    margin-bottom: 1em;
     img {
       width: 60%;
       margin:#{20px/$base}em 20% 0;

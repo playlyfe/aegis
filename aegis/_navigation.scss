@@ -21,19 +21,16 @@
     }
   }
   li {
-    $icon-height: 16px;
-    $padding: ($navbar-height - $icon-height)/2;
     display: block;
     float:left;
-    padding: 0 $padding;
-    &.iconified {
-      padding: $padding;
-    }
     &:hover {
       background-color: $navbar-bg-hl;
     }
   }
   a {
+    $icon-height: 16px;
+    $padding: ($navbar-height - $icon-height)/2;
+    padding: 0 $padding;
     color: $navbar-text-color;
     line-height: $navbar-height;
     &:hover {
@@ -46,7 +43,7 @@
     @include box-sizing('border-box');
     height: $navbar-height;
     padding: 6px 12px 5px;
-    margin-left: -15px;
+    margin-left: -12px;
     font-size: 1em;
     line-height: 1em;
     color: $navbar-text-color;
