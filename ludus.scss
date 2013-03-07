@@ -18,9 +18,7 @@
 // TODOKHS : AUTO-RECONFIGURING LAYOUT
 
 // A neu beginning to the sandbox project for playlyfe
-#content.container, #content.container-fluid {
-  margin:0 auto;
-}
+
 body {
   @extend .no-space;
   border: 0;
@@ -29,23 +27,20 @@ body {
   margin-top: 40px;
 }
 
-.container {
-  width: 90%;
+.container-fluid {
+  width: 100%;
+  min-width: 1000px;
   margin: 0 auto;
 }
-.container-fluid {
-  min-width: 1000px;
-  width:100%;
-}
-
 .wrapper {
-  @extend .container;
-  padding-top: 2em;
+  @extend .container-fluid;
+  @include box-sizing('border-box');
+  padding: 2em 2% 0;
 }
-.center-wrapper {
-  @extend .container;
+.shrink-wrapper {
+  @extend .wrapper;
   width:1000px;
-  margin-top:160px;
+  padding-top:10em;
 }
 
 /*
@@ -54,6 +49,9 @@ body {
 #navigator {
   @include no-select();
   width: 100%;
+  .tier {
+    padding-top: 0;
+  }
 }
 
 
@@ -115,6 +113,13 @@ body {
   position: relative;
   top: -23px;
   @include clearfix();
+  background-color: $white;
+  z-index: $uninav-z;
+  &.stuck {
+    position: fixed;
+    top: 41px;
+    width:96%;
+  }
   .uninav-item {
     display: block;
     text-align: center;
@@ -151,10 +156,11 @@ body {
 
 #uniview {
   position: relative;
+  z-index: $uniview-z;
+  overflow: hidden;
   .centered {
     text-align: center;
   }
-
 }
 .centered {
   margin: 5em auto;
@@ -308,10 +314,13 @@ body {
  */
 
 #sidewinder {
-  // width: 14.667%;
+  padding: 0 13px;
   width: 200px;
   top: auto;
   .metawinder {
+    padding-bottom : 1em;
+    border-bottom: 1px solid $gray-lightest;
+    margin-bottom: 1em;
     img {
       width: 60%;
       margin:#{20px/$base}em 20% 0;
@@ -721,4 +730,31 @@ hr.dotted {
   margin-left: -32px;
   margin-top: -45px;
   text-align: center;
+}
+
+.app-auth-dialog {
+  .perms-list {
+    @extend .no-space;
+    margin: 0 0 1em 2em;
+    li * { color: $sky; }
+  }
+  .app-card {
+    margin-top: 1em;
+    .app-image {
+      width: 100px;
+      height: 100px;
+    }
+    .app-name {
+      margin-top: 0;
+      font-size: 1.38em;
+    }
+  }
+  .app-auth-form {
+    margin-top: 2em;
+  }
+  .auth-tip {
+    border: 1px solid $sky;
+    background-color: lighten($sky,42%);
+    padding: 0.5em 1em;
+  }
 }
