@@ -115,6 +115,13 @@ body {
   position: relative;
   top: -23px;
   @include clearfix();
+  background-color: $white;
+  z-index: $uninav-z;
+  &.stuck {
+    position: fixed;
+    top: 41px;
+    width:96%;
+  }
   .uninav-item {
     display: block;
     text-align: center;
@@ -151,6 +158,8 @@ body {
 
 #uniview {
   position: relative;
+  z-index: $uniview-z;
+  overflow: hidden;
   .centered {
     text-align: center;
   }
