@@ -18,9 +18,7 @@
 // TODOKHS : AUTO-RECONFIGURING LAYOUT
 
 // A neu beginning to the sandbox project for playlyfe
-#content.container, #content.container-fluid {
-  margin:0 auto;
-}
+
 body {
   @extend .no-space;
   border: 0;
@@ -29,23 +27,20 @@ body {
   margin-top: 40px;
 }
 
-.container {
-  width: 90%;
+.container-fluid {
+  width: 100%;
+  min-width: 1000px;
   margin: 0 auto;
 }
-.container-fluid {
-  min-width: 1000px;
-  width:100%;
-}
-
 .wrapper {
-  @extend .container;
-  padding-top: 2em;
+  @extend .container-fluid;
+  @include box-sizing('border-box');
+  padding: 2em 2% 0;
 }
-.center-wrapper {
-  @extend .container;
+.shrink-wrapper {
+  @extend .wrapper;
   width:1000px;
-  margin-top:160px;
+  padding-top:10em;
 }
 
 /*
@@ -54,6 +49,9 @@ body {
 #navigator {
   @include no-select();
   width: 100%;
+  .tier {
+    padding-top: 0;
+  }
 }
 
 
@@ -163,7 +161,6 @@ body {
   .centered {
     text-align: center;
   }
-
 }
 .centered {
   margin: 5em auto;
