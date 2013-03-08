@@ -705,6 +705,32 @@ hr.dotted {
   }
 }
 
+#feedback {
+  position: fixed;
+  bottom: 0;
+  right: 1%;
+  background-color: $green;
+  color: white;
+  width: 100px;
+  height: 31px;
+  padding-top: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  @include box-shadow(1px 2px 7px rgba(0,0,0,0.15));
+  @include text-shadow(0 1px 0 rgba(136, 199, 23, 0.75));
+  @include button-interaction();
+  z-index: 175;
+}
+
+#loading {
+  position: fixed;
+  top:50%;
+  left: 50%;
+  margin-left: -32px;
+  margin-top: -45px;
+  text-align: center;
+}
 
 .app-auth-dialog {
   .perms-list {
