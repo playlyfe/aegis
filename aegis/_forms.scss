@@ -133,6 +133,7 @@ fieldset {
 .parsley-error-list {
   @extend .no-list;
   @extend .no-space;
+  color: $red;
 }
 
 // Groups of fields with labels on top (legends)
