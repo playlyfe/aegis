@@ -14,8 +14,6 @@
 
 
 // TODOKHS : MEDIA QUERIES
-// TODOKHS : SIDEBARS FOR LOWER RES MONITORS
-// TODOKHS : AUTO-RECONFIGURING LAYOUT
 
 // A neu beginning to the sandbox project for playlyfe
 
@@ -29,7 +27,7 @@ body {
 
 .container-fluid {
   width: 100%;
-  min-width: 1000px;
+  min-width: $min-screen-width;
   margin: 0 auto;
 }
 .wrapper {
@@ -39,7 +37,7 @@ body {
 }
 .shrink-wrapper {
   @extend .wrapper;
-  width:1000px;
+  width: $min-screen-width;
   padding-top:10em;
 }
 
@@ -178,6 +176,22 @@ body {
     border:1px solid $gray-lightest;
     padding: 0.4em 0.8em;
     margin-bottom: 0.5em;
+  }
+}
+
+.feed-item {
+  .feed-title {
+    font-size: 1.38em;
+    line-height: 1em;
+    margin-top: 0.5em;
+    color: $green;
+  }
+  .feed-summary {
+    color: $gray;
+    text-align: justify;
+    padding: 0 0.61em 1em;
+  }
+  .feed-link {
   }
 }
 
@@ -334,13 +348,11 @@ body {
   }
 }
 
+$workspace-padding: 263px;
 #workspace {
-  // width: 85.333%;
-  // margin-left:14.667%;
-
   width: 100%;
-  padding: 1px 21px 1px 221px;
-  min-width: 640px;
+  padding: 1px 21px 1px $workspace-padding;
+  min-width: #{$min-screen-width - $workspace-padding};
   @include box-sizing('border-box');
   // fix for the page shifting down due to
   // accidental top-margins on top-most elements
@@ -355,22 +367,19 @@ body {
 }
 
 #workbench {
-  margin: #{150px/$base}em 0 0 2em;
+  margin: #{150px/$base}em 0 0;
 }
 
 #sticky {
-  // width:85.333%;
-  // left:14.667%;
-
   width: 100%;
-  min-width: 753px; // width - paddingLeft;
+  min-width: #{$min-screen-width - $workspace-padding}; // width - paddingLeft;
   @include box-sizing('border-box');
   height:#{110px/$base}em;
 
   position: fixed;
   left: 0;
   margin-right: 0;
-  padding:#{21px/$base}em 0 0 247px;
+  padding:#{21px/$base}em 0 0 $workspace-padding;
 
   background-color: $white;
   @include box-sizing('border-box');
@@ -396,11 +405,9 @@ body {
   }
 }
 .wide-form {
-  width: 60%; // about ~400px
-  max-width: 600px;
+  width: #{$min-screen-width - $workspace-padding - 210px};
   .field-tip {
-    width: 40%;
-    max-width: 300px;
+    max-width: 200px;
   }
 }
 
@@ -586,7 +593,7 @@ table {
       margin: -0.5em 0 1em -1em;
     }
     .snippet, .button.inline {
-      margin-top:-0.5em;
+      margin-top:-0.15em;
     }
   }
 }
@@ -618,22 +625,6 @@ table {
 .attr-group {
   cursor: help;
   @extend .icon-group;
-}
-
-.snippet {
-  padding: 3px 8px 1px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width:400px;
-  border: 1px dashed $green-dark;
-  @include inline-block();
-  font-weight: 700;
-  font-size: #{12px/$base}em;
-  &:hover {
-    background-color: $green;
-    color: $white;
-    @include transition(all 0.4s ease 0.1s);
-  }
 }
 
 /*
@@ -788,3 +779,4 @@ hr.dotted {
     padding: 0.5em 1em;
   }
 }
+
