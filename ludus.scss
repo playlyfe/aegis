@@ -172,27 +172,27 @@ body {
   @extend .no-list;
   @extend .no-space;
   .uniview-item {
-    float:none;
-    display: block;
-    border:1px solid $gray-lightest;
     padding: 0.4em 0.8em;
     margin-bottom: 0.5em;
   }
 }
 
 .feed-item {
+  border-bottom: 1px solid $gray-lightest;
   .feed-title {
     font-size: 1.38em;
     line-height: 1em;
     margin-top: 0.5em;
-    color: $green;
+    color: $green-dark;
   }
   .feed-summary {
     color: $gray;
     text-align: justify;
-    padding: 0 0.61em 1em;
   }
   .feed-link {
+    @extend .no-anchor;
+    color: $green;
+    &:hover { color: $green-darker; text-decoration: underline; }
   }
 }
 
