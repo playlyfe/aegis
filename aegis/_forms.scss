@@ -484,7 +484,9 @@ input[type="tags"] {
 .immutable {
   cursor: help;
   font-weight: 700;
-  line-height: $input-height;
+  line-height: 21px;
+  padding-top: 4px;
+  @include box-sizing('border-box');
 }
 
 .form-search, .form-inline, .form-horizontal {
@@ -507,18 +509,18 @@ input[type="tags"] {
   label {
     padding-top: 4px;
     text-align: right;
-    width: 160px;
+    width: 135px;
   }
   .field-wrapper {
     *display: inline-block;
     *padding-left: 20px;
-    margin-left: 180px;
+    margin-left: 155px;
     *margin-left: 0;
     &.pad {
       padding-top:6px;
     }
     &:first-child {
-     *padding-left: 180px;
+     *padding-left: 155px;
     }
   }
   .form-actions {
@@ -528,7 +530,14 @@ input[type="tags"] {
   input[type="radio"],
   input[type="checkbox"] {
     float:none;
-    margin:-4px 5px 0 10px;
+    margin:-0.31em 5px 0 10px;
+  }
+  .snippet {
+    line-height: 1.62em;
+    margin-top: 0.31em;
+  }
+  .button.inline {
+    margin-top: 0.31em;
   }
 }
 
@@ -539,10 +548,10 @@ span#strength-meter {
     @include inline-block();
     vertical-align: baseline;
     position: relative;
-    left:20px;
-    height:5px;
-    width:50%;
-    min-width:200px;
+    left: 20px;
+    height: 0.38em;
+    width: 50%;
+    min-width: 200px;
     background-color: $gray-lightest;
     .meter {
       display:block;
@@ -554,15 +563,15 @@ span#strength-meter {
       @include transition(all 0.5s ease 0.2s);
       &.pass-strong {
         background-color: $green;
-        width:100%;
+        width: 100%;
       }
       &.pass-med {
         background-color: $yellow;
-        width:60%;
+        width: 60%;
       }
       &.pass-weak {
         background-color: $red;
-        width:20%;
+        width: 20%;
       }
     }
   }
