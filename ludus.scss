@@ -103,50 +103,50 @@ body {
 }
 
 #unispace {
-  min-width: 640px;
+  min-width: $min-screen-width;
   margin-top:4em;
   border-top:1px solid $gray-lightest;
 }
 #uninav {
   position: relative;
-  top: -23px;
+  top: -31px;
   @include clearfix();
-  background-color: $white;
-  z-index: $uninav-z;
   &.stuck {
     position: fixed;
     top: 41px;
     width:96%;
+    z-index: $uninav-z;
+    background-color: $white;
   }
   .uninav-item {
     display: block;
     text-align: center;
     float:left;
-    a {
+    .main-label {
       width:160px;
       @extend .no-anchor;
+      @include box-sizing('border-box');
+      cursor: pointer;
+      height: 31px;
+      padding-top:5px;
       color: $uninav-color;
-      margin-bottom: 3px;
-      border-bottom: 2px solid $uninav-border;
+      border-bottom: 1px solid $uninav-border;
       @include transition(color 0.2s ease 0.1s, border-color 0.3s ease 0.1s);
       &:hover {
         color: $uninav-color-hl;
-        border-bottom-color: $uninav-color-hl;
-        border-bottom-width: 3px;
-        margin-bottom: 2px;
+        border-bottom: 3px solid $uninav-color-hl;
       }
     }
     &.live {
-      a {
+      .main-label {
         color: $uninav-color-select;
         font-weight: bold;
-        margin-bottom: 0;
         border-bottom: 5px solid $uninav-color-select;
         @include transition(border-width 0.3s ease 0.1s);
-      }
-      a:hover {
-        color: $uninav-color-select-hl;
-        border-bottom-color: $uninav-color-select-hl;
+        &:hover {
+          color: $uninav-color-select-hl;
+          border-bottom-color: $uninav-color-select-hl;
+        }
       }
     }
   }
@@ -156,6 +156,7 @@ body {
   position: relative;
   z-index: $uniview-z;
   overflow: hidden;
+  top: -31px;
   .centered {
     text-align: center;
   }
