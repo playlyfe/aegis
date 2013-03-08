@@ -217,13 +217,16 @@ body {
   .app-icon {
     width:140px;
     height:140px;
-    background-color: $gray-lightest;
+    background-color: lighten($gray-lightest,5%);
   }
   .new-app {
-    background-color: $gray-lightest;
-    border: 1px dashed $gray;
+    img { opacity: 0.3; }
+    cursor: pointer;
+    background-color: lighten($gray-lightest,5%);
+    border: 1px dashed $gray-lighter;
   }
   .new-app-overlay {
+    cursor: pointer;
     width: 100%;
     top: 20%;
     position: absolute;
@@ -278,8 +281,7 @@ body {
     }
   }
   .app-name {
-    line-height: 1.62em;
-    font-size: 1.23em;
+    font-size: 1.08em;
     @include transition(color 0.2s ease 0.1s);
   }
   .app-desc {
