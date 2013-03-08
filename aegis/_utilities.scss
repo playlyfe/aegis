@@ -22,7 +22,14 @@
   float: none;
 }
 .static-pos {
-  position: static;
+  position: static !important;
+}
+.abs-pos {
+  position: absolute !important;
+}
+
+.width-auto {
+  width: auto !important;
 }
 
 // rules

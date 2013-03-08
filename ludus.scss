@@ -501,7 +501,7 @@ table {
    * which can potentially destroy a layout
    */
   .constraint {
-    max-width:90%;
+    max-width:100%;
     white-space: nowrap;
     text-overflow:ellipsis;
     overflow: hidden;
@@ -705,10 +705,10 @@ hr.dotted {
   &.profiler {
     width: 700px;
     margin-left:-350px;
-    top: 10%;
-    .modal-body { height: 28.5em; }
+    top: 6em;
+    .modal-body { min-height: 28.5em; }
     &.footless {
-      .modal-body { height: 33em; }
+      .modal-body { min-height: 33em; }
     }
   }
 
