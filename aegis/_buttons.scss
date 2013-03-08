@@ -21,7 +21,6 @@
   height: #{30px/$base}em;
 
   text-align: center;
-  // text-shadow: 0 1px 0 rgba(255,255,255,.75);
   vertical-align: middle;
   cursor: pointer;
 
@@ -30,8 +29,15 @@
   border: 1px solid $button-border;
   *border: 0; // Remove the border to prevent IE7's black border on input:focus
 
-  // @include box-shadow(inset 0 0 3px rgba(255,255,255,.8));
   @include box-sizing(border-box);
+
+  // Button sizes
+
+  /* smallest, icon-holder */
+  &.icon-hold {
+    padding: 3px 7px; // center the 16px icon in the button
+  }
+  /* medium, inline */
   &.inline {
     @include inline-block();
     float: none;
@@ -41,23 +47,30 @@
     padding-top: 0;
     padding-bottom: 0.1em;
   }
+  /* gigantic, block */
   &.titan {
     font-size: #{18px/$base}em;
     height: 3em;
     line-height: 2.8em;
     padding: 0 #{20px/$base}em;
   }
-  &.publisher {
-    min-width:100px;
+  /* round buttons */
+  &.round {
+    width: 8em;
+    height: 8em;
+    @include border-radius(4em);
+    line-height: 7.5em;
+    font-size: 1.5em;
   }
 
+
+  // Button colours
   &.important {
     background-color: $green; color: $white; border-color: $green-dark;
   }
   &.hazard {
     background-color: $red; color: $white; border-color: darken($red,10%);
   }
-
   &:hover {
     text-decoration: none;
     color: $gray-darker;
@@ -76,7 +89,7 @@
     &.primary {
       background-color: $green; color: $white; border-color: $green-dark;
     }
-    &.neutral, &.secondary {
+    &.neutral {
       background-color: $sky; color: $white; border-color: darken($sky,10%);
     }
     &.alert {
@@ -90,61 +103,3 @@
     @include tab-focus();
   }
 }
-
-
-
-// .button.active, .button:active {
-//     background-color: $btnBackground;
-//     background-image: none;
-//     outline: 0;
-//     @include box-shadow(#{inset 0 1px 2px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)});
-// }
-// .button.disabled, .button[disabled] {
-//     cursor: default;
-//     background-color: darken($white, 10%);
-//     background-image: none;
-//     @include opacity(0.65);
-//     @include box-shadow(none);
-// }
-
-// .button-group {
-//     @include clearfix();
-//     .button {
-//         float: left;
-//         @include border-radius(0px);
-//         &:first-child {
-//             @include border-left-radius($btnBorderRadius);
-//         }
-//         &:last-child {
-//             @include border-right-radius($btnBorderRadius);
-
-//         }
-//     }
-// }
-// .primary, .primary:hover,
-// .secondary, .secondary:hover,
-// .alert, .alert:hover {
-//   color: $white;
-//   text-shadow: 0 1px 0 rgba(0,0,0,.25);
-// }
-// .primary {
-//     @include buttonBackground($playlyfe, $greenDark);
-// }
-// .secondary {
-//     @include buttonBackground(adjust_hue($playlyfe,120), adjust_hue($greenDark,120));
-// }
-// .alert {
-//     @include buttonBackground(adjust_hue($playlyfe,290), adjust_hue($greenDark,290));
-// }
-// .button.large {
-//     font-size: 18px;
-//     line-height: 28px;
-//     padding: 10px;
-//     height: auto;
-// }
-// .button.small {
-//     font-size:11px;
-//     line-height:13px;
-//     padding:2px 4px;
-//     height:auto;
-// }

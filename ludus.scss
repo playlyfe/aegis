@@ -534,7 +534,37 @@ table {
   }
 }
 
-.detail, .guide {
+.publish-guide {
+  $button-margin: 4em;
+  $button-size: 8 * 1.5em;
+  position: relative;
+  margin: 5em 0 0 3em;
+  width: (3*8*1.5) + 3*$button-margin;  // 3*(8*1.5) circles + 3*2 margin
+
+  .publish-connector-horizontal {
+    position: relative;
+    top: $button-size/2 + 1;
+    left: $button-size/2; width: ($button-size + $button-margin)*2;
+    height: 16px;
+    background-color: $gray-lightest;
+    background-image: url('/images/publish-connector.png');
+    z-index: 2;
+  }
+  .button.round {
+    position: relative;
+    z-index: 3;
+    margin: 0 $button-margin 0 0;  // that is 3em of base
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .validate { background-color: lighten($yellow,20%); border-color: $yellow;
+    &:hover { background-color: $yellow; }
+  }
+  .deploy { background-color: lighten($sky,20%); color: $white; border-color: $sky; }
+}
+
+.detail {
   /* align the attribute labels to right */
   & > tbody > tr > td:first-child { text-align: right; }
   tr:hover {
