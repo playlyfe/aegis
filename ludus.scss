@@ -389,12 +389,10 @@ $workspace-padding: 263px;
   z-index: $sticky-z;
   h2 {
     margin:0;
-    text-transform: capitalize;
   }
   .sub {
     min-height: $base-line-height;
     font-size:#{12px/$base}em;
-    text-transform: lowercase;
   }
   &.stuck {
     border-bottom: 1px solid $gray-lightest;
@@ -793,3 +791,70 @@ hr.dotted {
   }
 }
 
+#pinboard-link {
+  position: relative;
+  &:hover #pinboard-wrapper {
+    display: block;
+  }
+}
+
+#pinboard-wrapper {
+  width: 400px;
+  background-color: white;
+  position: absolute;
+  top: 40px;
+  left: -324px;
+  border: 1px solid $gray-lighter;
+  border-top: 1px solid $green-dark;
+  border-bottom: 5px solid $green-dark;
+  display: none;
+  @include box-shadow(1px 2px 7px rgba(0,0,0,0.15));
+  @include background-clip(padding-box);
+  li {
+    padding: 0.5em 1em;
+    cursor: pointer;
+    @include box-sizing('border-box');
+    &:hover {
+      background-color: $gray-lightest;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+#fixer {
+  .header {
+    padding: 10px 12px;
+    border-top: 1px solid $gray-lightest;
+    &.error {
+      border-top: 1px solid darken($yellow, 10%);
+      border-bottom: 1px solid darken($yellow, 10%);
+      font-weight: bold;
+      background-color: $yellow;
+    }
+    &.valid {
+      color: $green;
+      font-weight: bold;
+    }
+  }
+
+  ul {
+    max-height: 300px;
+    li:last-child {
+      border-bottom: none;
+    }
+    p {
+      font-size: 11px;
+      line-height: 0px;
+      margin: 0 0 5px;
+    }
+  }
+  a, a:hover, a:visited {
+    display: inline;
+    padding: 0;
+    color: $sky;
+    text-decoration: underline;
+    background: transparent;
+  }
+}
