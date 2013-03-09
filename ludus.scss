@@ -617,6 +617,41 @@ table {
   td { padding: 2px 0; }
   td.tag-holder { width:60px; }
 }
+.detail-table-aside {
+  float: left;
+  display: block;
+  &~.detail {
+    float: left;
+    display: block;
+  }
+}
+.image-upload-row {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  .upload-image-overlay, .file-upload {
+    position: absolute;
+    right: 0; bottom: 0;
+    margin: 0 0;
+    width: 55px; height: 28px;
+  }
+  .upload-image-overlay {
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 16px;
+    background-color: $sky;
+    border-color: $sky;
+    color: $white;
+    z-index: 2;
+    i { margin-right: 6px; }
+  }
+  .file-upload {
+    .button { margin: 0;}
+    overflow: hidden;
+    z-index: 1;
+  }
+}
 
 .ref {
   @extend .no-anchor;
