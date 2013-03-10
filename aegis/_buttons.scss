@@ -71,6 +71,9 @@
   &.hazard {
     background-color: $red; color: $white; border-color: darken($red,10%);
   }
+  &.crystal {
+    background-color: $sky; color: $white; border-color: darken($sky,5%);
+  }
   &:hover {
     text-decoration: none;
     color: $gray-darker;
@@ -89,8 +92,11 @@
     &.primary {
       background-color: $green; color: $white; border-color: $green-dark;
     }
-    &.neutral {
-      background-color: $sky; color: $white; border-color: darken($sky,10%);
+    &.neutral, &.crystal {
+      background-color: $sky; color: $white; border-color: darken($sky,15%);
+    }
+    &.crystal {
+      background-color: darken($sky,10%);
     }
     &.alert {
       background-color: $red; color: $white; border-color: darken($red,10%);
