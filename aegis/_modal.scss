@@ -28,3 +28,68 @@
     right: 6px;
   }
 }
+
+.modal {
+  overflow: hidden;
+  .heading { margin: 0; }
+  .preheading { text-transform: uppercase; margin: 0; }
+  .subheading { font-size: 0.92em; }
+  .modal-head {
+    padding: 1em 2em;
+    border: 1px solid $green-dark;
+    border-bottom: none;
+    background-color: $green;
+    * { color: $white; }
+    .preheading { color: $gray-lightest; }
+    .subheading { color: rgba($white, 0.8); }
+  }
+
+  .modal-foot {
+    padding: 1em 2em;
+    border: 1px solid $gray-lighter;
+    border-top: none;
+  }
+  .modal-body {
+    border: 1px solid $gray-lighter;
+    border-bottom-color: $gray-lightest;
+    border-top: none;
+    padding: 1em 2em 0;
+    background-color: $white;
+    .modal-list {
+      list-style-type: disc;
+      margin: 1em 0;
+      li { font-weight: bold; }
+    }
+    .preheading { color: $gray-lighter; }
+    .subheading { color: $gray-lighter; }
+  }
+
+  /* Types of Modals: Info, Error, etc */
+  &.footless {
+    .modal-body {
+      border-bottom-color: $gray-lighter;
+    }
+  }
+  &.profiler {
+    width: 700px;
+    margin-left:-350px;
+    top: 6em;
+    .modal-body { min-height: 28.5em; }
+    &.footless {
+      .modal-body { min-height: 33em; }
+    }
+  }
+
+  &.dragons { /* grave warning modal */
+    .modal-head {
+      border: 1px solid darken($red,5%);
+      background-color: desaturate($red,20%);
+    }
+  }
+  &.informer {
+    .modal-head {
+      border: 1px solid darken($sky,10%);
+      background-color: desaturate($sky,20%);
+    }
+  }
+}

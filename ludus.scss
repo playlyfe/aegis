@@ -38,7 +38,7 @@ body {
 .shrink-wrapper {
   @extend .wrapper;
   width: $min-screen-width;
-  padding-top:10em;
+  padding-top: 7em;
 }
 
 /*
@@ -259,7 +259,7 @@ body {
     }
     &.app-info {
       top: 119px;
-      left: 71px;
+      right: 0px;
       background-color: $sky;
       &:hover { background-color: darken($sky,10%); }
     }
@@ -339,8 +339,7 @@ body {
     border-bottom: 1px solid $gray-lightest;
     margin-bottom: 1em;
     img {
-      width: 60%;
-      margin:#{20px/$base}em 20% 0;
+      margin: 30px 30px 0 30px;
     }
     #crux {
       font-size: #{16px/$base}em;
@@ -508,8 +507,6 @@ table {
     overflow: hidden;
   }
   /* Styles for special content types */
-  .warn { color: $red; }
-  .nudge { color: $sky; }
   .attr-group {
     display: block;
     float: left;
@@ -551,6 +548,9 @@ table {
     td { text-align: center; padding: #{15px/$base} 0;}
   }
 }
+
+.warn { color: $red; }
+.nudge { color: $sky; }
 
 .publish-guide {
   $button-margin: 4em;
@@ -629,13 +629,17 @@ table {
   position: relative;
   width: 140px;
   height: 140px;
-  .upload-image-overlay, .file-upload {
-    position: absolute;
-    right: 0; bottom: 0;
-    margin: 0 0;
-    width: 55px; height: 28px;
+  .upload-image-overlay, input[type="file"] {
+    position: absolute !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    margin: 0 0 !important;
+    width: 55px !important;
+    height: 28px !important;
+    display: none;
   }
   .upload-image-overlay {
+    display: none;
     text-align: center;
     padding: 6px 0;
     font-size: 12px;
@@ -643,13 +647,15 @@ table {
     background-color: $sky;
     border-color: $sky;
     color: $white;
-    z-index: 2;
     i { margin-right: 6px; }
   }
-  .file-upload {
-    .button { margin: 0;}
-    overflow: hidden;
-    z-index: 1;
+  &:hover {
+    .upload-image-overlay, input[type="file"] {
+      display: block;
+    }
+  }
+  input[type="file"] {
+    opacity: 0;
   }
 }
 
@@ -704,71 +710,6 @@ hr.dotted {
   &.nobot { margin-bottom: 0 }
   &.dark {
     border-color: $gray-dark;
-  }
-}
-
-.modal {
-  overflow: hidden;
-  .heading { margin: 0; }
-  .preheading { text-transform: uppercase; margin: 0; }
-  .subheading { font-size: 0.92em; }
-  .modal-head {
-    padding: 1em 2em;
-    border: 1px solid $green-dark;
-    border-bottom: none;
-    background-color: $green;
-    * { color: $white; }
-    .preheading { color: $gray-lightest; }
-    .subheading { color: rgba($white, 0.8); }
-  }
-
-  .modal-foot {
-    padding: 1em 2em;
-    border: 1px solid $gray-lighter;
-    border-top: none;
-  }
-  .modal-body {
-    border: 1px solid $gray-lighter;
-    border-bottom-color: $gray-lightest;
-    border-top: none;
-    padding: 1em 2em 0;
-    background-color: $white;
-    .modal-list {
-      list-style-type: disc;
-      margin: 1em 0;
-      li { font-weight: bold; }
-    }
-    .preheading { color: $gray-lighter; }
-    .subheading { color: $gray-lighter; }
-  }
-
-  /* Types of Modals: Info, Error, etc */
-  &.footless {
-    .modal-body {
-      border-bottom-color: $gray-lighter;
-    }
-  }
-  &.profiler {
-    width: 700px;
-    margin-left:-350px;
-    top: 6em;
-    .modal-body { min-height: 28.5em; }
-    &.footless {
-      .modal-body { min-height: 33em; }
-    }
-  }
-
-  &.dragons { /* grave warning modal */
-    .modal-head {
-      border: 1px solid darken($red,5%);
-      background-color: desaturate($red,20%);
-    }
-  }
-  &.informer {
-    .modal-head {
-      border: 1px solid darken($sky,10%);
-      background-color: desaturate($sky,20%);
-    }
   }
 }
 
@@ -893,3 +834,32 @@ hr.dotted {
     background: transparent;
   }
 }
+
+.main-land{ background:url("/images/build-discover.png") top left no-repeat; }
+.main-land-blurb {
+  margin-left: 130px;
+  margin-top: 21px;
+  h5 {
+    color: $gray-light;
+  }
+}
+.discover-app{
+  float: left;
+  width:115px;
+  height:99px;
+  background-position:0 -99px;
+  &:hover {
+    background-position:0 0;
+  }
+}
+
+.build-app {
+  float: left;
+  width:115px;
+  height:99px;
+  background-position:0 -297px;
+  &:hover {
+    background-position:0 -198px;
+  }
+}
+
