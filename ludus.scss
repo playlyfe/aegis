@@ -644,10 +644,9 @@ table {
     margin: 0 0 !important;
     width: 55px !important;
     height: 28px !important;
-    display: none;
+    display: block;
   }
   .upload-image-overlay {
-    display: none;
     text-align: center;
     padding: 6px 0;
     font-size: 12px;
@@ -656,11 +655,6 @@ table {
     border-color: $sky;
     color: $white;
     i { margin-right: 6px; }
-  }
-  &:hover {
-    .upload-image-overlay, input[type="file"] {
-      display: block;
-    }
   }
   input[type="file"] {
     opacity: 0;
