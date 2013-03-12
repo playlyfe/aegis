@@ -7,6 +7,12 @@
 .clearfix {
   @include clearfix();
 }
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
 .no-space {
   margin: 0; padding: 0;
 }

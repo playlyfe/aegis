@@ -51,6 +51,27 @@ form {
     @extend .no-space;
   }
 }
+.form-errors {
+  display: none;
+  position: relative;
+  margin-bottom: 5px;
+  *zoom: 1;
+  &:before, &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear:both;
+  }
+  padding: 0.2em 1em;
+  background-color: lighten($red,50%);
+  border: 1px solid $red;
+  color: $red;
+  @include box-sizing('border-box');
+}
+
+
 .field-wrapper {
   *display: block;
   margin: 0;
@@ -505,6 +526,11 @@ input[type="tags"] {
   .form-row {
     margin-bottom: 20px;
     *zoom: 1;
+  }
+  .form-errors {
+    @extend .form-errors;
+    margin-left: 155px;
+    margin-bottom: 20px;
   }
   label {
     padding-top: 4px;
