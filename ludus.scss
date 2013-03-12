@@ -439,11 +439,22 @@ $workspace-padding: 263px;
 }
 
 table {
-  &.expand {
+  &.expand {          /* the full width tables */
     width: 100%;
     table-layout: fixed;
     min-width: 670px;
   }
+  &.listing {         /* the listing tables (for flows, paths, etc) */
+    & > tbody > tr {
+      border-bottom: 1px solid $gray-lighter;
+      &:hover {
+        color: $green-dark;
+        border-bottom: 1px solid $green;
+      }
+      // & > td { border-bottom: $gray-lighter 1px solid;}
+    }
+  }
+                      /* styles for all tables */
   thead {
     background-color: $table-head-bg;
     th {
@@ -452,20 +463,21 @@ table {
       font-size: #{16px/$base}em;
       padding: #{5px/$base}em 0.25em;
       @include box-sizing('border-box');
-      &.col-xs { width: 5%; }
-      &.col-s { width: 10%; }
-      &.col-m { width:20%; }
-      &.col-l { width:30%; }
-      &.col-xl { width:40%; }
-      &.col-xxl { width:50%; }
-      &.col-ops { width:65px; }
+      &.cell-ops { width: 65px; }
+      &.cell-1 { width: 10%; }
+      &.cell-2 { width: 20%; }
+      &.cell-3 { width: 30%; }
+      &.cell-4 { width: 40%; }
+      &.cell-5 { width: 50%; }
+      &.cell-6 { width: 60%; }
+      &.cell-7 { width: 70%; }
+      &.cell-8 { width: 80%; }
+      &.cell-9 { width: 90%; }
     }
   }
   td {
     padding: #{10px/$base}em 0.25em;
     vertical-align: top;
-    border-bottom: $gray-lighter 1px solid;
-
     .info-tag {
       padding: 0.1em 0.25em;
       margin-right:1em;
@@ -534,12 +546,8 @@ table {
       .ref {
         color: $sky;
         @include transition(color 0.3s ease 0.1s);
-        &:hover {
-          @extend .ref:hover;
-        }
+        &:hover { @extend .ref:hover; }
       }
-      color: $green-dark;
-      border-bottom: 1px solid $green;
       .row-action { visibility: visible; }
     }
   }
