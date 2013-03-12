@@ -168,9 +168,20 @@ body {
   }
 }
 
+.uniview-sticky {
+  float: right;
+  width:25%;
+  @include box-sizing('border-box');
+  border: 1px solid $green;
+  background-color: $green-lightest;
+  margin-top: 1em;
+  padding: 0.5em 1em 1em;
+}
 .uniview-list-detailed {
   @extend .no-list;
   @extend .no-space;
+  width: 70%;
+  float: left;
   .uniview-item {
     padding: 0.4em 0.8em;
     margin-bottom: 0.5em;
