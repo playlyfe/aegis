@@ -157,13 +157,24 @@ body {
   z-index: $uniview-z;
   overflow: hidden;
   top: -31px;
-  .centered {
-    text-align: center;
-  }
 }
 .centered {
   margin: 5em auto;
+}
+
+.empty-state {
+  width: 400px;
+  text-align: center;
+  padding-top: 2em;
+  #workbench & {
+    margin-top: 5em;
+    text-align: left;
+  }
+  .callout-title {
+    color: $gray-lighter;
+  }
   .callout {
+    font-size: 1.2em;
     color: $gray-light;
   }
 }
@@ -172,11 +183,20 @@ body {
   float: right;
   width:25%;
   @include box-sizing('border-box');
-  border: 1px solid $green;
+  border: 1px solid $green-light;
   background-color: $green-lightest;
   margin-top: 1em;
   padding: 0.5em 1em 1em;
+  .title {
+    color: $green;
+  }
+  .summary {
+    margin: 1em 0;
+    color: $gray-dark;
+    text-align: justify;
+  }
 }
+
 .uniview-list-detailed {
   @extend .no-list;
   @extend .no-space;
@@ -190,22 +210,21 @@ body {
 
 .feed-item {
   border-bottom: 1px solid $gray-lightest;
-  .feed-title {
-    font-size: 1.38em;
-    line-height: 1em;
-    margin-top: 0.5em;
+  .title {
     color: $green-dark;
   }
-  .feed-summary {
+  .summary {
     color: $gray;
     text-align: justify;
   }
-  .feed-link {
+  .link {
+    margin-left: 1em;
     @extend .no-anchor;
     color: $green;
     &:hover { color: $green-darker; text-decoration: underline; }
   }
 }
+
 
 .uniview-list {
   @extend .no-list;
