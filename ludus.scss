@@ -172,7 +172,7 @@ body {
   float: right;
   width:25%;
   @include box-sizing('border-box');
-  border: 1px solid $green;
+  border: 1px solid $green-light;
   background-color: $green-lightest;
   margin-top: 1em;
   padding: 0.5em 1em 1em;
