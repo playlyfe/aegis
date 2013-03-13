@@ -157,13 +157,20 @@ body {
   z-index: $uniview-z;
   overflow: hidden;
   top: -31px;
-  .centered {
-    text-align: center;
-  }
 }
 .centered {
   margin: 5em auto;
+}
+
+.empty-state {
+  width: 400px;
+  text-align: center;
+  padding-top: 2em;
+  h4 {
+    color: $gray-lighter;
+  }
   .callout {
+    font-size: 1.2em;
     color: $gray-light;
   }
 }
