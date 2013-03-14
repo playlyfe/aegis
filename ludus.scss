@@ -804,7 +804,10 @@ hr.dotted {
 
 #pinboard-link {
   position: relative;
-  &:hover #pinboard-wrapper {
+  &.active {
+    background-color: $green-dark;
+  }
+  &:hover #pinboard-wrapper, &.active #pinboard-wrapper {
     display: block;
   }
 }
@@ -898,3 +901,8 @@ hr.dotted {
   }
 }
 
+#report {
+  li {
+    padding: 0.5em;
+  }
+}
