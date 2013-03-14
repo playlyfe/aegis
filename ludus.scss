@@ -621,29 +621,31 @@ table {
 }
 
 .detail {
-  /* align the attribute labels to right */
-  & > tbody > tr > td:first-child { text-align: right; }
-  tr:hover {
-    border-bottom: none;
+  tr:hover { border-bottom: none; }
+  & > tbody > tr {
+    & > td {
+      border: none;
+      padding: 1em 0;
+    }
+    /* align the attribute labels to right */
+    & > td:first-child { text-align: right; padding-right: 3em; }
+    & > td:first-child + td { padding-left: 0; }
+    & > td .button.inline:first-child { margin-left: -0.7em; } // offset the margin+padding
   }
-  td {
-    border: none;
-    padding: 1em 1.5em;
-    .no-list > li {
-      padding-bottom: 1em;
-    }
-    .ref {
-      margin-left:-0.61538em;   // fix for misaligned links
-    }
-    .json {
-      padding: 0.5em 1em 0.5em 0.75em;
-      background-color: #fafafa;
-      border: 1px #DDD solid;
-      margin: -0.5em 0 1em -1em;
-    }
-    .snippet, .button.inline {
-      margin-top:-0.15em;
-    }
+  .no-list > li {
+    padding-bottom: 1em;
+  }
+  .ref {
+    margin-left:-0.61538em;   // fix for misaligned links
+  }
+  .json {
+    padding: 0.5em 1em 0.5em 0.75em;
+    background-color: #fafafa;
+    border: 1px #DDD solid;
+    margin: -0.5em 0 1em -1em;
+  }
+  .snippet, .button.inline {
+    margin-top:-0.15em;
   }
 }
 .inner-table {
@@ -654,6 +656,7 @@ table {
   .info-tag { display: block; padding:1px 5px; }
   td { padding: 2px 0; }
   td.tag-holder { width:60px; }
+  .button.inline { margin-top: 0.2em; }
 }
 .detail-table-aside {
   float: left;

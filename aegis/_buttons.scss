@@ -41,11 +41,10 @@
   &.inline {
     @include inline-block();
     float: none;
-    margin: 0 #{4px/$base}em;
+    margin: 0 #{5px/$base}em;
     height:2em;
     line-height: 1.9em;
-    padding-top: 0;
-    padding-bottom: 0.1em;
+    padding: #{1px/$base}em #{8px/$base}em;
   }
   /* gigantic, block */
   &.titan {
@@ -107,5 +106,12 @@
   }
   &:focus {
     @include tab-focus();
+  }
+}
+
+// styles for contained elements
+.button {
+  .iconic-16 {
+    margin: 0 5px 0.31em -5px; // align with text
   }
 }
