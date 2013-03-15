@@ -108,10 +108,3 @@
     @include tab-focus();
   }
 }
-
-// styles for contained elements
-.button {
-  .iconic-16 {
-    margin: 0 5px 0.31em -5px; // align with text
-  }
-}
