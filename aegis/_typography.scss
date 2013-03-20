@@ -90,6 +90,11 @@ p  {
     font-size: $base-font-size;
     margin: 0 0 $base-font-size;
 }
+a {
+  text-decoration: none;
+  color: $green-dark;
+  &:hover { text-decoration: underline; }
+}
 info {
     font-size: $base-font-size * (1/$golden + (1 - 1 / $golden) * 1/$golden) ;
 }

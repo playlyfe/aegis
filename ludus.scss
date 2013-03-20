@@ -495,125 +495,6 @@ $workspace-padding: 263px;
   }
 }
 
-table {
-  &.expand {          /* the full width tables */
-    width: 100%;
-    table-layout: fixed;
-    min-width: 670px;
-  }
-  &.listing {         /* the listing tables (for flows, paths, etc) */
-    & > tbody > tr {
-      border-bottom: 1px solid $gray-lighter;
-      &:hover {
-        color: $green-dark;
-        border-bottom: 1px solid $green;
-      }
-      // & > td { border-bottom: $gray-lighter 1px solid;}
-    }
-  }
-                      /* styles for all tables */
-  thead {
-    background-color: $table-head-bg;
-    th {
-      color: $table-head-text-color;
-      text-align: left;
-      font-size: #{16px/$base}em;
-      padding: #{5px/$base}em 0.25em;
-      @include box-sizing('border-box');
-      &.cell-ops { width: 65px; }
-      &.cell-1 { width: 10%; }
-      &.cell-2 { width: 20%; }
-      &.cell-3 { width: 30%; }
-      &.cell-4 { width: 40%; }
-      &.cell-5 { width: 50%; }
-      &.cell-6 { width: 60%; }
-      &.cell-7 { width: 70%; }
-      &.cell-8 { width: 80%; }
-      &.cell-9 { width: 90%; }
-    }
-  }
-  td {
-    padding: #{10px/$base}em 0.25em;
-    vertical-align: top;
-    .info-tag {
-      padding: 0.1em 0.25em;
-      margin-right:1em;
-      background-color: lighten($sky,35%);
-      color: darken($sky,10%);
-      border:1px solid lighten($sky,10%);
-      cursor: pointer;
-      &:hover {
-        background-color: lighten($sky,20%);
-        color: darken($sky,30%);
-        @include transition(all 0.2s ease 0.1s);
-      }
-    }
-    .ref {
-      margin-left:-0.25em;
-    }
-  }
-
-  td.ops {
-    padding:6px 0;
-  }
-  .extra-info {
-    font-style: italic;
-    font-size: #{12px/$base}em;
-    padding-left: #{8px/$base}em;
-    max-width: 500px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  /*
-   * constrain the width of long values
-   * which can potentially destroy a layout
-   */
-  .constraint {
-    max-width:100%;
-    white-space: nowrap;
-    text-overflow:ellipsis;
-    overflow: hidden;
-  }
-  /* Styles for special content types */
-  .attr-group {
-    display: block;
-    float: left;
-    margin-top: -0.15em;
-  }
-  .placeholder-info {
-    display: block;
-    float:left;
-    margin-left: 0.2em;
-  }
-
-  .no-list > li {
-    padding-bottom: 0em;
-  }
-  tbody tr {
-    .row-action {
-      display: block;
-      visibility: hidden;
-      a { cursor: pointer; }
-    }
-    .action-item {
-      @extend .icon-group;
-    }
-    &:hover {
-      .ref {
-        color: $sky;
-        @include transition(color 0.3s ease 0.1s);
-        &:hover { @extend .ref:hover; }
-      }
-      .row-action { visibility: visible; }
-    }
-  }
-  tfoot {
-    background-color: $table-foot-bg;
-    td { text-align: center; padding: #{15px/$base} 0;}
-  }
-}
-
 .warn { color: $red; }
 .nudge { color: $sky; }
 
@@ -679,6 +560,7 @@ table {
   table-layout: fixed;
   width:100%;
   /* override the default table styles */
+  th { padding: 0; }
   tr:hover, td { border:none;}
   .info-tag { display: block; padding:1px 5px; }
   td { padding: 2px 0; }
@@ -718,6 +600,47 @@ table {
   }
   input[type="file"] {
     opacity: 0;
+  }
+}
+
+table {
+  tbody tr {
+    .ref {
+      margin-left:-0.25em;
+    }
+    &:hover {
+      .ref {
+        color: $sky;
+        @include transition(color 0.3s ease 0.1s);
+        &:hover { @extend .ref:hover; }
+      }
+    }
+  }
+ /* the listing tables (for flows, paths, etc) */
+  &.listing {
+    & > tbody > tr {
+      border-bottom: 1px solid $gray-lighter;
+      &:hover {
+        color: $green-dark;
+        border-bottom: 1px solid $green;
+      }
+    }
+  }
+  &.expand {          /* the full width tables */
+    width: 100%;
+    table-layout: fixed;
+    min-width: 670px;
+  }
+  /* Styles for special content types */
+  .attr-group {
+    display: block;
+    float: left;
+    margin-top: -0.15em;
+  }
+  .placeholder-info {
+    display: block;
+    float:left;
+    margin-left: 0.2em;
   }
 }
 

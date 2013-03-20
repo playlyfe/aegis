@@ -19,14 +19,17 @@
 }
 .no-list {
   @extend .no-space;
-  list-style: none;
+  list-style: none !important;
 }
 .no-anchor {
-  text-decoration: none;
+  text-decoration: none !important;
   outline: none;
+  &:hover {
+    text-decoration: none !important;
+  }
 }
 .no-float {
-  float: none;
+  float: none !important;
 }
 .static-pos {
   position: static !important;

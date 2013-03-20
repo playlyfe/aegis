@@ -1,43 +1,87 @@
 // table partial
 // Aegis UI (derived from Playlyfe Sandbox)
 // Kumar Harsh
-// 11.Feb.2013
+// 20.Mar.2013
 
-table.pl-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+table {
   thead {
     background-color: $table-head-bg;
     th {
       color: $table-head-text-color;
       text-align: left;
       font-size: #{16px/$base}em;
-      padding: #{5px/$base}em 0;
-      border-bottom: 1px solid $gray-lightest;
+      padding: #{5px/$base}em 0.25em;
       @include box-sizing('border-box');
-      &.col-xs { width: 5%; }
-      &.col-s { width: 10%; }
-      &.col-m { width:20%; }
-      &.col-l { width:30%; }
-      &.col-xl { width:40%; }
-      &.col-xxl { width:50%; }
-      &.col-ops { width:65px; }
+      &.cell-ops { width: 65px; }
+      &.cell-1 { width: 10%; }
+      &.cell-2 { width: 20%; }
+      &.cell-3 { width: 30%; }
+      &.cell-4 { width: 40%; }
+      &.cell-5 { width: 50%; }
+      &.cell-6 { width: 60%; }
+      &.cell-7 { width: 70%; }
+      &.cell-8 { width: 80%; }
+      &.cell-9 { width: 90%; }
     }
   }
-  tbody {
-    td {
-      padding: #{10px/$base}em 0;
-      vertical-align: top;
-      border-bottom: 1px solid $gray-lightest;
-    }
-    tr {
+  td {
+    padding: #{10px/$base}em 0.25em;
+    vertical-align: top;
+    .info-tag {
+      padding: 0.1em 0.25em;
+      margin-right:1em;
+      background-color: lighten($sky,35%);
+      color: darken($sky,10%);
+      border:1px solid lighten($sky,10%);
+      cursor: pointer;
       &:hover {
-        border-bottom: 1px solid $green;
+        background-color: lighten($sky,20%);
+        color: darken($sky,30%);
+        @include transition(all 0.2s ease 0.1s);
       }
+    }
+  }
+
+  td.ops {
+    padding:6px 0;
+  }
+  .extra-info {
+    font-style: italic;
+    font-size: #{12px/$base}em;
+    padding-left: #{8px/$base}em;
+    max-width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  /*
+   * constrain the width of long values
+   * which can potentially destroy a layout
+   */
+  .constraint {
+    max-width:100%;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    overflow: hidden;
+  }
+  .no-list > li {
+    padding-bottom: 0em;
+  }
+  tbody tr {
+    .row-action {
+      display: block;
+      visibility: hidden;
+      a { cursor: pointer; }
+    }
+    .action-item {
+      @extend .icon-group;
+    }
+    &:hover {
+      .row-action { visibility: visible; }
     }
   }
   tfoot {
     background-color: $table-foot-bg;
-    td { text-align: center; padding: #{15px/$base} 0; }
+    td { text-align: center; padding: #{15px/$base} 0;}
   }
 }
