@@ -17,9 +17,18 @@
 
 // A neu beginning to the sandbox project for playlyfe
 
+html, body {
+  height:100%;
+}
 body {
   @extend .no-space;
   border: 0;
+}
+#lyfe {
+  // make height 100% to span the whole page.
+  @include box-sizing('border-box');
+  min-height: 100%;
+  padding-bottom: 50px;
 }
 #main-layout {
   margin-top: 40px;
@@ -29,6 +38,7 @@ body {
   width: 100%;
   min-width: $min-screen-width;
   margin: 0 auto;
+  @include clearfix();
 }
 .wrapper {
   @extend .container-fluid;
@@ -45,6 +55,7 @@ body {
  * Essential page items
  */
 #navigator {
+  position:fixed;
   @include no-select();
   width: 100%;
   .tier {
@@ -52,6 +63,22 @@ body {
   }
 }
 
+#foot-navigator {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: -50px;
+  .nav {
+    @include inline-block();
+    li {
+      float: left;
+      margin-left: 20px;
+      &:first-child {
+        margin-left: 0;
+      }
+      a:hover { text-decoration: underline !important; }
+    }
+  }
+}
 
 /*
  * Profile CSS
