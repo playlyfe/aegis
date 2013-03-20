@@ -193,16 +193,25 @@ body {
   width: 400px;
   text-align: center;
   padding-top: 2em;
-  #workbench & {
-    margin-top: 5em;
-    text-align: left;
-  }
   .callout-title {
     color: $gray-lighter;
   }
   .callout {
     font-size: 1.2em;
     color: $gray-light;
+  }
+
+  #workbench & {
+    margin-top: 5em;
+    text-align: left;
+  }
+  .modal & {
+    margin-top: 0 !important;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    @include box-sizing('border-box');
+    .callout-title { margin: 0 0 0.62em; line-height: 1.52em; }
   }
 }
 
@@ -466,6 +475,19 @@ $workspace-padding: 263px;
   .field-tip {
     max-width: 200px;
   }
+}
+.modal-form {
+  width: 100%;
+  .form-row .field-tip {
+      max-width:400px;
+      margin-left: 0;
+      background-color: transparent;
+      border: none;
+      padding: 0 0.5em 0.2em;
+      right: 0; left: auto;
+      bottom: 0;
+      color: $sky;
+    }
 }
 
 .pagination-wrapper {
@@ -846,5 +868,35 @@ hr.dotted {
 #report {
   li {
     padding: 0.5em;
+  }
+}
+
+#role-manager {
+  width: 650px;
+  margin-left: -325px;
+  .modal-body {
+    padding: 2em 2em;
+    height: 300px;
+  }
+  .role-pane {
+    float:left;
+    width: 140px;
+    @include box-sizing('border-box');
+    border-right: 1px solid $gray-lightest;
+    padding-right: 20px;
+    margin-right: 20px;
+    .button.add-role {
+      width: 100%;
+    }
+    .role-list {
+      margin-top: 0.75em !important;
+      li {
+        padding: 0.25em 0.5em 0.75em;
+      }
+    }
+  }
+  .role-view {
+    float:left;
+    width: 436px;
   }
 }
