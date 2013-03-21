@@ -484,8 +484,7 @@ $workspace-padding: 263px;
       background-color: transparent;
       border: none;
       padding: 0 0.5em 0.2em;
-      right: 0; left: auto;
-      bottom: 0;
+      top: 0; right: 0; left: auto;
       color: $sky;
     }
 }
@@ -889,6 +888,8 @@ hr.dotted {
       width: 100%;
     }
     .role-list {
+      height:280px;
+      overflow-y: auto;
       margin-top: 0.75em !important;
       li {
         padding: 0.25em 0.5em 0.75em;
