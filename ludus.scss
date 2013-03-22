@@ -2,6 +2,7 @@
 @import "aegis/constants";
 @import "aegis/mixins";
 @import "aegis/utilities";
+@import "aegis/tidbits";
 @import "aegis/navigation";
 @import "aegis/modal";
 @import "aegis/sidebar";
@@ -452,9 +453,6 @@ $workspace-padding: 263px;
   background-color: $white;
   @include box-sizing('border-box');
   z-index: $sticky-z;
-  h2 {
-    margin:0;
-  }
   .sub {
     min-height: $base-line-height;
     font-size:#{12px/$base}em;
@@ -899,5 +897,23 @@ hr.dotted {
   .role-view {
     float:left;
     width: 436px;
+    .subtitle { color: $gray-lighter; }
+    .role-head { }
+    .role-body {
+      @include box-sizing('border-box');
+      height: 200px;
+      overflow-y: auto;
+      padding-top: 1em;
+      border-top: 1px solid $gray-lightest;
+    }
+    .permission-tag {
+      @include inline-block();
+      margin: 0.5em 0.5em;
+    }
+    .role-foot {
+      padding-top: 1em;
+      margin-top: 1em;
+      border-top: 1px solid $gray-lightest;
+    }
   }
 }

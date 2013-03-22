@@ -21,6 +21,8 @@
   @extend .no-space;
   list-style: none !important;
 }
+.no-top { margin-top: 0; }
+.no-bot { margin-bottom: 0 }
 .no-anchor {
   text-decoration: none !important;
   outline: none;
@@ -40,38 +42,4 @@
 
 .width-auto {
   width: auto !important;
-}
-
-// rules
-hr.dotted {
-  border: 0;
-  margin: 5px auto;
-  height: 1px;
-  border-bottom: 2px dotted $gray-lightest;
-  &.big {
-    margin: 20px auto;
-    border-width: 5px;
-  }
-  &.notop { margin-top: 0; }
-  &.nobot { margin-bottom: 0 }
-  &.dark {
-    border-color: $gray-dark;
-  }
-}
-
-.snippet {
-  padding: 0.2em 0.5em;
-  max-width:400px;
-  border: 1px dashed $green-dark;
-  @include box-sizing('border-box');
-  @include inline-block();
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: 700;
-  font-size: #{12px/$base}em;
-  &:hover {
-    background-color: $green;
-    color: $white;
-    @include transition(all 0.4s ease 0.1s);
-  }
 }

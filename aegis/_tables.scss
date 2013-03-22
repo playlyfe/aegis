@@ -30,15 +30,6 @@ table {
     .info-tag {
       padding: 0.1em 0.25em;
       margin-right:1em;
-      background-color: lighten($sky,35%);
-      color: darken($sky,10%);
-      border:1px solid lighten($sky,10%);
-      cursor: pointer;
-      &:hover {
-        background-color: lighten($sky,20%);
-        color: darken($sky,30%);
-        @include transition(all 0.2s ease 0.1s);
-      }
     }
   }
 
