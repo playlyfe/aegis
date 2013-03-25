@@ -66,3 +66,25 @@ hr.dotted {
     @include transition(all 0.4s ease 0.1s);
   }
 }
+
+
+.tip {
+  margin: $base-line-height/2 0;
+  &.info {
+    padding: $base-line-height/2;
+    background-color: lighten($sky,42%);
+    border: 1px solid lighten($sky,20%);
+    color: $sky;
+    a, a:hover {
+      font-weight: bold;
+      color: $sky;
+      text-decoration: underline;
+    }
+  }
+  &.alert {
+    padding: $base-line-height/2;
+    background-color: lighten($red,50%);
+    border: 1px solid $red;
+    color: $red;
+  }
+}
