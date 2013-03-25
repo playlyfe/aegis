@@ -787,7 +787,6 @@ hr.dotted {
   @include background-clip(padding-box);
   li {
     padding: 0.5em 1em;
-    cursor: pointer;
     @include box-sizing('border-box');
     &:hover {
       background-color: $gray-lightest;
@@ -795,6 +794,9 @@ hr.dotted {
     &:last-child {
       border-bottom: none;
     }
+  }
+  &> .list > li {
+    cursor: pointer;
   }
 }
 
