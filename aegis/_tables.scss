@@ -4,6 +4,24 @@
 // 20.Mar.2013
 
 table {
+
+  &.border {
+    th {
+      font-size: 1em;
+      color: $gray-darker;
+    }
+    td, th {
+      border: 1px solid #ccc;
+      padding: 7px 13px;
+    }
+  }
+
+  &.striped {
+    tr:nth-child(2n) {
+      background-color: #f8f8f8;
+    }
+  }
+
   thead {
     background-color: $table-head-bg;
     th {
