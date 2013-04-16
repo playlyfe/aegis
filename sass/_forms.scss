@@ -3,11 +3,17 @@
 // Johny Jose / Kumar Harsh
 // 23.Jan.2013
 
-$input-height: 31px;
-
 form {
   @include clearfix();
+  .button {
+    margin: 0 0 $base-line-height/2;
+  }
+  input, label, fieldset, legend, textarea, select, .button, .input_container {
+    float: left;
+    @include box-sizing('border-box');
+  }
 }
+
 .form-row {
   position: relative;
   margin-bottom: 5px;
@@ -21,23 +27,23 @@ form {
     clear:both;
   }
   legend + & {
-    margin-top: 20px;
+    margin-top: #{$input-height/2};
     -webkit-margin-top-collapse: separate;
   }
   .field-tip {
     position: absolute;
     display: none;
+    min-width: 200px;
     top: 0;
     left: 100%;
     margin-left:10px;
-    min-width: 200px;
-    color: $gray-light;
-    background-color: lighten($sky,42%);
-    border: 1px solid lighten($sky,20%);
+    color: $field-tip-color;
+    background-color: $field-tip-bg;
     @include box-sizing('border-box');
+    border: 1px solid $field-tip-border;
     padding: 0.5em 0.5em;
     a {
-      color: $sky;
+      color: $field-tip-hl-color;
     }
     &:hover {
       display: block;
@@ -51,6 +57,7 @@ form {
     @extend .no-space;
   }
 }
+
 .form-errors {
   display: none;
   position: relative;
@@ -64,11 +71,11 @@ form {
   &:after {
     clear:both;
   }
-  padding: 0.2em 1em;
-  background-color: lighten($red,50%);
-  border: 1px solid $red;
-  color: $red;
+  color: $error-color;
+  background-color: $error-bg;
   @include box-sizing('border-box');
+  border: 1px solid darken($error-color,10%);
+  padding: 0.2em 1em;
 }
 
 
@@ -77,9 +84,9 @@ form {
   margin: 0;
   &.pad {
     padding-top: 2px;
+    // for radio and checkboxes
     & > input:first-child {
-      // for radio and checkboxes
-      margin-left:0;
+      margin-left: 0;
     }
   }
 }
@@ -89,7 +96,7 @@ form {
 }
 .form-help-wrapper {
   @extend .field-wrapper;
-  margin-top:0px;
+  margin-top: 0px;
 }
 
 select, textarea,       input[type="text"],           input[type="password"],
@@ -99,15 +106,15 @@ input[type="number"],   input[type="email"],          input[type="url"],
 input[type="search"],   input[type="tel"],            input[type="color"],
 .input_container, .add-on {
   width: 100%;
+  height: #{$input-height/$base}em;
+  @include box-sizing('border-box');
   padding: #{4px/$base}em;
   margin: 0 0 #{9px/$base}em;
-  color: $gray;
-  font-size: $base-font-size;
-  height: #{$input-height/$base}em;
-  line-height: #{$base-line-height/$base}em;
   border: 1px solid #cccccc;
-  @include box-shadow(inset 0 1px 2px 0px rgba(0,0,0,0.1));
-  @include box-sizing('border-box');
+  color: $input-color;
+  font-size: $base-font-size;
+  line-height: #{$base-line-height/$base}em;
+  @include box-shadow(inset 0 1px 2px 0px $input-shadow);
   &.append {
     border-left: none;
   }
@@ -121,9 +128,6 @@ select, textarea, input {
     display: block;
   }
 }
-.CodeMirror-focused ~ .field-tip {
-  display: block;
-}
 
 label {
   display: block;
@@ -132,15 +136,15 @@ label {
   &.optional:after {
     content: '(optional)';
     margin-left: 3px;
-    color: $green;
+    color: $accent;
   }
   &.required:after {
     content: '*';
     margin-left: 3px;
-    color: adjust_hue($green,290);
+    color: $accent;
   }
   &.error {
-    color: adjust_hue($green,290);
+    color: $red;
   }
 }
 
@@ -151,12 +155,6 @@ fieldset {
   width: 100%;
 }
 
-.parsley-error-list {
-  @extend .no-list;
-  @extend .no-space;
-  color: $red;
-}
-
 // Groups of fields with labels on top (legends)
 legend {
   display: block;
@@ -164,24 +162,11 @@ legend {
   margin-bottom: $base-line-height;
   font-size: $h4-size;
   line-height: $base-line-height * 2;
-  color: $gray-dark;
-  border-bottom: #cccccc 1px solid;
+  color: $legend-color;
+  border-bottom: 1px solid $legend-border;
   width: 100%;
-  // Small
-  small {
-    font-size: $base-line-height * .75;
-    color: $gray-light;
-  }
 }
-form {
-  .button {
-    margin: 0 0 $base-line-height/2;
-  }
-  input, label, fieldset, legend, textarea, select, .button, .input_container {
-    float: left;
-    @include box-sizing('border-box');
-  }
-}
+
 .input_container {
   height: auto;
 }
@@ -201,12 +186,6 @@ input[type="checkbox"] {
 input[type="file"]{
   width: 160px;
   @include opacity(0);
-}
-select:focus,
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-  // @include tab-focus();
 }
 
 select {
@@ -238,28 +217,28 @@ input[type="tel"],
 input[type="color"],
 .input_container,
 .uneditable-input {
-  background-color: $white;
+  background-color: $input-bg;
   @include border-radius($input-border-radius);
-  @include transition(#{border linear .2s, box-shadow linear .2s});
+  @include transition(border linear .2s, box-shadow linear .2s);
 
   // Focus state
   &:focus {
-    border-color: $green;
+    border-color: $input-focus-border;
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
-    @include box-shadow(inset 0 1px 2px 0px lighten($green,30%));
+    @include box-shadow(inset 0 1px 2px 0px lighten($input-focus-border, 30%));
   }
   &.active_container {
-    border-color: $green;
+    border-color: $input-active-border;
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
-    @include box-shadow(inset 0 1px 2px 0 lighten($green,30%));
+    @include box-shadow(inset 0 1px 2px 0 lighten($input-active-border, 30%));
   }
   &.error {
-    border-color: adjust_hue($green,290);
+    border-color: $error-border;
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
-    @include box-shadow(inset 0 1px 2px 0px lighten(adjust_hue($green,290),30%));
+    @include box-shadow(inset 0 1px 2px 0px lighten($error-border,30%));
 
   }
 }
@@ -270,36 +249,20 @@ input[type="color"],
   white-space: nowrap;
   text-overflow: ellipsis;
   cursor: not-allowed;
-  background-color: $white;
-  color: $gray-light !important;
-  border-color: #eeeeee;
-  @include box-shadow(inset 0 1px 2px rgba(0,0,0,.025));
+  color: $input-disabled-color !important;
+  border-color: lighten($input-disabled-color, 30%);
+  @include box-shadow(inset 0 1px 2px lighten($input-disabled-color, 30%));
 }
 
 .prepend {
-  -moz-border-radius-topright: 0 !important;
-  -webkit-border-top-right-radius: 0 !important;
-  -ms-border-top-right-radius: 0 !important;
-  -o-border-top-right-radius: 0 !important;
-  border-top-right-radius: 0 !important;
-  -moz-border-radius-bottomright: 0 !important;
-  -webkit-border-bottom-right-radius: 0 !important;
-  -ms-border-bottom-right-radius: 0 !important;
-  -o-border-bottom-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
+  @include border-top-right-radius(0);
+  @include border-bottom-right-radius(0);
 }
 .append {
-  -moz-border-radius-topleft: 0 !important;
-  -webkit-border-top-left-radius: 0 !important;
-  -ms-border-top-left-radius: 0 !important;
-  -o-border-top-left-radius: 0 !important;
-  border-top-left-radius: 0 !important;
-  -moz-border-radius-bottomleft: 0 !important;
-  -webkit-border-bottom-left-radius: 0 !important;
-  -ms-border-bottom-left-radius: 0 !important;
-  -o-border-bottom-left-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
+  @include border-top-left-radius(0);
+  @include border-bottom-left-radius(0);
 }
+
 // File upload
 .file-upload {
   display: block;
@@ -311,7 +274,7 @@ input[type="color"],
   }
   input[type="file"] {
     z-index: $file-input-z;
-    @include opacity(0);
+    @include opacity(0);  // hide the actual file input
     position: absolute;
     top: 0;
     left: 0;
@@ -349,42 +312,43 @@ input[type="color"],
 }
 .tag {
   @include button-interaction();
-  padding: 2px 21px 2px 8px;
-  border: $green-light 1px solid;
-  background-color: $green-lightest;
   position: relative;
+  padding: 0.15em 21px 0.15em 8px;
+  border: 1px solid $tag-border;
+  background-color: $tag-bg;
   @include text-shadow(0 1px 0 rgba(255, 255, 255, 0.75));
-  &.error , &.error:hover {
-    border: darken($red, 5%) 1px solid;
-    color: $white;
-    background-color: $red;
-    @include text-shadow(0 1px 0 lighten($red,5%));
-    @include transition(color, 0.5s, ease, 0.1s);
-    @include transition(background-color, 0.5s, ease, 0.1s);
+  @include transition(all 0.5s ease 0.1s);
+
+  &:hover {
+    background-color: $tag-hover-bg;
+    color: $tag-hover-color;
+    @include box-shadow(#{inset 0 1px 2px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.05)});
+    @include text-shadow(none);
     .delete {
-        color: darken($red, 15%);
+      color: $tag-hover-color;
+    }
+  }
+
+  &.error , &.error:hover {
+    border: $error-border 1px solid;
+    color: $error-color;
+    background-color: $error-bg;
+    @include text-shadow(0 1px 0 lighten($error-color,5%));
+    .delete {
+      color: darken($error-color, 15%);
     }
   }
   .delete {
     position: absolute;
     top: 0px;
     right:0px;
-    font-size: 16px;
+    font-size: 1.23em;
     display: block;
     height: 26px;
     width: 18px;
     padding: 3px 5px 10px 4px;
-    color: $green-light;
+    color: $tag-color;
     @include box-sizing('border-box');
-  }
-  &:hover {
-    background-color: $green-light;
-    color: $white;
-    @include box-shadow(#{inset 0 1px 2px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.05)});
-    @include text-shadow(none);
-    .delete {
-      color: $white;
-    }
   }
 }
 .input_container[disabled="disabled"] {
@@ -393,16 +357,15 @@ input[type="color"],
       display: none;
     }
     &:hover {
-       color: $gray;
-       background-color: $green-lightest;
+       color: $input-disabled-color;
+       background-color: $tag-bg;
        @include text-shadow(0 1px 0 rgba(255, 255, 255, 0.75));
     }
   }
 }
 input[type="tags"] {
-  background-color: $white;
   border: none;
-  height: 27px;
+  height: 2.08em;
   font-size: $base-font-size;
   line-height: $base-line-height;
   &:focus {
@@ -416,7 +379,7 @@ input[type="tags"] {
   overflow-y: auto;
   overflow-x: visible;
   min-height: $input-height;
-  max-height: 200px;
+  max-height: $multiselect-max-height;
   width: auto;
   border: none;
   padding: 5px;
@@ -434,7 +397,7 @@ input[type="tags"] {
 
 .add-on {
   display: block;
-  background-color: $gray-lighter;
+  background-color: $addon-bg;
   width: auto;
   @include text-shadow(0 1px 0 rgba(255, 255, 255, 0.75));
   &.prepend {
@@ -455,7 +418,12 @@ input[type="tags"] {
 }
 
 .input_container {
-  select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .add-on {
+  input[type="text"],           input[type="password"], input[type="datetime"],
+  input[type="datetime-local"], input[type="date"],     input[type="month"],
+  input[type="time"],           input[type="week"],     input[type="number"],
+  input[type="email"],          input[type="url"],      input[type="search"],
+  input[type="tel"],            input[type="color"],
+  select, textarea, .add-on {
     margin-bottom: 0;
   }
 }
@@ -465,39 +433,13 @@ input[type="tags"] {
   @include no-select();
 }
 
-.label-list {
-  float: left;
-  display: block;
-  margin: 4px 0 0 4px;
-  padding: 0;
-  li {
-    display: block;
-    float: left;
-    margin: 0 5px 4px 0px;
-    list-style: none;
-    @include button-interaction();
-    padding: 2px 8px 2px 8px;
-    border: adjust_hue($green-light,120) 1px solid;
-    background-color: adjust_hue($green-light, 120);
-    position: relative;
-    color: $white;
-  }
-}
 
 // Image Uploads
-
 .img-wrapper {
   float: left;
   margin-right: $base-line-height / 2;
   img {
     float: left;
-  }
-}
-.control {
-  @include clearfix();
-  float: left;
-  input[type="submit"] {
-    clear: left;
   }
 }
 
@@ -529,24 +471,24 @@ input[type="tags"] {
   }
   .form-errors {
     @extend .form-errors;
-    margin-left: 155px;
+    margin-left: $form-horz-label-width + 20;
     margin-bottom: 20px;
   }
   label {
     padding-top: 4px;
     text-align: right;
-    width: 135px;
+    width: $form-horz-label-width;
   }
   .field-wrapper {
     *display: inline-block;
     *padding-left: 20px;
-    margin-left: 155px;
+    margin-left: $form-horz-label-width + 20;
     *margin-left: 0;
     &.pad {
       padding-top:6px;
     }
     &:first-child {
-     *padding-left: 155px;
+     *padding-left: $form-horz-label-width + 20;
     }
   }
   .form-actions {
@@ -587,15 +529,15 @@ span#strength-meter {
       width:5%;
       background-color: $gray-lighter;
       @include transition(all 0.5s ease 0.2s);
-      &.pass-strong {
+      &.strong {
         background-color: $green;
         width: 100%;
       }
-      &.pass-med {
+      &.medium {
         background-color: $yellow;
         width: 60%;
       }
-      &.pass-weak {
+      &.feeble {
         background-color: $red;
         width: 20%;
       }

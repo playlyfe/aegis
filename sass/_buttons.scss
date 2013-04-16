@@ -1,0 +1,157 @@
+// forms partial
+// Aegis UI (derived from Playlyfe Sandbox)
+// Kumar Harsh / Johny Jose
+// 24.Jan.2013
+
+.button {
+  // space subsequent buttons
+  &~.button {
+    margin-left:#{0.5*$base-line-height/$base}em;
+  }
+
+  @extend .no-anchor;
+  @include inline-block();
+  @include no-select();
+  padding: $button-padding;
+  margin: 0;
+
+  font-size: #{$button-font-size/$base}em;
+  line-height: $base-line-height;
+  *line-height: $base-line-height;
+  height: $button-height;
+
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+
+  border: {
+    width: 1px;
+    style: solid;
+  }
+  @include button-style(
+    $color: $button-color,
+    $bg: $button-bg,
+    $border: $button-border
+  );
+  *border: 0; // Remove the border to prevent IE7's black border on input:focus
+
+  @include box-sizing(border-box);
+
+
+  // Button sizes
+
+  /* smallest, icon-holder */
+  &.icon-hold {
+    padding: 3px 7px; // center the 16px icon in the button
+  }
+  /* medium, inline */
+  &.inline {
+    @include inline-block();
+    float: none;
+    margin: 0 #{5px/$base}em;
+    height: $button-inline-height; // in ems to align with text
+    line-height: 1.9em;
+    padding: $button-inline-padding;
+  }
+  /* gigantic, block */
+  &.titan {
+    font-size: #{$button-titan-font-size/$base}em;
+    height: 3em;
+    line-height: 2.8em;
+    padding: $button-titan-padding;
+  }
+  /* round buttons */
+  &.round {
+    width: 2*$button-round-radius;
+    height: 2*$button-round-radius;
+    @include border-radius($button-round-radius);
+    line-height: 2*$button-round-radius - 0.5em;
+    font-size: 1.5em;
+  }
+
+
+  // Button colours
+  &.important {
+    @include button-style(
+      $color: $button-prime-color,
+      $bg: $button-prime-bg,
+      $border: darken($button-prime-bg,10%)
+    );
+    &:hover {
+      @include button-style(
+        $bg: darken($button-prime-bg, 10%),
+        $border: darken($button-prime-bg, 30%)
+      );
+    }
+  }
+  &.hazard {
+    @include button-style(
+      $button-hazard-color,
+      $button-hazard-bg,
+      darken($button-hazard-bg, 10%)
+    );
+    &:hover {
+      @include button-style(
+        $bg: darken($button-hazard-bg, 10%),
+        $border: darken($red,20%)
+      );
+    }
+  }
+  &.accent {
+    @include button-style(
+      $button-accent-color,
+      $button-accent-bg,
+      darken($button-accent-bg, 10%)
+    );
+    &:hover {
+      @include button-style(
+        $bg: darken($button-accent-bg, 10%),
+        $border: darken($button-accent-bg, 20%)
+      );
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    @include button-style(
+      $button-hover-color,
+      $button-hover-bg
+    );
+    @include transition(
+      background 0.2s ease 0.1s,
+      color 0.1s ease 0.1s,
+      border 0.6s ease 0.1s
+    );
+
+    // Chameleonic buttons
+    &.primary {
+      @include button-style(
+        $button-prime-color,
+        $button-prime-bg,
+        darken($button-prime-bg, 10%)
+      )
+    }
+    &.neutral {
+      @include button-style(
+        $button-accent-color,
+        $button-accent-bg,
+        darken($button-accent-bg, 10%)
+      );
+    }
+    &.alert {
+      @include button-style(
+        $button-accent-color,
+        $button-accent-bg,
+        darken($button-accent-bg, 10%)
+      );
+    }
+    &.passive {
+      @include button-style(
+        $border: darken($button-border, 5%)
+      );
+    }
+  }
+  &:focus {
+    @include tab-focus();
+  }
+}

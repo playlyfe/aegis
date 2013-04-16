@@ -1,0 +1,94 @@
+// sidebar partial
+// Aegis UI (derived from Playlyfe Sandbox)
+// Kumar Harsh
+// 20.Jan.2013
+
+.sidebar {
+  position: $side-position;
+  width: $side-width;
+  height: 100%;
+  top:0;
+  left:0;
+  margin:0;
+
+  background: $side-bg;
+  border-right: 1px solid $side-border;
+
+  font-size: $side-font-size;
+  z-index: $side-z;
+  @include box-shadow($side-border 0px 0px 10px -1px);
+  @include no-select();
+
+  a {
+    border: none;
+    border-left: 5px solid white;
+    color: $side-color;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 5px 0 5px 10px;
+    @include transition(background, 0.3s, ease, 0.3s);
+    &:hover {
+      color: $side-hover-color;
+      @include transition(border-color, 0.3s, ease, 0.2s);
+    }
+  }
+
+  .main-label {
+    position: relative;
+    & > a { border-left-color: $side-trim; }
+    &:hover {
+      .arrow { border-left-color: $side-hover-trim; }
+      & > a { border-left-color: $side-hover-trim; color: $side-hover-color; }
+    }
+  }
+
+  .arrow {
+    display: block;
+    position: absolute;
+    top:10px; right:15px;
+    width: 0; height: 0;
+    border-left: 5px solid $side-color;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    @include transition(transform, 1.0s, ease, 0.1s);
+  }
+
+  .unwound .main-label {
+    & > a {
+      font-weight: bold;
+    }
+    .arrow {
+      @include transition(transform, 1.0s, ease, 0.1s);
+      @include rotateZ(90deg);
+    }
+    &:hover {
+      & > a, .arrow {
+        border-left-color: $side-hover-trim;
+      }
+    }
+  }
+
+  .active-l1 .main-label {
+    & > a {
+      color: $side-active-color;
+      border-left-color: $side-active-trim;
+    }
+    & > .arrow {
+      border-left-color: $side-active-trim;
+    }
+  }
+
+  .sub-label > a {
+    border-left: 2px solid $side-trim;
+    margin-left: 13px;
+    &:hover {
+      color: $side-sub-hover-color;
+      border-left-color: $side-sub-hover-trim;
+    }
+  }
+  .active-l2 > a {
+    font-weight: bold;
+    color: $side-sub-active-color;
+    border-left-color: $side-sub-active-trim;
+  }
+}

@@ -3,13 +3,13 @@
 // Kumar Harsh
 // 20.Jan.2013
 
-
 .navbar {
+  @include box-sizing('border-box');
   background-color: $navbar-bg;
   border-bottom: 1px solid $navbar-border;
-  top:0;
-  z-index:10000;
-  @include box-sizing('border-box');
+  z-index: $navbar-z;
+  top: 0;
+  // each navbar can have one or more tiers
   .tier {
     height: $navbar-height;
     .nav {
@@ -18,7 +18,7 @@
   }
   li {
     display: block;
-    float:left;
+    float: left;
     &:hover {
       background-color: $navbar-bg-hl;
     }

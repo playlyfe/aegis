@@ -1,8 +1,10 @@
-// forms partial
+// Utilities partial
 // Aegis UI (derived from Playlyfe Sandbox)
 // Kumar Harsh
 // 11.Feb.2013
 
+// This partial has the utility classes which can be
+// applied on any element, giving it some trivial styles
 
 .clearfix {
   @include clearfix();
@@ -14,16 +16,20 @@
   display: block !important;
 }
 .no-space {
+  // apply on <ul> to make it align with paragraph text
   margin: 0 !important;
   padding: 0 !important;
 }
 .no-list {
+  // apply on lists to strip away the bullets & numbers
   @extend .no-space;
   list-style: none !important;
 }
 .no-top { margin-top: 0; }
 .no-bot { margin-bottom: 0 }
+
 .no-anchor {
+  // apply on <a> tags to remove underline
   text-decoration: none !important;
   outline: none;
   &:hover {
@@ -39,7 +45,19 @@
 .abs-pos {
   position: absolute !important;
 }
-
+.fix-pos {
+  position: fixed !important;
+}
 .width-auto {
   width: auto !important;
+}
+
+// styles for the descriptive icons
+.icon-group {
+  // for 16x16 icons
+  margin: 0 0.5em;
+}
+.attr-group {
+  cursor: help;
+  @extend .icon-group;
 }

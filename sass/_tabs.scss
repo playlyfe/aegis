@@ -1,0 +1,162 @@
+.tabbar {
+  position: relative;
+  top: -#{$tabbar-height};
+  background-color: $tabbar-bg;
+  @include clearfix();
+  // if you want tabbar to stick at top when scrolled
+  &.stuck {
+    position: fixed;
+    top: $tabbar-height + 1em;
+    width:96%;
+    z-index: $tabbar-z;
+  }
+  .tab-item {
+    display: block;
+    text-align: center;
+    float:left;
+    .label {
+      width:160px;
+      @extend .no-anchor;
+      @include box-sizing('border-box');
+      cursor: pointer;
+      height: $tabbar-height;
+      padding-top:5px;
+      color: $tabbar-color;
+      border-bottom: 1px solid $tabbar-border;
+      @include transition(color 0.2s ease 0.1s, border-color 0.3s ease 0.1s);
+      &:hover {
+        color: $tabbar-color-hl;
+        border-bottom: 3px solid $tabbar-color-hl;
+      }
+    }
+    &.live {
+      .label {
+        color: $tabbar-color-select;
+        font-weight: bold;
+        border-bottom: 5px solid $tabbar-color-select;
+        @include transition(border-width 0.3s ease 0.1s);
+        &:hover {
+          color: $tabbar-color-select-hl;
+          border-bottom-color: $tabbar-color-select-hl;
+        }
+      }
+    }
+  }
+}
+
+#uniview {
+  position: relative;
+  z-index: $uniview-z;
+  overflow: hidden;
+  top: -31px;
+}
+.centered {
+  margin: 5em auto;
+}
+
+.empty-state {
+  width: 400px;
+  text-align: center;
+  padding-top: 2em;
+  .callout-title {
+    color: $gray-lighter;
+  }
+  .callout {
+    font-size: 1.2em;
+    color: $gray-light;
+  }
+
+  #workbench & {
+    margin-top: 5em;
+    text-align: left;
+  }
+  .modal & {
+    margin-top: 0 !important;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    @include box-sizing('border-box');
+    .callout-title { margin: 0 0 0.62em; line-height: 1.52em; }
+  }
+}
+
+.uniview-sticky {
+  float: right;
+  width:25%;
+  @include box-sizing('border-box');
+  border: 1px solid $green-light;
+  background-color: $green-lightest;
+  margin-top: 1em;
+  padding: 0.5em 1em 1em;
+  .title {
+    color: $green;
+  }
+  .summary {
+    margin: 1em 0;
+    color: $gray-dark;
+    text-align: justify;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// .tabs {
+//   position: relative;
+//   min-height: 400px; /* This part sucks */
+//   clear: both;
+//   margin: 25px 0;
+//   .tab {
+//     float: left;
+//   }
+//   .tab label {
+//     background: #eee;
+//     padding: 10px;
+//     border: 1px solid #ccc;
+//     margin-left: -1px;
+//     position: relative;
+//     left: 1px;
+//     display: inline;
+//     margin-bottom: none;
+//     width: auto;
+//     @include button-interaction();
+//   }
+//   .tab [type=radio] {
+//     display: none;
+//   }
+//   .content {
+//     position: absolute;
+//     top: 28px;
+//     left: 0;
+//     background: white;
+//     right: 0;
+//     bottom: 0;
+//     padding: 20px;
+//     border: 1px solid #ccc;
+//     overflow: hidden;
+//   }
+
+//   .content > * {
+//     opacity: 0;
+//   }
+
+//   [type=radio]:checked ~ label {
+//     background: white;
+//     border-bottom: 1px solid white;
+//     z-index: 2;
+//   }
+
+//   [type=radio]:checked ~ label ~ .content {
+//     z-index: 1;
+//   }
+
+//   [type=radio]:checked ~ label ~ .content > * {
+//     opacity: 1;
+//   }
+// }
