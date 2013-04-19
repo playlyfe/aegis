@@ -4,12 +4,10 @@
 // 20.Jan.2013
 
 .sidebar {
-  position: $side-position;
+  position: relative;
   width: $side-width;
-  height: 100%;
-  top:0;
-  left:0;
-  margin:0;
+  height: $side-height;
+  padding: $side-padding 0;
 
   background: $side-bg;
   border-right: 1px solid $side-border;

@@ -42,14 +42,31 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     text-shadow: 2px 2px 3px $prime-lightest;
   }
+  a {
+    @extend .no-anchor;
+    color: $heading-color;
+    &:hover {
+      color: $accent-dark;
+    }
+  }
 }
 
 body {
   // conditional style sheet for IE
   // font-size:100%;
+  @extend .no-space;
+  border: none;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  color: $text-color;
+  color: $base-color;
+}
+.wrapper {
+  width: $min-screen-width;
+  margin: 0 auto;
+  @include clearfix;
+  @if $navbar-pos == fixed {
+    margin-top: $navbar-height * $golden;
+  }
 }
 h1, h2 {
   line-height: 2 * $base-line-height;
@@ -61,8 +78,9 @@ h4, h5, h6, p {
 h1 {
   font-size: $h1-size;
   &.splash {
-    font-size: 55px;
-    margin: 2*$base-font-size 0;
+    font-size: $h1-size * 1.5;
+    line-height: 1.1em;
+    margin: 0.5em 0;
   }
 }
 h2 {
@@ -84,6 +102,9 @@ h6 {
   font-weight: bold;
   margin: 2px 0;
 }
+.header {
+  color: mix($prime-lighter, $base-color, 20%);
+}
 p  {
   font-size: $base-font-size;
   margin: 0 0 $base-font-size;
@@ -99,3 +120,23 @@ a {
 .caps {
   text-transform: uppercase;
 }
+.hl {
+  color: $accent-dark;
+}
+code, pre {
+  font-family: $mono-font-family;
+  padding: 1em 1em;
+  background-color: $code-bg;
+  color: $code-color;
+  border: 1px solid darken($code-bg, 10%);
+  margin-bottom: 1em;
+}
+code {
+  padding: 4px 5px 1px;
+  margin: 0 0.2em;
+}
+
+.text-left    { text-align: left;    }
+.text-right   { text-align: right;   }
+.text-center  { text-align: center;  }
+.text-justify { text-align: justify; }

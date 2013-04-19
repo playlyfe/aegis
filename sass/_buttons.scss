@@ -49,23 +49,23 @@
     @include inline-block();
     float: none;
     margin: 0 #{5px/$base}em;
-    height: $button-inline-height; // in ems to align with text
-    line-height: 1.9em;
-    padding: $button-inline-padding;
+    height: $button-inline-height - 0.5; // half em less
+    line-height: $button-inline-height / 2;
+    padding: 0.2em  #{$button-inline-padding/$base}em 0;
   }
   /* gigantic, block */
   &.titan {
     font-size: #{$button-titan-font-size/$base}em;
-    height: 3em;
-    line-height: 2.8em;
-    padding: $button-titan-padding;
+    height: $button-titan-height;
+    line-height: $button-titan-height;
+    padding: 0 $button-titan-height/2;
   }
   /* round buttons */
   &.round {
     width: 2*$button-round-radius;
     height: 2*$button-round-radius;
     @include border-radius($button-round-radius);
-    line-height: 2*$button-round-radius - 0.5em;
+    line-height: 1.5em;
     font-size: 1.5em;
   }
 
@@ -79,20 +79,22 @@
     );
     &:hover {
       @include button-style(
+        $color: $button-prime-color,
         $bg: darken($button-prime-bg, 10%),
-        $border: darken($button-prime-bg, 30%)
+        $border: darken($button-prime-bg, 20%)
       );
     }
   }
   &.hazard {
     @include button-style(
-      $button-hazard-color,
-      $button-hazard-bg,
-      darken($button-hazard-bg, 10%)
+      $button-alert-color,
+      $button-alert-bg,
+      darken($button-alert-bg, 10%)
     );
     &:hover {
       @include button-style(
-        $bg: darken($button-hazard-bg, 10%),
+        $color: $button-alert-color,
+        $bg: darken($button-alert-bg, 10%),
         $border: darken($red,20%)
       );
     }
@@ -105,6 +107,7 @@
     );
     &:hover {
       @include button-style(
+        $color: $button-accent-color,
         $bg: darken($button-accent-bg, 10%),
         $border: darken($button-accent-bg, 20%)
       );
@@ -140,13 +143,15 @@
     }
     &.alert {
       @include button-style(
-        $button-accent-color,
-        $button-accent-bg,
-        darken($button-accent-bg, 10%)
+        $button-alert-color,
+        $button-alert-bg,
+        darken($button-alert-bg, 10%)
       );
     }
-    &.passive {
+    &.disabled {
       @include button-style(
+        $color: $button-hover-color,
+        $bg: lighten($button-bg, 20%),
         $border: darken($button-border, 5%)
       );
     }

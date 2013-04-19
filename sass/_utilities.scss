@@ -39,6 +39,12 @@
 .no-float {
   float: none !important;
 }
+.left {
+  float: left !important;
+}
+.right {
+  float: right !important;
+}
 .static-pos {
   position: static !important;
 }
@@ -51,7 +57,12 @@
 .width-auto {
   width: auto !important;
 }
-
+.inline {
+  display: inline;
+}
+.block {
+  display: block;
+}
 // styles for the descriptive icons
 .icon-group {
   // for 16x16 icons
@@ -60,4 +71,7 @@
 .attr-group {
   cursor: help;
   @extend .icon-group;
+}
+.fade {
+  opacity: 0.2;
 }

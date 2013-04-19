@@ -3,48 +3,30 @@
 // Kumar Harsh
 // 20.Mar.2013
 
-table {
+.table {
+  border-collapse: collapse;
+  margin: 2em 0;
 
-  &.border {
-    th {
-      font-size: 1em;
-      color: $gray-darker;
-    }
-    td, th {
-      border: 1px solid #ccc;
-      padding: 7px 13px;
-    }
-  }
-
-  &.striped {
-    tr:nth-child(2n) {
-      background-color: #f8f8f8;
-    }
+  // cell sizes for table cells
+  @for $i from 1 through 10 {
+    .cell-#{$i} { width: $i * 10%; }
   }
 
   thead {
     background-color: $table-head-bg;
-    th {
-      color: $table-head-text-color;
-      text-align: left;
-      font-size: #{16px/$base}em;
-      padding: #{5px/$base}em 0.25em;
-      @include box-sizing('border-box');
-      &.cell-ops { width: 65px; }
-      &.cell-1 { width: 10%; }
-      &.cell-2 { width: 20%; }
-      &.cell-3 { width: 30%; }
-      &.cell-4 { width: 40%; }
-      &.cell-5 { width: 50%; }
-      &.cell-6 { width: 60%; }
-      &.cell-7 { width: 70%; }
-      &.cell-8 { width: 80%; }
-      &.cell-9 { width: 90%; }
-    }
+  }
+  th {
+    color: $table-head-color;
+    text-align: left;
+    font-size: $base;
+    border: 1px solid $table-border;
+    padding: #{5px/$base}em 0.25em;
+    @include box-sizing('border-box');
   }
   td {
     padding: #{10px/$base}em 0.25em;
     vertical-align: top;
+    border: 1px solid $table-border;
     .info-tag {
       padding: 0.1em 0.25em;
       margin-right:1em;
@@ -92,5 +74,49 @@ table {
   tfoot {
     background-color: $table-foot-bg;
     td { text-align: center; padding: #{15px/$base} 0;}
+  }
+}
+
+// table types
+.table {
+  // without borders
+  &.non-bordered {
+    th {
+      font-size: #{16px/$base}em;
+    }
+    td, th {
+      border: none;
+      padding: 0.5em 1em;
+    }
+  }
+
+  // tables suited for lists
+  &.listing {
+    & > thead > tr > th {
+      border: none;
+      font-size: #{16px/$base}em;
+    }
+    & > tbody > tr {
+      & > td { border: none; }
+      border-bottom: 1px solid $table-border;
+      &:hover {
+        color: $prime-darker;
+        border-bottom: 1px solid $green;
+      }
+    }
+  }
+
+  // the full width tables
+  &.expanded {
+    table-layout: fixed;
+    width: 100%;
+    min-width: 670px;
+  }
+
+    // alternating stripes
+  &.striped {
+    tr:nth-child(2n) {
+      background-color: $table-body-alt-bg;
+    }
   }
 }

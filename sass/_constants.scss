@@ -19,7 +19,6 @@ $min-screen-width:      1024px;
   COLOURS
   ===========================
 */
-$base-color:            #95d905;
 
 // Grays
 $black:                 #000 !default;
@@ -44,9 +43,14 @@ $gold:                  #da9100 !default;
 $yellow:                #ffcc00 !default;
 
 
+// MAIN COLOURS
+$prime-color:           $green;
+$accent-color:          $navy;
+
+
 // Primaries
 // TODOKHS: normalize the colours
-$prime:                 desaturate($base-color, $golden * 10);
+$prime:                 desaturate($prime-color, $golden * 10);
 $prime-darkest:         mix($black, $prime, 100% / $golden);
 $prime-darker:          mix($black, $prime, 30%);
 $prime-dark:            mix($black, $prime, 10%);
@@ -54,7 +58,7 @@ $prime-light:           mix($white, $prime, 100% / ( $golden * $golden * $golden
 $prime-lighter:         mix($white, $prime, 70%);
 $prime-lightest:        mix($white, $prime, 85%);
 
-$accent:                $sky;
+$accent:                $accent-color;
 $accent-darkest:        darken($accent, 100% / $golden);
 $accent-darker:         darken($accent, 30%);
 $accent-dark:           darken($accent, 10%);
@@ -63,76 +67,15 @@ $accent-lighter:        lighten($accent, 25%);
 $accent-lightest:       lighten($accent, 40%);
 
 
-/*
-  ===========================
-  COMMON
-  ===========================
-*/
-$error-bg:            lighten($red,50%);
-$error-color:         $red;
-$error-border:        $red;
-
-
-
-// NAVBAR VARS
-$navbar-height:         40px;
-$crest-height:          28px;
-$navbar-bg:             $prime;
-$navbar-bg-hl:          $prime-dark;
-$navbar-border:         $prime-dark;
-$navbar-text-color:     $white;
-
 
 //
 //  ===========================
-//  NAVIGATORS & MENUS
+//  COMMON
 //  ===========================
 //
-
-$side-position:             fixed;
-$side-z:                    100;
-$side-width:                200px;
-$side-border:               $gray-lightest;
-$side-bg:                   $white;
-$side-font-size:            13px;
-
-// MAIN-MENU
-$side-color:                $gray-dark;
-$side-trim:                 $gray-lightest;
-$side-hover-color:          $prime;
-$side-hover-trim:           $prime;
-$side-active-color:         $prime-dark;
-$side-active-trim:          $prime-dark;
-
-// SUB-MENU
-$side-sub-color:            $gray-lightest;
-$side-sub-trim:             $gray-lightest;
-$side-sub-hover-color:      $sky;
-$side-sub-hover-trim:       lighten($sky,10%);
-$side-sub-active-color:     $sky;
-$side-sub-active-trim:      $sky;
-
-// UNINAV RULES
-$tabbar-z:                  100;
-$tabbar-font-size:          1;
-$tabbar-height:             2.38em;
-$tabbar-bg:                 $side-bg;
-$tabbar-color:              $side-color;
-$tabbar-trim:               $side-trim;
-$tabbar-hover-color:        $side-hover-color;
-$tabbar-active-color:       $side-active-color;
-
-
-
-// TABLE
-$table-head-bg:             $white;
-$table-head-text-color:     $gray-light;
-$table-foot-bg:             $white;
-
-// Z-Index order
-$sticky-z:      50;
-$file-input-z:  150;
-$navbar-z:      1000;
+$error-bg:             lighten($red,50%);
+$error-color:          $red;
+$error-border:         $red;
 
 
 //
@@ -140,12 +83,12 @@ $navbar-z:      1000;
 //  TYPOGRAPHY
 //  ===========================
 //
-
 $base:             13px;
 $base-font-family: 'Droid Sans', 'sans serif';
+$mono-font-family: 'Droid Mono', 'Consolas', 'Inconsolata', 'Ubuntu Mono', monospace;
 $base-font-size:   $base;
 $base-line-height: 21px;
-$text-color:       $gray;
+$base-color:       $gray;
 
 $h6-size: 1.08em;
 $h5-size: 1.15em;
@@ -161,6 +104,85 @@ $link-hover-color:        $accent-dark !default;
 $heading-color:           $gray !default;
 $subheading-color:        $gray-lighter !default;
 
+$code-bg:                 $gray-ultralight;
+$code-color:              $accent;
+
+//
+//  ===========================
+//  NAVBAR
+//  ===========================
+//
+$navbar-z:              1000;
+$navbar-pos:            fixed;
+$navbar-height:         40px;
+$navbar-icon-height:    16px;
+$navbar-color:          $white;
+$navbar-bg:             $prime;
+$navbar-hover-bg:       $prime-dark;
+$navbar-border:         $prime-dark;
+
+
+//
+//  ===========================
+//  PAGE NAVIGATORS & MENUS
+//  ===========================
+//
+
+$side-position:             fixed;
+$side-z:                    100;
+$side-width:                200px;
+$side-height:               auto;
+$side-padding:              1em;
+$side-border:               $gray-lightest;
+$side-bg:                   $white;
+$side-font-size:            $base;
+
+// MAIN-MENU
+$side-color:                $gray-dark;
+$side-trim:                 $gray-lightest;
+$side-hover-color:          $prime;
+$side-hover-trim:           $prime;
+$side-active-color:         $prime-dark;
+$side-active-trim:          $prime-dark;
+
+// SUB-MENU
+$side-sub-color:            $gray-lightest;
+$side-sub-trim:             $gray-lightest;
+$side-sub-hover-color:      $accent;
+$side-sub-hover-trim:       $accent-light;
+$side-sub-active-color:     $accent;
+$side-sub-active-trim:      $accent;
+
+// UNINAV RULES
+$tabbar-z:                  100;
+$tabbar-font-size:          1;
+$tabbar-height:             2.38em;
+$tabbar-bg:                 $side-bg;
+$tabbar-color:              $side-color;
+$tabbar-trim:               $side-trim;
+$tabbar-hover-color:        $side-hover-color;
+$tabbar-active-color:       $side-active-color;
+
+
+
+//
+//  ===========================
+//  TABLES
+//  ===========================
+//
+
+$table-head-bg:             $white;
+$table-head-color:          $gray-light;
+$table-border:              $gray-lighter;
+$table-body-bg:             $white;
+$table-body-alt-bg:         $gray-ultralight;
+$table-foot-bg:             $white;
+
+// Z-Index order
+$sticky-z:      50;
+$file-input-z:  150;
+
+
 
 //
 //  ===========================
@@ -174,10 +196,10 @@ $button-font-size:       14px;
 $button-height:          30px;
 
 $button-inline-height:   2em;
-$button-inline-padding:  #{1px/$base}em #{8px/$base}em;
+$button-inline-padding:  8px;
 
 $button-titan-font-size: 18px;
-$button-titan-padding:   0 #{20px/$base}em;
+$button-titan-height:    3em;
 
 $button-round-radius:    4em;
 
@@ -185,17 +207,17 @@ $button-round-radius:    4em;
 // COLOURS
 $button-color:          $gray-dark;
 $button-bg:             $gray-ultralight;
-$button-border:         darken($gray-ultralight,5%);
+$button-border:         darken($gray-ultralight,10%);
 $button-hover-color:    $gray-darker;
-$button-hover-bg:       $gray-light;
+$button-hover-bg:       $gray-lightest;
 
 $button-prime-bg:       $prime;
 $button-prime-color:    $white;
 
-$button-hazard-bg:      $red;
-$button-hazard-color:   $white;
+$button-alert-bg:       $error-color;
+$button-alert-color:    $white;
 
-$button-accent-bg:      $sky;
+$button-accent-bg:      $accent;
 $button-accent-color:   $white;
 
 
@@ -208,26 +230,26 @@ $button-accent-color:   $white;
 
 
 // INFOTAG
-$infoTag-color: $accent-dark;
-$infoTag-color-hover: $accent-darker;
-$infoTag-alert-color: darken($red,10%);
-$infoTag-inactive-color: $gray-light;
+$infoTag-color:           $accent-dark;
+$infoTag-color-hover:     $accent-darker;
+$infoTag-alert-color:     darken($red,10%);
+$infoTag-inactive-color:  $gray-light;
 
-$infoTag-bg: $accent-lightest;
-$infoTag-bg-hover: $accent-lighter;
-$infoTag-alert-bg: lighten($red,35%);
-$infoTag-inactive-bg: $gray-ultralight;
+$infoTag-bg:              $accent-lightest;
+$infoTag-bg-hover:        $accent-lighter;
+$infoTag-alert-bg:        lighten($red,35%);
+$infoTag-inactive-bg:     $gray-ultralight;
 
-// DIVIDER
-$divider-light-color: $gray-ultralight;
-$divider-dark-color: $gray-dark;
-$divider-width: 2px;
-$divider-fat-width: 5px;
+// HR / DIVIDER
+$divider-light-color:     $gray-ultralight;
+$divider-dark-color:      $gray-dark;
+$divider-width:           2px;
+$divider-fat-width:       5px;
 
 // SNIPPET
-$snippet-hover-color: $white;
-$snippet-hover-fill:  $prime;
-$snippet-border: 1px dashed $prime-dark;
+$snippet-hover-color:     $white;
+$snippet-hover-fill:      $prime;
+$snippet-border:          1px dashed $prime-dark;
 
 
 //
@@ -238,21 +260,21 @@ $snippet-border: 1px dashed $prime-dark;
 
 
 // MODAL
-$mask-opacity: 0.70;
-$mask-z:        200;
+$mask-opacity:        0.70;
+$mask-z:              200;
 
-$modal-width: 500px;
-$modal-wide-width: 700px;
-$modal-z:       250;
-$modal-shadow-color: rgba(0,0,0,0.15);
+$modal-width:         500px;
+$modal-wide-width:    700px;
+$modal-z:             250;
+$modal-shadow-color:  rgba(0,0,0,0.15);
 
-$modal-head-bg: $prime;
-$modal-head-border: $prime-dark;
-$modal-bg: $white;
-$modal-border: $gray-ultralight;
+$modal-head-bg:       $prime;
+$modal-head-border:   $prime-dark;
+$modal-bg:            $white;
+$modal-border:        $gray-ultralight;
 
 // OVERLAYS (covers forms while request completes)
-$overlay-cover: rgba(255,255,255,0.8);
+$overlay-cover:       rgba(255,255,255,0.8);
 
 
 //
@@ -265,34 +287,34 @@ $overlay-cover: rgba(255,255,255,0.8);
 $form-horz-label-width: 135px;
 
 // INPUTS
-$input-height:         31px;
+$input-height:          31px;
 
-$input-bg:             $white;
-$input-color:          $gray;
-$input-disabled-color: $gray-light;
-$input-shadow:         rgba(0,0,0,0.1);
+$input-bg:              $white;
+$input-color:           $gray;
+$input-disabled-color:  $gray-light;
+$input-shadow:          rgba(0,0,0,0.1);
 
-$input-border-radius:  0px;
-$input-border:         $gray-dark;
-$input-focus-border:   $prime;
-$input-active-border:  $prime;
+$input-border-radius:   0px;
+$input-border:          $gray-dark;
+$input-focus-border:    $prime;
+$input-active-border:   $prime;
 
 // INPUT FIELD TIPS
-$field-tip-color:      $gray-light;
-$field-tip-hl-color:   $accent;
-$field-tip-bg:         $accent-lightest;
-$field-tip-border:     $accent-lighter;
+$field-tip-color:       $gray-light;
+$field-tip-hl-color:    $accent;
+$field-tip-bg:          $accent-lightest;
+$field-tip-border:      $accent-lighter;
 
 // LEGEND
-$legend-color:         $gray-dark;
-$legend-border:        $gray-light;
+$legend-color:          $gray-dark;
+$legend-border:         $gray-light;
 
 // TAGS
-$tag-color:            $input-color;
-$tag-bg:               $prime-lightest;
-$tag-border:           $prime-light;
-$tag-hover-color:      $white;
-$tag-hover-bg:         $prime-light;
+$tag-color:             $input-color;
+$tag-bg:                $prime-lightest;
+$tag-border:            $prime-light;
+$tag-hover-color:       $white;
+$tag-hover-bg:          $prime-light;
 
 // MULTISELECT
 $multiselect-max-height: 200px;

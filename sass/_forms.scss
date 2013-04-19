@@ -178,7 +178,7 @@ textarea {
 // Position radios and checkboxes better
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 3px $base-font-size 0 3px;
+  margin: 3px $base-font-size 0 0;
   *margin-top: 0; /* IE7 */
   line-height: $base-line-height;
   cursor: pointer;
@@ -452,6 +452,14 @@ input[type="tags"] {
   @include box-sizing('border-box');
 }
 
+// inline buttons in forms need special treatment
+form .button.inline {
+  height: $input-height - 2 ; // in ems to align with fields
+  line-height: $input-height - 2;
+  padding: 0 #{$button-inline-padding/$base}em;
+}
+
+
 .form-search, .form-inline, .form-horizontal {
   input, textarea, select, .help-inline,
   .uneditable-input, .input-prepend, .input-append {
@@ -498,7 +506,7 @@ input[type="tags"] {
   input[type="radio"],
   input[type="checkbox"] {
     float:none;
-    margin:-0.31em 5px 0 10px;
+    margin:-0.31em 5px 0 0;
   }
   .snippet {
     line-height: 1.62em;
