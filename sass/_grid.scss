@@ -1,0 +1,276 @@
+/*
+  Variable Grid System (Fluid Version).
+  Learn more ~ http://www.spry-soft.com/grids/
+  Based on 960 Grid System - http://960.gs/ & 960 Fluid - http://www.designinfluences.com/
+
+  Licensed under GPL and MIT.
+*/
+
+.grid-12,
+.grid-16
+{
+  width: 92%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+
+.col-1,  .col-2,  .col-3,  .col-4,
+.col-5,  .col-6,  .col-7,  .col-8,
+.col-9,  .col-10, .col-11, .col-12,
+.col-13, .col-14, .col-15, .col-16
+{
+  display: inline;
+  // position: relative;
+  float: left;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.grid-12 .col-3,
+.grid-16 .col-4
+{
+  width: 23%;
+}
+
+.grid-12 .col-6,
+.grid-16 .col-8
+{
+  width: 48%;
+}
+
+.grid-12 .col-9,
+.grid-16 .col-12
+{
+  width: 73%;
+}
+
+.grid-12 .col-12,
+.grid-16 .col-16
+{
+  width: 98%;
+}
+
+
+//
+//  ===========================
+//  SPECIAL CLASSES
+//  ===========================
+//
+.alpha { margin-left: 0; }
+.omega { margin-right: 0; }
+.alphamega { @extend .alpha; @extend .omega; }
+
+//
+//  ===========================
+//  GRID / 12 COL
+//  ===========================
+//
+
+// as much as i want to convert this into
+// mathematical formula based loop, the
+// values don't come out quite correctly
+// cuz of decimal rounding.
+//
+// This works perfectly though:
+// .grid-12 {
+//   $col-width: 6.333%;
+//   .col-1 { width: $col-width; }
+//   @for $i from 2 through 12 {
+//     @if $i%3 != 0 {
+//       .col-#{$i} { width: $col-width * $i + 2% * ($i - 1) ;}
+//     }
+//   }
+// }
+.grid-12 {
+  .col-1  { width: 6.333%; }
+  .col-2  { width: 14.666%; }
+  .col-4  { width: 31.333%; }
+  .col-5  { width: 39.666%; }
+  .col-7  { width: 56.333%; }
+  .col-8  { width: 64.666%; }
+  .col-10 { width: 81.333%; }
+  .col-11 { width: 89.666%; }
+}
+
+
+//
+//  ===========================
+//  GRID / 16 COL
+//  ===========================
+//
+
+.grid-16 {
+  .col-1  { width: 4.25%; }
+  .col-2  { width: 10.5%; }
+  .col-3  { width: 16.75%; }
+  .col-5  { width: 29.25%; }
+  .col-6  { width: 35.5%; }
+  .col-7  { width: 41.75%; }
+  .col-9  { width: 54.25%; }
+  .col-10 { width: 60.5%; }
+  .col-11 { width: 66.75%; }
+  .col-13 { width: 79.25%; }
+  .col-14 { width: 85.5%; }
+  .col-15 { width: 91.75%; }
+}
+
+
+//
+//  ===========================
+//  PREFIX
+//  ===========================
+//
+
+.grid-12 .pfx-3,
+.grid-16 .pfx-4
+{
+  padding-left: 25%;
+}
+
+.grid-12 .pfx-6,
+.grid-16 .pfx-8
+{
+  padding-left: 50%;
+}
+
+.grid-12 .pfx-9,
+.grid-16 .pfx-12
+{
+  padding-left: 75%;
+}
+
+//
+//  ===========================
+//  PREFIX / 12 COL
+//  ===========================
+//
+.grid-12 {
+  .pfx-1  { padding-left: 8.333%; }
+  .pfx-2  { padding-left: 16.666%; }
+  .pfx-4  { padding-left: 33.333%; }
+  .pfx-5  { padding-left: 41.666%; }
+  .pfx-7  { padding-left: 58.333%; }
+  .pfx-8  { padding-left: 66.666%; }
+  .pfx-10 { padding-left: 83.333%; }
+  .pfx-11 { padding-left: 91.666%; }
+}
+
+
+//
+//  ===========================
+//  PREFIX / 16 COL
+//  ===========================
+//
+
+.grid-16 {
+  .pfx-1  { padding-left: 6.25%; }
+  .pfx-2  { padding-left: 12.5%; }
+  .pfx-3  { padding-left: 18.75%; }
+  .pfx-5  { padding-left: 31.25%; }
+  .pfx-6  { padding-left: 37.5%; }
+  .pfx-7  { padding-left: 43.75%; }
+  .pfx-9  { padding-left: 56.25%; }
+  .pfx-10 { padding-left: 62.5%; }
+  .pfx-11 { padding-left: 68.75%; }
+  .pfx-13 { padding-left: 81.25%; }
+  .pfx-14 { padding-left: 87.5%; }
+  .pfx-15 { padding-left: 93.75%; }
+}
+
+
+//
+//  ===========================
+//  SUFFIX
+//  ===========================
+//
+
+
+.grid-12 .sfx-3,
+.grid-16 .sfx-4
+{
+  padding-right: 25%;
+}
+
+.grid-12 .sfx-6,
+.grid-16 .sfx-8
+{
+  padding-right: 50%;
+}
+
+.grid-12 .sfx-9,
+.grid-16 .sfx-12
+{
+  padding-right: 75%;
+}
+
+
+//
+//  ===========================
+//  SUFFIX / 12 COL
+//  ===========================
+//
+.grid-12 {
+  .sfx-1 { padding-right: 8.333%; }
+  .sfx-2 { padding-right: 16.666%; }
+  .sfx-4 { padding-right: 33.333%; }
+  .sfx-5 { padding-right: 41.666%; }
+  .sfx-7 { padding-right: 58.333%; }
+  .sfx-8 { padding-right: 66.666%; }
+  .sfx-10 { padding-right: 83.333%; }
+  .sfx-11 { padding-right: 91.666%; }
+}
+
+
+
+
+//
+//  ===========================
+//  SUFFIX / 16 COL
+//  ===========================
+//
+.grid-16 {
+  .sfx-1 { padding-right: 6.25%; }
+  .sfx-2 { padding-right: 16.5%; }
+  .sfx-3 { padding-right: 18.75%; }
+  .sfx-5 { padding-right: 31.25%; }
+  .sfx-6 { padding-right: 37.5%; }
+  .sfx-7 { padding-right: 43.75%; }
+  .sfx-9 { padding-right: 56.25%; }
+  .sfx-10 { padding-right: 62.5%; }
+  .sfx-11 { padding-right: 68.75%; }
+  .sfx-13 { padding-right: 81.25%; }
+  .sfx-14 { padding-right: 87.5%; }
+  .sfx-15 { padding-right: 93.75%; }
+}
+
+//
+//  ===========================
+//  PUSH & PULLS
+//  ===========================
+//
+.grid-12 {
+  .push-1  { left:8.333%;  }
+  .push-2  { left:16.667%; }
+  .push-3  { left:25.0%;   }
+  .push-4  { left:33.333%; }
+  .push-5  { left:41.667%; }
+  .push-6  { left:50.0%;   }
+  .push-7  { left:58.333%; }
+  .push-8  { left:66.667%; }
+  .push-9  { left:75.0%;   }
+  .push-10 { left:83.333%; }
+  .push-11 { left:91.667%; }
+
+  .pull-1  { left:-8.333%;  }
+  .pull-2  { left:-16.667%; }
+  .pull-3  { left:-25.0%;   }
+  .pull-4  { left:-33.333%; }
+  .pull-5  { left:-41.667%; }
+  .pull-6  { left:-50.0%;   }
+  .pull-7  { left:-58.333%; }
+  .pull-8  { left:-66.667%; }
+  .pull-9  { left:-75.0%;   }
+  .pull-10 { left:-83.333%; }
+  .pull-11 { left:-91.667%; }
+}
