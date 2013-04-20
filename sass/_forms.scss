@@ -159,9 +159,9 @@ fieldset {
 legend {
   display: block;
   padding: 0px;
-  margin-bottom: $base-line-height;
+  margin-bottom: $base-line-height/2;
   font-size: $h4-size;
-  line-height: $base-line-height * 2;
+  line-height: $base-line-height * $golden;
   color: $legend-color;
   border-bottom: 1px solid $legend-border;
   width: 100%;
@@ -482,7 +482,9 @@ form .button.inline {
     margin-left: $form-horz-label-width + 20;
     margin-bottom: 20px;
   }
-  label {
+  // only right align the form labels
+  // not checkbox & radio texts
+  .form-row > label {
     padding-top: 4px;
     text-align: right;
     width: $form-horz-label-width;

@@ -306,8 +306,8 @@ $field-tip-bg:          $accent-lightest;
 $field-tip-border:      $accent-lighter;
 
 // LEGEND
-$legend-color:          $gray-dark;
-$legend-border:         $gray-light;
+$legend-color:          $gray-light;
+$legend-border:         $gray-lighter;
 
 // TAGS
 $tag-color:             $input-color;
@@ -321,3 +321,8 @@ $multiselect-max-height: 200px;
 
 // OTHERS
 $addon-bg: $gray-lighter;
+
+// EXAMPLE BOX
+$example-text: "example";
+$example-bg: $accent;
+$example-color: $white;
