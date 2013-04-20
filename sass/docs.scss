@@ -1,0 +1,43 @@
+@import "compass";
+@import "constants";
+@import "mixins";
+@import "utilities";
+.docs-eg {
+  position: relative;
+}
+.docs-eg-code {
+  clear:left;
+  position: relative;
+  top: 100%;
+}
+#sidewinder {
+  margin-top: $navbar-height * $golden;
+}
+.content {
+  margin-top: 0;
+}
+
+.docs-section {
+  padding: $navbar-height * $golden 0;
+  border-bottom: 2px dashed $gray-lightest;
+}
+.docs-article {
+  padding-bottom: 1em;
+  border-bottom: 1px dashed $gray-ultralight;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+.docs-h3 {
+  padding-top: 10px;
+}
+.docs-h1, .docs-h3, .docs-h4 {
+  a {
+    @extend .no-anchor;
+    @include button-interaction();
+    color: $gray-dark;
+    &:hover {
+      color: mix($gray-dark, $accent, 60%);
+    }
+  }
+}
