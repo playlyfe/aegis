@@ -300,10 +300,11 @@ $input-focus-border:    $prime;
 $input-active-border:   $prime;
 
 // INPUT FIELD TIPS
-$field-tip-color:       $gray-light;
-$field-tip-hl-color:    $accent;
-$field-tip-bg:          $accent-lightest;
-$field-tip-border:      $accent-lighter;
+$field-help-min-width:  200px;
+$field-help-color:      $gray-light;
+$field-help-link-color: $accent;
+$field-help-bg:         $accent-lightest;
+$field-help-border:     $accent-lighter;
 
 // LEGEND
 $legend-color:          $gray-light;

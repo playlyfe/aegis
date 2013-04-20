@@ -7,6 +7,12 @@ form {
   @include clearfix();
   .button {
     margin: 0 0 $base-line-height/2;
+    // inline buttons in forms need special treatment
+    &.inline {
+      height: $input-height - 2 ; // in ems to align with fields
+      line-height: $input-height - 2;
+      padding: 0 #{$button-inline-padding/$base}em;
+    }
   }
   input, label, fieldset, legend, textarea, select, .button, .input_container {
     float: left;
@@ -29,32 +35,6 @@ form {
   legend + & {
     margin-top: #{$input-height/2};
     -webkit-margin-top-collapse: separate;
-  }
-  .field-tip {
-    position: absolute;
-    display: none;
-    min-width: 200px;
-    top: 0;
-    left: 100%;
-    margin-left:10px;
-    color: $field-tip-color;
-    background-color: $field-tip-bg;
-    @include box-sizing('border-box');
-    border: 1px solid $field-tip-border;
-    padding: 0.5em 0.5em;
-    a {
-      color: $field-tip-hl-color;
-    }
-    &:hover {
-      display: block;
-    }
-    p:last-child {
-      margin-bottom: 0;
-    }
-  }
-  .tip-list {
-    @extend .no-list;
-    @extend .no-space;
   }
 }
 
@@ -80,16 +60,37 @@ form {
 
 
 .field-wrapper {
+  position: relative;
   *display: block;
   margin: 0;
-  &.pad {
-    padding-top: 2px;
-    // for radio and checkboxes
-    & > input:first-child {
-      margin-left: 0;
+  .field-help {
+    position: absolute;
+    display: none;
+    min-width: $field-help-min-width;
+    top: 26px;
+    left: 100%;
+    margin-left:10px;
+    color: $field-help-color;
+    background-color: $field-help-bg;
+    @include box-sizing('border-box');
+    border: 1px solid $field-help-border;
+    padding: 0.3em 0.5em;
+    a {
+      color: $field-help-link-color;
+    }
+    &:hover {
+      display: block;
+    }
+    p:last-child {
+      margin-bottom: 0;
     }
   }
+  input[type="radio"] + .field-help,
+  input[type="checkbox"] + .field-help {
+    top: 0;
+  }
 }
+
 .form-actions {
   @extend .field-wrapper;
   margin-top: 1em;
@@ -124,7 +125,7 @@ input[type="search"],   input[type="tel"],            input[type="color"],
 }
 
 select, textarea, input {
-  &:focus ~ .field-tip {
+  &:focus ~ .field-help {
     display: block;
   }
 }
@@ -452,13 +453,6 @@ input[type="tags"] {
   @include box-sizing('border-box');
 }
 
-// inline buttons in forms need special treatment
-form .button.inline {
-  height: $input-height - 2 ; // in ems to align with fields
-  line-height: $input-height - 2;
-  padding: 0 #{$button-inline-padding/$base}em;
-}
-
 
 .form-search, .form-inline, .form-horizontal {
   input, textarea, select, .help-inline,
@@ -499,6 +493,9 @@ form .button.inline {
     }
     &:first-child {
      *padding-left: $form-horz-label-width + 20;
+    }
+    .field-help {
+      top: 0;
     }
   }
   .form-actions {
