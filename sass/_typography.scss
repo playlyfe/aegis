@@ -42,13 +42,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     text-shadow: 2px 2px 3px $prime-lightest;
   }
-  a {
-    @extend .no-anchor;
-    color: $heading-color;
-    &:hover {
-      color: $accent-dark;
-    }
-  }
 }
 
 body {
@@ -64,9 +57,6 @@ body {
   width: $min-screen-width;
   margin: 0 auto;
   @include clearfix;
-  @if $navbar-pos == fixed {
-    margin-top: $navbar-height * $golden;
-  }
 }
 h1, h2 {
   line-height: 2 * $base-line-height;
@@ -130,6 +120,8 @@ code, pre {
   color: $code-color;
   border: 1px solid darken($code-bg, 10%);
   margin-bottom: 1em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 code {
   padding: 4px 5px 1px;
