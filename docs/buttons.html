@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Aegis</title>
+    <link rel="stylesheet" href="assets/css/aegis.css">
+    <link rel="stylesheet" href="assets/css/docs.css">
+    <script src="assets/js/vendor/jquery/jquery.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navigator" class="navbar">
+        <div role="global-nav" class="tier wrapper grid-12"><a href="/" class="crest"><img src="assets/images/logo-playlyfe-white.png" alt="Aegis" title="The Aegis UI Framework"></a>
+          <ul class="nav">
+            <li><a href="start.html">Getting Started</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="button.html">Button</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="wrapper grid-12">
+        <nav id="sidewinder" class="sidebar fix-pos">
+          <ul class="nav">
+            <li>
+              <div class="main-label"><a href="#types">Types</a></div>
+            </li>
+            <li>
+              <div class="main-label"><a href="#sizes">Sizes</a></div>
+            </li>
+            <li>
+              <div class="main-label"><a href="#tags">Supported Tags</a></div>
+            </li>
+          </ul>
+        </nav>
+        <div class="content col-9 pfx-3">
+          <h1 class="splash docs-page-header">Buttons</h1>
+          <section id="types" class="docs-section">
+            <h1 class="docs-h1">Types</h1>
+            <p>
+              You can turn any of these elements into a button: <code>button, a, span, div</code>,
+              although for the sake of semantics and sanity, the <code>&lt;button&gt;</code>
+              and <code>&lt;a&gt;</code> elements should be used.
+            </p>
+            <p>
+              Here is a quick example of buttons:
+              
+            </p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Button</th>
+                  <th>Classes</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <button>Default</button>
+                  </td>
+                  <td><code>NA</code></td>
+                  <td>Your default button, provided by the browser</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="button">New</button>
+                  </td>
+                  <td><code>.button</code></td>
+                  <td>Aegis's default button style</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="button primary">Primary</button>
+                  </td>
+                  <td><code>.button.primary</code></td>
+                  <td>For the main action on your forms.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="button alert">Alert</button>
+                  </td>
+                  <td><code>.button.alert</code></td>
+                  <td>Reserve these for negative actions, such as deletion.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="button neutral">Neutral</button>
+                  </td>
+                  <td><code>.button.neutral</code></td>
+                  <td>These are used for buttons which denote non-primary actions.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="button disabled">Disabled</button>
+                  </td>
+                  <td><code>.button.disabled</code></td>
+                  <td>Use for disabled actions</td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="button important">Important</button>
+                  </td>
+                  <td><code>.button.important</code></td>
+                  <td>
+                    <span class='hl'>Highlight</span> Use for the primary action on your page.
+                    Use the highlight buttons judiciously, as a lot of them may make users
+                    unnecessarily lose focus from your content.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="button hazard">Hazard</button>
+                  </td>
+                  <td><code>.button.hazard</code></td>
+                  <td>
+                    <span class='hl'>Highlight</span> Use for very important negative actions,
+                    such as deletion or account deactivation, etc.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="button accent">Accent</button>
+                  </td>
+                  <td><code>.button.accent</code></td>
+                  <td>
+                    <span class='hl'>Highlight</span> Use for buttons which are not the primary
+                    action of your form.
+                    
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="sizes" class="docs-section">
+            <h1 class="docs-h1">Sizes</h1>
+            <p>
+              Although the button provided above should cover 95% of the cases,
+              sometimes you may find these classes don't fit your needs perfectly.
+              So, here are some variations in buttons we have included. You can make
+              more variations by mixing the colour classes with these.
+              
+            </p>
+            <div class="example docs-eg">
+              <table class="table expanded docs-eg-object">
+                <thead>
+                  <tr>
+                    <th class="cell-3">Button</th>
+                    <th class="cell-3">Classes</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <button class="button icon-hold neutral"><strong>&#9095;</strong></button>
+                    </td>
+                    <td><code>.button.icon-hold</code></td>
+                    <td>Useful for having a button with an icon, or an icon with a button.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button class="button inline">Inline</button>
+                    </td>
+                    <td><code>.button.inline</code></td>
+                    <td>
+                      Useful when you may need a button <a class='button neutral inline'>inline</a>.
+                      They can change height depending upon where they are used.</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button class="button titan alert">GIGANTASAUR!</button>
+                    </td>
+                    <td><code>.button.titan</code></td>
+                    <td>Make a mega-monstrous button.</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button class="button round primary">A<br>Round<br>Button</button>
+                    </td>
+                    <td><code>.button.round</code></td>
+                    <td>Break the rectangularity, and get a rounded one!</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="tags" class="docs-section">
+            <h1 class="docs-h1">Supported Tags</h1>
+            <p>
+              Officially, we support the following tags which can be turned into buttons:
+              
+            </p>
+            <div class="example docs-eg">
+              <table class="table borderless docs-eg-object">
+                <tbody>
+                  <tr>
+                    <td>
+                      <button class="button important">Buttons</button>
+                    </td>
+                    <td>
+                      <input type="button" value="Inputs" class="button accent">
+                    </td>
+                    <td><a class="button primary">Anchors</a></td>
+                    <td><span class="button neutral">Spans</span></td>
+                    <td>
+                      <div class="button alert">Divs</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre class="docs-eg-code">&lt;button class="button important"&gt;Buttons&lt;/button&gt;
+&lt;input type="button" class="button accent" value='Inputs'&gt;
+&lt;a class="button primary"&gt;Anchors&lt;/a&gt;
+&lt;span class="button accent"&gt;Spans&lt;/span&gt;
+&lt;div class="button hazard"&gt;DIVs&lt;/div&gt;</pre>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

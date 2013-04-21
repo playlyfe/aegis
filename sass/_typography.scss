@@ -122,6 +122,9 @@ code, pre {
   margin-bottom: 1em;
   white-space: pre-wrap;
   word-wrap: break-word;
+  &:empty {
+    display: none;
+  }
 }
 code {
   padding: 4px 5px 1px;

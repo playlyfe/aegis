@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Aegis</title>
+    <link rel="stylesheet" href="assets/css/aegis.css">
+    <link rel="stylesheet" href="assets/css/docs.css">
+    <script src="assets/js/vendor/jquery/jquery.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navigator" class="navbar">
+        <div role="global-nav" class="tier wrapper grid-12"><a href="/" class="crest"><img src="assets/images/logo-playlyfe-white.png" alt="Aegis" title="The Aegis UI Framework"></a>
+          <ul class="nav">
+            <li><a href="start.html">Getting Started</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="button.html">Button</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="wrapper grid-12">
+        <nav id="sidewinder" class="sidebar fix-pos">
+          <ul class="nav">
+            <li>
+              <div class="main-label"><a href="#heading">Headings</a></div>
+            </li>
+            <li>
+              <div class="main-label"><a href="#paragraph">Paragraphs</a></div>
+            </li>
+            <li>
+              <div class="main-label"><a href="#list">Lists</a></div>
+              <ul class="nav">
+                <li class="sub-label"><a href="#ul">Unordered Lists</a></li>
+                <li class="sub-label"><a href="#ol">Ordered Lists</a></li>
+                <li class="sub-label"><a href="#no-list">Unstyled Lists</a></li>
+                <li class="sub-label"><a href="#inline">Inline Lists</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="main-label"><a href="#code">Code Highlighting</a></div>
+              <ul class="nav">
+                <li class="sub-label"><a href="#code-inline">Inline Code</a></li>
+                <li class="sub-label"><a href="#code-block">Block Code</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="main-label"><a href="#utility">Utility Classes</a></div>
+              <ul class="nav">
+                <li class="sub-label"><a href="#align">Alignment</a></li>
+                <li class="sub-label"><a href="#BnI"><strong>B</strong> & <em>I</em></a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="content col-9 pfx-3">
+          <h1 class="splash docs-page-header">Typography</h1>
+          <section id="heading" class="docs-section">
+            <h1 class="docs-h1">Headings</h1>
+            <p>
+              Perhaps starting off showing off the typographic features is best left to long
+              paragraphs of text, which not only set the tone for the features to come, but
+              also offer a contrast to the big burly blocks of heading texts.
+            </p>
+            <p>
+              What Aegis offers in typography is carefully proportioned text and header texts
+              of all forms.
+              
+            </p>
+            <div class="example docs-eg">
+              <h1>H1 - Largest Heading</h1>
+              <h2>H2 - Slightly Smaller one</h2>
+              <h3>H3 - You'd use this more</h3>
+              <h4>H4 - Small Heading</h4>
+              <h5>H5 - Tiny Heading</h5>
+            </div>
+          </section>
+          <section id="paragraph" class="docs-section">
+            <h1 class="docs-h1">Paragraphs</h1>
+            <p>
+              Paragraphs, as already shown above, are the centerpiece of any website. To demonstrate
+              the paragraph styles, here is a short snippet of literature presented in a
+              <strong>13px font-size</strong> with a <strong>line-height of 21px</strong>.
+              In ems, this line-height would come to <strong>1.62em</strong>.
+              
+            </p>
+            <div class="example docs-eg">
+              <h3 class="text-center">Youth</h3>
+              <h5 class="text-center">by Isaac Asimov (an excerpt)</h5>
+              <p>
+                "The atomic bombs," returned the Astronomer, "need not be the end of
+                civilization. These visitors of mine had their atomic bomb, or whatever
+                their equivalent was on their own worlds, and survived it, because they
+                didn't give up. Don't you see? It wasn't the bomb that defeated us, but
+                our own shell shock. This may be the last chance to reverse the
+                process."
+                
+              </p>
+              <p>
+                "Tell me," said the Industrialist, "what do these friends from space
+                want in return?"
+                
+              </p>
+              <p>
+                The Astronomer hesitated. He said, "I will be truthful with you. They
+                come from a denser planet. Ours is richer in the lighter atoms."
+                
+              </p>
+              <p>"They want magnesium? Aluminum?"</p>
+              <p>"No, sir. Carbon and hydrogen. They want coal and oil."</p>
+              <p>"Really?"</p>
+              <p>
+                The Astronomer said, quickly, "You are going to ask why creatures who
+                have mastered space travel, and therefore atomic power, would want coal
+                and oil. I can't answer that."
+                
+              </p>
+              <p>
+                The Industrialist smiled. "But I can. This is the best evidence yet of
+                the truth of your story. Superficially, atomic power would seem to
+                preclude the use of coal and oil. However, quite apart from the energy
+                gained by their combustion they remain, and always will remain, the
+                basic raw material for all organic chemistry. Plastics, dyes,
+                pharmaceuticals, solvents. Industry could not exist without them, even
+                in an atomic age. Still, if coal and oil are the low price for which
+                they would sell us the troubles and tortures of racial youth, my answer
+                is that the commodity would be dear if offered gratis."
+                
+              </p>
+              <p>The Astronomer sighed and said, "There are the boys!"</p>
+              <p>
+                They were visible through the open window, standing together in the
+                grassy field and lost in animated conversation. The Industrialist's son
+                pointed imperiously and the Astronomer's son nodded and made off at a
+                run toward the house.
+                
+              </p>
+              <p>
+                The Industrialist said, "There is the Youth you speak of. Our race has
+                as much of it as it ever had."
+                
+                
+              </p>
+            </div>
+          </section>
+          <section id="list" class="docs-section">
+            <h1 class="docs-h1">Lists</h1>
+            <p>
+              Lists are perhaps one of the most used elements in online typography
+              after paragraphs. Here are the different styles aegis offers you:
+              
+            </p>
+            <article id="ul" class="docs-article">
+              <h3 class="docs-h3">Unordered Lists</h3>
+              <p>
+                Unordered lists or <code>ul</code> are the ones having a plain listing without
+                any particular order or preference given to the items.
+              </p>
+              <div class="example docs-eg">
+                <div class="docs-eg-object">
+                  <ul>
+                    <li>Step 1: Add a <code>&lt;ul&gt;</code> tag</li>
+                    <li>Step 2: Add a <code>&lt;li&gt;</code> tag</li>
+                    <li>Step 3: Write Text in <code>&lt;li&gt;</code></li>
+                  </ul>
+                </div>
+                <pre class="docs-eg-code">&lt;ul&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+              </div>
+            </article>
+            <article id="ol" class="docs-article">
+              <h3 class="docs-h3">Ordered Lists</h3>
+              <p>
+                Ordered lists <code>ol</code>, on the other hand, have their items
+                arranged in ordered manner.
+                
+              </p>
+              <div class="example docs-eg">
+                <div class="docs-eg-object">
+                  <ol>
+                    <li>Number 1</li>
+                    <li>Number 2</li>
+                    <li>Number 3</li>
+                  </ol>
+                </div>
+                <pre class="docs-eg-code">&lt;ol&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+              </div>
+            </article>
+            <article id="no-list" class="docs-article">
+              <h3 class="docs-h3">Unstyled or No-List</h3>
+              <p>
+                Many times, those pesky little dots and margins need to be removed,
+                for example in a menu listing, or as in the sidebar here.
+                For those times, add a <code>.no-list</code> class
+                to your <code>ul</code> or <code>ol</code> lists.
+                
+              </p>
+              <div class="example docs-eg">
+                <div class="docs-eg-object">
+                  <ul class="no-list">
+                    <li>To use an unstyled list, write ul</li>
+                    <li>Add a no-list class to it</li>
+                    <li>And voilà!</li>
+                  </ul>
+                  <pre class="docs-eg-code">&lt;ul class=&quot;no-list&quot;&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+                </div>
+              </div>
+            </article>
+            <article id="inline" class="docs-article">
+              <h3 class="docs-h3">Inline Lists</h3>
+              <p>Inline lists, handy in navbars.</p>
+              <div class="example docs-eg">
+                <div class="docs-eg-object">
+                  <ul class="inline">
+                    <li>Inline</li>
+                    <li>Lists</li>
+                    <li>Make</li>
+                    <li>Horizontal</li>
+                    <li>Menus</li>
+                    <li>Fun</li>
+                    <li>Innit</li>
+                  </ul>
+                </div>
+                <pre class="docs-eg-code">&lt;ul class=&quot;inline&quot;&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+              </div>
+            </article>
+          </section>
+          <section id="code" class="docs-section">
+            <h1 class="docs-h1">Code Highlighting</h1>
+            <p>
+              You also get a simple background highlighting for inline-code and code-blocks.
+              <em>(todo)</em> The code-highlighting itself is provided thanks to CodeMirror.
+              To use, just wrap a code within a <code>&lt;pre&gt;</code> block.
+              
+            </p>
+            <article id="code-inline" class="docs-article">
+              <h3 class="docs-h3">Inline Code</h3>
+              <p>
+                To get monospaced and highlighted code, wrap a piece of text
+                in <code>&lt;code&gt;</code> tag.</p>
+                
+              </p>
+              <div class="example docs-eg">
+                <div class="docs-eg-object">Writing <code>HTML</code> is a breeze with SublimeText.</div>
+                <pre class="docs-eg-code">&lt;code&gt;HTML&lt;/code&gt;
+</pre>
+              </div>
+            </article>
+            <article id="code-block" class="docs-article">
+              <h3 class="docs-h3">Block Code</h3>
+              <p>
+                Similarly, just wrap your code snippet within a
+                <code>&lt;pre&gt;</code> tab to get a block of code.
+                
+              </p>
+              <div class="example docs-eg">
+                <pre class="docs-eg-object">(function() {
+  alert("To show this code, wrap this code in a &lt;pre&gt; tag!"
+   ");
+})();</pre>
+                <pre class="docs-eg-code">&lt;pre&gt;
+  code... code... code
+&lt;/pre&gt;
+</pre>
+              </div>
+            </article>
+          </section>
+          <section id="utility" class="docs-section">
+            <h1 class="docs-h1">Utility Classes</h1>
+            <p>
+              There are several utility classes provided which can be used to modify the
+              default behaviour of the text.
+              
+            </p>
+            <article id="align" class="docs-article">
+              <h3 class="docs-h3">Alignment</h3>
+              <p>Use alignment classes to realign the text blocks.</p>
+              <div class="example docs-eg">
+                <div class="docs-eg-object">
+                  <p class="text-left col-4">
+                    <strong>LEFT</strong><br>The Industrialist smiled.
+                    "But I can. This is the best evidence yet of the
+                    truth of your story.
+                  </p>
+                  <p class="text-center col-4">
+                    <strong>CENTER</strong><br>Superficially, atomic power would
+                    seem to preclude the use of coal and oil.
+                  </p>
+                  <p class="text-right col-4">
+                    <strong>RIGHT</strong><br>However, quite apart from the energy
+                    gained by their combustion they remain, and always will remain, the
+                    basic raw material for all organic chemistry. Plastics, dyes,
+                    pharmaceuticals, solvents.
+                  </p>
+                  <p class="text-justify col-8">
+                    <strong>JUSTIFY</strong><br>The Industrialist smiled.
+                    "But I can. This is the best evidence yet of the truth of your story.
+                    Superficially, atomic power would seem to preclude the use of coal and oil.
+                    However, quite apart from the energy gained by their combustion they remain,
+                    and always will remain, the basic raw material for all organic chemistry.
+                    Plastics, dyes, pharmaceuticals, solvents.
+                  </p>
+                </div>
+                <pre class="docs-eg-code">&lt;p.text-left"&gt;...&lt;/p&gt;
+&lt;p.text-center"&gt;...&lt;/p&gt;
+&lt;p.text-right"&gt;...&lt;/p&gt;
+&lt;p.text-justify"&gt;...&lt;/p&gt;
+</pre>
+              </div>
+            </article>
+            <article id="BnI" class="docs-article">
+              <h3 class="docs-h3"><strong>B</strong> &amp; <em>I</em></h3>
+              <p>
+                Text can be emboldened with <code>&lt;strong&gt;</code> or
+                <code>&lt;b&gt;</code>, and italicized using either <code>&lt;em&gt;</code>
+                or <code>&lt;i&gt;</code> tags.
+                
+              </p>
+              <div class="example docs-eg">
+                <div class="docs-eg-object">
+                  <p>
+                    <i>"Tell me,"</i> said the Industrialist, <em>"what do these friends from
+                    space want in return?"</em></p>
+                    
+                  </p>
+                  <p>
+                    The Astronomer <strong>hesitated</strong>. He said, <em>"I will be
+                    truthful with you. They come from a denser planet. Ours is richer in the
+                    lighter atoms."</em></p>
+                    
+                  </p>
+                  <p>
+                    <em>"They want <strong>magnesium</strong>? <b>Aluminum</b>?"</em></p>
+                    
+                  </p>
+                  <p>
+                    <i>"No, sir. Carbon and hydrogen. They want coal and oil."</i></p>
+                    
+                  </p>
+                  <p><em><strong>"Really?"</strong></em></p></p>
+                </div>
+                <pre class="docs-eg-code">&lt;strong&gt;hesitated&lt;/strong&gt;
+&lt;em&gt;"what do these friends from space want in return?"&lt;/em&gt;
+&lt;b&gt;Aluminum&lt;/b&gt;
+&lt;i&gt;"Tell me,"&lt;/i&gt;</pre>
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

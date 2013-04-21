@@ -1,0 +1,298 @@
+extends ../layout-elements
+
+block sidebar
+  nav.sidebar.fix-pos#sidewinder
+    ul.nav
+      li
+        .main-label: a(href="#heading") Headings
+      li
+        .main-label: a(href="#paragraph") Paragraphs
+      li
+        .main-label: a(href="#list") Lists
+        ul.nav
+          li.sub-label: a(href="#ul") Unordered Lists
+          li.sub-label: a(href="#ol") Ordered Lists
+          li.sub-label: a(href="#no-list") Unstyled Lists
+          li.sub-label: a(href="#inline") Inline Lists
+      li
+        .main-label: a(href="#code") Code Highlighting
+        ul.nav
+          li.sub-label: a(href="#code-inline") Inline Code
+          li.sub-label: a(href="#code-block") Block Code
+      li
+        .main-label: a(href="#utility") Utility Classes
+        ul.nav
+          li.sub-label: a(href="#align") Alignment
+          li.sub-label: a(href="#BnI") <strong>B</strong> & <em>I</em>
+
+block content
+  h1.splash.docs-page-header Typography
+
+  section.docs-section#heading
+    h1.docs-h1 Headings
+    p.
+      Perhaps starting off showing off the typographic features is best left to long
+      paragraphs of text, which not only set the tone for the features to come, but
+      also offer a contrast to the big burly blocks of heading texts.
+    p.
+      What Aegis offers in typography is carefully proportioned text and header texts
+      of all forms.
+
+    .example.docs-eg
+      h1 H1 - Largest Heading
+      h2 H2 - Slightly Smaller one
+      h3 H3 - You'd use this more
+      h4 H4 - Small Heading
+      h5 H5 - Tiny Heading
+
+  section.docs-section#paragraph
+    h1.docs-h1 Paragraphs
+    p.
+      Paragraphs, as already shown above, are the centerpiece of any website. To demonstrate
+      the paragraph styles, here is a short snippet of literature presented in a
+      <strong>13px font-size</strong> with a <strong>line-height of 21px</strong>.
+      In ems, this line-height would come to <strong>1.62em</strong>.
+
+    .example.docs-eg
+      h3.text-center Youth
+      h5.text-center by Isaac Asimov (an excerpt)
+      p.
+        "The atomic bombs," returned the Astronomer, "need not be the end of
+        civilization. These visitors of mine had their atomic bomb, or whatever
+        their equivalent was on their own worlds, and survived it, because they
+        didn't give up. Don't you see? It wasn't the bomb that defeated us, but
+        our own shell shock. This may be the last chance to reverse the
+        process."
+
+      p.
+        "Tell me," said the Industrialist, "what do these friends from space
+        want in return?"
+
+      p.
+        The Astronomer hesitated. He said, "I will be truthful with you. They
+        come from a denser planet. Ours is richer in the lighter atoms."
+
+      p "They want magnesium? Aluminum?"
+
+      p "No, sir. Carbon and hydrogen. They want coal and oil."
+
+      p "Really?"
+
+      p.
+        The Astronomer said, quickly, "You are going to ask why creatures who
+        have mastered space travel, and therefore atomic power, would want coal
+        and oil. I can't answer that."
+
+      p.
+        The Industrialist smiled. "But I can. This is the best evidence yet of
+        the truth of your story. Superficially, atomic power would seem to
+        preclude the use of coal and oil. However, quite apart from the energy
+        gained by their combustion they remain, and always will remain, the
+        basic raw material for all organic chemistry. Plastics, dyes,
+        pharmaceuticals, solvents. Industry could not exist without them, even
+        in an atomic age. Still, if coal and oil are the low price for which
+        they would sell us the troubles and tortures of racial youth, my answer
+        is that the commodity would be dear if offered gratis."
+
+      p The Astronomer sighed and said, "There are the boys!"
+
+      p.
+        They were visible through the open window, standing together in the
+        grassy field and lost in animated conversation. The Industrialist's son
+        pointed imperiously and the Astronomer's son nodded and made off at a
+        run toward the house.
+
+      p.
+        The Industrialist said, "There is the Youth you speak of. Our race has
+        as much of it as it ever had."
+
+
+  section.docs-section#list
+    h1.docs-h1 Lists
+    p.
+      Lists are perhaps one of the most used elements in online typography
+      after paragraphs. Here are the different styles aegis offers you:
+
+    article.docs-article#ul
+      h3.docs-h3 Unordered Lists
+      p.
+        Unordered lists or <code>ul</code> are the ones having a plain listing without
+        any particular order or preference given to the items.
+      .example.docs-eg
+        .docs-eg-object
+          ul
+            li Step 1: Add a <code>&lt;ul&gt;</code> tag
+            li Step 2: Add a <code>&lt;li&gt;</code> tag
+            li Step 3: Write Text in <code>&lt;li&gt;</code>
+        pre.docs-eg-code.
+          &lt;ul&gt;
+            &lt;li&gt;...&lt;/li&gt;
+            &lt;li&gt;...&lt;/li&gt;
+            &lt;li&gt;...&lt;/li&gt;
+          &lt;/ul&gt;
+
+    article.docs-article#ol
+      h3.docs-h3 Ordered Lists
+      p.
+        Ordered lists <code>ol</code>, on the other hand, have their items
+        arranged in ordered manner.
+
+      .example.docs-eg
+        .docs-eg-object
+          ol
+            li Number 1
+            li Number 2
+            li Number 3
+        pre.docs-eg-code.
+          &lt;ol&gt;
+            &lt;li&gt;...&lt;/li&gt;
+            &lt;li&gt;...&lt;/li&gt;
+            &lt;li&gt;...&lt;/li&gt;
+          &lt;/ol&gt;
+
+    article.docs-article#no-list
+      h3.docs-h3 Unstyled or No-List
+      p.
+        Many times, those pesky little dots and margins need to be removed,
+        for example in a menu listing, or as in the sidebar here.
+        For those times, add a <code>.no-list</code> class
+        to your <code>ul</code> or <code>ol</code> lists.
+
+      .example.docs-eg
+        .docs-eg-object
+          ul.no-list
+            li To use an unstyled list, write ul
+            li Add a no-list class to it
+            li And voilà!
+          pre.docs-eg-code.
+            &lt;ul class=&quot;no-list&quot;&gt;
+              &lt;li&gt;...&lt;/li&gt;
+              &lt;li&gt;...&lt;/li&gt;
+              &lt;li&gt;...&lt;/li&gt;
+            &lt;/ul&gt;
+
+    article.docs-article#inline
+      h3.docs-h3 Inline Lists
+      p Inline lists, handy in navbars.
+      .example.docs-eg
+        .docs-eg-object
+          ul.inline
+            li Inline
+            li Lists
+            li Make
+            li Horizontal
+            li Menus
+            li Fun
+            li Innit
+        pre.docs-eg-code.
+          &lt;ul class=&quot;inline&quot;&gt;
+            &lt;li&gt;...&lt;/li&gt;
+            &lt;li&gt;...&lt;/li&gt;
+            &lt;li&gt;...&lt;/li&gt;
+          &lt;/ul&gt;
+
+  section.docs-section#code
+    h1.docs-h1 Code Highlighting
+    p.
+      You also get a simple background highlighting for inline-code and code-blocks.
+      <em>(todo)</em> The code-highlighting itself is provided thanks to CodeMirror.
+      To use, just wrap a code within a <code>&lt;pre&gt;</code> block.
+
+    article.docs-article#code-inline
+      h3.docs-h3 Inline Code
+      p.
+        To get monospaced and highlighted code, wrap a piece of text
+        in <code>&lt;code&gt;</code> tag.</p>
+
+      .example.docs-eg
+        .docs-eg-object.
+          Writing <code>HTML</code> is a breeze with SublimeText.
+        pre.docs-eg-code.
+          &lt;code&gt;HTML&lt;/code&gt;
+
+    article.docs-article#code-block
+      h3.docs-h3 Block Code
+      p.
+        Similarly, just wrap your code snippet within a
+        <code>&lt;pre&gt;</code> tab to get a block of code.
+
+      .example.docs-eg
+        pre.docs-eg-object.
+          (function() {
+            alert("To show this code, wrap this code in a &lt;pre&gt; tag!"
+             ");
+          })();
+        pre.docs-eg-code.
+          &lt;pre&gt;
+            code... code... code
+          &lt;/pre&gt;
+
+  section.docs-section#utility
+    h1.docs-h1 Utility Classes
+    p.
+      There are several utility classes provided which can be used to modify the
+      default behaviour of the text.
+
+    article.docs-article#align
+      h3.docs-h3 Alignment
+      p Use alignment classes to realign the text blocks.
+
+      .example.docs-eg
+        .docs-eg-object
+          p.text-left.col-4.
+            <strong>LEFT</strong><br>The Industrialist smiled.
+            "But I can. This is the best evidence yet of the
+            truth of your story.
+          p.text-center.col-4.
+            <strong>CENTER</strong><br>Superficially, atomic power would
+            seem to preclude the use of coal and oil.
+          p.text-right.col-4.
+            <strong>RIGHT</strong><br>However, quite apart from the energy
+            gained by their combustion they remain, and always will remain, the
+            basic raw material for all organic chemistry. Plastics, dyes,
+            pharmaceuticals, solvents.
+          p.text-justify.col-8.
+            <strong>JUSTIFY</strong><br>The Industrialist smiled.
+            "But I can. This is the best evidence yet of the truth of your story.
+            Superficially, atomic power would seem to preclude the use of coal and oil.
+            However, quite apart from the energy gained by their combustion they remain,
+            and always will remain, the basic raw material for all organic chemistry.
+            Plastics, dyes, pharmaceuticals, solvents.
+        pre.docs-eg-code.
+          &lt;p.text-left"&gt;...&lt;/p&gt;
+          &lt;p.text-center"&gt;...&lt;/p&gt;
+          &lt;p.text-right"&gt;...&lt;/p&gt;
+          &lt;p.text-justify"&gt;...&lt;/p&gt;
+
+    article.docs-article#BnI
+      h3.docs-h3 <strong>B</strong> &amp; <em>I</em>
+      p.
+        Text can be emboldened with <code>&lt;strong&gt;</code> or
+        <code>&lt;b&gt;</code>, and italicized using either <code>&lt;em&gt;</code>
+        or <code>&lt;i&gt;</code> tags.
+
+      .example.docs-eg
+        .docs-eg-object
+          p.
+            <i>"Tell me,"</i> said the Industrialist, <em>"what do these friends from
+            space want in return?"</em></p>
+
+          p.
+            The Astronomer <strong>hesitated</strong>. He said, <em>"I will be
+            truthful with you. They come from a denser planet. Ours is richer in the
+            lighter atoms."</em></p>
+
+          p.
+            <em>"They want <strong>magnesium</strong>? <b>Aluminum</b>?"</em></p>
+
+          p.
+            <i>"No, sir. Carbon and hydrogen. They want coal and oil."</i></p>
+
+          p.
+            <em><strong>"Really?"</strong></em></p>
+        pre.docs-eg-code
+          &lt;strong&gt;hesitated&lt;/strong&gt;
+          &lt;em&gt;"what do these friends from space want in return?"&lt;/em&gt;
+
+          &lt;b&gt;Aluminum&lt;/b&gt;
+          &lt;i&gt;"Tell me,"&lt;/i&gt;

@@ -62,4 +62,8 @@
 ---
 * Removed cell-ops from table partial. Add it back to a specific stylesheet
 * changed bordered class to non-bordered,
-* listing class is slightly changed.
+* nearly changed all style classes & added new spatial classes.
+
+### TIDBITS
+---
+* Added a *example* class for demonstrations.

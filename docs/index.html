@@ -1,60 +1,48 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Aegis</title>
-  <link rel="stylesheet" href="assets/css/aegis.css">
-  <script src="assets/js/vendor/jquery/jquery.js"></script>
-</head>
-<body>
-
-  <div class="container">
-
-    <nav id="navigator" class="navbar">
-        <div class="tier wrapper" role="global-nav">
-            <a class="crest" href="/">
-                <img src="assets/images/logo-playlyfe-white.png" alt="Aegis" title="The Aegis UI Framework">
-            </a>
-            <ul class="nav">
-                <li><a href="start.html">Getting Started</a></li>
-                <li><a href="base.html">Base Elements</a></li>
-            </ul>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Aegis</title>
+    <link rel="stylesheet" href="assets/css/aegis.css">
+    <link rel="stylesheet" href="assets/css/docs.css">
+    <script src="assets/js/vendor/jquery/jquery.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navigator" class="navbar">
+        <div role="global-nav" class="tier wrapper grid-12"><a href="/" class="crest"><img src="assets/images/logo-playlyfe-white.png" alt="Aegis" title="The Aegis UI Framework"></a>
+          <ul class="nav">
+            <li><a href="start.html">Getting Started</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="button.html">Button</a></li>
+          </ul>
         </div>
-    </nav>
-
-    <div class='content'>
-      <nav class='sidebar'>
-        <ul class="nav">
-          <li>
-            <div class="main-label"><a>Menu 1</a></div>
-            <ul class='nav'>
-              <li class='sub-label'><a>Test</a></li>
-              <li class='sub-label'><a>Test</a></li>
-            </ul>
-          </li>
-          <li>
-            <div class="main-label"><a>Menu 2</a></div>
-            <ul class='nav'>
-              <li class='sub-label'><a>Test</a></li>
-              <li class='sub-label'><a>Test</a></li>
-            </ul>
-          </li>
-          <li>
-            <div class="main-label"><a>Menu 3</a></div>
-            <ul class='nav'>
-              <li class='sub-label'><a>Hector</a></li>
-              <li class='sub-label'><a>Achilles</a></li>
-            </ul>
-          </li>
-        </ul>
       </nav>
+      <div class="wrapper grid-12">
+        <section id="intro" class="docs-section">
+          <h1 class="splash">Aegis</h1><p>To start using the Aegis UI, download the compiled css and javascript files.
+Include them in your project, and start designing. The only requirement for
+Aegis is <strong>jQuery</strong>, which is required for animations and rendering advanced form elements.
+So, what are you waiting for? Click the shiny green button and get going!
+You can also have a look at the source files if you want to customize or
+contribute to the project.</p>
 
-      <div id="main">
-        <h1>Lets Start!</h1>
+          <button class="button accent titan">Download Aegis</button>
+          <button class="button primary titan">View Project on Github</button>
+        </section>
+        <section id="usage" class="docs-section">
+          <h3 class="docs-h3">Usage</h3>
+          <p>
+            To use Aegis in your project, link to the css and js files as such:
+            
+          </p>
+          <pre class="docs-eg-code">&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;path-to-css&gt;/aegis.css&quot;&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;&lt;path-to-js&gt;/jquery.js&#039;&gt;&lt;/script&gt;
+&lt;script type=&#039;text/javascript&#039; src=&#039;&lt;path-to-js&gt;/aegis.js&#039;&gt;&lt;/script&gt;</pre>
+        </section>
       </div>
     </div>
-
-  </div>
-
-</body>
+  </body>
 </html>

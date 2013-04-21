@@ -104,11 +104,12 @@ hr.dotted {
 }
 
 .example {
-  border: 1px solid lighten($example-bg, 30%);
   background-color: #fefefc;
-  padding: 1em 2em;
   margin: 1em 0;
+  padding: 2em 2em 1em;
+  border: 1px solid lighten($example-bg, 30%);
   @include box-shadow(inset 0px -1px 5px 0px lighten($example-bg, 40%));
+  overflow: hidden;
   &:after {
     display: block;
     padding: 2px 5px;

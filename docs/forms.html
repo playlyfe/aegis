@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Aegis</title>
+    <link rel="stylesheet" href="assets/css/aegis.css">
+    <link rel="stylesheet" href="assets/css/docs.css">
+    <script src="assets/js/vendor/jquery/jquery.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navigator" class="navbar">
+        <div role="global-nav" class="tier wrapper grid-12"><a href="/" class="crest"><img src="assets/images/logo-playlyfe-white.png" alt="Aegis" title="The Aegis UI Framework"></a>
+          <ul class="nav">
+            <li><a href="start.html">Getting Started</a></li>
+            <li><a href="typography.html">Typography</a></li>
+            <li><a href="tables.html">Tables</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="button.html">Button</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="wrapper grid-12">
+        <nav id="sidewinder" class="sidebar fix-pos">
+          <ul class="nav">
+            <li>
+              <div class="main-label"><a href="#styles">Form Styles</a></div>
+              <ul class="sidebar-l2 nav">
+                <li class="sub-label"><a href="#vertical">Vertical Layout</a></li>
+                <li class="sub-label"><a href="#horizontal">Horizontal Layout</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="main-label"><a href="#standard">Standard Elements</a></div>
+              <ul class="sidebar-l2 nav">
+                <li class="sub-label"><a href="#text-input">Text Inputs</a></li>
+                <li class="sub-label"><a href="#textarea">Textarea</a></li>
+                <li class="sub-label"><a href="#checkbox-radio">Checkboxes & Radios</a></li>
+                <li class="sub-label"><a href="#select">Select Boxes</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="main-label"><a href="#new">New Elements</a></div>
+              <ul class="sidebar-l2 nav">
+                <li class="sub-label"><a href="#snippet">Snippets</a></li>
+              </ul>
+            </li>
+            <li>
+              <div class="main-label"><a href="#addons">Addons</a></div>
+              <ul class="sidebar-l2 nav">
+                <li class="sub-label"><a href="#field-help">Field Help</a></li>
+                <li class="sub-label"><a href="#form-help">Form Help</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="content col-9 pfx-3">
+          <h1 class="splash docs-page-header">Forms</h1>
+          <section id="styles" class="docs-section">
+            <h1 class="docs-h3">Form Styles</h1>
+            <p>
+              Each row is wrapped within a <code>form-row</code> class. A form is designed such
+              that by default it will expand to fill the parent div unless a width is given to
+              the form (<em>Hint: Grids!</em>).
+              
+              
+            </p>
+            <article id="vertical" class="docs-article">
+              <h3 class="docs-h3">Vertical Layout</h3>
+              <p>
+                The Aegis forms are generally laid out in a vertical fashion, with labels above
+                their fields, and the form is scanned in a top-down manner.
+                
+              </p>
+              <div class="example docs-eg">
+                <form class="col-6 docs-eg-object">
+                  <fieldset>
+                    <legend>Full Form Functionality</legend>
+                    <div class="form-row">
+                      <label for="username">Username</label>
+                      <div class="field-wrapper">
+                        <input id="username" type="text">
+                        <aside class="field-help">
+                          <p>Let's see how field-help works.</p>
+                        </aside>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <label for="password"></label>
+                      <Password></Password>
+                      <div class="field-wrapper">
+                        <input id="password" type="password">
+                        <aside class="field-help">
+                          <p>Please enter your password.</p>
+                        </aside>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="field-wrapper">">
+                        <input type="checkbox">
+                        <aside class="field-help">
+                          <p>So you see how field-help works?</p>
+                        </aside>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-actions">
+                        <button class="button primary">Log In</button>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+                <pre class="docs-eg-code">&lt;form&gt;
+&lt;div class="form-row"&gt;
+  &lt;label for="username"&gt;Username&lt;/label&gt;
+  &lt;div class="field-wrapper"&gt;
+    &lt;input id='username' type="text"&gt;
+    &lt;aside class="field-help"&gt;
+      &lt;p&gt;Let's see how field-help works.&lt;/p&gt;
+    &lt;/aside&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="form-row"&gt;
+  &lt;label for="password"&gt;Password&lt;/label&gt;
+  &lt;div class="field-wrapper"&gt;
+    &lt;input id='password' type="password"&gt;
+    &lt;aside class="field-help"&gt;
+      &lt;p&gt;Please enter your password.&lt;/p&gt;
+    &lt;/aside&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="form-row"&gt;
+  &lt;div class="field-wrapper"&gt;
+    &lt;input type="checkbox"&gt;Remember Me&lt;/input&gt;
+    &lt;aside class="field-help"&gt;
+      &lt;p&gt;So you see how field-help works?&lt;/p&gt;
+    &lt;/aside&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="form-row"&gt;
+  &lt;div class="form-actions"&gt;
+    &lt;button class="button primary"&gt;Log In&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+
+</pre>
+              </div>
+            </article>
+            <article id="horizontal" class="docs-article">
+              <h3 class="docs-h3">Horizontal Layout</h3>
+              <p>
+                To make the label and fields align horizontally, just add a
+                <code>.form-horizontal</code> class to the form.
+                
+              </p>
+              <div class="example docs-eg">
+                <form class="form-horizontal col-6 docs-eg-object">
+                  <fieldset>
+                    <legend>Full Form Functionality</legend>
+                    <div class="form-row">
+                      <label for="username">Username</label>
+                      <div class="field-wrapper">
+                        <input id="username" type="text">
+                        <aside class="field-help">
+                          <p>Let's see how field-help works.</p>
+                        </aside>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <label for="password">Password</label>
+                      <div class="field-wrapper">
+                        <input id="password" type="password">
+                        <aside class="field-help">
+                          <p>Please enter your password.</p>
+                        </aside>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="field-wrapper">
+                        <input type="checkbox">
+                        <aside class="field-help">
+                          <p>So you see how field-help works?</p>
+                        </aside>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-actions">
+                        <button class="button primary">Log In</button>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+                <pre class="docs-eg-code">&lt;form class=&#039;form-horizontal&#039;&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Full Form Functionality&lt;/legend&gt;
+    &lt;div class=&quot;form-row&quot;&gt;
+      &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;
+      &lt;div class=&quot;field-wrapper&quot;&gt;
+        &lt;input id=&#039;username&#039; type=&quot;text&quot;&gt;
+        &lt;aside class=&quot;field-help&quot;&gt;
+          &lt;p&gt;Let&#039;s see how field-help works.&lt;/p&gt;
+        &lt;/aside&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-row&quot;&gt;
+      &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
+      &lt;div class=&quot;field-wrapper&quot;&gt;
+        &lt;input id=&#039;password&#039; type=&quot;password&quot;&gt;
+        &lt;aside class=&quot;field-help&quot;&gt;
+          &lt;p&gt;Please enter your password.&lt;/p&gt;
+        &lt;/aside&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-row&quot;&gt;
+      &lt;div class=&quot;field-wrapper&quot;&gt;
+        &lt;input type=&quot;checkbox&quot;&gt;Remember Me&lt;/input&gt;
+        &lt;aside class=&quot;field-help&quot;&gt;
+          &lt;p&gt;So you see how field-help works?&lt;/p&gt;
+        &lt;/aside&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-row&quot;&gt;
+      &lt;div class=&quot;form-actions&quot;&gt;
+        &lt;button class=&quot;button primary&quot;&gt;Log In&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+
+
+</pre>
+              </div>
+            </article>
+          </section>
+          <section id="standard" class="docs-section">
+            <h1 class="docs-h1">Standard Elements</h1>
+            <article id="text-input" class="docs-article">
+              <h3 class="docs-h3">Text Inputs</h3>
+              <p>
+                Text inputs are omnipresent, from the username and password fields strewn
+                all around, to nearly all related fields like search, email, url, tel,
+                date, time, month, week, datetime, datetime-local, and number.
+                
+              </p>
+              <div class="example docs-eg">
+                <form class="alpha col-6 docs-eg-object">
+                  <div class="form-row">
+                    <label for="text">Text Input</label>
+                    <div class="field-wrapper">
+                      <input id="text" type="text">
+                    </div>
+                  </div>
+                </form>
+                <pre class="docs-eg-code">&lt;input type='text'&gt;
+</pre>
+              </div>
+            </article>
+            <article id="textarea" class="docs-article">
+              <h3 class="docs-h3">Textarea</h3>
+              <p>
+                Textarea inputs follow the same styles of normal text inputs.
+                They can be resized vertically.
+                
+              </p>
+              <div class="example docs-eg">
+                <form class="alpha col-6 docs-eg-object">
+                  <div class="form-row">
+                    <label for="textarea-field">Textarea</label>
+                    <div class="field-wrapper">
+                      <textarea id="textarea-field"></textarea>
+                    </div>
+                  </div>
+                </form>
+                <pre class="docs-eg-code">&lt;input type='text'&gt;
+</pre>
+              </div>
+            </article>
+            <article id="checkbox-radio" class="docs-article">
+              <h3 class="docs-h3">Checkboxes &amp; Radios</h3>
+              <p>
+                Checkboxes are used for selecting multiple items from a given set, whereas Radio buttons allow only one item to be selected. Checkboxes are rendered in a stacked formation, whereas radio-buttons of a group are rendered side-by-side as long as there is horizontal space available.
+                
+              </p>
+              <div class="example docs-eg">
+                <form class="alpha col-6 docs-eg-object form-horizontal">
+                  <label for="wolverine">
+                    <input id="wolverine" type="checkbox" value="wolverine" name="xmen" checked>Wolverine
+                  </label>
+                  <label for="cyclops">
+                    <input id="cyclops" type="checkbox" value="cyclops" name="xmen">Cyclops
+                  </label>
+                  <label for="apocalypse" class="disabled">
+                    <input id="apocalypse" type="checkbox" value="apocalypse" name="xmen" disabled>Apocalypse
+                  </label>
+                  <label for="expanding">
+                    <input id="expanding" type="radio" name="universe" value="expanding" checked>Expanding
+                  </label>
+                  <label for="contracting">
+                    <input id="contracting" type="radio" name="universe" value="contracting">Contracting
+                  </label>
+                </form>
+                <pre class="docs-eg-code">&lt;label for='wolverine'&gt;
+  &lt;input type="checkbox" id="wolverine" value="wolverine" name="xmen" checked&gt; Wolverine &lt;/input&gt;
+&lt;/label&gt;
+
+&lt;label for="cyclops"&gt;
+  &lt;input type="checkbox" id="cyclops" value="cyclops" name="xmen"&gt; Cyclops &lt;/input&gt;
+&lt;/label&gt;
+
+&lt;label for="apocalypse" class='disabled'&gt;
+  &lt;input type="checkbox" id="apocalypse" value="apocalypse" name="xmen" disabled&gt; Apocalypse &lt;/input&gt;
+&lt;/label&gt;
+
+&lt;label for="expanding"&gt;
+  &lt;input type="radio" id="expanding" name="universe" value="expanding" checked&gt; Expanding &lt;/input&gt;
+&lt;/label&gt;
+
+&lt;label for="contracting"&gt;
+  &lt;input type="radio" id="contracting" name="universe" value="contracting"&gt; Contracting &lt;/input&gt;
+&lt;/label&gt;
+</pre>
+              </div>
+            </article>
+            <article id="select" class="docs-article">
+              <h3 class="docs-h3">Select Boxes</h3>
+              <p>
+                Select boxes allow you to select an option from a given list.
+                
+              </p>
+              <div class="example docs-eg">
+                <form class="alpha col-6 docs-eg-object">
+                  <div class="form-row">
+                    <label for="select">Choose Your Enemy</label>
+                    <div class="field-wrapper">
+                      <select id="select">
+                        <option value="???">Joker</option>
+                        <option value="edward">Riddler</option>
+                        <option value="victorF">Mr. Freeze</option>
+                        <option value="bane">Bane</option>
+                        <option value="victorZ">Zsasz</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+                <pre class="docs-eg-code">&lt;select id="select"&gt;
+  &lt;option value="???"&gt;Joker&lt;/option&gt;
+  &lt;option value="edward"&gt;Riddler&lt;/option&gt;
+  &lt;option value="victorF"&gt;Mr. Freeze&lt;/option&gt;
+  &lt;option value="bane"&gt;Bane&lt;/option&gt;
+  &lt;option value="victorZ"&gt;Zsasz&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+              </div>
+            </article>
+          </section>
+          <section id="new" class="docs-section">
+            <h1 class="docs-h1">New Elements</h1>
+            <p>
+              Aegis adds some additional form elements to this standard set.
+              To use these elements, you'll have to include the corresponding plugin
+              scripts in your page within a <code>&lt;script&gt;</code> tag.
+              For example, if your want to add a multiselect input, you need to include
+              <code>aegis-multiselect.js</code> to your page.
+              
+            </p>
+            <article id="snippet" class="docs-article">
+              <h3 class="docs-h3">Snippets</h3>
+              <p>
+                Snippets are small bits of information which you'd like users to select,
+                copy and paste somewhere. Some use cases are presenting IDs or application
+                secrets for developers to copy/paste in their code. To turn any text into a
+                snippet, surround it with a <code>.snippet</code> span. You can also add a
+                <code>.select-snippet</code> button next to the <code>.snippet</code> span to
+                give users a more clear way to select the text. Note that right now, clicking on
+                the snippet class only selects the text, but does not copy it. Javascript is not
+                allowed (yet) to directly access the clipboad, but hopefully this operation will
+                be <a href='http://www.w3.org/TR/clipboard-apis/'>supported soon</a>.
+                Till then, <code>Ctrl+C</code> is your friend.
+                
+              </p>
+              <p class="hl">
+                Remember to include the <code>aegis-snippets.js</code> file in your code to
+                use this feature
+                
+              </p>
+              <div class="example docs-eg">
+                <form class="docs-eg-object">col-9 alpha
+                  <div class="form-row">
+                    <div class="field-wrapper"><span title="Click on the text to copy it" class="snippet alpha">This is some random text which can be copied in one click</span><a class="button inline select-snippet">Select</a></div>
+                  </div>
+                  <pre class="docs-eg-code">&lt;form&gt;
+  &lt;div class="form-row"&gt;
+    &lt;div class="field-wrapper"&gt;
+      &lt;span class="snippet" title="Click on the text to copy it"&gt;
+        This is some random text which can be copied in one click
+      &lt;/span&gt;
+      &lt;a class="button inline select-snippet"&gt;Select&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+
+</pre>
+                </form>
+              </div>
+            </article>
+          </section>
+          <section id="addons" class="docs-section">
+            <h1 class="docs-h1">Addons</h1>
+            <p>
+              In addition to all the form-elements listed above, here are some
+              nifty addons to make your forms more user-friendly.
+              
+            </p>
+            <article id="field-help" class="docs-article">
+              <h3 class="docs-h3">Field Help</h3>
+              <p>
+                As shown above, field helps are used to provide guidance to the user while
+                filling the form in the form of tooltips. You can use tooltips by adding
+                another element beside the input field with a <code>.field-help</code> class.
+                
+              </p>
+              <div class="example docs-eg">
+                <form class="alpha col-6 docs-eg-object">
+                  <div class="form-row">
+                    <label for="select">Choose Your Enemy</label>
+                    <div class="field-wrapper">
+                      <select id="select">
+                        <option value="hush">Hush</option>
+                        <option value="ras-al-ghul">Raʾs al-Ġūl</option>
+                        <option value="scarecrow">Scarecrow</option>
+                      </select>
+                      <aside class="field-help">Choose your most-feared nightmare</aside>
+                    </div>
+                  </div>
+                </form>
+                <pre class="docs-eg-code">&lt;select id="select"&gt;
+  &lt;option value="hush"&gt;Hush&lt;/option&gt;
+  &lt;option value="ras-al-ghul"&gt;Raʾs al-Ġūl&lt;/option&gt;
+  &lt;option value="scarecrow"&gt;Scarecrow&lt;/option&gt;
+&lt;/select&gt;
+&lt;aside class="field-help"&gt;Choose your most-feared nightmare&lt;/aside&gt;
+
+
+
+</pre>
+              </div>
+            </article>
+            <article id="form-help" class="docs-article">
+              <h3 class="docs-h3">Form Help</h3>
+              <p>
+                Also provided is a general help text for the whole form. Use it by
+                adding the <code>.form-help</code> class to a span or div.
+                
+              </p>
+              <div class="example docs-eg">
+                <form class="alpha col-6 docs-eg-object">
+                  <div class="form-row">
+                    <label for="select">Choose Your Enemy</label>
+                    <div class="field-wrapper">
+                      <select id="select">
+                        <option value="hush">Dr. Strange</option>
+                        <option value="ras-al-ghul">Raʾs al-Ġūl</option>
+                        <option value="scarecrow">Joker</option>
+                      </select>
+                      <aside class="field-help">Choose wisely... The symbol of the bat is at stake!</aside>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-help">We know your identity Bruce!</div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-actions">
+                      <button class="button alert">Fight</button>
+                    </div>
+                  </div>
+                </form>
+                <pre class="docs-eg-code">&lt;div class="form-row"&gt;
+  &lt;div class="form-help"&gt;We know your identity Bruce!&lt;/div&gt;
+&lt;/div&gt;</pre>
+              </div>
+            </article>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

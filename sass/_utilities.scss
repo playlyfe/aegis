@@ -15,18 +15,13 @@
 .show {
   display: block !important;
 }
-.no-space {
-  // apply on <ul> to make it align with paragraph text
-  margin: 0 !important;
-  padding: 0 !important;
-}
-.no-list {
-  // apply on lists to strip away the bullets & numbers
-  @extend .no-space;
-  list-style: none !important;
-}
+
 .no-top { margin-top: 0; }
 .no-bot { margin-bottom: 0 }
+.no-space {
+  margin: 0;
+  padding: 0;
+}
 
 .no-anchor {
   // apply on <a> tags to remove underline
@@ -74,4 +69,18 @@
 }
 .fade {
   opacity: 0.2;
+}
+
+
+// STYLES FOR LISTS
+ul, ol {
+  &.no-list {
+    // apply on lists to strip away the bullets & numbers
+    @extend .no-space;
+    list-style: none !important;
+  }
+  &.inline {
+    @extend .no-list;
+    &>li { @include inline-block(); padding: 0 0.25em; }
+  }
 }

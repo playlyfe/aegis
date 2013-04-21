@@ -1,0 +1,294 @@
+extends ../layout-elements
+
+block sidebar
+  nav.sidebar.fix-pos#sidewinder
+    ul.nav
+      li
+        .main-label: a(href="#defaults") Defaults
+      li
+        .main-label: a(href="#classes") Classes
+        ul.sidebar-l2.nav
+          li.sub-label: a(href="#spatial") Spatial
+          li.sub-label: a(href="#style") Style
+      li
+        .main-label: a(href="#cells") Cells
+
+block content
+  h1.splash.docs-page-header Tables
+
+  section.docs-section#defaults
+    h1.docs-h1 Defaults
+    p.
+      Tables have a light border, with ample padding for text to be easily readable and a
+      bold-but-understated table header. To apply the aegis style to any table add a
+      <code>.table</code> class to it.
+
+    .example.docs-eg
+      table.table.docs-eg-object
+        thead
+          tr
+            th Team
+            th Played
+            th Points
+        tbody
+          tr
+            td Man Utd
+            td 33
+            td 81
+          tr
+            td Man City
+            td 33
+            td 68
+          tr
+            td Chelsea
+            td 32
+            td 61
+          tr
+            td Arsenal
+            td 33
+            td 60
+          tr
+            td Tottenham
+            td 32
+            td 58
+      pre.docs-eg-code.
+        &lt;table class='table'&gt;
+          &lt;thead&gt;...&lt;/thead&gt;
+          &lt;tbody&gt;...&lt;/tbody&gt;
+        &lt;/table&gt;
+
+  section.docs-section#classes
+    h1.docs-h1 Classes
+    p.
+      Along with the default styling, there are also several classes which can be used
+      to give the tables more styles. Some of them change the complete style
+      (<strong>style classes</strong>) and some adjust the spacing of the cells
+      (<strong>spatial classes</strong>)
+
+
+
+    article.docs-article#spatial
+      h3.docs-h3 Spatial
+
+      h4.docs-h4: code .condensed
+      p.
+        Condensed tables have half the top/bottom and left/right padding
+        than the normal tables.
+      div.example.docs-eg
+        table.table.condensed.docs-eg-object
+          thead
+            tr
+              th Team
+              th Played
+              th Points
+          tbody
+            tr
+              td Man Utd
+              td 33
+              td 81
+            tr
+              td Man City
+              td 33
+              td 68
+            tr
+              td Chelsea
+              td 32
+              td 61
+            tr
+              td Arsenal
+              td 33
+              td 60
+            tr
+              td Tottenham
+              td 32
+              td 58
+        pre.docs-eg-code.
+          &lt;table class="condensed table"&gt;
+            ...
+          &lt;/table&gt;
+
+      h4.docs-h4: code .expanded
+      p.
+        Expanded tables give a very ample padding of
+        <em>base-line-height</em> on left/right and half of that on top/bottom.
+      .example.docs-eg
+        table.table.expanded.docs-eg-object
+          thead
+            tr
+              th Team
+              th Played
+              th Points
+          tbody
+            tr
+              td Man Utd
+              td 33
+              td 81
+            tr
+              td Man City
+              td 33
+              td 68
+            tr
+              td Chelsea
+              td 32
+              td 61
+            tr
+              td Arsenal
+              td 33
+              td 60
+            tr
+              td Tottenham
+              td 32
+              td 58
+        pre.docs-eg-code.
+          &lt;table class="expanded table"&gt;
+            ...
+          &lt;/table&gt;
+
+    article.docs-article#style
+      h3.docs-h3 Style
+      h4.docs-h5: code .highlight
+      p Whenever a row is hovered over, the text is highlighted.
+      .example.docs-eg
+        table.table.highlight.docs-eg-object
+          thead
+            tr
+              th Team
+              th Played
+              th Points
+          tbody
+            tr
+              td Man Utd
+              td 33
+              td 81
+            tr
+              td Man City
+              td 33
+              td 68
+            tr
+              td Chelsea
+              td 32
+              td 61
+            tr
+              td Arsenal
+              td 33
+              td 60
+            tr
+              td Tottenham
+              td 32
+              td 58
+        pre.docs-eg-code.
+          &lt;table class="table highlight"&gt;
+            ...
+          &lt;/table&gt;
+
+      h4.docs-h4: code .listing
+      p.
+        Ideally suited for big wide lists with no vertical borders to distract attention.
+        Best used along the the <code>.highlight</code> class.
+      .example.docs-eg
+        table.table.listing.highlight.docs-eg-object
+          thead
+            tr
+              th Teams
+              th Championships
+              th About
+          tbody
+            tr
+              td Man Utd
+              td 19
+              td Manchester United has won many trophies in English football, including a record 19 league titles, a record 11 FA Cups, four League Cups and a record 19 FA Community Shields. The club has also won three European Cups, one UEFA Cup Winners' Cup, one UEFA Super Cup, one Intercontinental Cup and one FIFA Club World Cup. In 1998–99, the club won a Treble of the Premier League, the FA Cup and the UEFA Champions League, an unprecedented feat for an English club.
+            tr
+              td Man City
+              td 3
+              td Manchester City Football Club is an English Premier League football club based in Manchester. Founded in 1880 as St. Mark's (West Gorton), they became Ardwick Association Football Club in 1887 and Manchester City in 1894. The club has played at the City of Manchester Stadium since 2003, having played at Maine Road from 1923. The club's most successful period was in the late 1960s and early 1970s when they won the League Championship, FA Cup, League Cup and European Cup Winners' Cup under the management team of Joe Mercer and Malcolm Allison.
+            tr
+              td Chelsea
+              td 4
+              td Chelsea had their first major success in 1955, when they won the league championship, and won various cup competitions during the 1960s, 1970s, 1990s and 2000s. Overall, Chelsea have won four league titles, seven FA Cups, four League Cups and four FA Community Shields. The club have also been successful in continental competitions, winning two UEFA Cup Winners' Cups, one UEFA Super Cup and one UEFA Champions League title. In 2009–10, the club won their first "Double"[3] and in May 2012 became the first London club to win the UEFA Champions League.
+            tr
+              td Arsenal
+              td 13
+              td Arsenal was founded in 1886 in Woolwich and in 1893 became the first club from the south of England to join the Football League. In 1913, it moved north across the city to Arsenal Stadium in Highbury. In the 1930s the club won five League Championship titles and two FA Cups. After a lean period in the post-war years it won the League and FA Cup Double, in the 1970–71 season, and in the 1990s and first decade of the 21st century won two more Doubles and reached the 2006 UEFA Champions League Final. Arsenal has a long-standing rivalry with North London neighbours Tottenham Hotspur, with whom it contests the North London derby. Arsenal is the fourth most valuable association football club in the world as of 2012, valued at $1.3 billion.
+            tr
+              td Tottenham Hotspur
+              td 2
+              td Founded in 1882, Tottenham won the FA Cup for the first time in 1901, making it the only non-League club to do so since the formation of the Football League. Tottenham was the first club in the 20th century to achieve the League and FA Cup Double, winning both competitions in the 1960–61 season. After successfully defending the FA Cup in 1962, in 1963 it became the first British club to win a UEFA club competition – the European Cup Winners' Cup. In 1967 it won the FA Cup for a third time in the 1960s. In the 1970s Tottenham won the League Cup on two occasions and was the inaugural winner of the UEFA Cup in 1972, becoming the first British club to win two different major European trophies. In the 1980s Spurs won several trophies: the FA Cup twice, FA Community Shield and the UEFA Cup in 1984. In the 1990s the club won the FA Cup and the League Cup. When it won the League Cup once more in 2008, it meant that it had won a major trophy in each of the last six decades – an achievement only matched by Manchester United.
+        pre.docs-eg-code.
+          &lt;table class="table listing highlight"&gt;
+            ...
+          &lt;/table&gt;
+
+      h4.docs-h4: code .striped
+      p Striped tables have alternating rows of darker shade.
+      .example.docs-eg
+        table.table.striped.docs-eg-object
+          thead
+            tr
+              th Team
+              th Played
+              th Points
+          tbody
+            tr
+              td Man Utd
+              td 33
+              td 81
+            tr
+              td Man City
+              td 33
+              td 68
+            tr
+              td Chelsea
+              td 32
+              td 61
+            tr
+              td Arsenal
+              td 33
+              td 60
+            tr
+              td Tottenham
+              td 32
+              td 58
+        pre.docs-eg-code.
+          &lt;table class="table striped"&gt;
+            ...
+          &lt;/table&gt;
+
+
+  section.docs-section#cells
+    h1.docs-h1 Cells
+    p.
+      Along with the specific widths for tables, you also get power to control the
+      widths of individual columns, so that you can fine-tune the table look.
+      Apply the classes on the cells of the <strong>first row</strong> of the table,
+      and the corresponding column will resized. The classes are of the form
+      <code>.cells-X</code>, where <code>X</code> ranges from
+      <code>1 (10% width)</code> to <code>9 (90% width)</code>.
+
+    .example.docs-eg
+      table.table.docs-eg-object
+        thead
+          tr
+            th.cell-8 Testing
+            th.cell-3 Cells
+        tbody
+          tr
+            td 5
+            td Cells are meant to be adjustable
+          tr
+            td 2
+            td And it will be better if they be resizable according to you
+          tr
+            td 10
+            td rather than depending on your browser
+      pre.docs-eg-code.
+        &lt;table class="table"&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th class="cell-8"&gt;Testing&lt;/th&gt;
+              &lt;th class="cell-2"&gt;Cells&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            ...
+          &lt;/tbody&gt;
+        &lt;/table&gt;

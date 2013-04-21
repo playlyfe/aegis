@@ -2,6 +2,18 @@
 @import "constants";
 @import "mixins";
 @import "utilities";
+
+#sidewinder {
+  margin-top: $navbar-height * $golden;
+}
+.content {
+  margin-top: 0;
+}
+.docs-page-header {
+  padding: $navbar-height * ($golden - 1) 0;
+  border-bottom: 2px solid $accent-lighter;
+  font-weight: 100;
+}
 .docs-eg {
   position: relative;
 }
@@ -10,15 +22,8 @@
   position: relative;
   top: 100%;
 }
-#sidewinder {
-  margin-top: $navbar-height * $golden;
-}
-.content {
-  margin-top: 0;
-}
-
 .docs-section {
-  padding: $navbar-height * $golden 0;
+  padding: 2em 0;
   border-bottom: 2px dashed $gray-lightest;
 }
 .docs-article {
@@ -27,6 +32,12 @@
   &:last-child {
     border-bottom: none;
   }
+  .docs-h3 {
+    padding-top: $navbar-height;
+  }
+}
+.docs-h1 {
+  padding-bottom: 0.3em;
 }
 .docs-h3 {
   padding-top: 10px;

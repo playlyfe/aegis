@@ -1,0 +1,23 @@
+doctype 5
+html
+  head
+    meta(charset="UTF-8")
+    title Aegis
+    link(rel="stylesheet", href="assets/css/aegis.css")
+    link(rel="stylesheet", href="assets/css/docs.css")
+    script(src="assets/js/vendor/jquery/jquery.js")
+
+  body
+    .container
+      nav#navigator.navbar
+        .tier.wrapper.grid-12(role="global-nav")
+          a.crest(href="/")
+            img(src="assets/images/logo-playlyfe-white.png", alt="Aegis", title="The Aegis UI Framework")
+          ul.nav
+            li: a(href="start.html") Getting Started
+            li: a(href="typography.html") Typography
+            li: a(href="tables.html") Tables
+            li: a(href="form.html") Form
+            li: a(href="button.html") Button
+
+      block body

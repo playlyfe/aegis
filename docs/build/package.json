@@ -1,0 +1,9 @@
+{
+  "name": "aegis-documentation",
+  "version": "0.0.1",
+  "description": "package for converting aegis documentation's dust templates to compiled html",
+  "dependencies": {
+    "jade": "*",
+    "marked": "*"
+  }
+}

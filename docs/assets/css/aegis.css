@@ -267,18 +267,15 @@
 .show {
   display: block !important; }
 
-.no-space, .no-list, .nav, body {
-  margin: 0 !important;
-  padding: 0 !important; }
-
-.no-list, .nav {
-  list-style: none !important; }
-
 .no-top {
   margin-top: 0; }
 
 .no-bot {
   margin-bottom: 0; }
+
+.no-space, ul.no-list, ul.inline, ul.nav, ol.no-list, ol.inline, ol.nav, .nav, body {
+  margin: 0;
+  padding: 0; }
 
 .no-anchor, .nav a, .tabbar .tab-item .label, .button {
   text-decoration: none !important;
@@ -321,6 +318,17 @@
 
 .fade {
   opacity: 0.2; }
+
+ul.no-list, ul.inline, ul.nav, ol.no-list, ol.inline, ol.nav {
+  list-style: none !important; }
+ul.inline > li, ol.inline > li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  padding: 0 0.25em; }
 
 /*
  * tidbits partial
@@ -422,13 +430,14 @@ hr.dotted {
     padding: 10.5px; }
 
 .example {
-  border: 1px solid #bee2ff;
   background-color: #fefefc;
-  padding: 1em 2em;
   margin: 1em 0;
+  padding: 2em 2em 1em;
+  border: 1px solid #bee2ff;
   -webkit-box-shadow: inset 0px -1px 5px 0px #f1f9ff;
   -moz-box-shadow: inset 0px -1px 5px 0px #f1f9ff;
-  box-shadow: inset 0px -1px 5px 0px #f1f9ff; }
+  box-shadow: inset 0px -1px 5px 0px #f1f9ff;
+  overflow: hidden; }
   .example:after {
     display: block;
     padding: 2px 5px;
@@ -816,6 +825,8 @@ code, pre {
   margin-bottom: 1em;
   white-space: pre-wrap;
   word-wrap: break-word; }
+  code:empty, pre:empty {
+    display: none; }
 
 code {
   padding: 4px 5px 1px;
@@ -1674,7 +1685,7 @@ span#strength-meter {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden; }
-  .table .no-list > li, .table .nav > li {
+  .table .no-list > li, .table ul.inline > li, .table ol.inline > li, .table .nav > li {
     padding-bottom: 0em; }
   .table tfoot {
     background-color: white; }
