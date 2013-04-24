@@ -2,6 +2,10 @@
   "name": "aegis",
   "version": "0.1",
   "dependencies": {
-    "jquery": "~1.9.0"
+    "jquery": "~1.9.0",
+    "mocha": "*",
+    "chai": "*",
+    "chai-jquery": "*",
+    "sinon": "*"
   }
 }

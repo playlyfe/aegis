@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Aegis UI Tests</title>
+  <link rel="stylesheet" href="../../docs/assets/js/vendor/mocha/mocha.css" />
+  <script src="../../docs/assets/js/vendor/jquery/jquery.min.js"></script>
+  <script src="../../docs/assets/js/vendor/mocha/mocha.js"></script>
+  <script src="../../docs/assets/js/vendor/chai/chai.js"></script>
+  <script src="../../docs/assets/js/vendor/chai-jquery/chai-jquery.js"></script>
+<!--  <script src="../../docs/assets/js/vendor/sinon/lib/sinon.js"></script> -->
+<!-- <script src="../../docs/assets/js/vendor/sinon/lib/sinon/util/fake_timers.js"></script> -->
+  <script>
+    $.fx.off = true;
+    expect = chai.expect;
+    mocha.setup('bdd');
+    $(function () {
+      mocha.run()
+    })
+  </script>
+
+  <!-- include dependency files here... -->
+  <!--<script src="../../example.js"></script>-->
+
+  <!-- include source files here... -->
+  <script src="../../docs/assets/js/aegis-sidewinder.js"></script>
+
+  <!-- include test files here... -->
+  <script src="spec/aegis-sidewinder.spec.js"></script>
+
+</head>
+<body>
+  <div id="mocha"></div>
+  <div id="testing"></div>
+</body>
+</html>
