@@ -3,18 +3,18 @@
 // Kumar Harsh
 // 20.Jan.2013
 
-.sidebar {
+.sidewinder {
   position: relative;
   width: $side-width;
   height: $side-height;
-  padding: $side-padding 0;
+  padding: $side-padding 0 !important;
 
   background: $side-bg;
   border-right: 1px solid $side-border;
 
   font-size: $side-font-size;
   z-index: $side-z;
-  @include box-shadow($side-border 0px 0px 10px -1px);
+  // @include box-shadow($side-border 0px 0px 10px -1px);
   @include no-select();
 
   a {
@@ -31,29 +31,32 @@
     }
   }
 
-  .main-label {
+  .sw-l1 {
     position: relative;
-    & > a { border-left-color: $side-trim; }
+    & > a {
+      border-left-color: $side-trim;
+      font-weight: bold;
+      color: lighten($side-color, 15%);
+    }
     &:hover {
       .arrow { border-left-color: $side-hover-trim; }
       & > a { border-left-color: $side-hover-trim; color: $side-hover-color; }
     }
+    .arrow {
+      display: block;
+      position: absolute;
+      top:10px; right:15px;
+      width: 0; height: 0;
+      border-left: 5px solid $side-color;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      @include transition(transform, 1.0s, ease, 0.1s);
+    }
   }
 
-  .arrow {
-    display: block;
-    position: absolute;
-    top:10px; right:15px;
-    width: 0; height: 0;
-    border-left: 5px solid $side-color;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    @include transition(transform, 1.0s, ease, 0.1s);
-  }
-
-  .unwound .main-label {
+  .unwound {
     & > a {
-      font-weight: bold;
+      color: $side-color;
     }
     .arrow {
       @include transition(transform, 1.0s, ease, 0.1s);
@@ -66,7 +69,7 @@
     }
   }
 
-  .active-l1 .main-label {
+  .sw-l1.active {
     & > a {
       color: $side-active-color;
       border-left-color: $side-active-trim;
@@ -76,17 +79,20 @@
     }
   }
 
-  .sub-label > a {
-    border-left: 2px solid $side-trim;
-    margin-left: 13px;
-    &:hover {
-      color: $side-sub-hover-color;
-      border-left-color: $side-sub-hover-trim;
+  .sw-l2 {
+    a {
+      border-left: 2px solid $side-trim;
+      margin-left: 13px;
+      &:hover {
+        color: $side-sub-hover-color;
+        border-left-color: $side-sub-hover-trim;
+      }
+    }
+    .active a {
+      font-weight: bold;
+      color: $side-sub-active-color;
+      border-left-color: $side-sub-active-trim;
     }
   }
-  .active-l2 > a {
-    font-weight: bold;
-    color: $side-sub-active-color;
-    border-left-color: $side-sub-active-trim;
-  }
+
 }
