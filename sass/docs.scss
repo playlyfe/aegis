@@ -3,15 +3,15 @@
 @import "mixins";
 @import "utilities";
 
-#sidewinder {
-  margin-top: $navbar-height * $golden;
+#sidebar {
+  margin-top: $navbar-height;
 }
 .content {
   margin-top: 0;
 }
 .docs-page-header {
   padding: $navbar-height * ($golden - 1) 0;
-  border-bottom: 2px solid $accent-lighter;
+  border-bottom: 2px solid $prime-lighter;
   font-weight: 100;
 }
 .docs-eg {
@@ -23,7 +23,7 @@
   top: 100%;
 }
 .docs-section {
-  padding: 2em 0;
+  padding: 3.5em 0;
   border-bottom: 2px dashed $gray-lightest;
 }
 .docs-article {

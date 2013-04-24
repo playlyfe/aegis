@@ -6,36 +6,31 @@
     <link rel="stylesheet" href="assets/css/aegis.css">
     <link rel="stylesheet" href="assets/css/docs.css">
     <script src="assets/js/vendor/jquery/jquery.js"></script>
+    <script src="assets/js/aegis-sidewinder.js"></script>
   </head>
   <body>
     <div class="container">
       <nav id="navigator" class="navbar">
         <div role="global-nav" class="tier wrapper grid-12"><a href="/" class="crest"><img src="assets/images/logo-playlyfe-white.png" alt="Aegis" title="The Aegis UI Framework"></a>
           <ul class="nav">
-            <li><a href="start.html">Getting Started</a></li>
             <li><a href="typography.html">Typography</a></li>
             <li><a href="tables.html">Tables</a></li>
-            <li><a href="form.html">Form</a></li>
-            <li><a href="button.html">Button</a></li>
+            <li><a href="forms.html">Form</a></li>
+            <li><a href="buttons.html">Button</a></li>
           </ul>
         </div>
       </nav>
       <div class="wrapper grid-12">
-        <nav id="sidewinder" class="sidebar fix-pos">
+        <nav id="sidebar" class="fix-pos">
           <ul class="nav">
-            <li>
-              <div class="main-label"><a href="#defaults">Defaults</a></div>
-            </li>
-            <li>
-              <div class="main-label"><a href="#classes">Classes</a></div>
-              <ul class="sidebar-l2 nav">
-                <li class="sub-label"><a href="#spatial">Spatial</a></li>
-                <li class="sub-label"><a href="#style">Style</a></li>
+            <li><a href="#defaults">Defaults</a></li>
+            <li><a href="#classes">Classes</a>
+              <ul class="nav">
+                <li><a href="#spatial">Spatial</a></li>
+                <li><a href="#style">Style</a></li>
               </ul>
             </li>
-            <li>
-              <div class="main-label"><a href="#cells">Cells</a></div>
-            </li>
+            <li><a href="#cells">Cells</a></li>
           </ul>
         </nav>
         <div class="content col-9 pfx-3">
@@ -147,7 +142,7 @@
                     </tr>
                   </tbody>
                 </table>
-                <pre class="docs-eg-code">&lt;table class="condensed table"&gt;
+                <pre class="docs-eg-code">&lt;table class=&quot;condensed table&quot;&gt;
   ...
 &lt;/table&gt;
 </pre>
@@ -194,7 +189,7 @@
                     </tr>
                   </tbody>
                 </table>
-                <pre class="docs-eg-code">&lt;table class="expanded table"&gt;
+                <pre class="docs-eg-code">&lt;table class=&quot;expanded table&quot;&gt;
   ...
 &lt;/table&gt;
 </pre>
@@ -241,7 +236,7 @@
                     </tr>
                   </tbody>
                 </table>
-                <pre class="docs-eg-code">&lt;table class="table highlight"&gt;
+                <pre class="docs-eg-code">&lt;table class=&quot;table highlight&quot;&gt;
   ...
 &lt;/table&gt;
 </pre>
@@ -288,7 +283,7 @@
                     </tr>
                   </tbody>
                 </table>
-                <pre class="docs-eg-code">&lt;table class="table listing highlight"&gt;
+                <pre class="docs-eg-code">&lt;table class=&quot;table listing highlight&quot;&gt;
   ...
 &lt;/table&gt;
 </pre>
@@ -332,7 +327,7 @@
                     </tr>
                   </tbody>
                 </table>
-                <pre class="docs-eg-code">&lt;table class="table striped"&gt;
+                <pre class="docs-eg-code">&lt;table class=&quot;table striped&quot;&gt;
   ...
 &lt;/table&gt;
 
@@ -374,11 +369,11 @@
                   </tr>
                 </tbody>
               </table>
-              <pre class="docs-eg-code">&lt;table class="table"&gt;
+              <pre class="docs-eg-code">&lt;table class=&quot;table&quot;&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th class="cell-8"&gt;Testing&lt;/th&gt;
-      &lt;th class="cell-2"&gt;Cells&lt;/th&gt;
+      &lt;th class=&quot;cell-8&quot;&gt;Testing&lt;/th&gt;
+      &lt;th class=&quot;cell-2&quot;&gt;Cells&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -389,6 +384,7 @@
           </section>
         </div>
       </div>
+      <script>$('#sidebar>ul').sidewinder({open:"selected"})</script>
     </div>
   </body>
 </html>

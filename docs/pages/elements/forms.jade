@@ -1,29 +1,28 @@
 extends ../layout-elements
 
 block sidebar
-  nav.sidebar.fix-pos#sidewinder
-    ul.nav
-      li
-        .main-label: a(href="#styles") Form Styles
-        ul.sidebar-l2.nav
-          li.sub-label: a(href="#vertical") Vertical Layout
-          li.sub-label: a(href="#horizontal") Horizontal Layout
-      li
-        .main-label: a(href="#standard") Standard Elements
-        ul.sidebar-l2.nav
-          li.sub-label: a(href="#text-input") Text Inputs
-          li.sub-label: a(href="#textarea") Textarea
-          li.sub-label: a(href="#checkbox-radio") Checkboxes & Radios
-          li.sub-label: a(href="#select") Select Boxes
-      li
-        .main-label: a(href="#new") New Elements
-        ul.sidebar-l2.nav
-          li.sub-label: a(href="#snippet") Snippets
-      li
-        .main-label: a(href="#addons") Addons
-        ul.sidebar-l2.nav
-          li.sub-label: a(href="#field-help") Field Help
-          li.sub-label: a(href="#form-help") Form Help
+  ul.nav
+    li
+      a(href="#styles") Form Styles
+      ul.nav
+        li: a(href="#vertical") Vertical Layout
+        li: a(href="#horizontal") Horizontal Layout
+    li
+      a(href="#standard") Standard Elements
+      ul.nav
+        li: a(href="#text-input") Text Inputs
+        li: a(href="#textarea") Textarea
+        li: a(href="#checkbox-radio") Checkboxes & Radios
+        li: a(href="#select") Select Boxes
+    li
+      a(href="#new") New Elements
+      ul.nav
+        li: a(href="#snippet") Snippets
+    li
+      a(href="#addons") Addons
+      ul.nav
+        li: a(href="#field-help") Field Help
+        li: a(href="#form-help") Form Help
 
 block content
   h1.splash.docs-page-header Forms

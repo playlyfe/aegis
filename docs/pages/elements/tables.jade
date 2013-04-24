@@ -1,17 +1,16 @@
 extends ../layout-elements
 
 block sidebar
-  nav.sidebar.fix-pos#sidewinder
-    ul.nav
-      li
-        .main-label: a(href="#defaults") Defaults
-      li
-        .main-label: a(href="#classes") Classes
-        ul.sidebar-l2.nav
-          li.sub-label: a(href="#spatial") Spatial
-          li.sub-label: a(href="#style") Style
-      li
-        .main-label: a(href="#cells") Cells
+  ul.nav
+    li
+      a(href="#defaults") Defaults
+    li
+      a(href="#classes") Classes
+      ul.nav
+        li: a(href="#spatial") Spatial
+        li: a(href="#style") Style
+    li
+      a(href="#cells") Cells
 
 block content
   h1.splash.docs-page-header Tables

@@ -1,29 +1,33 @@
 extends ../layout-elements
 
 block sidebar
-  nav.sidebar.fix-pos#sidewinder
-    ul.nav
-      li
-        .main-label: a(href="#heading") Headings
-      li
-        .main-label: a(href="#paragraph") Paragraphs
-      li
-        .main-label: a(href="#list") Lists
-        ul.nav
-          li.sub-label: a(href="#ul") Unordered Lists
-          li.sub-label: a(href="#ol") Ordered Lists
-          li.sub-label: a(href="#no-list") Unstyled Lists
-          li.sub-label: a(href="#inline") Inline Lists
-      li
-        .main-label: a(href="#code") Code Highlighting
-        ul.nav
-          li.sub-label: a(href="#code-inline") Inline Code
-          li.sub-label: a(href="#code-block") Block Code
-      li
-        .main-label: a(href="#utility") Utility Classes
-        ul.nav
-          li.sub-label: a(href="#align") Alignment
-          li.sub-label: a(href="#BnI") <strong>B</strong> & <em>I</em>
+  ul.nav
+    li
+      a(href="#heading") Headings
+    li
+      a(href="#paragraph") Paragraphs
+    li
+      a(href="#list") Lists
+      ul.nav
+        li: a(href="#ul") Unordered Lists
+        li: a(href="#ol") Ordered Lists
+        li: a(href="#no-list") Unstyled Lists
+        li: a(href="#inline") Inline Lists
+    li
+      a(href="#code") Code Highlighting
+      ul.nav
+        li: a(href="#code-inline") Inline Code
+        li: a(href="#code-block") Block Code
+    li
+      a(href="#utility") Utility Classes
+      ul.nav
+        li: a(href="#align") Alignment
+        li: a(href="#BnI") <strong>B</strong> & <em>I</em>
+    li.dummy
+      a Dummy
+      ul.nav
+        li: a(href="#ul") Dummy List
+        li: a(href="#code-block") Dummy Code
 
 block content
   h1.splash.docs-page-header Typography
@@ -259,10 +263,10 @@ block content
             and always will remain, the basic raw material for all organic chemistry.
             Plastics, dyes, pharmaceuticals, solvents.
         pre.docs-eg-code.
-          &lt;p.text-left"&gt;...&lt;/p&gt;
-          &lt;p.text-center"&gt;...&lt;/p&gt;
-          &lt;p.text-right"&gt;...&lt;/p&gt;
-          &lt;p.text-justify"&gt;...&lt;/p&gt;
+          &lt;p class="text-left"&gt;...&lt;/p&gt;
+          &lt;p class="text-center"&gt;...&lt;/p&gt;
+          &lt;p class="text-right"&gt;...&lt;/p&gt;
+          &lt;p class="text-justify"&gt;...&lt;/p&gt;
 
     article.docs-article#BnI
       h3.docs-h3 <strong>B</strong> &amp; <em>I</em>
