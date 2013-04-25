@@ -49,7 +49,7 @@
 }
 
 /* line 21, ../../../sass/_utilities.scss */
-.no-space, ul.no-list, ul.inline, ol.no-list, ol.inline {
+.no-space, ul.no-list, ul.inline, ol.inline, ol.no-list {
   margin: 0;
   padding: 0;
 }
@@ -125,7 +125,7 @@
 }
 
 /* line 77, ../../../sass/_utilities.scss */
-ul.no-list, ul.inline, ol.no-list, ol.inline {
+ul.no-list, ul.inline, ol.inline, ol.no-list {
   list-style: none !important;
 }
 /* line 84, ../../../sass/_utilities.scss */

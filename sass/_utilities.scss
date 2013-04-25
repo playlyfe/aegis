@@ -80,7 +80,7 @@ ul, ol {
     list-style: none !important;
   }
   &.inline {
-    @extend .no-list;
+    @extend ul.no-list;
     &>li { @include inline-block(); padding: 0 0.25em; }
   }
 }
