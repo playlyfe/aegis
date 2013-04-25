@@ -127,7 +127,9 @@
       this.$el = $('<ul>\n  <li>\n    <a>Game <span class=\'arrow\'></span></a>\n  </li>\n  <li>\n    <a>of <span class=\'arrow\'></span></a>\n    <ul>\n      <li><a>wait</a></li>\n      <li><a>for</a></li>\n      <li>it</li>\n    </ul>\n  </li>\n  <li><a>Thrones <span class=\'arrow\'></span></a>\n    <ul>\n      <li><a>Self</a></li>\n      <li><a>High</a></li>\n      <li><a>Five</a></li>\n    </ul>\n  </li>\n  <li>Winter is coming</li>\n  <li class=\'dummy\'>My Sons\n    <ul>\n      <li><a>Rob</a></li>\n      <li><a>Jon</a></li>\n      <li><a>Bran</a></li>\n    </ul>\n  </li>\n</ul>');
       return $('#testing').append(this.$el);
     });
-    afterEach(function() {});
+    afterEach(function() {
+      return this.$el.remove();
+    });
     describe('L1 items', function() {
       it('should mark the clicked L1 item as "unwound"', function() {
         var $elem;

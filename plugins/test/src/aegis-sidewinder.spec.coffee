@@ -148,8 +148,7 @@ describe 'mechanics', () ->
     $('#testing').append @$el
 
   afterEach () ->
-    # @$el.remove()
-
+    @$el.remove()
 
 
   describe 'L1 items', () ->
