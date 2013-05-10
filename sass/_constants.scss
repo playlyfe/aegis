@@ -59,7 +59,7 @@ $prime-lighter:         mix($white, $prime, 70%);
 $prime-lightest:        mix($white, $prime, 85%);
 
 $accent:                $accent-color;
-$accent-darkest:        darken($accent, 100% / $golden);
+$accent-darkest:        darken($accent, 50%);
 $accent-darker:         darken($accent, 30%);
 $accent-dark:           darken($accent, 10%);
 $accent-light:          lighten($accent, 10%);
