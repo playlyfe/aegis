@@ -85,6 +85,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-jade'
 
+  grunt.registerTask 'default', ['compass:prod', 'compass:docs', 'jade:docs', 'coffee:plugins', 'coffee:test']
+
   grunt.registerTask 'css', ['compass:prod', 'compass:docs']
   grunt.registerTask 'docs', ['jade:docs']
 
