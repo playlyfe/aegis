@@ -5,7 +5,7 @@ module.exports = (grunt) ->
       prod:
         options:
           sassDir: "sass"
-          cssDir: "docs/assets/css"
+          cssDir: ["docs/assets/css", "."]
           specify: "sass/aegis.scss"
           environment: "production"
       docs:
