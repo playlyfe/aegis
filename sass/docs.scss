@@ -25,10 +25,19 @@
 .docs-section {
   padding: 3.5em 0;
   border-bottom: 2px dashed $gray-lightest;
+  &.no-border {
+    border-bottom: none;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
 }
 .docs-article {
   padding-bottom: 1em;
   border-bottom: 1px dashed $gray-ultralight;
+  &.no-border {
+    border-bottom: none;
+  }
   &:last-child {
     border-bottom: none;
   }
@@ -51,4 +60,24 @@
       color: mix($gray-dark, $accent, 60%);
     }
   }
+}
+.button.docs-multiline {
+  height: auto;
+  &.titan {
+    line-height: 1em;
+    padding-top:1em;
+    padding-bottom: 1em;
+  }
+}
+.docs-fade {
+  opacity: 0.1;
+}
+.docs-subtext {
+  font-size: 11px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+.docs-splash-sep {
+  padding: 10px 0;
 }

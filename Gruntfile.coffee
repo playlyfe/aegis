@@ -31,7 +31,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           flatten: true
-          cwd: 'docs/pages'
+          cwd: 'templates'
           src: ['**/*.jade', '!**/layout*.jade']
           dest: 'docs/'
           ext: '.html'
@@ -72,7 +72,7 @@ module.exports = (grunt) ->
         options:
           nospawn: true
       docs:
-        files: ['docs/pages/**/*.jade']
+        files: ['templates/**/*.jade']
         tasks: ['jade:docs']
         options:
           nospawn: true
