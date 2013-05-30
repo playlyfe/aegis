@@ -11,7 +11,7 @@
   <body>
     <div class="container">
       <nav id="navigator" class="navbar">
-        <div role="global-nav" class="tier wrapper grid-12"><a href="/" class="crest"><img src="assets/images/logo-playlyfe-white.png" alt="Aegis" title="The Aegis UI Framework"></a>
+        <div role="global-nav" class="tier wrapper grid-12"><a href="/aegis" class="crest"><img src="assets/images/aegis-logo.png" alt="Aegis" title="The Aegis UI Framework"></a>
           <ul class="nav">
             <li><a href="typography.html">Typography</a></li>
             <li><a href="tables.html">Tables</a></li>
@@ -21,33 +21,61 @@
         </div>
       </nav>
       <div class="wrapper grid-12">
-        <section id="intro" class="docs-section">
-          <h1 class="splash">Aegis</h1>
-          <p>
-            To start using the Aegis UI, download the compiled css and javascript files.
-            Include them in your project, and start designing. The only requirement for
-            Aegis is <strong>jQuery</strong>, which is required for animations and rendering
-            advanced form elements.
-            
-          </p>
-          <p>
-            So, what are you waiting for? Click the shiny green button and get going!
-            You can also have a look at the source files if you want to customize or
-            contribute to the project.
-            
-          </p>
-          <button class="button accent titan">Download Aegis</button>
-          <button class="button primary titan">View Project on Github</button>
+        <section id="intro" class="docs-section col-12">
+          <h1 class="splash">Aegis<span class="docs-fade"> css framework</span></h1>
+          <article class="col-8">
+            <p>
+              To start using Aegis, download the compiled and minified css.
+              Include the css in your project, and start designing.
+              If you plan to also use the Aegis javascript plugins, then don't forget to include
+              <strong>jQuery</strong> in your html. Aegis requires jQuery for animations and
+              rendering advanced form elements.
+              
+            </p>
+            <p>
+              So, what are you waiting for? Grab the latest version of Aegis and get going!
+              You can also have a look at project source files if you want to customize or
+              contribute to its development.
+              
+            </p>
+          </article>
+          <aside class="col-4">
+            <div class="col-10 docs-splash-sep pfx-1"><a href="https://raw.github.com/playlyfe/aegis/master/aegis.css" class="col-12 button accent docs-multiline titan">Download Aegis
+                <div class="docs-subtext">Latest: 30-May-2013</div></a></div>
+            <div class="col-10 docs-splash-sep pfx-1"><a href="https://github.com/playlyfe/aegis" class="col-12 button primary titan">View on Github</a></div>
+          </aside>
         </section>
-        <section id="usage" class="docs-section">
-          <h3 class="docs-h3">Usage</h3>
-          <p>
-            To use Aegis in your project, link to the css and js files as such:
-            
-          </p>
-          <pre class="docs-eg-code">&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;path-to-css&gt;/aegis.css&quot;&gt;
-&lt;script type=&#039;text/javascript&#039; src=&#039;&lt;path-to-js&gt;/jquery.js&#039;&gt;&lt;/script&gt;
-&lt;script type=&#039;text/javascript&#039; src=&#039;&lt;path-to-js&gt;/aegis.js&#039;&gt;&lt;/script&gt;</pre>
+        <section id="tips" class="docs-section col-12">
+          <article id="usage" class="docs-article col-7 sfx-1 no-border">
+            <h4 class="docs-h4">Usage</h4>
+            <p>
+              To use Aegis in your project, link to the css and js files as such:
+              
+            </p>
+            <pre class="docs-eg-code">&lt;link rel=&quot;stylesheet&quot; href=&quot;&lt;path-to-css&gt;/aegis.css&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;&lt;path-to-js&gt;/jquery.js&quot;&gt;&lt;/script&gt;</pre>
+            <p>
+              For using the aegis plugins, include the scripts separately after jquery:
+              
+            </p>
+            <pre class="docs-eg-code">&lt;script type=&quot;text/javascript&quot; src=&quot;&lt;path-to-js&gt;/aegis-{plugin}.js&quot;&gt;&lt;/script&gt;</pre>
+          </article>
+          <article id="note" class="docs-article col-4">
+            <h4 class="docs-h4">A Small Note</h4>
+            <p>
+              The js plugins are in development, therefore you won't find a download button for them. But in case
+              you want to try them, you can always<br>
+              <a href="https://github.com/playlyfe/aegis/tree/gh-pages/assets/js">download the plugins manually</a>.
+            </p>
+            <p>
+              As long as Aegis is in alpha, keep an eye out for future changes which may (or may not)
+              break your page styles and cause apocalypse. We invite you to contribute to the project if
+              you want to accelerate the pace of development (or to prevent apocalypse and be called a hero).
+              Once the framework has matured, we'll come out with a stable version for you.
+              
+            </p>
+            <h6>Have Fun</h6>
+          </article>
         </section>
       </div>
     </div>

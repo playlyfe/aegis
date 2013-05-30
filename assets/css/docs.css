@@ -173,32 +173,44 @@ ul.inline > li, ol.inline > li {
   padding: 3.5em 0;
   border-bottom: 2px dashed #dddddd;
 }
+/* line 28, ../../../sass/docs.scss */
+.docs-section.no-border {
+  border-bottom: none;
+}
+/* line 31, ../../../sass/docs.scss */
+.docs-section:last-child {
+  border-bottom: none;
+}
 
-/* line 29, ../../../sass/docs.scss */
+/* line 35, ../../../sass/docs.scss */
 .docs-article {
   padding-bottom: 1em;
   border-bottom: 1px dashed #eeeeee;
 }
-/* line 32, ../../../sass/docs.scss */
+/* line 38, ../../../sass/docs.scss */
+.docs-article.no-border {
+  border-bottom: none;
+}
+/* line 41, ../../../sass/docs.scss */
 .docs-article:last-child {
   border-bottom: none;
 }
-/* line 35, ../../../sass/docs.scss */
+/* line 44, ../../../sass/docs.scss */
 .docs-article .docs-h3 {
   padding-top: 40px;
 }
 
-/* line 39, ../../../sass/docs.scss */
+/* line 48, ../../../sass/docs.scss */
 .docs-h1 {
   padding-bottom: 0.3em;
 }
 
-/* line 42, ../../../sass/docs.scss */
+/* line 51, ../../../sass/docs.scss */
 .docs-h3 {
   padding-top: 10px;
 }
 
-/* line 46, ../../../sass/docs.scss */
+/* line 55, ../../../sass/docs.scss */
 .docs-h1 a, .docs-h3 a, .docs-h4 a {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -209,7 +221,36 @@ ul.inline > li, ol.inline > li {
   cursor: pointer;
   color: #333333;
 }
-/* line 50, ../../../sass/docs.scss */
+/* line 59, ../../../sass/docs.scss */
 .docs-h1 a:hover, .docs-h3 a:hover, .docs-h4 a:hover {
   color: #2d5d84;
+}
+
+/* line 64, ../../../sass/docs.scss */
+.button.docs-multiline {
+  height: auto;
+}
+/* line 66, ../../../sass/docs.scss */
+.button.docs-multiline.titan {
+  line-height: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/* line 72, ../../../sass/docs.scss */
+.docs-fade {
+  opacity: 0.1;
+}
+
+/* line 75, ../../../sass/docs.scss */
+.docs-subtext {
+  font-size: 11px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* line 81, ../../../sass/docs.scss */
+.docs-splash-sep {
+  padding: 10px 0;
 }
