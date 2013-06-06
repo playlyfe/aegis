@@ -6,7 +6,7 @@
 form {
   @include clearfix();
   .button {
-    margin: 0 0 $base-line-height/2;
+    margin-bottom: $base-line-height / 2;
     // inline buttons in forms need special treatment
     &.inline {
       height: $input-height - 2 ; // in ems to align with fields
@@ -39,23 +39,29 @@ form {
 }
 
 .form-errors {
-  display: none;
-  position: relative;
-  margin-bottom: 5px;
-  *zoom: 1;
-  &:before, &:after {
-    display: table;
-    content: "";
-    line-height: 0;
-  }
-  &:after {
-    clear:both;
-  }
+  @extend .form-row;
+  @extend .unstyled;
   color: $error-color;
   background-color: $error-bg;
   @include box-sizing('border-box');
   border: 1px solid darken($error-color,10%);
-  padding: 0.2em 1em;
+  padding: 5px 5px;
+}
+.error-list {
+  @extend .unstyled;
+  float: left;
+  margin-left: 20px;
+  li {
+    position: relative;
+    &:before {
+      font-family: "Lyfeicons";
+      position: absolute;
+      left: -20px;
+      display: block;
+      content: "\e00d";
+    }
+    color: $error-color;
+  }
 }
 
 

@@ -44,6 +44,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+html, body {
+  min-height: 100%;
+}
 body {
   // conditional style sheet for IE
   // font-size:100%;
@@ -53,11 +56,23 @@ body {
   line-height: $base-line-height;
   color: $base-color;
 }
-.wrapper {
+.fixed-width {
   width: $min-screen-width;
   margin: 0 auto;
   @include clearfix;
 }
+.page-wrapper {
+  padding-top: $navbar-height;
+  min-height: 100%;
+  @include box-sizing('border-box');
+}
+.page-content {
+  overflow: auto;
+  padding-top: $content-padding;
+  padding-bottom: $footer-height + $navbar-height;
+}
+
+
 h1, h2 {
   line-height: 2 * $base-line-height;
 }
@@ -91,9 +106,6 @@ h6 {
   text-transform: uppercase;
   font-weight: bold;
   margin: 2px 0;
-}
-.header {
-  color: mix($prime-lighter, $base-color, 20%);
 }
 p  {
   font-size: $base-font-size;

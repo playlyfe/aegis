@@ -9,7 +9,7 @@
   @extend .no-list;
   @extend .no-space;
   a {
-    @extend .no-anchor;
+    @include button-interaction();
     display: block;
   }
 }
@@ -22,10 +22,8 @@
   z-index: $navbar-z;
   width: 100%;
   top: 0;
-  // each navbar can have one or more tiers
-  .tier {
+  .navbar-inner {
     height: $navbar-height;
-    margin: 0 auto;
   }
   li {
     float: left;
@@ -48,10 +46,7 @@
     display: block;
     @include box-sizing('border-box');
     height: $navbar-height;
-    padding: 6px 12px 5px;
-    // this is for aligning rounded crests if you have fixed page-widths
-    // If your's has a squarish edge, modify this margin or remove the line
-    margin-left: -12px;
+    padding: 6px 12px 5px 0;
     font-size: 1em;
     line-height: 1em;
     color: transparent;

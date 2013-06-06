@@ -4,11 +4,19 @@
 // 4.Jun.2013
 
 .footer {
+  position: relative;
+  margin-top: - $footer-height - 28px;
+  height: $footer-height;
+  padding: $footer-padding;
+  border-top: 1px solid $footer-border;
+  background-color: $footer-bg;
+  z-index: $footer-z;
   .nav {
     text-align: center;
     li {
       padding-left: 20px;
       padding-right: 20px;
+      color: $prime-darker;
     }
   }
 }

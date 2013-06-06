@@ -3,15 +3,13 @@
 // Kumar Harsh
 // 4.Jun.2013
 
-ul, ol {
-  &.unstyled {
-    @extend .no-space;
-    list-style: none;
-  }
-  &.list-inline {
-    > li {
-      @include inline-block();
-      padding: 0 0.5em;
-    }
+.unstyled {
+  @extend .no-space;
+  list-style: none;
+}
+.list-inline {
+  > li {
+    @include inline-block();
+    padding: 0 0.5em;
   }
 }

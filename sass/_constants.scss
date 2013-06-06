@@ -109,7 +109,7 @@ $code-color:              $accent;
 
 //
 //  ===========================
-//  NAVBAR
+//  GENERAL PAGE LAYOUT
 //  ===========================
 //
 $navbar-z:              1000;
@@ -121,6 +121,13 @@ $navbar-bg:             $prime;
 $navbar-hover-bg:       $prime-dark;
 $navbar-border:         $prime-dark;
 
+$content-padding:       40px;
+
+$footer-height:         26px;
+$footer-z:              900;
+$footer-border:         $prime-dark;
+$footer-bg:             $white;
+$footer-padding:        13px 0;
 
 //
 //  ===========================
@@ -156,7 +163,7 @@ $side-sub-active-trim:      $accent;
 // UNINAV RULES
 $tabbar-z:                  100;
 $tabbar-font-size:          1;
-$tabbar-height:             2.38em;
+$tabbar-height:             25px;
 $tabbar-bg:                 $side-bg;
 $tabbar-color:              $side-color;
 $tabbar-trim:               $side-trim;
@@ -196,11 +203,11 @@ $button-padding:         #{4px/$base}em #{20px/$base}em;
 $button-font-size:       14px;
 $button-height:          30px;
 
-$button-inline-height:   2em;
+$button-inline-height:   26px;
 $button-inline-padding:  8px;
 
-$button-titan-font-size: 18px;
-$button-titan-height:    3em;
+$button-titan-font-size: 21px;
+$button-titan-height:    54px;
 
 $button-round-radius:    4em;
 
@@ -211,6 +218,8 @@ $button-bg:             $gray-ultralight;
 $button-border:         darken($gray-ultralight,10%);
 $button-hover-color:    $gray-darker;
 $button-hover-bg:       $gray-lightest;
+
+$button-disabled-bg:    $white;
 
 $button-prime-bg:       $prime;
 $button-prime-color:    $white;

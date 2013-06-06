@@ -1,54 +1,45 @@
-.tabbar {
+.tab-bar {
   position: relative;
-  top: -#{$tabbar-height};
-  background-color: $tabbar-bg;
-  @include clearfix();
-  // if you want tabbar to stick at top when scrolled
-  &.stuck {
-    position: fixed;
-    top: $tabbar-height + 1em;
-    width:96%;
-    z-index: $tabbar-z;
+  border-bottom: 1px solid $tabbar-trim;
+}
+
+.tab-item {
+  @include box-sizing('border-box');
+  @include transition(border-color 0.3s ease 0.1s);
+  float: left;
+  display: block;
+  text-align: center;
+  height: $tabbar-height;
+  line-height: $tabbar-height;
+  vertical-align: baseline;
+  width: 160px;
+  border-bottom: 1px solid $tabbar-trim;
+  /* shift the items 1px to sit on tabbar's border */
+  margin-bottom: -1px;
+  a {
+    color: $tabbar-color;
+    @include transition(color 0.2s ease 0.1s);
   }
-  .tab-item {
-    display: block;
-    text-align: center;
-    float:left;
-    .label {
-      width:160px;
-      @extend .no-anchor;
-      @include box-sizing('border-box');
-      cursor: pointer;
-      height: $tabbar-height;
-      padding-top:5px;
-      color: $tabbar-color;
-      border-bottom: 1px solid $tabbar-trim;
-      @include transition(color 0.2s ease 0.1s, border-color 0.3s ease 0.1s);
-      &:hover {
-        color: $tabbar-hover-color;
-        border-bottom: 3px solid $tabbar-hover-color;
-      }
-    }
-    &.live {
-      .label {
-        color: $tabbar-active-color;
-        font-weight: bold;
-        border-bottom: 5px solid $tabbar-active-color;
-        @include transition(border-width 0.3s ease 0.1s);
-        &:hover {
-          color: lighten($tabbar-active-color, 10%);
-          border-bottom-color: lighten($tabbar-active-color, 10%);
-        }
-      }
+  &:hover {
+    border-bottom: 3px solid $tabbar-hover-color;
+    a, a:hover { color: $tabbar-hover-color; }
+  }
+
+  &.live {
+    font-weight: bold;
+    border-bottom: 5px solid $tabbar-active-color;
+    @include transition(border-width 0.3s ease 0.1s);
+    a { color: $tabbar-active-color; }
+    &:hover {
+      a, a:hover { color: lighten($tabbar-active-color, 10%); }
+      border-bottom-color: lighten($tabbar-active-color, 10%);
     }
   }
 }
-
-.tabview {
+.tab-content {
   position: relative;
   z-index: $tabbar-z - 1;
   overflow: hidden;
-  top: -#{$tabbar-height};
 }
 
 

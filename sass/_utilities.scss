@@ -31,9 +31,6 @@
     text-decoration: none !important;
   }
 }
-.no-float {
-  float: none !important;
-}
 .left {
   float: left !important;
 }
@@ -69,18 +66,4 @@
 }
 .fade {
   opacity: 0.2;
-}
-
-
-// STYLES FOR LISTS
-ul, ol {
-  &.no-list {
-    // apply on lists to strip away the bullets & numbers
-    @extend .no-space;
-    list-style: none !important;
-  }
-  &.inline {
-    @extend ul.no-list;
-    &>li { @include inline-block(); padding: 0 0.25em; }
-  }
 }

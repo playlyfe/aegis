@@ -6,6 +6,33 @@
  */
 
 
+// The media object
+// (OOCSS / stubbornella.com)
+.media {
+  margin: 10px;
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+  .content {
+    /* use overflow for clearing floats and
+     creating new layout context */
+    overflow: hidden;
+    zoom: 1;
+  }
+  .image {
+    /* you can float the image to either left or right */
+    float: left;
+    margin-right: 10px;
+    img {
+      display: block;
+    }
+    &.right {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+}
+
 /*
  * This partial gives you some extra elements
  * for your page. See the demo page for examples.
@@ -81,27 +108,6 @@ hr.dotted {
   }
 }
 
-
-// TODO: dont exactly know where i'm using this...
-.tip {
-  margin: $base-line-height/2 0;
-  &.info {
-    padding: $base-line-height/2;
-    background-color: $accent-lightest;
-    border: 1px solid $accent-lighter;
-    color: $accent;
-    a, a:hover {
-      font-weight: bold;
-      text-decoration: underline;
-    }
-  }
-  &.alert {
-    color: $red;
-    background-color: lighten($red,50%);
-    border: 1px solid $red;
-    padding: $base-line-height/2;
-  }
-}
 
 .example {
   background-color: #fefefc;
