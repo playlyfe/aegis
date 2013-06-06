@@ -1,0 +1,106 @@
+// Icon font
+@font-face {
+  font-family: 'Lyfeicons';
+  src: url('fonts/lyfeicons-webfont.eot');
+  src: local('Lyfeicons'), local('lyfeiconsregular'),
+        url('fonts/lyfeicons-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/lyfeicons-webfont.woff') format('woff'),
+       url('fonts/lyfeicons-webfont.ttf') format('truetype'),
+       url('fonts/lyfeicons-webfont.svg#lyfeiconsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'Lyfeicons';
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  display: inline;
+  *margin-right: .3em;
+}
+// [class^="icon-"],
+// [class*=" icon-"] {
+//   width: auto;
+//   height: auto;
+//   line-height: normal;
+//   vertical-align: baseline;
+//   background-image: none;
+//   background-position: 0% 0%;
+//   background-repeat: repeat;
+//   margin-top: 0;
+// }
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+  vertical-align: -10%;
+  font-size: 1.3333em;
+}
+a [class^="icon-"],
+a [class*=" icon-"],
+a [class^="icon-"]:before,
+a [class*=" icon-"]:before {
+  display: inline;
+}
+
+.icon-add:before { content: '\E002'; }
+.icon-edit:before { content: '\E003'; }
+.icon-view:before { content: '\E004'; }
+.icon-close:before { content: '\E005'; }
+.icon-delete:before { content: '\E006'; }
+.icon-list:before { content: '\E007'; }
+.icon-reset:before { content: '\E008'; }
+.icon-settings:before { content: '\E009'; }
+.icon-properties:before { content: '\E00a'; }
+.icon-calendar:before { content: '\E00b'; }
+.icon-target:before { content: '\E00c'; }
+.icon-dead-face:before { content: '\E00d'; }
+.icon-sad-face:before { content: '\E00e'; }
+.icon-happy-face:before { content: '\E00f'; }
+.icon-home:before { content: '\E010'; }
+.icon-user:before { content: '\E011'; }
+.icon-square:before { content: '\E012'; }
+.icon-circle:before { content: '\E013'; }
+.icon-up:before { content: '\E014'; }
+.icon-down:before { content: '\E015'; }
+.icon-right:before { content: '\E016'; }
+.icon-left:before { content: '\E017'; }
+.icon-stop:before { content: '\E018'; }
+.icon-list:before { content: '\E019'; }
+.icon-search:before { content: '\E01a'; }
+.icon-search-invert:before { content: '\E01b'; }
+.icon-error:before { content: '\E01c'; }
+.icon-warning:before { content: '\E01d'; }
+.icon-help:before { content: '\E01e'; }
+.icon-sandbox:before { content: '\E020'; }
+.icon-simulate:before { content: '\E021'; }
+.icon-design:before { content: '\E022'; }
+.icon-gateway:before { content: '\E023'; }
+.icon-gateway-inclusive:before { content: '\E024'; }
+.icon-activity:before { content: '\E025'; }
+.icon-lanes:before { content: '\E026'; }
+.icon-loops:before { content: '\E027'; }
+.icon-Not_before:before { content: '\E028'; }
+.icon-Not_after:before { content: '\E029'; }
+.icon-timed:before { content: '\E02a'; }
+.icon-token:before { content: '\E02b'; }
+.icon-code:before { content: '\E02c'; }
+.icon-mail:before { content: '\E02d'; }
+.icon-web:before { content: '\E02e'; }
+.icon-twitter:before { content: '\E02f'; }
+.icon-builder:before { content: '\E030'; }
+.icon-settings:before { content: '\E031'; }
+.icon-mechanics:before { content: '\E032'; }
+.icon-dev-tools:before { content: '\E033'; }
+.icon-pl:before { content: '\E034'; }
+.icon-playlyfe:before { content: '\E035'; }
+.icon-fullscreen:before { content: '\E036'; }
+.icon-restore:before { content: '\E037'; }

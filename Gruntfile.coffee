@@ -16,11 +16,8 @@ module.exports = (grunt) ->
       dev:
         options:
           sassDir: "sass"
-          cssDir: "docs/assets/css"
-          specify: [
-            "sass/aegis.scss"
-            "sass/docs.scss"
-          ]
+          cssDir: ["docs/assets/css", "."]
+          specify: "sass/aegis.scss"
           outputStyle: "expanded"
 
     jade:
@@ -68,12 +65,12 @@ module.exports = (grunt) ->
           nospawn: true
       css:
         files: ['sass/*.scss']
-        tasks: ['compass:prod','compass:docs']
+        tasks: ['compass:dev']
         options:
           nospawn: true
       docs:
-        files: ['templates/**/*.jade']
-        tasks: ['jade:docs']
+        files: ['templates/**/*.jade', 'sass/*.scss']
+        tasks: ['jade:docs','compass:docs']
         options:
           nospawn: true
   }
@@ -85,12 +82,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-jade'
 
-  grunt.registerTask 'default', ['compass:prod', 'compass:docs', 'jade:docs', 'coffee:plugins', 'coffee:test']
+  grunt.registerTask 'default', ['watch:css']
 
-  grunt.registerTask 'css', ['compass:prod', 'compass:docs']
-  grunt.registerTask 'docs', ['jade:docs']
-
-  grunt.registerTask 'plugins-test', ['coffee:test']
-  grunt.registerTask 'plugins', ['coffee:plugins']
-
-  grunt.registerTask 'build', ['clean', 'css', 'docs', 'plugins-test', 'plugins']
+  grunt.registerTask 'build', ['clean', 'compass:prod', 'compass:docs', 'jade:docs', 'coffee:plugins', 'coffee:test']
