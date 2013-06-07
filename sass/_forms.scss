@@ -21,17 +21,9 @@ form {
 }
 
 .form-row {
+  @include clearfix;
   position: relative;
   margin-bottom: 5px;
-  *zoom: 1;
-  &:before, &:after {
-    display: table;
-    content: "";
-    line-height: 0;
-  }
-  &:after {
-    clear:both;
-  }
   legend + & {
     margin-top: #{$input-height/2};
     -webkit-margin-top-collapse: separate;
@@ -39,28 +31,49 @@ form {
 }
 
 .form-errors {
+  @include box-sizing('border-box');
   @extend .form-row;
   @extend .unstyled;
-  color: $error-color;
   background-color: $error-bg;
-  @include box-sizing('border-box');
-  border: 1px solid darken($error-color,10%);
-  padding: 5px 5px;
+  margin: 5px 0;
+  padding: 2px 0;
+  border: 1px solid darken($error-bg,10%);
+  &:before {
+    font-family: "Lyfeicons";
+    position: absolute;
+    display: block;
+    font-size: 25px;
+    top: -20px;
+    left: 50%;
+    margin-left: -15px;
+    display: block;
+    content: "\e00d";
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+  }
 }
-.error-list {
+.field-errors {
   @extend .unstyled;
   float: left;
   margin-left: 20px;
+}
+.form-errors, .field-errors {
+  color: $error-color;
   li {
+    margin: 2px 4px;
     position: relative;
-    &:before {
-      font-family: "Lyfeicons";
-      position: absolute;
-      left: -20px;
-      display: block;
-      content: "\e00d";
-    }
-    color: $error-color;
+  }
+}
+.field-errors {
+  li:before {
+    font-family: "Lyfeicons";
+    position: absolute;
+    left: -20px;
+    display: block;
+    content: "\e00d";
   }
 }
 
