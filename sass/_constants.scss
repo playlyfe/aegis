@@ -124,7 +124,7 @@ $navbar-border:         $prime-dark;
 $content-padding:       40px;
 
 $footer-height:         26px;
-$footer-z:              900;
+$footer-z:              200;
 $footer-border:         $prime-dark;
 $footer-bg:             $white;
 $footer-padding:        13px 0;
@@ -271,11 +271,11 @@ $snippet-border:          1px dashed $prime-dark;
 
 // MODAL
 $mask-opacity:        0.70;
-$mask-z:              200;
+$mask-z:              250;
 
 $modal-width:         500px;
 $modal-wide-width:    700px;
-$modal-z:             250;
+$modal-z:             260;
 $modal-shadow-color:  rgba(0,0,0,0.15);
 
 $modal-head-bg:       $prime;
