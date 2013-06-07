@@ -30,7 +30,6 @@
 
 
 .button { // Button sizes & colours
-
   &.icon { /* smallest, icon-holder */
     padding: 3px 7px;
   }
@@ -143,13 +142,6 @@
         darken($button-alert-bg, 10%)
       );
     }
-    // &.disabled, &[disabled] {
-    //   @include button-style(
-    //     $color: $button-color,
-    //     $bg: $button-disabled-bg,
-    //     $border: darken($button-border, 5%)
-    //   );
-    // }
   }
   &:focus {
     @include tab-focus();
