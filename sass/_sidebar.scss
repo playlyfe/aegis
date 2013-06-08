@@ -13,7 +13,7 @@
   border-right: 1px solid $side-border;
 
   font-size: $side-font-size;
-  z-index: $side-z;
+  z-index: 1;
   // @include box-shadow($side-border 0px 0px 10px -1px);
   @include no-select();
 

@@ -293,7 +293,7 @@ input[type="color"],
     width: 70px;
   }
   input[type="file"] {
-    z-index: $file-input-z;
+    z-index: 1;
     @include opacity(0);  // hide the actual file input
     position: absolute;
     top: 0;
@@ -302,7 +302,7 @@ input[type="color"],
     width: 100%;
   }
   input[type="text"] {
-    z-index: $file-input-z + 1;
+    z-index: 2;
     position: absolute;
     top: 0;
     left: 70px;

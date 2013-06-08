@@ -112,7 +112,6 @@ $code-color:              $accent;
 //  GENERAL PAGE LAYOUT
 //  ===========================
 //
-$navbar-z:              1000;
 $navbar-pos:            fixed;
 $navbar-height:         40px;
 $navbar-icon-height:    16px;
@@ -124,10 +123,10 @@ $navbar-border:         $prime-dark;
 $content-padding:       40px;
 
 $footer-height:         26px;
-$footer-z:              200;
 $footer-border:         $prime-dark;
 $footer-bg:             $white;
 $footer-padding:        13px 0;
+
 
 //
 //  ===========================
@@ -136,7 +135,6 @@ $footer-padding:        13px 0;
 //
 
 $side-position:             fixed;
-$side-z:                    100;
 $side-width:                200px;
 $side-height:               auto;
 $side-padding:              2em;
@@ -161,7 +159,6 @@ $side-sub-active-color:     $accent;
 $side-sub-active-trim:      $accent;
 
 // UNINAV RULES
-$tabbar-z:                  100;
 $tabbar-font-size:          1;
 $tabbar-height:             25px;
 $tabbar-bg:                 $side-bg;
@@ -187,8 +184,6 @@ $table-body-alt-bg:         $gray-ultralight;
 $table-foot-bg:             $white;
 
 // Z-Index order
-$sticky-z:      50;
-$file-input-z:  150;
 
 
 
@@ -270,9 +265,7 @@ $snippet-border:          1px dashed $prime-dark;
 
 // MODAL
 $mask-color:          rgba(255,255,255,0.8);
-$mask-z:              50;
 
-$modal-mask-z:        300;
 $modal-width:         500px;
 $modal-wide-width:    70%;
 
@@ -332,3 +325,11 @@ $addon-bg: $gray-lighter;
 $example-text: "example";
 $example-bg: $accent;
 $example-color: $white;
+
+
+
+// Z-INDICES
+$navbar-z:              1000;
+$modal-mask-z:          900;
+$mask-z:                500;
+$dropdown-z:            400;

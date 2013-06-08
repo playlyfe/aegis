@@ -1,8 +1,8 @@
 .tab-bar {
   position: relative;
   border-bottom: 1px solid $tabbar-trim;
+  z-index: 2;
 }
-
 .tab-item {
   @include box-sizing('border-box');
   @include transition(border-color 0.3s ease 0.1s);
@@ -38,7 +38,7 @@
 }
 .tab-content {
   position: relative;
-  z-index: $tabbar-z - 1;
+  z-index: 1;
   overflow: hidden;
 }
 
