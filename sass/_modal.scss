@@ -49,8 +49,8 @@
   @include background-clip(padding-box);
 
   &.lined {
-    .modal-head { border-bottom: 1px solid $modal-inner-border; }
-    .modal-foot { border-top: 1px solid $modal-inner-border; }
+    .modal-header { border-bottom: 1px solid $modal-inner-border; }
+    .modal-footer { border-top: 1px solid $modal-inner-border; }
   }
   &.special { border-top-width: 10px; }
   &.wide {
@@ -70,23 +70,16 @@
     @include box-shadow(1px 2px 7px $error-bg);
   }
 }
-.modal-section {
-  padding: 0em 1em;
+.modal-header, .modal-body, .modal-footer {
+  padding: 1em 2em;
   overflow: hidden;
 }
+.modal-header { padding-top:0; padding-bottom: 0; }
 .modal-body {
-  padding-top: 1em;
-  padding-bottom: 0;
   border-bottom: 1px solid lighten($modal-border, 10%);
+  /* remove bottom margin from forms */
+  form { margin-bottom: 0; }
 }
-
-  //   .modal-list {
-  //     list-style-type: disc;
-  //     margin: 1em 0;
-  //     li {
-  //       font-weight: bold;
-  //     }
-  //   }
 
 .spinner {
   position: relative;

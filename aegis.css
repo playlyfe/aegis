@@ -723,11 +723,11 @@
   background-clip: padding-box;
 }
 /* line 52, sass/_modal.scss */
-.modal.lined .modal-head {
+.modal.lined .modal-header {
   border-bottom: 1px solid #eeeeee;
 }
 /* line 53, sass/_modal.scss */
-.modal.lined .modal-foot {
+.modal.lined .modal-footer {
   border-top: 1px solid #eeeeee;
 }
 /* line 55, sass/_modal.scss */
@@ -762,19 +762,28 @@
 }
 
 /* line 73, sass/_modal.scss */
-.modal-section {
-  padding: 0em 1em;
+.modal-header, .modal-body, .modal-footer {
+  padding: 1em 2em;
   overflow: hidden;
 }
 
 /* line 77, sass/_modal.scss */
-.modal-body {
-  padding-top: 1em;
+.modal-header {
+  padding-top: 0;
   padding-bottom: 0;
-  border-bottom: 1px solid #f7f7f7;
 }
 
-/* line 91, sass/_modal.scss */
+/* line 78, sass/_modal.scss */
+.modal-body {
+  border-bottom: 1px solid #f7f7f7;
+  /* remove bottom margin from forms */
+}
+/* line 81, sass/_modal.scss */
+.modal-body form {
+  margin-bottom: 0;
+}
+
+/* line 84, sass/_modal.scss */
 .spinner {
   position: relative;
   top: 50%;
