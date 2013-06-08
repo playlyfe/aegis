@@ -39,12 +39,17 @@ a [class*=" icon-"]:before {
   display: inline;
 }
 
+.icon-big { font-size: 1.6em; }
+.icon-2x { font-size: 2em; }
+.icon-3x { font-size: 3em; }
+.icon-4x { font-size: 4em; }
+
 .icon-add:before { content: '\E002'; }
 .icon-edit:before { content: '\E003'; }
 .icon-view:before { content: '\E004'; }
 .icon-close:before { content: '\E005'; }
 .icon-delete:before { content: '\E006'; }
-.icon-list:before { content: '\E007'; }
+.icon-menu:before { content: '\E007'; }
 .icon-reset:before { content: '\E008'; }
 .icon-settings:before { content: '\E009'; }
 .icon-properties:before { content: '\E00a'; }
@@ -76,8 +81,8 @@ a [class*=" icon-"]:before {
 .icon-activity:before { content: '\E025'; }
 .icon-lanes:before { content: '\E026'; }
 .icon-loops:before { content: '\E027'; }
-.icon-Not_before:before { content: '\E028'; }
-.icon-Not_after:before { content: '\E029'; }
+.icon-right-half:before { content: '\E028'; } /* no sooner than */
+.icon-left-half:before { content: '\E029'; } /* no later than */
 .icon-timed:before { content: '\E02a'; }
 .icon-token:before { content: '\E02b'; }
 .icon-code:before { content: '\E02c'; }

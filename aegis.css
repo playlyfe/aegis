@@ -1133,23 +1133,23 @@ a [class*=" icon-"]:before {
 }
 
 /* line 42, sass/_icons.scss */
+.icon-big {
+  font-size: 1.6em;
+}
+
+/* line 43, sass/_icons.scss */
 .icon-2x {
   font-size: 2em;
 }
 
-/* line 43, sass/_icons.scss */
+/* line 44, sass/_icons.scss */
 .icon-3x {
   font-size: 3em;
 }
 
-/* line 44, sass/_icons.scss */
+/* line 45, sass/_icons.scss */
 .icon-4x {
   font-size: 4em;
-}
-
-/* line 45, sass/_icons.scss */
-.icon-5x {
-  font-size: 5em;
 }
 
 /* line 47, sass/_icons.scss */
@@ -1178,7 +1178,7 @@ a [class*=" icon-"]:before {
 }
 
 /* line 52, sass/_icons.scss */
-.icon-list:before {
+.icon-menu:before {
   content: '\E007';
 }
 
@@ -1338,15 +1338,17 @@ a [class*=" icon-"]:before {
 }
 
 /* line 84, sass/_icons.scss */
-.icon-Not_before:before {
+.icon-right-half:before {
   content: '\E028';
 }
 
+/* no sooner than */
 /* line 85, sass/_icons.scss */
-.icon-Not_after:before {
+.icon-left-half:before {
   content: '\E029';
 }
 
+/* no later than */
 /* line 86, sass/_icons.scss */
 .icon-timed:before {
   content: '\E02a';
