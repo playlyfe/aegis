@@ -269,21 +269,17 @@ $snippet-border:          1px dashed $prime-dark;
 
 
 // MODAL
-$mask-opacity:        0.70;
-$mask-z:              250;
+$mask-color:          rgba(255,255,255,0.8);
+$mask-z:              50;
 
+$modal-mask-z:        300;
 $modal-width:         500px;
-$modal-wide-width:    700px;
-$modal-z:             260;
-$modal-shadow-color:  rgba(0,0,0,0.15);
+$modal-wide-width:    70%;
 
-$modal-head-bg:       $prime;
-$modal-head-border:   $prime-dark;
+$modal-shadow:        rgba(0,0,0,0.15);
 $modal-bg:            $white;
-$modal-border:        $gray-ultralight;
-
-// OVERLAYS (covers forms while request completes)
-$overlay-cover:       rgba(255,255,255,0.8);
+$modal-border:        $gray-lightest;
+$modal-inner-border:  $gray-ultralight;
 
 
 //
