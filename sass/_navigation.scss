@@ -55,3 +55,36 @@
     }
   }
 }
+
+
+// Dropdown menus
+.dropdown {
+  position: relative;
+  // use either the -nav (ul,ol) or the -wrapper (divs, etc) versions
+  // don't use both together
+  .dropdown-nav, .dropdown-wrapper {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $dropdown-bg;
+    border: 1px solid $dropdown-border;
+    border-top: none;
+    z-index: $dropdown-z;
+  }
+  &:hover {
+    .dropdown-nav, .dropdown-wrapper {
+      display: block;
+    }
+  }
+}
+
+.navbar {
+  .dropdown-nav {
+    background-color: $navbar-bg;
+    border-color: $navbar-border;
+  }
+  .dropdown-nav > li, .dropdown-wrapper > .nav > li {
+    float: none;
+  }
+}

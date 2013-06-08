@@ -20,6 +20,9 @@
   -webkit-font-smoothing: antialiased;
   display: inline;
   margin-right: 0.7em;
+  &.no-space {
+    margin: 0;
+  }
 }
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
@@ -27,11 +30,7 @@
   display: inline-block;
   speak: none;
 }
-/* makes the font 33% larger relative to the icon container */
-.icon-large:before {
-  vertical-align: -10%;
-  font-size: 1.3333em;
-}
+
 a [class^="icon-"],
 a [class*=" icon-"],
 a [class^="icon-"]:before,
@@ -39,7 +38,11 @@ a [class*=" icon-"]:before {
   display: inline;
 }
 
-.icon-big { font-size: 1.6em; }
+/* makes the font 33% larger relative to the icon container */
+.icon-big:before {
+  vertical-align: -10%;
+  font-size: 1.5em;
+}
 .icon-2x { font-size: 2em; }
 .icon-3x { font-size: 3em; }
 .icon-4x { font-size: 4em; }

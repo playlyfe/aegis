@@ -646,6 +646,36 @@
   background-color: transparent;
 }
 
+/* line 61, sass/_navigation.scss */
+.dropdown {
+  position: relative;
+}
+/* line 65, sass/_navigation.scss */
+.dropdown .dropdown-nav, .dropdown .dropdown-wrapper {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #eeeeee;
+  border-top: none;
+  z-index: 400;
+}
+/* line 76, sass/_navigation.scss */
+.dropdown:hover .dropdown-nav, .dropdown:hover .dropdown-wrapper {
+  display: block;
+}
+
+/* line 83, sass/_navigation.scss */
+.navbar .dropdown-nav {
+  background-color: #8fc717;
+  border-color: #80b314;
+}
+/* line 87, sass/_navigation.scss */
+.navbar .dropdown-nav > li, .navbar .dropdown-wrapper > .nav > li {
+  float: none;
+}
+
 /* line 19, sass/_modal.scss */
 .mask, .mask-content {
   display: block;
@@ -655,7 +685,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.8);
-  z-index: 50;
+  z-index: 500;
 }
 
 /* line 27, sass/_modal.scss */
@@ -664,14 +694,14 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  z-index: 51;
+  z-index: 501;
   padding: 20px 10px;
 }
 
 /* line 34, sass/_modal.scss */
 .modal-mask {
   position: fixed;
-  z-index: 300;
+  z-index: 900;
 }
 
 /* line 38, sass/_modal.scss */
@@ -683,7 +713,7 @@
   left: 50%;
   overflow: hidden;
   background: white;
-  z-index: 301;
+  z-index: 901;
   border: 1px solid #dddddd;
   -webkit-box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.15);
@@ -762,7 +792,7 @@
   background: white;
   border-right: 1px solid #dddddd;
   font-size: 13px;
-  z-index: 100;
+  z-index: 1;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -1108,8 +1138,19 @@ code {
   display: inline;
   margin-right: 0.7em;
 }
+/* line 23, sass/_icons.scss */
+[class^="icon-"].no-space, [class^="icon-"].unstyled, [class^="icon-"].form-errors, .form-horizontal [class^="icon-"].form-errors, [class^="icon-"].field-errors, [class^="icon-"].nav, body[class^="icon-"],
+[class*=" icon-"].no-space,
+[class*=" icon-"].unstyled,
+[class*=" icon-"].form-errors,
+.form-horizontal [class*=" icon-"].form-errors,
+[class*=" icon-"].field-errors,
+[class*=" icon-"].nav,
+body[class*=" icon-"] {
+  margin: 0;
+}
 
-/* line 25, sass/_icons.scss */
+/* line 28, sass/_icons.scss */
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   text-decoration: inherit;
@@ -1117,14 +1158,7 @@ code {
   speak: none;
 }
 
-/* makes the font 33% larger relative to the icon container */
-/* line 31, sass/_icons.scss */
-.icon-large:before {
-  vertical-align: -10%;
-  font-size: 1.3333em;
-}
-
-/* line 38, sass/_icons.scss */
+/* line 37, sass/_icons.scss */
 a [class^="icon-"],
 a [class*=" icon-"],
 a [class^="icon-"]:before,
@@ -1132,289 +1166,291 @@ a [class*=" icon-"]:before {
   display: inline;
 }
 
+/* makes the font 33% larger relative to the icon container */
 /* line 42, sass/_icons.scss */
-.icon-big {
-  font-size: 1.6em;
+.icon-big:before {
+  vertical-align: -10%;
+  font-size: 1.5em;
 }
 
-/* line 43, sass/_icons.scss */
+/* line 46, sass/_icons.scss */
 .icon-2x {
   font-size: 2em;
 }
 
-/* line 44, sass/_icons.scss */
+/* line 47, sass/_icons.scss */
 .icon-3x {
   font-size: 3em;
 }
 
-/* line 45, sass/_icons.scss */
+/* line 48, sass/_icons.scss */
 .icon-4x {
   font-size: 4em;
 }
 
-/* line 47, sass/_icons.scss */
+/* line 50, sass/_icons.scss */
 .icon-add:before {
   content: '\E002';
 }
 
-/* line 48, sass/_icons.scss */
+/* line 51, sass/_icons.scss */
 .icon-edit:before {
   content: '\E003';
 }
 
-/* line 49, sass/_icons.scss */
+/* line 52, sass/_icons.scss */
 .icon-view:before {
   content: '\E004';
 }
 
-/* line 50, sass/_icons.scss */
+/* line 53, sass/_icons.scss */
 .icon-close:before {
   content: '\E005';
 }
 
-/* line 51, sass/_icons.scss */
+/* line 54, sass/_icons.scss */
 .icon-delete:before {
   content: '\E006';
 }
 
-/* line 52, sass/_icons.scss */
+/* line 55, sass/_icons.scss */
 .icon-menu:before {
   content: '\E007';
 }
 
-/* line 53, sass/_icons.scss */
+/* line 56, sass/_icons.scss */
 .icon-reset:before {
   content: '\E008';
 }
 
-/* line 54, sass/_icons.scss */
+/* line 57, sass/_icons.scss */
 .icon-settings:before {
   content: '\E009';
 }
 
-/* line 55, sass/_icons.scss */
+/* line 58, sass/_icons.scss */
 .icon-properties:before {
   content: '\E00a';
 }
 
-/* line 56, sass/_icons.scss */
+/* line 59, sass/_icons.scss */
 .icon-calendar:before {
   content: '\E00b';
 }
 
-/* line 57, sass/_icons.scss */
+/* line 60, sass/_icons.scss */
 .icon-target:before {
   content: '\E00c';
 }
 
-/* line 58, sass/_icons.scss */
+/* line 61, sass/_icons.scss */
 .icon-dead-face:before {
   content: '\E00d';
 }
 
-/* line 59, sass/_icons.scss */
+/* line 62, sass/_icons.scss */
 .icon-sad-face:before {
   content: '\E00e';
 }
 
-/* line 60, sass/_icons.scss */
+/* line 63, sass/_icons.scss */
 .icon-happy-face:before {
   content: '\E00f';
 }
 
-/* line 61, sass/_icons.scss */
+/* line 64, sass/_icons.scss */
 .icon-home:before {
   content: '\E010';
 }
 
-/* line 62, sass/_icons.scss */
+/* line 65, sass/_icons.scss */
 .icon-user:before {
   content: '\E011';
 }
 
-/* line 63, sass/_icons.scss */
+/* line 66, sass/_icons.scss */
 .icon-square:before {
   content: '\E012';
 }
 
-/* line 64, sass/_icons.scss */
+/* line 67, sass/_icons.scss */
 .icon-circle:before {
   content: '\E013';
 }
 
-/* line 65, sass/_icons.scss */
+/* line 68, sass/_icons.scss */
 .icon-up:before {
   content: '\E014';
 }
 
-/* line 66, sass/_icons.scss */
+/* line 69, sass/_icons.scss */
 .icon-down:before {
   content: '\E015';
 }
 
-/* line 67, sass/_icons.scss */
+/* line 70, sass/_icons.scss */
 .icon-right:before {
   content: '\E016';
 }
 
-/* line 68, sass/_icons.scss */
+/* line 71, sass/_icons.scss */
 .icon-left:before {
   content: '\E017';
 }
 
-/* line 69, sass/_icons.scss */
+/* line 72, sass/_icons.scss */
 .icon-stop:before {
   content: '\E018';
 }
 
-/* line 70, sass/_icons.scss */
+/* line 73, sass/_icons.scss */
 .icon-list:before {
   content: '\E019';
 }
 
-/* line 71, sass/_icons.scss */
+/* line 74, sass/_icons.scss */
 .icon-search:before {
   content: '\E01a';
 }
 
-/* line 72, sass/_icons.scss */
+/* line 75, sass/_icons.scss */
 .icon-search-invert:before {
   content: '\E01b';
 }
 
-/* line 73, sass/_icons.scss */
+/* line 76, sass/_icons.scss */
 .icon-error:before {
   content: '\E01c';
 }
 
-/* line 74, sass/_icons.scss */
+/* line 77, sass/_icons.scss */
 .icon-warning:before {
   content: '\E01d';
 }
 
-/* line 75, sass/_icons.scss */
+/* line 78, sass/_icons.scss */
 .icon-help:before {
   content: '\E01e';
 }
 
-/* line 76, sass/_icons.scss */
+/* line 79, sass/_icons.scss */
 .icon-sandbox:before {
   content: '\E020';
 }
 
-/* line 77, sass/_icons.scss */
+/* line 80, sass/_icons.scss */
 .icon-simulate:before {
   content: '\E021';
 }
 
-/* line 78, sass/_icons.scss */
+/* line 81, sass/_icons.scss */
 .icon-design:before {
   content: '\E022';
 }
 
-/* line 79, sass/_icons.scss */
+/* line 82, sass/_icons.scss */
 .icon-gateway:before {
   content: '\E023';
 }
 
-/* line 80, sass/_icons.scss */
+/* line 83, sass/_icons.scss */
 .icon-gateway-inclusive:before {
   content: '\E024';
 }
 
-/* line 81, sass/_icons.scss */
+/* line 84, sass/_icons.scss */
 .icon-activity:before {
   content: '\E025';
 }
 
-/* line 82, sass/_icons.scss */
+/* line 85, sass/_icons.scss */
 .icon-lanes:before {
   content: '\E026';
 }
 
-/* line 83, sass/_icons.scss */
+/* line 86, sass/_icons.scss */
 .icon-loops:before {
   content: '\E027';
 }
 
-/* line 84, sass/_icons.scss */
+/* line 87, sass/_icons.scss */
 .icon-right-half:before {
   content: '\E028';
 }
 
 /* no sooner than */
-/* line 85, sass/_icons.scss */
+/* line 88, sass/_icons.scss */
 .icon-left-half:before {
   content: '\E029';
 }
 
 /* no later than */
-/* line 86, sass/_icons.scss */
+/* line 89, sass/_icons.scss */
 .icon-timed:before {
   content: '\E02a';
 }
 
-/* line 87, sass/_icons.scss */
+/* line 90, sass/_icons.scss */
 .icon-token:before {
   content: '\E02b';
 }
 
-/* line 88, sass/_icons.scss */
+/* line 91, sass/_icons.scss */
 .icon-code:before {
   content: '\E02c';
 }
 
-/* line 89, sass/_icons.scss */
+/* line 92, sass/_icons.scss */
 .icon-mail:before {
   content: '\E02d';
 }
 
-/* line 90, sass/_icons.scss */
+/* line 93, sass/_icons.scss */
 .icon-web:before {
   content: '\E02e';
 }
 
-/* line 91, sass/_icons.scss */
+/* line 94, sass/_icons.scss */
 .icon-twitter:before {
   content: '\E02f';
 }
 
-/* line 92, sass/_icons.scss */
+/* line 95, sass/_icons.scss */
 .icon-builder:before {
   content: '\E030';
 }
 
-/* line 93, sass/_icons.scss */
+/* line 96, sass/_icons.scss */
 .icon-settings:before {
   content: '\E031';
 }
 
-/* line 94, sass/_icons.scss */
+/* line 97, sass/_icons.scss */
 .icon-mechanics:before {
   content: '\E032';
 }
 
-/* line 95, sass/_icons.scss */
+/* line 98, sass/_icons.scss */
 .icon-dev-tools:before {
   content: '\E033';
 }
 
-/* line 96, sass/_icons.scss */
+/* line 99, sass/_icons.scss */
 .icon-pl:before {
   content: '\E034';
 }
 
-/* line 97, sass/_icons.scss */
+/* line 100, sass/_icons.scss */
 .icon-playlyfe:before {
   content: '\E035';
 }
 
-/* line 98, sass/_icons.scss */
+/* line 101, sass/_icons.scss */
 .icon-fullscreen:before {
   content: '\E036';
 }
 
-/* line 99, sass/_icons.scss */
+/* line 102, sass/_icons.scss */
 .icon-restore:before {
   content: '\E037';
 }
@@ -1867,7 +1903,7 @@ input[type="color"].error,
 }
 /* line 295, sass/_forms.scss */
 .file-upload input[type="file"] {
-  z-index: 150;
+  z-index: 1;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   position: absolute;
@@ -1878,7 +1914,7 @@ input[type="color"].error,
 }
 /* line 304, sass/_forms.scss */
 .file-upload input[type="text"] {
-  z-index: 151;
+  z-index: 2;
   position: absolute;
   top: 0;
   left: 70px;
@@ -2256,6 +2292,7 @@ span#strength-meter .meter-wrap .meter.feeble {
 .tab-bar {
   position: relative;
   border-bottom: 1px solid #dddddd;
+  z-index: 2;
 }
 
 /* line 6, sass/_tabs.scss */
@@ -2322,7 +2359,7 @@ span#strength-meter .meter-wrap .meter.feeble {
 /* line 39, sass/_tabs.scss */
 .tab-content {
   position: relative;
-  z-index: 99;
+  z-index: 1;
   overflow: hidden;
 }
 
@@ -2634,13 +2671,12 @@ span#strength-meter .meter-wrap .meter.feeble {
   padding: 13px 0;
   border-top: 1px solid #80b314;
   background-color: white;
-  z-index: 200;
 }
-/* line 14, sass/_footer.scss */
+/* line 13, sass/_footer.scss */
 .footer .nav {
   text-align: center;
 }
-/* line 16, sass/_footer.scss */
+/* line 15, sass/_footer.scss */
 .footer .nav li {
   padding-left: 20px;
   padding-right: 20px;
