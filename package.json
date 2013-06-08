@@ -9,5 +9,8 @@
     "grunt-contrib-compass": "*",
     "grunt-contrib-jade": "*",
     "grunt-contrib-watch": "~0.3.1"
+  },
+  "dependencies": {
+    "grunt-contrib-cssmin": "~0.6.1"
   }
 }

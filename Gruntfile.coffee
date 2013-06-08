@@ -2,23 +2,24 @@ module.exports = (grunt) ->
 
   grunt.initConfig {
     compass:
-      prod:
-        options:
-          sassDir: "sass"
-          cssDir: ["docs/assets/css", "."]
-          specify: "sass/aegis.scss"
-          environment: "production"
       docs:
         options:
           sassDir: "sass"
           cssDir: "docs/assets/css"
-          specify: "sass/docs.scss"
+          environment: "production"
       dev:
         options:
           sassDir: "sass"
-          cssDir: ["docs/assets/css", "."]
+          cssDir: "."
           specify: "sass/aegis.scss"
           outputStyle: "expanded"
+          debugInfo: false
+
+    cssmin:
+      aegis:
+        cwd: '.'
+        src: 'aegis.css'
+        dest: 'aegis.min.css'
 
     jade:
       docs:
@@ -81,7 +82,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-jade'
+  grunt.loadNpmTasks 'grunt-contrib-cssmin'
 
   grunt.registerTask 'default', ['watch:css']
 
-  grunt.registerTask 'build', ['clean', 'compass:prod', 'compass:docs', 'jade:docs', 'coffee:plugins', 'coffee:test']
+  grunt.registerTask 'build', ['clean', 'compass', 'cssmin', 'jade:docs', 'coffee:plugins', 'coffee:test']
