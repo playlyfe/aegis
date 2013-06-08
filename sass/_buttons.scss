@@ -98,7 +98,7 @@
     }
   }
   &.disabled, &[disabled] {
-    &[class^="button"] {
+    &[class~="button"], &[class~="button"]:hover {
       cursor: default;
       @include button-style(
         $color: $button-color,
@@ -128,7 +128,7 @@
         darken($button-prime-bg, 10%)
       )
     }
-    &.neutral {
+    &.info {
       @include button-style(
         $button-accent-color,
         $button-accent-bg,

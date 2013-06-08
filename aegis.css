@@ -717,7 +717,7 @@
   box-shadow: 1px 2px 7px #a9d44d;
 }
 /* line 64, sass/_modal.scss */
-.modal.neutral {
+.modal.info {
   border-color: #0085f1;
   -webkit-box-shadow: 1px 2px 7px #a5d6ff;
   -moz-box-shadow: 1px 2px 7px #a5d6ff;
@@ -2428,7 +2428,7 @@ span#strength-meter .meter-wrap .meter.feeble {
   border-color: #0069be;
 }
 /* line 101, sass/_buttons.scss */
-.button.disabled[class^="button"], .button[disabled][class^="button"] {
+.button.disabled[class~="button"], .button.disabled[class~="button"]:hover, .button[disabled][class~="button"], .button[disabled][class~="button"]:hover {
   cursor: default;
   color: #555555;
   background-color: white;
@@ -2452,7 +2452,7 @@ span#strength-meter .meter-wrap .meter.feeble {
   border-color: #6e9912;
 }
 /* line 131, sass/_buttons.scss */
-.button:hover.neutral {
+.button:hover.info {
   color: white;
   background-color: #259dff;
   border-color: #0085f1;

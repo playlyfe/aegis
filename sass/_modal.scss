@@ -61,7 +61,7 @@
     border-color: $prime-dark;
     @include box-shadow(1px 2px 7px $prime-light);
   }
-  &.neutral {
+  &.info {
     border-color: $accent-dark;
     @include box-shadow(1px 2px 7px $accent-lighter);
   }
