@@ -1534,8 +1534,7 @@ label.error {
 
 /* line 70, sass/_forms.scss */
 .field-errors {
-  float: left;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 /* line 75, sass/_forms.scss */
@@ -1548,13 +1547,13 @@ label.error {
   position: relative;
 }
 
-/* line 83, sass/_forms.scss */
+/* line 84, sass/_forms.scss */
 .field-errors li:before {
   font-family: "Lyfeicons";
   position: absolute;
-  left: -20px;
+  left: -14px;
   display: block;
-  content: "\e00d";
+  content: "\e005";
 }
 
 /* line 93, sass/_forms.scss */
