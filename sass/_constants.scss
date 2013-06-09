@@ -85,7 +85,7 @@ $error-border:         $red;
 //
 $base:             13px;
 $base-font-family: 'Droid Sans', 'sans serif';
-$mono-font-family: 'Droid Mono', 'Consolas', 'Inconsolata', 'Ubuntu Mono', monospace;
+$mono-font-family: 'Droid Mono', 'Consolas', 'Lucida Console', 'Ubuntu Mono', monospace;
 $base-font-size:   $base;
 $base-line-height: 21px;
 $base-color:       $gray;
@@ -100,9 +100,6 @@ $h1-size: 3.38em;
 // Text colours
 $link-color:              $prime-dark  !default;
 $link-hover-color:        $accent-dark !default;
-
-$heading-color:           $gray !default;
-$subheading-color:        $gray-lighter !default;
 
 $code-bg:                 lighten($gray-ultralight,5%);
 $code-color:              $accent;
