@@ -35,8 +35,8 @@ textarea {
 }
 
 .form-row {
-  position: relative;
   margin-bottom: 5px;
+  @include clearfix();
 }
 
 label {
@@ -93,7 +93,6 @@ label {
 .field-wrapper {
   position: relative;
   *display: block;
-  margin: 0;
 }
 
 .form-actions {
@@ -106,7 +105,8 @@ input[type="datetime"], input[type="datetime-local"], input[type="date"],
 input[type="month"],    input[type="time"],           input[type="week"],
 input[type="number"],   input[type="email"],          input[type="url"],
 input[type="search"],   input[type="tel"],            input[type="color"],
-.input_container, .add-on {
+, .add-on {
+  display: inline-block;
   width: 100%;
   height: #{$input-height/$base}em;
   @include box-sizing('border-box');
@@ -124,13 +124,6 @@ input[type="search"],   input[type="tel"],            input[type="color"],
     border-right: none;
   }
 }
-
-select, textarea, input {
-  &:focus ~ .field-help {
-    display: block;
-  }
-}
-
 
 fieldset {
   padding: 0;
