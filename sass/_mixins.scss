@@ -1,4 +1,6 @@
 // Utility mixins
+
+// clearfix
 @mixin clearfix {
   *zoom: 1;
   &:before,
@@ -11,6 +13,7 @@
   }
 }
 
+// make the text unselectable (in supported browsers)
 @mixin no-select() {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -20,9 +23,19 @@
   user-select: none;
 }
 
+// apply on <a> tags to remove underline
+@mixin no-anchor {
+  text-decoration: none !important;
+  outline: none;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+// give non-button elements properties of a button
 @mixin button-interaction() {
   @include no-select();
-  @extend .no-anchor;
+  @include no-anchor;
   cursor: pointer;
 }
 

@@ -24,12 +24,7 @@
 }
 
 .no-anchor {
-  // apply on <a> tags to remove underline
-  text-decoration: none !important;
-  outline: none;
-  &:hover {
-    text-decoration: none !important;
-  }
+  @include no-anchor;
 }
 .left {
   float: left !important;
