@@ -450,12 +450,12 @@
 .clearfix {
   *zoom: 1;
 }
-/* line 5, sass/_mixins.scss */
+/* line 7, sass/_mixins.scss */
 .clearfix:before, .clearfix:after {
   display: table;
   content: "";
 }
-/* line 9, sass/_mixins.scss */
+/* line 11, sass/_mixins.scss */
 .clearfix:after {
   clear: both;
 }
@@ -481,78 +481,78 @@
 }
 
 /* line 21, sass/_utilities.scss */
-.no-space, .unstyled, .form-errors, .form-horizontal .form-errors, .field-errors, .nav, body {
+.no-space, .unstyled, .form-errors, .field-errors, .nav, body {
   margin: 0;
   padding: 0;
 }
 
 /* line 26, sass/_utilities.scss */
-.no-anchor, .nav a, .tag, .button, .info-tag {
+.no-anchor {
   text-decoration: none !important;
   outline: none;
 }
-/* line 30, sass/_utilities.scss */
-.no-anchor:hover, .nav a:hover, .tag:hover, .button:hover, .info-tag:hover {
+/* line 30, sass/_mixins.scss */
+.no-anchor:hover {
   text-decoration: none !important;
 }
 
-/* line 34, sass/_utilities.scss */
+/* line 29, sass/_utilities.scss */
 .left {
   float: left !important;
 }
 
-/* line 37, sass/_utilities.scss */
+/* line 32, sass/_utilities.scss */
 .right {
   float: right !important;
 }
 
-/* line 40, sass/_utilities.scss */
+/* line 35, sass/_utilities.scss */
 .static-pos {
   position: static !important;
 }
 
-/* line 43, sass/_utilities.scss */
+/* line 38, sass/_utilities.scss */
 .abs-pos {
   position: absolute !important;
 }
 
-/* line 46, sass/_utilities.scss */
+/* line 41, sass/_utilities.scss */
 .fix-pos {
   position: fixed !important;
 }
 
-/* line 49, sass/_utilities.scss */
+/* line 44, sass/_utilities.scss */
 .width-auto {
   width: auto !important;
 }
 
-/* line 52, sass/_utilities.scss */
+/* line 47, sass/_utilities.scss */
 .inline {
   display: inline;
 }
 
-/* line 55, sass/_utilities.scss */
+/* line 50, sass/_utilities.scss */
 .block {
   display: block;
 }
 
-/* line 59, sass/_utilities.scss */
+/* line 54, sass/_utilities.scss */
 .icon-group, .attr-group {
   margin: 0 0.5em;
 }
 
-/* line 63, sass/_utilities.scss */
+/* line 58, sass/_utilities.scss */
 .attr-group {
   cursor: help;
 }
 
-/* line 67, sass/_utilities.scss */
+/* line 62, sass/_utilities.scss */
 .fade {
   opacity: 0.2;
 }
 
 /* line 6, sass/_list.scss */
-.unstyled, .form-errors, .form-horizontal .form-errors, .field-errors {
+.unstyled, .form-errors, .field-errors {
   list-style: none;
 }
 
@@ -571,12 +571,12 @@
 .nav {
   *zoom: 1;
 }
-/* line 5, sass/_mixins.scss */
+/* line 7, sass/_mixins.scss */
 .nav:before, .nav:after {
   display: table;
   content: "";
 }
-/* line 9, sass/_mixins.scss */
+/* line 11, sass/_mixins.scss */
 .nav:after {
   clear: both;
 }
@@ -588,8 +588,14 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  text-decoration: none !important;
+  outline: none;
   cursor: pointer;
   display: block;
+}
+/* line 30, sass/_mixins.scss */
+.nav a:hover {
+  text-decoration: none !important;
 }
 
 /* line 17, sass/_navigation.scss */
@@ -973,12 +979,12 @@ body {
   margin: 0 auto;
   *zoom: 1;
 }
-/* line 5, sass/_mixins.scss */
+/* line 7, sass/_mixins.scss */
 .fixed-width:before, .fixed-width:after {
   display: table;
   content: "";
 }
-/* line 9, sass/_mixins.scss */
+/* line 11, sass/_mixins.scss */
 .fixed-width:after {
   clear: both;
 }
@@ -1138,11 +1144,10 @@ code {
   margin-right: 0.7em;
 }
 /* line 23, sass/_icons.scss */
-[class^="icon-"].no-space, [class^="icon-"].unstyled, [class^="icon-"].form-errors, .form-horizontal [class^="icon-"].form-errors, [class^="icon-"].field-errors, [class^="icon-"].nav, body[class^="icon-"],
+[class^="icon-"].no-space, [class^="icon-"].unstyled, [class^="icon-"].form-errors, [class^="icon-"].field-errors, [class^="icon-"].nav, body[class^="icon-"],
 [class*=" icon-"].no-space,
 [class*=" icon-"].unstyled,
 [class*=" icon-"].form-errors,
-.form-horizontal [class*=" icon-"].form-errors,
 [class*=" icon-"].field-errors,
 [class*=" icon-"].nav,
 body[class*=" icon-"] {
@@ -1203,7 +1208,7 @@ a [class*=" icon-"]:before {
 }
 
 /* line 53, sass/_icons.scss */
-.icon-close:before {
+.icon-cross:before {
   content: '\E005';
 }
 
@@ -1456,101 +1461,94 @@ a [class*=" icon-"]:before {
 
 /* line 6, sass/_forms.scss */
 form {
-  *zoom: 1;
-}
-/* line 5, sass/_mixins.scss */
-form:before, form:after {
-  display: table;
-  content: "";
-}
-/* line 9, sass/_mixins.scss */
-form:after {
-  clear: both;
-}
-/* line 8, sass/_forms.scss */
-form .button {
-  margin-bottom: 10.5px;
-}
-/* line 11, sass/_forms.scss */
-form .button.inline {
-  height: 29px;
-  line-height: 29px;
-  padding: 0 0.61538em;
-}
-/* line 17, sass/_forms.scss */
-form input, form label, form fieldset, form legend, form textarea, form select, form .button, form .input_container {
-  float: left;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  margin: 0 0 21px;
 }
 
-/* line 23, sass/_forms.scss */
-.form-row, .form-errors, .form-horizontal .form-errors {
-  *zoom: 1;
-  position: relative;
-  margin-bottom: 5px;
+/* line 10, sass/_forms.scss */
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
-/* line 5, sass/_mixins.scss */
-.form-row:before, .form-errors:before, .form-horizontal .form-errors:before, .form-row:after, .form-errors:after, .form-horizontal .form-errors:after {
-  display: table;
-  content: "";
-}
-/* line 9, sass/_mixins.scss */
-.form-row:after, .form-errors:after, .form-horizontal .form-errors:after {
-  clear: both;
-}
-/* line 27, sass/_forms.scss */
-legend + .form-row, legend + .form-errors, .form-horizontal legend + .form-errors {
-  margin-top: 15.5px;
-  -webkit-margin-top-collapse: separate;
+
+/* line 16, sass/_forms.scss */
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 21px;
+  font-size: 19.5px;
+  line-height: 42px;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #dddddd;
 }
 
 /* line 33, sass/_forms.scss */
+label,
+input,
+button,
+select,
+textarea {
+  font: normal 13px/21px "Droid Sans", "sans serif";
+}
+
+/* line 37, sass/_forms.scss */
+.form-row, .form-errors {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+/* line 42, sass/_forms.scss */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+/* line 45, sass/_forms.scss */
+label.optional:after {
+  content: '(optional)';
+  margin-left: 3px;
+  color: #259dff;
+}
+/* line 50, sass/_forms.scss */
+label.required:after {
+  content: '*';
+  margin-left: 3px;
+  color: #259dff;
+}
+/* line 55, sass/_forms.scss */
+label.error {
+  color: #e20000;
+}
+
+/* line 60, sass/_forms.scss */
 .form-errors, .form-horizontal .form-errors {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #ffe2e2;
   margin: 5px 0;
-  padding: 2px 0;
+  padding: 10.5px;
   border: 1px solid #ffafaf;
 }
-/* line 41, sass/_forms.scss */
-.form-errors:before, .form-horizontal .form-errors:before {
-  font-family: "Lyfeicons";
-  position: absolute;
-  display: block;
-  font-size: 25px;
-  top: -20px;
-  left: 50%;
-  margin-left: -15px;
-  display: block;
-  content: "\e00d";
-  width: 30px;
-  height: 30px;
-  background: white;
-  border-radius: 15px;
-  text-align: center;
-}
 
-/* line 58, sass/_forms.scss */
+/* line 70, sass/_forms.scss */
 .field-errors {
   float: left;
   margin-left: 20px;
 }
 
-/* line 63, sass/_forms.scss */
+/* line 75, sass/_forms.scss */
 .form-errors, .form-horizontal .form-errors, .field-errors {
   color: #e20000;
 }
-/* line 65, sass/_forms.scss */
+/* line 77, sass/_forms.scss */
 .form-errors li, .form-horizontal .form-errors li, .field-errors li {
   margin: 2px 4px;
   position: relative;
 }
 
-/* line 71, sass/_forms.scss */
+/* line 83, sass/_forms.scss */
 .field-errors li:before {
   font-family: "Lyfeicons";
   position: absolute;
@@ -1559,59 +1557,19 @@ legend + .form-row, legend + .form-errors, .form-horizontal legend + .form-error
   content: "\e00d";
 }
 
-/* line 81, sass/_forms.scss */
-.field-wrapper, .form-actions, .form-help-wrapper {
+/* line 93, sass/_forms.scss */
+.field-wrapper, .form-actions {
   position: relative;
   *display: block;
   margin: 0;
 }
-/* line 85, sass/_forms.scss */
-.field-wrapper .field-help, .form-actions .field-help, .form-help-wrapper .field-help {
-  position: absolute;
-  display: none;
-  min-width: 200px;
-  top: 26px;
-  left: 100%;
-  margin-left: 10px;
-  color: #888888;
-  background-color: #f1f9ff;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border: 1px solid #a5d6ff;
-  padding: 0.3em 0.5em;
-}
-/* line 97, sass/_forms.scss */
-.field-wrapper .field-help a, .form-actions .field-help a, .form-help-wrapper .field-help a {
-  color: #259dff;
-}
-/* line 100, sass/_forms.scss */
-.field-wrapper .field-help:hover, .form-actions .field-help:hover, .form-help-wrapper .field-help:hover {
-  display: block;
-}
-/* line 103, sass/_forms.scss */
-.field-wrapper .field-help p:last-child, .form-actions .field-help p:last-child, .form-help-wrapper .field-help p:last-child {
-  margin-bottom: 0;
-}
-/* line 108, sass/_forms.scss */
-.field-wrapper input[type="radio"] + .field-help, .form-actions input[type="radio"] + .field-help, .form-help-wrapper input[type="radio"] + .field-help,
-.field-wrapper input[type="checkbox"] + .field-help,
-.form-actions input[type="checkbox"] + .field-help,
-.form-help-wrapper input[type="checkbox"] + .field-help {
-  top: 0;
-}
 
-/* line 113, sass/_forms.scss */
+/* line 99, sass/_forms.scss */
 .form-actions {
   margin-top: 1em;
 }
 
-/* line 117, sass/_forms.scss */
-.form-help-wrapper {
-  margin-top: 0px;
-}
-
-/* line 127, sass/_forms.scss */
+/* line 109, sass/_forms.scss */
 select, textarea, input[type="text"], input[type="password"],
 input[type="datetime"], input[type="datetime-local"], input[type="date"],
 input[type="month"], input[type="time"], input[type="week"],
@@ -1633,7 +1591,7 @@ input[type="search"], input[type="tel"], input[type="color"],
   -moz-box-shadow: inset 0 1px 2px 0px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px 0px rgba(0, 0, 0, 0.1);
 }
-/* line 138, sass/_forms.scss */
+/* line 120, sass/_forms.scss */
 select.append, textarea.append, input[type="text"].append, input[type="password"].append,
 input[type="datetime"].append, input[type="datetime-local"].append, input[type="date"].append,
 input[type="month"].append, input[type="time"].append, input[type="week"].append,
@@ -1642,7 +1600,7 @@ input[type="search"].append, input[type="tel"].append, input[type="color"].appen
 .input_container.append, .add-on.append {
   border-left: none;
 }
-/* line 141, sass/_forms.scss */
+/* line 123, sass/_forms.scss */
 select.prepend, textarea.prepend, input[type="text"].prepend, input[type="password"].prepend,
 input[type="datetime"].prepend, input[type="datetime-local"].prepend, input[type="date"].prepend,
 input[type="month"].prepend, input[type="time"].prepend, input[type="week"].prepend,
@@ -1652,35 +1610,12 @@ input[type="search"].prepend, input[type="tel"].prepend, input[type="color"].pre
   border-right: none;
 }
 
-/* line 147, sass/_forms.scss */
+/* line 129, sass/_forms.scss */
 select:focus ~ .field-help, textarea:focus ~ .field-help, input:focus ~ .field-help {
   display: block;
 }
 
-/* line 152, sass/_forms.scss */
-label {
-  display: block;
-  width: 100%;
-  margin-bottom: 5px;
-}
-/* line 156, sass/_forms.scss */
-label.optional:after {
-  content: '(optional)';
-  margin-left: 3px;
-  color: #259dff;
-}
-/* line 161, sass/_forms.scss */
-label.required:after {
-  content: '*';
-  margin-left: 3px;
-  color: #259dff;
-}
-/* line 166, sass/_forms.scss */
-label.error {
-  color: #e20000;
-}
-
-/* line 171, sass/_forms.scss */
+/* line 135, sass/_forms.scss */
 fieldset {
   padding: 0;
   margin: 0 0 21px;
@@ -1688,47 +1623,40 @@ fieldset {
   width: 100%;
 }
 
-/* line 179, sass/_forms.scss */
-legend {
-  display: block;
-  padding: 0px;
-  margin-bottom: 10.5px;
-  font-size: 1.62em;
-  line-height: 33.978px;
-  color: #888888;
-  border-bottom: 1px solid #bbbbbb;
-  width: 100%;
-}
-
-/* line 190, sass/_forms.scss */
+/* line 142, sass/_forms.scss */
 .input_container {
   height: auto;
 }
 
-/* line 193, sass/_forms.scss */
+/* line 145, sass/_forms.scss */
 textarea {
   height: auto;
   resize: vertical;
 }
 
-/* line 200, sass/_forms.scss */
+/* line 152, sass/_forms.scss */
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 3px 13px 0 0;
+  float: left;
+  margin: 4px 7px 0 0;
   *margin-top: 0;
   /* IE7 */
   line-height: 21px;
   cursor: pointer;
 }
 
-/* line 206, sass/_forms.scss */
-input[type="file"] {
-  width: 160px;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
+/* line 166, sass/_forms.scss */
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
 }
 
-/* line 211, sass/_forms.scss */
+/* line 170, sass/_forms.scss */
 select {
   background-color: #dddddd;
   border: #888888 1px solid;
@@ -1741,13 +1669,13 @@ select {
   height: 31px;
 }
 
-/* line 219, sass/_forms.scss */
+/* line 179, sass/_forms.scss */
 select[multiple],
 select[size] {
   height: auto;
 }
 
-/* line 239, sass/_forms.scss */
+/* line 200, sass/_forms.scss */
 textarea,
 input[type="text"],
 input[type="password"],
@@ -1777,7 +1705,7 @@ input[type="color"],
   -o-transition: border linear 0.2s, box-shadow linear 0.2s;
   transition: border linear 0.2s, box-shadow linear 0.2s;
 }
-/* line 245, sass/_forms.scss */
+/* line 206, sass/_forms.scss */
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -1803,7 +1731,7 @@ input[type="color"]:focus,
   -moz-box-shadow: inset 0 1px 2px 0px #cff186;
   box-shadow: inset 0 1px 2px 0px #cff186;
 }
-/* line 251, sass/_forms.scss */
+/* line 212, sass/_forms.scss */
 textarea.active_container,
 input[type="text"].active_container,
 input[type="password"].active_container,
@@ -1829,7 +1757,7 @@ input[type="color"].active_container,
   -moz-box-shadow: inset 0 1px 2px 0 #cff186;
   box-shadow: inset 0 1px 2px 0 #cff186;
 }
-/* line 257, sass/_forms.scss */
+/* line 218, sass/_forms.scss */
 textarea.error,
 input[type="text"].error,
 input[type="password"].error,
@@ -1856,7 +1784,7 @@ input[type="color"].error,
   box-shadow: inset 0 1px 2px 0px #ff7c7c;
 }
 
-/* line 267, sass/_forms.scss */
+/* line 228, sass/_forms.scss */
 .uneditable-input {
   overflow: hidden;
   white-space: nowrap;
@@ -1869,7 +1797,7 @@ input[type="color"].error,
   box-shadow: inset 0 1px 2px #d5d5d5;
 }
 
-/* line 277, sass/_forms.scss */
+/* line 238, sass/_forms.scss */
 .prepend {
   -moz-border-radius-topright: 0;
   -webkit-border-top-right-radius: 0;
@@ -1879,7 +1807,7 @@ input[type="color"].error,
   border-bottom-right-radius: 0;
 }
 
-/* line 281, sass/_forms.scss */
+/* line 242, sass/_forms.scss */
 .append {
   -moz-border-radius-topleft: 0;
   -webkit-border-top-left-radius: 0;
@@ -1889,223 +1817,23 @@ input[type="color"].error,
   border-bottom-left-radius: 0;
 }
 
-/* line 287, sass/_forms.scss */
-.file-upload {
-  display: block;
-  position: relative;
-  float: left;
-}
-/* line 291, sass/_forms.scss */
-.file-upload .button {
-  position: relative;
-  width: 70px;
-}
-/* line 295, sass/_forms.scss */
-.file-upload input[type="file"] {
-  z-index: 1;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-/* line 304, sass/_forms.scss */
-.file-upload input[type="text"] {
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 70px;
-  min-width: 80px;
-}
-
-/* line 313, sass/_forms.scss */
-.prompt {
-  padding: 1em 0;
-}
-
-/* line 317, sass/_forms.scss */
-.tag_wrapper {
-  *zoom: 1;
-  display: block;
-}
-/* line 5, sass/_mixins.scss */
-.tag_wrapper:before, .tag_wrapper:after {
-  display: table;
-  content: "";
-}
-/* line 9, sass/_mixins.scss */
-.tag_wrapper:after {
-  clear: both;
-}
-
-/* line 321, sass/_forms.scss */
-.tag_list {
-  float: left;
-  display: block;
-  margin: 4px 0 0 4px;
-  padding: 0;
-}
-/* line 326, sass/_forms.scss */
-.tag_list li {
-  display: block;
-  float: left;
-  margin: 0 5px 4px 0px;
-  list-style: none;
-}
-
-/* line 333, sass/_forms.scss */
-.tag {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: pointer;
-  position: relative;
-  padding: 0.15em 21px 0.15em 8px;
-  border: 1px solid #a9d44d;
-  background-color: #eef6dc;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
-  -webkit-transition: all 0.5s ease;
-  -webkit-transition-delay: 0.1s;
-  -moz-transition: all 0.5s ease 0.1s;
-  -o-transition: all 0.5s ease 0.1s;
-  transition: all 0.5s ease 0.1s;
-}
-/* line 342, sass/_forms.scss */
-.tag:hover {
-  background-color: #a9d44d;
-  color: white;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05);
-  text-shadow: none;
-}
-/* line 347, sass/_forms.scss */
-.tag:hover .delete {
-  color: white;
-}
-/* line 352, sass/_forms.scss */
-.tag.error, .tag.error:hover {
-  border: #e20000 1px solid;
-  color: #e20000;
-  background-color: #ffe2e2;
-  text-shadow: 0 1px 0 #fb0000;
-}
-/* line 357, sass/_forms.scss */
-.tag.error .delete, .tag.error:hover .delete {
-  color: #960000;
-}
-/* line 361, sass/_forms.scss */
-.tag .delete {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  font-size: 1.23em;
-  display: block;
-  height: 26px;
-  width: 18px;
-  padding: 3px 5px 10px 4px;
-  color: #555555;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* line 376, sass/_forms.scss */
-.input_container[disabled="disabled"] .tag .delete {
-  display: none;
-}
-/* line 379, sass/_forms.scss */
-.input_container[disabled="disabled"] .tag:hover {
-  color: #888888;
-  background-color: #eef6dc;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
-}
-
-/* line 386, sass/_forms.scss */
-input[type="tags"] {
-  border: none;
-  height: 2.08em;
-  font-size: 13px;
-  line-height: 21px;
-}
-/* line 391, sass/_forms.scss */
-input[type="tags"]:focus {
-  outline: none;
-}
-
-/* line 396, sass/_forms.scss */
-.options-list {
-  display: block;
-  margin: 4px 0 5px 0px;
-  overflow-y: auto;
-  overflow-x: visible;
-  min-height: 31px;
-  max-height: 200px;
-  width: auto;
-  border: none;
-  padding: 5px;
-}
-/* line 406, sass/_forms.scss */
-.options-list li {
-  display: block;
-  float: left;
-  margin: 0 5px 4px 0px;
-  list-style: none;
-}
-/* line 412, sass/_forms.scss */
-.options-list li:last-child {
-  margin: 0 5px 0px 0px;
-}
-
-/* line 418, sass/_forms.scss */
+/* line 247, sass/_forms.scss */
 .add-on {
   display: block;
   background-color: #bbbbbb;
   width: auto;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
 }
-/* line 423, sass/_forms.scss */
+/* line 252, sass/_forms.scss */
 .add-on.prepend {
   text-align: right;
 }
-/* line 426, sass/_forms.scss */
+/* line 255, sass/_forms.scss */
 .add-on.append {
   text-align: left;
 }
 
-/* line 430, sass/_forms.scss */
-.input-group {
-  margin: 0 -5px 0 0px;
-  float: left;
-}
-/* line 433, sass/_forms.scss */
-.input-group * {
-  margin: 0;
-  float: none;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-}
-
-/* line 446, sass/_forms.scss */
-.input_container input[type="text"], .input_container input[type="password"], .input_container input[type="datetime"],
-.input_container input[type="datetime-local"], .input_container input[type="date"], .input_container input[type="month"],
-.input_container input[type="time"], .input_container input[type="week"], .input_container input[type="number"],
-.input_container input[type="email"], .input_container input[type="url"], .input_container input[type="search"],
-.input_container input[type="tel"], .input_container input[type="color"],
-.input_container select, .input_container textarea, .input_container .add-on {
-  margin-bottom: 0;
-}
-
-/* line 451, sass/_forms.scss */
+/* line 260, sass/_forms.scss */
 .disabled, *[disabled] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
   opacity: 0.65;
@@ -2117,17 +1845,7 @@ input[type="tags"]:focus {
   user-select: none;
 }
 
-/* line 458, sass/_forms.scss */
-.img-wrapper {
-  float: left;
-  margin-right: 10.5px;
-}
-/* line 461, sass/_forms.scss */
-.img-wrapper img {
-  float: left;
-}
-
-/* line 467, sass/_forms.scss */
+/* line 266, sass/_forms.scss */
 .immutable {
   cursor: help;
   font-weight: 700;
@@ -2138,153 +1856,69 @@ input[type="tags"]:focus {
   box-sizing: border-box;
 }
 
-/* line 478, sass/_forms.scss */
-.form-search input, .form-search textarea, .form-search select, .form-search .help-inline,
-.form-search .uneditable-input, .form-search .input-prepend, .form-search .input-append, .form-inline input, .form-inline textarea, .form-inline select, .form-inline .help-inline,
-.form-inline .uneditable-input, .form-inline .input-prepend, .form-inline .input-append, .form-horizontal input, .form-horizontal textarea, .form-horizontal select, .form-horizontal .help-inline,
-.form-horizontal .uneditable-input, .form-horizontal .input-prepend, .form-horizontal .input-append {
+/* line 283, sass/_forms.scss */
+.form-search input,
+.form-search textarea,
+.form-search select,
+.form-search .help-inline,
+.form-search .uneditable-input,
+.form-search .input-prepend,
+.form-search .input-append,
+.form-inline input,
+.form-inline textarea,
+.form-inline select,
+.form-inline .help-inline,
+.form-inline .uneditable-input,
+.form-inline .input-prepend,
+.form-inline .input-append,
+.form-horizontal input,
+.form-horizontal textarea,
+.form-horizontal select,
+.form-horizontal .help-inline,
+.form-horizontal .uneditable-input,
+.form-horizontal .input-prepend,
+.form-horizontal .input-append {
   display: inline-block;
-  *display: inline;
   /* IE7 inline-block hack */
+  *display: inline;
   *zoom: 1;
   margin-bottom: 0;
   vertical-align: middle;
 }
 
-/* line 489, sass/_forms.scss */
-.form-horizontal .form-row, .form-horizontal .form-errors, .form-horizontal .form-errors {
-  margin-bottom: 20px;
-  *zoom: 1;
-}
-/* line 493, sass/_forms.scss */
-.form-horizontal .form-errors, .form-horizontal .form-errors {
+/* line 294, sass/_forms.scss */
+.form-horizontal .form-errors {
   margin-left: 155px;
+}
+/* line 300, sass/_forms.scss */
+.form-horizontal .form-row, .form-horizontal .form-errors {
   margin-bottom: 20px;
 }
-/* line 500, sass/_forms.scss */
-.form-horizontal .form-row > label, .form-horizontal .form-errors > label, .form-horizontal .form-errors > label {
+/* line 302, sass/_forms.scss */
+.form-horizontal .form-row .field-label, .form-horizontal .form-errors .field-label {
+  float: left;
   padding-top: 4px;
   text-align: right;
   width: 135px;
 }
-/* line 505, sass/_forms.scss */
-.form-horizontal .field-wrapper, .form-horizontal .form-actions, .form-horizontal .form-help-wrapper {
+/* line 309, sass/_forms.scss */
+.form-horizontal .field-wrapper, .form-horizontal .form-actions {
   *display: inline-block;
   *padding-left: 20px;
   margin-left: 155px;
   *margin-left: 0;
 }
-/* line 510, sass/_forms.scss */
-.form-horizontal .field-wrapper.pad, .form-horizontal .pad.form-actions, .form-horizontal .pad.form-help-wrapper {
+/* line 314, sass/_forms.scss */
+.form-horizontal .field-wrapper.pad, .form-horizontal .pad.form-actions {
   padding-top: 6px;
 }
-/* line 513, sass/_forms.scss */
-.form-horizontal .field-wrapper:first-child, .form-horizontal .form-actions:first-child, .form-horizontal .form-help-wrapper:first-child {
+/* line 317, sass/_forms.scss */
+.form-horizontal .field-wrapper:first-child, .form-horizontal .form-actions:first-child {
   *padding-left: 155px;
 }
-/* line 516, sass/_forms.scss */
-.form-horizontal .field-wrapper .field-help, .form-horizontal .form-actions .field-help, .form-horizontal .form-help-wrapper .field-help {
+/* line 320, sass/_forms.scss */
+.form-horizontal .field-wrapper .field-help, .form-horizontal .form-actions .field-help {
   top: 0;
-}
-/* line 520, sass/_forms.scss */
-.form-horizontal .form-actions {
-  margin-top: 0;
-}
-/* line 525, sass/_forms.scss */
-.form-horizontal input[type="radio"],
-.form-horizontal input[type="checkbox"] {
-  float: none;
-  margin: -0.31em 5px 0 0;
-}
-/* line 529, sass/_forms.scss */
-.form-horizontal .snippet {
-  line-height: 1.62em;
-  margin-top: 0.31em;
-}
-/* line 533, sass/_forms.scss */
-.form-horizontal .button.inline {
-  margin-top: 0.31em;
-}
-
-/* line 538, sass/_forms.scss */
-span#strength-meter {
-  float: left;
-  margin-top: 0.5em;
-}
-/* line 541, sass/_forms.scss */
-span#strength-meter .meter-wrap {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  vertical-align: baseline;
-  position: relative;
-  left: 20px;
-  height: 0.38em;
-  width: 50%;
-  min-width: 200px;
-  background-color: #dddddd;
-}
-/* line 550, sass/_forms.scss */
-span#strength-meter .meter-wrap .meter {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 5px;
-  width: 5%;
-  background-color: #bbbbbb;
-  -webkit-transition: all 0.5s ease;
-  -webkit-transition-delay: 0.2s;
-  -moz-transition: all 0.5s ease 0.2s;
-  -o-transition: all 0.5s ease 0.2s;
-  transition: all 0.5s ease 0.2s;
-}
-/* line 558, sass/_forms.scss */
-span#strength-meter .meter-wrap .meter.strong {
-  background-color: #95d905;
-  width: 100%;
-}
-/* line 562, sass/_forms.scss */
-span#strength-meter .meter-wrap .meter.medium {
-  background-color: #ffcc00;
-  width: 60%;
-}
-/* line 566, sass/_forms.scss */
-span#strength-meter .meter-wrap .meter.feeble {
-  background-color: #e20000;
-  width: 20%;
-}
-
-/* line 574, sass/_forms.scss */
-.fb-login {
-  display: block;
-  background-image: url(/images/fb-sign-in.png);
-  background-repeat: no-repeat;
-  width: 180px;
-  height: 30px;
-  margin: 0 0 10px 0px;
-}
-
-/* line 584, sass/_forms.scss */
-.map-input .map-row, .map-input .map-actions {
-  *zoom: 1;
-  width: 100%;
-}
-/* line 5, sass/_mixins.scss */
-.map-input .map-row:before, .map-input .map-row:after, .map-input .map-actions:before, .map-input .map-actions:after {
-  display: table;
-  content: "";
-}
-/* line 9, sass/_mixins.scss */
-.map-input .map-row:after, .map-input .map-actions:after {
-  clear: both;
-}
-/* line 588, sass/_forms.scss */
-.map-input .map-row {
-  position: relative;
 }
 
 /* line 1, sass/_tabs.scss */
@@ -2376,6 +2010,8 @@ span#strength-meter .meter-wrap .meter.feeble {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  text-decoration: none !important;
+  outline: none;
   cursor: pointer;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2393,6 +2029,10 @@ span#strength-meter .meter-wrap .meter.feeble {
   background-color: #eeeeee;
   border-color: #d4d4d4;
   *border: 0;
+}
+/* line 30, sass/_mixins.scss */
+.button:hover {
+  text-decoration: none !important;
 }
 
 /* line 33, sass/_buttons.scss */
@@ -2734,7 +2374,13 @@ span#strength-meter .meter-wrap .meter.feeble {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  text-decoration: none !important;
+  outline: none;
   cursor: pointer;
+}
+/* line 30, sass/_mixins.scss */
+.info-tag:hover {
+  text-decoration: none !important;
 }
 /* line 48, sass/_tidbits.scss */
 .info-tag:hover {

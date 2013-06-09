@@ -4,29 +4,56 @@
 // 23.Jan.2013
 
 form {
-  @include clearfix();
-  .button {
-    margin-bottom: $base-line-height / 2;
-    // inline buttons in forms need special treatment
-    &.inline {
-      height: $input-height - 2 ; // in ems to align with fields
-      line-height: $input-height - 2;
-      padding: 0 #{$button-inline-padding/$base}em;
-    }
-  }
-  input, label, fieldset, legend, textarea, select, .button, .input_container {
-    float: left;
-    @include box-sizing('border-box');
-  }
+  margin: 0 0 $base-line-height;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: $base-line-height;
+  font-size: $base-font-size * 1.5;
+  line-height: $base-line-height * 2;
+  color: $gray-dark;
+  border: 0;
+  border-bottom: 1px solid $gray-lightest;
+}
+
+
+label, 
+input,
+button,
+select,
+textarea {
+  font: normal #{$base-font-size}/#{$base-line-height} $base-font-family
 }
 
 .form-row {
-  @include clearfix;
   position: relative;
   margin-bottom: 5px;
-  legend + & {
-    margin-top: #{$input-height/2};
-    -webkit-margin-top-collapse: separate;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  &.optional:after {
+    content: '(optional)';
+    margin-left: 3px;
+    color: $accent;
+  }
+  &.required:after {
+    content: '*';
+    margin-left: 3px;
+    color: $accent;
+  }
+  &.error {
+    color: $red;
   }
 }
 
@@ -36,25 +63,10 @@ form {
   @extend .unstyled;
   background-color: $error-bg;
   margin: 5px 0;
-  padding: 2px 0;
+  padding: $base-line-height/2;
   border: 1px solid darken($error-bg,10%);
-  &:before {
-    font-family: "Lyfeicons";
-    position: absolute;
-    display: block;
-    font-size: 25px;
-    top: -20px;
-    left: 50%;
-    margin-left: -15px;
-    display: block;
-    content: "\e00d";
-    width: 30px;
-    height: 30px;
-    background: white;
-    border-radius: 15px;
-    text-align: center;
-  }
 }
+
 .field-errors {
   @extend .unstyled;
   float: left;
@@ -82,41 +94,11 @@ form {
   position: relative;
   *display: block;
   margin: 0;
-  .field-help {
-    position: absolute;
-    display: none;
-    min-width: $field-help-min-width;
-    top: 26px;
-    left: 100%;
-    margin-left:10px;
-    color: $field-help-color;
-    background-color: $field-help-bg;
-    @include box-sizing('border-box');
-    border: 1px solid $field-help-border;
-    padding: 0.3em 0.5em;
-    a {
-      color: $field-help-link-color;
-    }
-    &:hover {
-      display: block;
-    }
-    p:last-child {
-      margin-bottom: 0;
-    }
-  }
-  input[type="radio"] + .field-help,
-  input[type="checkbox"] + .field-help {
-    top: 0;
-  }
 }
 
 .form-actions {
   @extend .field-wrapper;
   margin-top: 1em;
-}
-.form-help-wrapper {
-  @extend .field-wrapper;
-  margin-top: 0px;
 }
 
 select, textarea,       input[type="text"],           input[type="password"],
@@ -149,41 +131,11 @@ select, textarea, input {
   }
 }
 
-label {
-  display: block;
-  width: 100%;
-  margin-bottom: 5px;
-  &.optional:after {
-    content: '(optional)';
-    margin-left: 3px;
-    color: $accent;
-  }
-  &.required:after {
-    content: '*';
-    margin-left: 3px;
-    color: $accent;
-  }
-  &.error {
-    color: $red;
-  }
-}
 
 fieldset {
   padding: 0;
   margin: 0 0 $base-line-height;
   border: none;
-  width: 100%;
-}
-
-// Groups of fields with labels on top (legends)
-legend {
-  display: block;
-  padding: 0px;
-  margin-bottom: $base-line-height/2;
-  font-size: $h4-size;
-  line-height: $base-line-height * $golden;
-  color: $legend-color;
-  border-bottom: 1px solid $legend-border;
   width: 100%;
 }
 
@@ -198,14 +150,21 @@ textarea {
 // Position radios and checkboxes better
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 3px $base-font-size 0 0;
+  float: left;
+  margin: 4px 7px 0 0;
   *margin-top: 0; /* IE7 */
   line-height: $base-line-height;
   cursor: pointer;
 }
-input[type="file"]{
-  width: 160px;
-  @include opacity(0);
+
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto; // Override of generic input selector
 }
 
 select {
@@ -215,10 +174,12 @@ select {
   line-height: $input-height;
   height: $input-height;
 }
+
 select[multiple],
 select[size] {
   height: auto;
 }
+
 // Everything else
 textarea,
 input[type="text"],
@@ -283,138 +244,6 @@ input[type="color"],
   @include border-bottom-left-radius(0);
 }
 
-// File upload
-.file-upload {
-  display: block;
-  position: relative;
-  float: left;
-  .button {
-    position: relative;
-    width: 70px;
-  }
-  input[type="file"] {
-    z-index: 1;
-    @include opacity(0);  // hide the actual file input
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
-  input[type="text"] {
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    left: 70px;
-    // minimum width to hide browse button in firefox
-    min-width: 80px;
-  }
-}
-.prompt {
-  padding: 1em 0;
-}
-
-.tag_wrapper {
-  @include clearfix();
-  display: block;
-}
-.tag_list {
-  float: left;
-  display: block;
-  margin: 4px 0 0 4px;
-  padding: 0;
-  li {
-    display: block;
-    float: left;
-    margin: 0 5px 4px 0px;
-    list-style: none;
-  }
-}
-.tag {
-  @include button-interaction();
-  position: relative;
-  padding: 0.15em 21px 0.15em 8px;
-  border: 1px solid $tag-border;
-  background-color: $tag-bg;
-  @include text-shadow(0 1px 0 rgba(255, 255, 255, 0.75));
-  @include transition(all 0.5s ease 0.1s);
-
-  &:hover {
-    background-color: $tag-hover-bg;
-    color: $tag-hover-color;
-    @include box-shadow(#{inset 0 1px 2px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.05)});
-    @include text-shadow(none);
-    .delete {
-      color: $tag-hover-color;
-    }
-  }
-
-  &.error , &.error:hover {
-    border: $error-border 1px solid;
-    color: $error-color;
-    background-color: $error-bg;
-    @include text-shadow(0 1px 0 lighten($error-color,5%));
-    .delete {
-      color: darken($error-color, 15%);
-    }
-  }
-  .delete {
-    position: absolute;
-    top: 0px;
-    right:0px;
-    font-size: 1.23em;
-    display: block;
-    height: 26px;
-    width: 18px;
-    padding: 3px 5px 10px 4px;
-    color: $tag-color;
-    @include box-sizing('border-box');
-  }
-}
-.input_container[disabled="disabled"] {
-  .tag {
-    .delete {
-      display: none;
-    }
-    &:hover {
-       color: $input-disabled-color;
-       background-color: $tag-bg;
-       @include text-shadow(0 1px 0 rgba(255, 255, 255, 0.75));
-    }
-  }
-}
-input[type="tags"] {
-  border: none;
-  height: 2.08em;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  &:focus {
-    outline: none;
-  }
-}
-// Multiselect
-.options-list{
-  display: block;
-  margin: 4px 0 5px 0px;
-  overflow-y: auto;
-  overflow-x: visible;
-  min-height: $input-height;
-  max-height: $multiselect-max-height;
-  width: auto;
-  border: none;
-  padding: 5px;
-  li {
-    display: block;
-    float: left;
-    margin: 0 5px 4px 0px;
-    list-style: none;
-  }
-  li:last-child {
-    margin: 0 5px 0px 0px;
-  }
-}
-
-
 .add-on {
   display: block;
   background-color: $addon-bg;
@@ -427,40 +256,10 @@ input[type="tags"] {
     text-align: left;
   }
 }
-.input-group {
-  margin: 0 -5px 0 0px;
-  float: left;
-  *  {
-    margin: 0;
-    float: none;
-    @include inline-block();
-  }
-}
-
-.input_container {
-  input[type="text"],           input[type="password"], input[type="datetime"],
-  input[type="datetime-local"], input[type="date"],     input[type="month"],
-  input[type="time"],           input[type="week"],     input[type="number"],
-  input[type="email"],          input[type="url"],      input[type="search"],
-  input[type="tel"],            input[type="color"],
-  select, textarea, .add-on {
-    margin-bottom: 0;
-  }
-}
 
 .disabled, *[disabled] {
   @include opacity(0.65);
   @include no-select();
-}
-
-
-// Image Uploads
-.img-wrapper {
-  float: left;
-  margin-right: $base-line-height / 2;
-  img {
-    float: left;
-  }
 }
 
 // make the immutable fields align properly
@@ -472,13 +271,19 @@ input[type="tags"] {
   @include box-sizing('border-box');
 }
 
-
-.form-search, .form-inline, .form-horizontal {
-  input, textarea, select, .help-inline,
-  .uneditable-input, .input-prepend, .input-append {
+.form-search,
+.form-inline, 
+.form-horizontal {
+  input,
+  textarea,
+  select, 
+  .help-inline,
+  .uneditable-input, 
+  .input-prepend, 
+  .input-append {
     display: inline-block;
-    *display: inline;
     /* IE7 inline-block hack */
+    *display: inline;
     *zoom: 1;
     margin-bottom: 0;
     vertical-align: middle;
@@ -486,21 +291,20 @@ input[type="tags"] {
 }
 
 .form-horizontal {
-  .form-row {
-    margin-bottom: 20px;
-    *zoom: 1;
-  }
   .form-errors {
     @extend .form-errors;
     margin-left: $form-horz-label-width + 20;
-    margin-bottom: 20px;
   }
   // only right align the form labels
   // not checkbox & radio texts
-  .form-row > label {
-    padding-top: 4px;
-    text-align: right;
-    width: $form-horz-label-width;
+  .form-row {
+    margin-bottom: 20px;
+    .field-label {
+      float: left;
+      padding-top: 4px;
+      text-align: right;
+      width: $form-horz-label-width;
+    }
   }
   .field-wrapper {
     *display: inline-block;
@@ -516,76 +320,5 @@ input[type="tags"] {
     .field-help {
       top: 0;
     }
-  }
-  .form-actions {
-    margin-top: 0;
-  }
-  // special styling for smaller controls
-  input[type="radio"],
-  input[type="checkbox"] {
-    float:none;
-    margin:-0.31em 5px 0 0;
-  }
-  .snippet {
-    line-height: 1.62em;
-    margin-top: 0.31em;
-  }
-  .button.inline {
-    margin-top: 0.31em;
-  }
-}
-
-span#strength-meter {
-  float: left;
-  margin-top:0.5em;
-  .meter-wrap {
-    @include inline-block();
-    vertical-align: baseline;
-    position: relative;
-    left: 20px;
-    height: 0.38em;
-    width: 50%;
-    min-width: 200px;
-    background-color: $gray-lightest;
-    .meter {
-      display:block;
-      position: absolute;
-      left:0; top:0;
-      height:5px;
-      width:5%;
-      background-color: $gray-lighter;
-      @include transition(all 0.5s ease 0.2s);
-      &.strong {
-        background-color: $green;
-        width: 100%;
-      }
-      &.medium {
-        background-color: $yellow;
-        width: 60%;
-      }
-      &.feeble {
-        background-color: $red;
-        width: 20%;
-      }
-    }
-  }
-}
-
-.fb-login {
-    display: block;
-    background-image: url(/images/fb-sign-in.png);
-    background-repeat: no-repeat;
-    width: 180px;
-    height: 30px;
-    margin: 0 0 10px 0px;
-}
-
-.map-input {
-  .map-row, .map-actions {
-    @include clearfix();
-    width: 100%;
-  }
-  .map-row {
-    position: relative;
   }
 }

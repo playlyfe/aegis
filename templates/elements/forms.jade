@@ -53,14 +53,15 @@ block content
                   p Let's see how field-help works.
 
             .form-row
-              label(for="password")Password
+              label(for="password") Password
               .field-wrapper
                 input#password(type="password")
                 aside.field-help
                   p Please enter your password.
             .form-row
-              .field-wrapper">
-                input(type="checkbox") Remember Me
+              .field-wrapper
+                label(for="remember") Remember Me
+                  input(name="remember", type="checkbox") 
                 aside.field-help
                   p So you see how field-help works?
             .form-row
@@ -113,20 +114,21 @@ block content
           fieldset
             legend Full Form Functionality
             .form-row
-              label(for="username") Username
+              label.field-label(for="username") Username
               .field-wrapper
                 input#username(type="text")
                 aside.field-help
                   p Let's see how field-help works.
             .form-row
-              label(for="password") Password
+              label.field-label(for="password") Password
               .field-wrapper
                 input#password(type="password")
                 aside.field-help
                   p Please enter your password.
             .form-row
               .field-wrapper
-                input(type="checkbox") Remember Me
+                label Remember Me
+                  input(name="remember", type="checkbox") 
                 aside.field-help
                   p So you see how field-help works?
             .form-row
