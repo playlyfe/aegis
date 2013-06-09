@@ -773,17 +773,7 @@
   padding-bottom: 0;
 }
 
-/* line 78, sass/_modal.scss */
-.modal-body {
-  border-bottom: 1px solid #f7f7f7;
-  /* remove bottom margin from forms */
-}
-/* line 81, sass/_modal.scss */
-.modal-body form {
-  margin-bottom: 0;
-}
-
-/* line 84, sass/_modal.scss */
+/* line 79, sass/_modal.scss */
 .spinner {
   position: relative;
   top: 50%;
