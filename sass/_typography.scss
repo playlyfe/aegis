@@ -48,14 +48,14 @@ body {
   @include clearfix;
 }
 .page-wrapper {
+  @include box-sizing('border-box');
   padding-top: $navbar-height;
   min-height: 100%;
-  @include box-sizing('border-box');
 }
 .page-content {
   overflow: auto;
   padding-top: $content-padding;
-  padding-bottom: $footer-height + $navbar-height;
+  padding-bottom: $footer-height;
 }
 
 h1, h2, h3, h4, h5, h6, p, body, textarea, input, select {

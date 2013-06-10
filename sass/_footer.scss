@@ -4,10 +4,12 @@
 // 4.Jun.2013
 
 .footer {
+  @include box-sizing('border-box');
   position: relative;
-  margin-top: - $footer-height - 28px;
+  // margin top will be equal to the footer dimensions
+  margin-top: -$footer-height;
   height: $footer-height;
-  padding: $footer-padding;
+  padding: $footer-paddingV 0;
   border-top: 1px solid $footer-border;
   background-color: $footer-bg;
   .nav {

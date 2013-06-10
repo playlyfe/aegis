@@ -119,10 +119,11 @@ $navbar-border:         $prime-dark;
 
 $content-padding:       40px;
 
-$footer-height:         26px;
+// keep in mind, footer has a border-box sizing
+$footer-height:         50px;
+$footer-paddingV:       13px;
 $footer-border:         $prime-dark;
 $footer-bg:             $white;
-$footer-padding:        13px 0;
 
 
 //
