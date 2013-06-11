@@ -1,27 +1,15 @@
 /*
- * constants partial
- * Aegis UI (derived from Playlyfe Sandbox)
- * Kumar Harsh / Johny Jose
- * 20.Jan.2013
+ * The Aegis CSS Framework v0.1
+ * Licensed under Apache.
+ * http://www.apache.org/licenses/LICENSE-2.0
  */
-/*
- * All the colours and sizes are stored here.
- * If you are looking for a quick makeover,
- * just change the values of variables here.
- */
-/*
-  ===========================
-  COLOURS
-  ===========================
-*/
 /*
   Variable Grid System (Fluid Version).
   Learn more ~ http://www.spry-soft.com/grids/
   Based on 960 Grid System - http://960.gs/ & 960 Fluid - http://www.designinfluences.com/
-
   Licensed under GPL and MIT.
 */
-/* line 11, sass/_grid.scss */
+/* line 9, sass/_grid.scss */
 .grid-12,
 .grid-16 {
   width: 92%;
@@ -29,7 +17,7 @@
   margin-right: 4%;
 }
 
-/* line 22, sass/_grid.scss */
+/* line 19, sass/_grid.scss */
 .col-1, .col-2, .col-3, .col-4,
 .col-5, .col-6, .col-7, .col-8,
 .col-9, .col-10, .col-11, .col-12,
@@ -41,407 +29,407 @@
   margin-right: 1%;
 }
 
-/* line 32, sass/_grid.scss */
+/* line 29, sass/_grid.scss */
 .grid-12 .col-3,
 .grid-16 .col-4 {
   width: 23%;
 }
 
-/* line 38, sass/_grid.scss */
+/* line 35, sass/_grid.scss */
 .grid-12 .col-6,
 .grid-16 .col-8 {
   width: 48%;
 }
 
-/* line 44, sass/_grid.scss */
+/* line 41, sass/_grid.scss */
 .grid-12 .col-9,
 .grid-16 .col-12 {
   width: 73%;
 }
 
-/* line 50, sass/_grid.scss */
+/* line 47, sass/_grid.scss */
 .grid-12 .col-12,
 .grid-16 .col-16 {
   width: 98%;
 }
 
-/* line 60, sass/_grid.scss */
+/* line 57, sass/_grid.scss */
 .alpha, .alphamega {
   margin-left: 0;
 }
 
-/* line 61, sass/_grid.scss */
+/* line 58, sass/_grid.scss */
 .omega, .alphamega {
   margin-right: 0;
 }
 
-/* line 86, sass/_grid.scss */
+/* line 67, sass/_grid.scss */
 .grid-12 .col-1 {
   width: 6.333%;
 }
-/* line 87, sass/_grid.scss */
+/* line 68, sass/_grid.scss */
 .grid-12 .col-2 {
   width: 14.666%;
 }
-/* line 88, sass/_grid.scss */
+/* line 69, sass/_grid.scss */
 .grid-12 .col-4 {
   width: 31.333%;
 }
-/* line 89, sass/_grid.scss */
+/* line 70, sass/_grid.scss */
 .grid-12 .col-5 {
   width: 39.666%;
 }
-/* line 90, sass/_grid.scss */
+/* line 71, sass/_grid.scss */
 .grid-12 .col-7 {
   width: 56.333%;
 }
-/* line 91, sass/_grid.scss */
+/* line 72, sass/_grid.scss */
 .grid-12 .col-8 {
   width: 64.666%;
 }
-/* line 92, sass/_grid.scss */
+/* line 73, sass/_grid.scss */
 .grid-12 .col-10 {
   width: 81.333%;
 }
-/* line 93, sass/_grid.scss */
+/* line 74, sass/_grid.scss */
 .grid-12 .col-11 {
   width: 89.666%;
 }
 
-/* line 104, sass/_grid.scss */
+/* line 85, sass/_grid.scss */
 .grid-16 .col-1 {
   width: 4.25%;
 }
-/* line 105, sass/_grid.scss */
+/* line 86, sass/_grid.scss */
 .grid-16 .col-2 {
   width: 10.5%;
 }
-/* line 106, sass/_grid.scss */
+/* line 87, sass/_grid.scss */
 .grid-16 .col-3 {
   width: 16.75%;
 }
-/* line 107, sass/_grid.scss */
+/* line 88, sass/_grid.scss */
 .grid-16 .col-5 {
   width: 29.25%;
 }
-/* line 108, sass/_grid.scss */
+/* line 89, sass/_grid.scss */
 .grid-16 .col-6 {
   width: 35.5%;
 }
-/* line 109, sass/_grid.scss */
+/* line 90, sass/_grid.scss */
 .grid-16 .col-7 {
   width: 41.75%;
 }
-/* line 110, sass/_grid.scss */
+/* line 91, sass/_grid.scss */
 .grid-16 .col-9 {
   width: 54.25%;
 }
-/* line 111, sass/_grid.scss */
+/* line 92, sass/_grid.scss */
 .grid-16 .col-10 {
   width: 60.5%;
 }
-/* line 112, sass/_grid.scss */
+/* line 93, sass/_grid.scss */
 .grid-16 .col-11 {
   width: 66.75%;
 }
-/* line 113, sass/_grid.scss */
+/* line 94, sass/_grid.scss */
 .grid-16 .col-13 {
   width: 79.25%;
 }
-/* line 114, sass/_grid.scss */
+/* line 95, sass/_grid.scss */
 .grid-16 .col-14 {
   width: 85.5%;
 }
-/* line 115, sass/_grid.scss */
+/* line 96, sass/_grid.scss */
 .grid-16 .col-15 {
   width: 91.75%;
 }
 
-/* line 127, sass/_grid.scss */
+/* line 108, sass/_grid.scss */
 .grid-12 .pfx-3,
 .grid-16 .pfx-4 {
   padding-left: 25%;
 }
 
-/* line 133, sass/_grid.scss */
+/* line 114, sass/_grid.scss */
 .grid-12 .pfx-6,
 .grid-16 .pfx-8 {
   padding-left: 50%;
 }
 
-/* line 139, sass/_grid.scss */
+/* line 120, sass/_grid.scss */
 .grid-12 .pfx-9,
 .grid-16 .pfx-12 {
   padding-left: 75%;
 }
 
-/* line 149, sass/_grid.scss */
+/* line 130, sass/_grid.scss */
 .grid-12 .pfx-1 {
   padding-left: 8.333%;
 }
-/* line 150, sass/_grid.scss */
+/* line 131, sass/_grid.scss */
 .grid-12 .pfx-2 {
   padding-left: 16.666%;
 }
-/* line 151, sass/_grid.scss */
+/* line 132, sass/_grid.scss */
 .grid-12 .pfx-4 {
   padding-left: 33.333%;
 }
-/* line 152, sass/_grid.scss */
+/* line 133, sass/_grid.scss */
 .grid-12 .pfx-5 {
   padding-left: 41.666%;
 }
-/* line 153, sass/_grid.scss */
+/* line 134, sass/_grid.scss */
 .grid-12 .pfx-7 {
   padding-left: 58.333%;
 }
-/* line 154, sass/_grid.scss */
+/* line 135, sass/_grid.scss */
 .grid-12 .pfx-8 {
   padding-left: 66.666%;
 }
-/* line 155, sass/_grid.scss */
+/* line 136, sass/_grid.scss */
 .grid-12 .pfx-10 {
   padding-left: 83.333%;
 }
-/* line 156, sass/_grid.scss */
+/* line 137, sass/_grid.scss */
 .grid-12 .pfx-11 {
   padding-left: 91.666%;
 }
 
-/* line 167, sass/_grid.scss */
+/* line 148, sass/_grid.scss */
 .grid-16 .pfx-1 {
   padding-left: 6.25%;
 }
-/* line 168, sass/_grid.scss */
+/* line 149, sass/_grid.scss */
 .grid-16 .pfx-2 {
   padding-left: 12.5%;
 }
-/* line 169, sass/_grid.scss */
+/* line 150, sass/_grid.scss */
 .grid-16 .pfx-3 {
   padding-left: 18.75%;
 }
-/* line 170, sass/_grid.scss */
+/* line 151, sass/_grid.scss */
 .grid-16 .pfx-5 {
   padding-left: 31.25%;
 }
-/* line 171, sass/_grid.scss */
+/* line 152, sass/_grid.scss */
 .grid-16 .pfx-6 {
   padding-left: 37.5%;
 }
-/* line 172, sass/_grid.scss */
+/* line 153, sass/_grid.scss */
 .grid-16 .pfx-7 {
   padding-left: 43.75%;
 }
-/* line 173, sass/_grid.scss */
+/* line 154, sass/_grid.scss */
 .grid-16 .pfx-9 {
   padding-left: 56.25%;
 }
-/* line 174, sass/_grid.scss */
+/* line 155, sass/_grid.scss */
 .grid-16 .pfx-10 {
   padding-left: 62.5%;
 }
-/* line 175, sass/_grid.scss */
+/* line 156, sass/_grid.scss */
 .grid-16 .pfx-11 {
   padding-left: 68.75%;
 }
-/* line 176, sass/_grid.scss */
+/* line 157, sass/_grid.scss */
 .grid-16 .pfx-13 {
   padding-left: 81.25%;
 }
-/* line 177, sass/_grid.scss */
+/* line 158, sass/_grid.scss */
 .grid-16 .pfx-14 {
   padding-left: 87.5%;
 }
-/* line 178, sass/_grid.scss */
+/* line 159, sass/_grid.scss */
 .grid-16 .pfx-15 {
   padding-left: 93.75%;
 }
 
-/* line 191, sass/_grid.scss */
+/* line 172, sass/_grid.scss */
 .grid-12 .sfx-3,
 .grid-16 .sfx-4 {
   padding-right: 25%;
 }
 
-/* line 197, sass/_grid.scss */
+/* line 178, sass/_grid.scss */
 .grid-12 .sfx-6,
 .grid-16 .sfx-8 {
   padding-right: 50%;
 }
 
-/* line 203, sass/_grid.scss */
+/* line 184, sass/_grid.scss */
 .grid-12 .sfx-9,
 .grid-16 .sfx-12 {
   padding-right: 75%;
 }
 
-/* line 214, sass/_grid.scss */
+/* line 195, sass/_grid.scss */
 .grid-12 .sfx-1 {
   padding-right: 8.333%;
 }
-/* line 215, sass/_grid.scss */
+/* line 196, sass/_grid.scss */
 .grid-12 .sfx-2 {
   padding-right: 16.666%;
 }
-/* line 216, sass/_grid.scss */
+/* line 197, sass/_grid.scss */
 .grid-12 .sfx-4 {
   padding-right: 33.333%;
 }
-/* line 217, sass/_grid.scss */
+/* line 198, sass/_grid.scss */
 .grid-12 .sfx-5 {
   padding-right: 41.666%;
 }
-/* line 218, sass/_grid.scss */
+/* line 199, sass/_grid.scss */
 .grid-12 .sfx-7 {
   padding-right: 58.333%;
 }
-/* line 219, sass/_grid.scss */
+/* line 200, sass/_grid.scss */
 .grid-12 .sfx-8 {
   padding-right: 66.666%;
 }
-/* line 220, sass/_grid.scss */
+/* line 201, sass/_grid.scss */
 .grid-12 .sfx-10 {
   padding-right: 83.333%;
 }
-/* line 221, sass/_grid.scss */
+/* line 202, sass/_grid.scss */
 .grid-12 .sfx-11 {
   padding-right: 91.666%;
 }
 
-/* line 233, sass/_grid.scss */
+/* line 214, sass/_grid.scss */
 .grid-16 .sfx-1 {
   padding-right: 6.25%;
 }
-/* line 234, sass/_grid.scss */
+/* line 215, sass/_grid.scss */
 .grid-16 .sfx-2 {
   padding-right: 16.5%;
 }
-/* line 235, sass/_grid.scss */
+/* line 216, sass/_grid.scss */
 .grid-16 .sfx-3 {
   padding-right: 18.75%;
 }
-/* line 236, sass/_grid.scss */
+/* line 217, sass/_grid.scss */
 .grid-16 .sfx-5 {
   padding-right: 31.25%;
 }
-/* line 237, sass/_grid.scss */
+/* line 218, sass/_grid.scss */
 .grid-16 .sfx-6 {
   padding-right: 37.5%;
 }
-/* line 238, sass/_grid.scss */
+/* line 219, sass/_grid.scss */
 .grid-16 .sfx-7 {
   padding-right: 43.75%;
 }
-/* line 239, sass/_grid.scss */
+/* line 220, sass/_grid.scss */
 .grid-16 .sfx-9 {
   padding-right: 56.25%;
 }
-/* line 240, sass/_grid.scss */
+/* line 221, sass/_grid.scss */
 .grid-16 .sfx-10 {
   padding-right: 62.5%;
 }
-/* line 241, sass/_grid.scss */
+/* line 222, sass/_grid.scss */
 .grid-16 .sfx-11 {
   padding-right: 68.75%;
 }
-/* line 242, sass/_grid.scss */
+/* line 223, sass/_grid.scss */
 .grid-16 .sfx-13 {
   padding-right: 81.25%;
 }
-/* line 243, sass/_grid.scss */
+/* line 224, sass/_grid.scss */
 .grid-16 .sfx-14 {
   padding-right: 87.5%;
 }
-/* line 244, sass/_grid.scss */
+/* line 225, sass/_grid.scss */
 .grid-16 .sfx-15 {
   padding-right: 93.75%;
 }
 
-/* line 253, sass/_grid.scss */
+/* line 234, sass/_grid.scss */
 .grid-12 .push-1 {
   left: 8.333%;
 }
-/* line 254, sass/_grid.scss */
+/* line 235, sass/_grid.scss */
 .grid-12 .push-2 {
   left: 16.667%;
 }
-/* line 255, sass/_grid.scss */
+/* line 236, sass/_grid.scss */
 .grid-12 .push-3 {
   left: 25.0%;
 }
-/* line 256, sass/_grid.scss */
+/* line 237, sass/_grid.scss */
 .grid-12 .push-4 {
   left: 33.333%;
 }
-/* line 257, sass/_grid.scss */
+/* line 238, sass/_grid.scss */
 .grid-12 .push-5 {
   left: 41.667%;
 }
-/* line 258, sass/_grid.scss */
+/* line 239, sass/_grid.scss */
 .grid-12 .push-6 {
   left: 50.0%;
 }
-/* line 259, sass/_grid.scss */
+/* line 240, sass/_grid.scss */
 .grid-12 .push-7 {
   left: 58.333%;
 }
-/* line 260, sass/_grid.scss */
+/* line 241, sass/_grid.scss */
 .grid-12 .push-8 {
   left: 66.667%;
 }
-/* line 261, sass/_grid.scss */
+/* line 242, sass/_grid.scss */
 .grid-12 .push-9 {
   left: 75.0%;
 }
-/* line 262, sass/_grid.scss */
+/* line 243, sass/_grid.scss */
 .grid-12 .push-10 {
   left: 83.333%;
 }
-/* line 263, sass/_grid.scss */
+/* line 244, sass/_grid.scss */
 .grid-12 .push-11 {
   left: 91.667%;
 }
-/* line 265, sass/_grid.scss */
+/* line 246, sass/_grid.scss */
 .grid-12 .pull-1 {
   left: -8.333%;
 }
-/* line 266, sass/_grid.scss */
+/* line 247, sass/_grid.scss */
 .grid-12 .pull-2 {
   left: -16.667%;
 }
-/* line 267, sass/_grid.scss */
+/* line 248, sass/_grid.scss */
 .grid-12 .pull-3 {
   left: -25.0%;
 }
-/* line 268, sass/_grid.scss */
+/* line 249, sass/_grid.scss */
 .grid-12 .pull-4 {
   left: -33.333%;
 }
-/* line 269, sass/_grid.scss */
+/* line 250, sass/_grid.scss */
 .grid-12 .pull-5 {
   left: -41.667%;
 }
-/* line 270, sass/_grid.scss */
+/* line 251, sass/_grid.scss */
 .grid-12 .pull-6 {
   left: -50.0%;
 }
-/* line 271, sass/_grid.scss */
+/* line 252, sass/_grid.scss */
 .grid-12 .pull-7 {
   left: -58.333%;
 }
-/* line 272, sass/_grid.scss */
+/* line 253, sass/_grid.scss */
 .grid-12 .pull-8 {
   left: -66.667%;
 }
-/* line 273, sass/_grid.scss */
+/* line 254, sass/_grid.scss */
 .grid-12 .pull-9 {
   left: -75.0%;
 }
-/* line 274, sass/_grid.scss */
+/* line 255, sass/_grid.scss */
 .grid-12 .pull-10 {
   left: -83.333%;
 }
-/* line 275, sass/_grid.scss */
+/* line 256, sass/_grid.scss */
 .grid-12 .pull-11 {
   left: -91.667%;
 }
@@ -568,7 +556,7 @@
   padding: 0 0.5em;
 }
 
-/* line 7, sass/_navigation.scss */
+/* line 6, sass/_navigation.scss */
 .nav {
   *zoom: 1;
 }
@@ -582,7 +570,7 @@
 .nav:after {
   clear: both;
 }
-/* line 11, sass/_navigation.scss */
+/* line 10, sass/_navigation.scss */
 .nav a {
   -webkit-touch-callout: none;
   -moz-user-select: -moz-none;
@@ -599,7 +587,7 @@
   text-decoration: none !important;
 }
 
-/* line 17, sass/_navigation.scss */
+/* line 15, sass/_navigation.scss */
 .navbar {
   position: fixed;
   -webkit-box-sizing: border-box;
@@ -611,11 +599,11 @@
   width: 100%;
   top: 0;
 }
-/* line 25, sass/_navigation.scss */
+/* line 23, sass/_navigation.scss */
 .navbar .navbar-inner {
   height: 40px;
 }
-/* line 28, sass/_navigation.scss */
+/* line 26, sass/_navigation.scss */
 .navbar li {
   float: left;
   display: block;
@@ -624,21 +612,21 @@
   -o-transition: background 0.2s ease, 0.1s;
   transition: background 0.2s ease, 0.1s;
 }
-/* line 32, sass/_navigation.scss */
+/* line 30, sass/_navigation.scss */
 .navbar li:hover {
   background-color: #80b314;
 }
-/* line 34, sass/_navigation.scss */
+/* line 32, sass/_navigation.scss */
 .navbar a {
   color: white;
   line-height: 40px;
   padding: 0 12px;
 }
-/* line 38, sass/_navigation.scss */
+/* line 36, sass/_navigation.scss */
 .navbar a:hover {
   color: white;
 }
-/* line 42, sass/_navigation.scss */
+/* line 40, sass/_navigation.scss */
 .navbar .crest {
   float: left;
   display: block;
@@ -649,16 +637,16 @@
   line-height: 40px;
   color: transparent;
 }
-/* line 49, sass/_navigation.scss */
+/* line 47, sass/_navigation.scss */
 .navbar .crest:hover {
   background-color: transparent;
 }
 
-/* line 57, sass/_navigation.scss */
+/* line 54, sass/_navigation.scss */
 .dropdown {
   position: relative;
 }
-/* line 61, sass/_navigation.scss */
+/* line 58, sass/_navigation.scss */
 .dropdown .dropdown-nav, .dropdown .dropdown-wrapper {
   display: none;
   position: absolute;
@@ -669,17 +657,17 @@
   border-top: none;
   z-index: 400;
 }
-/* line 72, sass/_navigation.scss */
+/* line 69, sass/_navigation.scss */
 .dropdown:hover .dropdown-nav, .dropdown:hover .dropdown-wrapper {
   display: block;
 }
 
-/* line 79, sass/_navigation.scss */
+/* line 75, sass/_navigation.scss */
 .navbar .dropdown-nav {
   background-color: #8fc717;
   border-color: #80b314;
 }
-/* line 83, sass/_navigation.scss */
+/* line 79, sass/_navigation.scss */
 .navbar .dropdown-nav > li, .navbar .dropdown-wrapper > .nav > li {
   float: none;
 }
@@ -936,12 +924,12 @@
   src: local("Droid Sans Mono"), local("DroidSansMono"), url(http://themes.googleusercontent.com/static/fonts/droidsansmono/v4/ns-m2xQYezAtqh7ai59hJUYuTAAIFFn5GTWtryCmBQ4.woff) format("woff");
 }
 
-/* line 33, sass/_typography.scss */
+/* line 37, sass/_typography.scss */
 html, body {
   height: 100%;
 }
 
-/* line 36, sass/_typography.scss */
+/* line 40, sass/_typography.scss */
 body {
   border: none;
   font-size: 13px;
@@ -949,7 +937,7 @@ body {
   color: #555555;
 }
 
-/* line 45, sass/_typography.scss */
+/* line 49, sass/_typography.scss */
 .fixed-width {
   width: 1024px;
   margin: 0 auto;
@@ -966,7 +954,7 @@ body {
   clear: both;
 }
 
-/* line 50, sass/_typography.scss */
+/* line 54, sass/_typography.scss */
 .page-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -975,74 +963,74 @@ body {
   min-height: 100%;
 }
 
-/* line 55, sass/_typography.scss */
+/* line 59, sass/_typography.scss */
 .page-content {
   overflow: auto;
   padding-top: 40px;
   padding-bottom: 50px;
 }
 
-/* line 61, sass/_typography.scss */
+/* line 65, sass/_typography.scss */
 h1, h2, h3, h4, h5, h6, p, body, textarea, input, select {
   font-family: "Droid Sans", "sans serif";
   font-weight: normal;
 }
 
-/* line 65, sass/_typography.scss */
+/* line 69, sass/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
   margin: 13px 0;
 }
-/* line 68, sass/_typography.scss */
+/* line 72, sass/_typography.scss */
 h1.splash, h2.splash, h3.splash, h4.splash, h5.splash, h6.splash {
   font-weight: bold;
   text-shadow: 2px 2px 3px #555555;
 }
 
-/* line 73, sass/_typography.scss */
+/* line 77, sass/_typography.scss */
 h1, h2 {
   line-height: 42px;
 }
 
-/* line 76, sass/_typography.scss */
+/* line 80, sass/_typography.scss */
 h4, h5, h6, p {
   line-height: 21px;
 }
 
-/* line 80, sass/_typography.scss */
+/* line 84, sass/_typography.scss */
 h1 {
   font-size: 3.38em;
 }
-/* line 82, sass/_typography.scss */
+/* line 86, sass/_typography.scss */
 h1.splash {
   font-size: 5.07em;
   line-height: 1.1em;
   margin: 0.5em 0;
 }
 
-/* line 88, sass/_typography.scss */
+/* line 92, sass/_typography.scss */
 h2 {
   font-size: 2.62em;
 }
 
-/* line 91, sass/_typography.scss */
+/* line 95, sass/_typography.scss */
 h3 {
   line-height: 33.978px;
   font-size: 2.08em;
 }
 
-/* line 95, sass/_typography.scss */
+/* line 99, sass/_typography.scss */
 h4 {
   font-size: 1.62em;
 }
 
-/* line 98, sass/_typography.scss */
+/* line 102, sass/_typography.scss */
 h5 {
   font-size: 1.15em;
   margin: 6.5px 0;
 }
 
-/* line 102, sass/_typography.scss */
+/* line 106, sass/_typography.scss */
 h6 {
   font-size: 1.08em;
   text-transform: uppercase;
@@ -1050,34 +1038,34 @@ h6 {
   margin: 2px 0;
 }
 
-/* line 108, sass/_typography.scss */
+/* line 112, sass/_typography.scss */
 p {
   font-size: 13px;
   margin: 0 0 13px;
 }
 
-/* line 112, sass/_typography.scss */
+/* line 116, sass/_typography.scss */
 a {
   color: #80b314;
   text-decoration: none;
 }
-/* line 115, sass/_typography.scss */
+/* line 119, sass/_typography.scss */
 a:hover {
   color: #0085f1;
   text-decoration: underline;
 }
 
-/* line 120, sass/_typography.scss */
+/* line 124, sass/_typography.scss */
 .caps {
   text-transform: uppercase;
 }
 
-/* line 123, sass/_typography.scss */
+/* line 127, sass/_typography.scss */
 .hl {
   color: #0085f1;
 }
 
-/* line 126, sass/_typography.scss */
+/* line 130, sass/_typography.scss */
 code, pre {
   font-family: "Droid Mono", "Consolas", "Lucida Console", "Ubuntu Mono", monospace;
   padding: 1em 1em;
@@ -1088,33 +1076,33 @@ code, pre {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-/* line 135, sass/_typography.scss */
+/* line 139, sass/_typography.scss */
 code:empty, pre:empty {
   display: none;
 }
 
-/* line 139, sass/_typography.scss */
+/* line 143, sass/_typography.scss */
 code {
   padding: 4px 5px 1px;
   margin: 0 0.2em;
 }
 
-/* line 144, sass/_typography.scss */
+/* line 148, sass/_typography.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 145, sass/_typography.scss */
+/* line 149, sass/_typography.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 146, sass/_typography.scss */
+/* line 150, sass/_typography.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 147, sass/_typography.scss */
+/* line 151, sass/_typography.scss */
 .text-justify {
   text-align: justify;
 }
@@ -1127,7 +1115,7 @@ code {
   font-style: normal;
 }
 
-/* line 15, sass/_icons.scss */
+/* line 19, sass/_icons.scss */
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: 'Lyfeicons';
@@ -1138,7 +1126,7 @@ code {
   display: inline;
   margin-right: 0.7em;
 }
-/* line 23, sass/_icons.scss */
+/* line 27, sass/_icons.scss */
 [class^="icon-"].no-space, [class^="icon-"].unstyled, [class^="icon-"].form-errors, .form-horizontal [class^="icon-"].form-errors, [class^="icon-"].field-errors, [class^="icon-"].nav, body[class^="icon-"],
 [class*=" icon-"].no-space,
 [class*=" icon-"].unstyled,
@@ -1150,7 +1138,7 @@ body[class*=" icon-"] {
   margin: 0;
 }
 
-/* line 28, sass/_icons.scss */
+/* line 32, sass/_icons.scss */
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   text-decoration: inherit;
@@ -1158,7 +1146,7 @@ body[class*=" icon-"] {
   speak: none;
 }
 
-/* line 37, sass/_icons.scss */
+/* line 41, sass/_icons.scss */
 a [class^="icon-"],
 a [class*=" icon-"],
 a [class^="icon-"]:before,
@@ -1167,290 +1155,290 @@ a [class*=" icon-"]:before {
 }
 
 /* makes the font 33% larger relative to the icon container */
-/* line 42, sass/_icons.scss */
+/* line 46, sass/_icons.scss */
 .icon-big:before {
   vertical-align: -10%;
   font-size: 1.5em;
 }
 
-/* line 46, sass/_icons.scss */
+/* line 50, sass/_icons.scss */
 .icon-2x {
   font-size: 2em;
 }
 
-/* line 47, sass/_icons.scss */
+/* line 51, sass/_icons.scss */
 .icon-3x {
   font-size: 3em;
 }
 
-/* line 48, sass/_icons.scss */
+/* line 52, sass/_icons.scss */
 .icon-4x {
   font-size: 4em;
 }
 
-/* line 50, sass/_icons.scss */
+/* line 54, sass/_icons.scss */
 .icon-add:before {
   content: '\E002';
 }
 
-/* line 51, sass/_icons.scss */
+/* line 55, sass/_icons.scss */
 .icon-edit:before {
   content: '\E003';
 }
 
-/* line 52, sass/_icons.scss */
+/* line 56, sass/_icons.scss */
 .icon-view:before {
   content: '\E004';
 }
 
-/* line 53, sass/_icons.scss */
+/* line 57, sass/_icons.scss */
 .icon-cross:before {
   content: '\E005';
 }
 
-/* line 54, sass/_icons.scss */
+/* line 58, sass/_icons.scss */
 .icon-delete:before {
   content: '\E006';
 }
 
-/* line 55, sass/_icons.scss */
+/* line 59, sass/_icons.scss */
 .icon-menu:before {
   content: '\E007';
 }
 
-/* line 56, sass/_icons.scss */
+/* line 60, sass/_icons.scss */
 .icon-reset:before {
   content: '\E008';
 }
 
-/* line 57, sass/_icons.scss */
+/* line 61, sass/_icons.scss */
 .icon-settings:before {
   content: '\E009';
 }
 
-/* line 58, sass/_icons.scss */
+/* line 62, sass/_icons.scss */
 .icon-properties:before {
   content: '\E00a';
 }
 
-/* line 59, sass/_icons.scss */
+/* line 63, sass/_icons.scss */
 .icon-calendar:before {
   content: '\E00b';
 }
 
-/* line 60, sass/_icons.scss */
+/* line 64, sass/_icons.scss */
 .icon-target:before {
   content: '\E00c';
 }
 
-/* line 61, sass/_icons.scss */
+/* line 65, sass/_icons.scss */
 .icon-dead-face:before {
   content: '\E00d';
 }
 
-/* line 62, sass/_icons.scss */
+/* line 66, sass/_icons.scss */
 .icon-sad-face:before {
   content: '\E00e';
 }
 
-/* line 63, sass/_icons.scss */
+/* line 67, sass/_icons.scss */
 .icon-happy-face:before {
   content: '\E00f';
 }
 
-/* line 64, sass/_icons.scss */
+/* line 68, sass/_icons.scss */
 .icon-home:before {
   content: '\E010';
 }
 
-/* line 65, sass/_icons.scss */
+/* line 69, sass/_icons.scss */
 .icon-user:before {
   content: '\E011';
 }
 
-/* line 66, sass/_icons.scss */
+/* line 70, sass/_icons.scss */
 .icon-square:before {
   content: '\E012';
 }
 
-/* line 67, sass/_icons.scss */
+/* line 71, sass/_icons.scss */
 .icon-circle:before {
   content: '\E013';
 }
 
-/* line 68, sass/_icons.scss */
+/* line 72, sass/_icons.scss */
 .icon-up:before {
   content: '\E014';
 }
 
-/* line 69, sass/_icons.scss */
+/* line 73, sass/_icons.scss */
 .icon-down:before {
   content: '\E015';
 }
 
-/* line 70, sass/_icons.scss */
+/* line 74, sass/_icons.scss */
 .icon-right:before {
   content: '\E016';
 }
 
-/* line 71, sass/_icons.scss */
+/* line 75, sass/_icons.scss */
 .icon-left:before {
   content: '\E017';
 }
 
-/* line 72, sass/_icons.scss */
+/* line 76, sass/_icons.scss */
 .icon-stop:before {
   content: '\E018';
 }
 
-/* line 73, sass/_icons.scss */
+/* line 77, sass/_icons.scss */
 .icon-list:before {
   content: '\E019';
 }
 
-/* line 74, sass/_icons.scss */
+/* line 78, sass/_icons.scss */
 .icon-search:before {
   content: '\E01a';
 }
 
-/* line 75, sass/_icons.scss */
+/* line 79, sass/_icons.scss */
 .icon-search-invert:before {
   content: '\E01b';
 }
 
-/* line 76, sass/_icons.scss */
+/* line 80, sass/_icons.scss */
 .icon-error:before {
   content: '\E01c';
 }
 
-/* line 77, sass/_icons.scss */
+/* line 81, sass/_icons.scss */
 .icon-warning:before {
   content: '\E01d';
 }
 
-/* line 78, sass/_icons.scss */
+/* line 82, sass/_icons.scss */
 .icon-help:before {
   content: '\E01e';
 }
 
-/* line 79, sass/_icons.scss */
+/* line 83, sass/_icons.scss */
 .icon-sandbox:before {
   content: '\E020';
 }
 
-/* line 80, sass/_icons.scss */
+/* line 84, sass/_icons.scss */
 .icon-simulate:before {
   content: '\E021';
 }
 
-/* line 81, sass/_icons.scss */
+/* line 85, sass/_icons.scss */
 .icon-design:before {
   content: '\E022';
 }
 
-/* line 82, sass/_icons.scss */
+/* line 86, sass/_icons.scss */
 .icon-gateway:before {
   content: '\E023';
 }
 
-/* line 83, sass/_icons.scss */
+/* line 87, sass/_icons.scss */
 .icon-gateway-inclusive:before {
   content: '\E024';
 }
 
-/* line 84, sass/_icons.scss */
+/* line 88, sass/_icons.scss */
 .icon-activity:before {
   content: '\E025';
 }
 
-/* line 85, sass/_icons.scss */
+/* line 89, sass/_icons.scss */
 .icon-lanes:before {
   content: '\E026';
 }
 
-/* line 86, sass/_icons.scss */
+/* line 90, sass/_icons.scss */
 .icon-loops:before {
   content: '\E027';
 }
 
-/* line 87, sass/_icons.scss */
+/* line 91, sass/_icons.scss */
 .icon-right-half:before {
   content: '\E028';
 }
 
 /* no sooner than */
-/* line 88, sass/_icons.scss */
+/* line 92, sass/_icons.scss */
 .icon-left-half:before {
   content: '\E029';
 }
 
 /* no later than */
-/* line 89, sass/_icons.scss */
+/* line 93, sass/_icons.scss */
 .icon-timed:before {
   content: '\E02a';
 }
 
-/* line 90, sass/_icons.scss */
+/* line 94, sass/_icons.scss */
 .icon-token:before {
   content: '\E02b';
 }
 
-/* line 91, sass/_icons.scss */
+/* line 95, sass/_icons.scss */
 .icon-code:before {
   content: '\E02c';
 }
 
-/* line 92, sass/_icons.scss */
+/* line 96, sass/_icons.scss */
 .icon-mail:before {
   content: '\E02d';
 }
 
-/* line 93, sass/_icons.scss */
+/* line 97, sass/_icons.scss */
 .icon-web:before {
   content: '\E02e';
 }
 
-/* line 94, sass/_icons.scss */
+/* line 98, sass/_icons.scss */
 .icon-twitter:before {
   content: '\E02f';
 }
 
-/* line 95, sass/_icons.scss */
+/* line 99, sass/_icons.scss */
 .icon-builder:before {
   content: '\E030';
 }
 
-/* line 96, sass/_icons.scss */
+/* line 100, sass/_icons.scss */
 .icon-settings:before {
   content: '\E031';
 }
 
-/* line 97, sass/_icons.scss */
+/* line 101, sass/_icons.scss */
 .icon-mechanics:before {
   content: '\E032';
 }
 
-/* line 98, sass/_icons.scss */
+/* line 102, sass/_icons.scss */
 .icon-dev-tools:before {
   content: '\E033';
 }
 
-/* line 99, sass/_icons.scss */
+/* line 103, sass/_icons.scss */
 .icon-pl:before {
   content: '\E034';
 }
 
-/* line 100, sass/_icons.scss */
+/* line 104, sass/_icons.scss */
 .icon-playlyfe:before {
   content: '\E035';
 }
 
-/* line 101, sass/_icons.scss */
+/* line 105, sass/_icons.scss */
 .icon-fullscreen:before {
   content: '\E036';
 }
 
-/* line 102, sass/_icons.scss */
+/* line 106, sass/_icons.scss */
 .icon-restore:before {
   content: '\E037';
 }
@@ -2324,47 +2312,37 @@ input[type="color"].error,
   color: #648b10;
 }
 
-/*
- * tidbits partial
- * Aegis UI (derived from Playlyfe Sandbox)
- * Kumar Harsh
- * 23.Mar.2013
- */
-/* line 11, sass/_tidbits.scss */
+/* line 10, sass/_tidbits.scss */
 .media {
   margin: 10px;
   overflow: hidden;
   _overflow: visible;
   zoom: 1;
 }
-/* line 16, sass/_tidbits.scss */
+/* line 15, sass/_tidbits.scss */
 .media .content {
   /* use overflow for clearing floats and
    creating new layout context */
   overflow: hidden;
   zoom: 1;
 }
-/* line 22, sass/_tidbits.scss */
+/* line 21, sass/_tidbits.scss */
 .media .image {
   /* you can float the image to either left or right */
   float: left;
   margin-right: 10px;
 }
-/* line 26, sass/_tidbits.scss */
+/* line 25, sass/_tidbits.scss */
 .media .image img {
   display: block;
 }
-/* line 29, sass/_tidbits.scss */
+/* line 28, sass/_tidbits.scss */
 .media .image.right {
   margin-right: 0;
   margin-left: 10px;
 }
 
-/*
- * This partial gives you some extra elements
- * for your page. See the demo page for examples.
- */
-/* line 41, sass/_tidbits.scss */
+/* line 39, sass/_tidbits.scss */
 .info-tag {
   padding: 0.2em 0.4em;
   background-color: #f1f9ff;
@@ -2383,7 +2361,7 @@ input[type="color"].error,
 .info-tag:hover {
   text-decoration: none !important;
 }
-/* line 48, sass/_tidbits.scss */
+/* line 46, sass/_tidbits.scss */
 .info-tag:hover {
   background-color: #a5d6ff;
   color: #004d8b;
@@ -2393,48 +2371,48 @@ input[type="color"].error,
   -o-transition: all 0.2s ease 0.1s;
   transition: all 0.2s ease 0.1s;
 }
-/* line 53, sass/_tidbits.scss */
+/* line 51, sass/_tidbits.scss */
 .info-tag.alert {
   color: #af0000;
   background-color: #ff9696;
   border: 1px solid #ff1616;
 }
-/* line 57, sass/_tidbits.scss */
+/* line 55, sass/_tidbits.scss */
 .info-tag.alert:hover {
   color: #620000;
   background-color: #ff4949;
 }
-/* line 62, sass/_tidbits.scss */
+/* line 60, sass/_tidbits.scss */
 .info-tag.inactive {
   color: #888888;
   background-color: #eeeeee;
   border: 1px solid #aeaeae;
 }
-/* line 66, sass/_tidbits.scss */
+/* line 64, sass/_tidbits.scss */
 .info-tag.inactive:hover {
   color: #6f6f6f;
   background-color: #d4d4d4;
   border-color: #959595;
 }
 
-/* line 75, sass/_tidbits.scss */
+/* line 73, sass/_tidbits.scss */
 hr.dotted {
   border: 0;
   margin: 5px auto;
   height: 1px;
   border-bottom: 2px dotted #eeeeee;
 }
-/* line 80, sass/_tidbits.scss */
+/* line 78, sass/_tidbits.scss */
 hr.dotted.fat {
   margin: 20px auto;
   border-width: 5px;
 }
-/* line 84, sass/_tidbits.scss */
+/* line 82, sass/_tidbits.scss */
 hr.dotted.dark {
   border-color: #333333;
 }
 
-/* line 93, sass/_tidbits.scss */
+/* line 91, sass/_tidbits.scss */
 .snippet {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2452,7 +2430,7 @@ hr.dotted.dark {
   text-overflow: ellipsis;
   font-weight: 700;
 }
-/* line 102, sass/_tidbits.scss */
+/* line 100, sass/_tidbits.scss */
 .snippet:hover {
   background-color: #8fc717;
   color: white;
@@ -2463,7 +2441,7 @@ hr.dotted.dark {
   transition: all 0.4s ease 0.1s;
 }
 
-/* line 110, sass/_tidbits.scss */
+/* line 108, sass/_tidbits.scss */
 .example {
   background-color: #fefefc;
   margin: 1em 0;
@@ -2474,7 +2452,7 @@ hr.dotted.dark {
   box-shadow: inset 0px -1px 5px 0px #f1f9ff;
   overflow: hidden;
 }
-/* line 117, sass/_tidbits.scss */
+/* line 115, sass/_tidbits.scss */
 .example:after {
   display: block;
   padding: 2px 5px;

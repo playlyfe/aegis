@@ -2,10 +2,8 @@
   Variable Grid System (Fluid Version).
   Learn more ~ http://www.spry-soft.com/grids/
   Based on 960 Grid System - http://960.gs/ & 960 Fluid - http://www.designinfluences.com/
-
   Licensed under GPL and MIT.
 */
-
 .grid-12,
 .grid-16
 {
@@ -13,7 +11,6 @@
   margin-left: 4%;
   margin-right: 4%;
 }
-
 
 .col-1,  .col-2,  .col-3,  .col-4,
 .col-5,  .col-6,  .col-7,  .col-8,
@@ -66,22 +63,6 @@
 //  GRID / 12 COL
 //  ===========================
 //
-
-// as much as i want to convert this into
-// mathematical formula based loop, the
-// values don't come out quite correctly
-// cuz of decimal rounding.
-//
-// This works perfectly though:
-// .grid-12 {
-//   $col-width: 6.333%;
-//   .col-1 { width: $col-width; }
-//   @for $i from 2 through 12 {
-//     @if $i%3 != 0 {
-//       .col-#{$i} { width: $col-width * $i + 2% * ($i - 1) ;}
-//     }
-//   }
-// }
 .grid-12 {
   .col-1  { width: 6.333%; }
   .col-2  { width: 14.666%; }
