@@ -8,20 +8,13 @@
   width: $side-width;
   height: $side-height;
   padding: $side-padding 0 !important;
-
   background: $side-bg;
   border-right: 1px solid $side-border;
-
   font-size: $side-font-size;
   z-index: 1;
-  // @include box-shadow($side-border 0px 0px 10px -1px);
-  @include no-select();
-
   a {
-    border: none;
     border-left: 5px solid white;
     color: $side-color;
-    cursor: pointer;
     margin-left: 10px;
     padding: 5px 0 5px 10px;
     @include transition(background, 0.3s, ease, 0.3s);
@@ -30,7 +23,6 @@
       @include transition(border-color, 0.3s, ease, 0.2s);
     }
   }
-
   .sw-l1 {
     position: relative;
     & > a {
@@ -53,7 +45,6 @@
       @include transition(transform, 1.0s, ease, 0.1s);
     }
   }
-
   .unwound {
     & > a {
       color: $side-color;
@@ -68,7 +59,6 @@
       }
     }
   }
-
   .sw-l1.active {
     & > a {
       color: $side-active-color;
@@ -94,5 +84,4 @@
       border-left-color: $side-sub-active-trim;
     }
   }
-
 }

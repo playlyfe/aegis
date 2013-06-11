@@ -93,14 +93,12 @@ hr.dotted {
 .snippet {
   @include box-sizing('border-box');
   @include inline-block();
-  max-width:400px;
+  max-width: 400px;
   padding: 0.2em 0.5em;
   border: $snippet-border;
-
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 700;
-  font-size: #{12px/$base}em;
   &:hover {
     background-color: $snippet-hover-fill;
     color: $snippet-hover-color;

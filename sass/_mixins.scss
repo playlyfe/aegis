@@ -14,16 +14,6 @@
   }
 }
 
-// make the text unselectable (in supported browsers)
-@mixin no-select() {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 // apply on <a> tags to remove underline
 @mixin no-anchor {
   text-decoration: none !important;
@@ -31,6 +21,12 @@
   &:hover {
     text-decoration: none !important;
   }
+}
+
+// make the text unselectable (in supported browsers)
+@mixin no-select() {
+  -webkit-touch-callout: none;
+  @include user-select(none);
 }
 
 // give non-button elements properties of a button
@@ -57,5 +53,30 @@
   }
   @if $border != null {
     border-color: $border;
+  }
+}
+
+// animation mixins
+// when compass 0.13 comes out,
+// this will be removed
+@mixin animation($opts) {
+  -webkit-animation: $opts;
+     -moz-animation: $opts;
+      -ms-animation: $opts;
+       -o-animation: $opts;
+          animation: $opts;
+}
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
   }
 }

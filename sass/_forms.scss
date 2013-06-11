@@ -26,17 +26,23 @@ legend {
 }
 
 
-label, 
+label,
 input,
 button,
 select,
 textarea {
-  font: normal #{$base-font-size}/#{$base-line-height} $base-font-family
+  font: normal #{$base-font-size}/#{$base-line-height} $base-font-family;
 }
 
 .form-row {
   margin-bottom: 5px;
   @include clearfix();
+  .snippet {
+    // align snippets with inputs
+    height: $input-height;
+    line-height: $input-height;
+    padding-top: 0; padding-bottom: 0;
+  }
 }
 
 label {
@@ -105,24 +111,19 @@ input[type="datetime"], input[type="datetime-local"], input[type="date"],
 input[type="month"],    input[type="time"],           input[type="week"],
 input[type="number"],   input[type="email"],          input[type="url"],
 input[type="search"],   input[type="tel"],            input[type="color"],
-, .add-on {
-  display: inline-block;
+, .add-on, .immutable {
+  @include inline-block();
+  @include box-sizing('border-box');
+  @include box-shadow(inset 0 1px 2px 0px $input-shadow);
   width: 100%;
   height: #{$input-height/$base}em;
-  @include box-sizing('border-box');
   padding: #{4px/$base}em;
   margin: 0 0 #{9px/$base}em;
-  border: 1px solid #cccccc;
+  border: 1px solid $input-border;
   color: $input-color;
-  font-size: $base-font-size;
   line-height: #{$base-line-height/$base}em;
-  @include box-shadow(inset 0 1px 2px 0px $input-shadow);
-  &.append {
-    border-left: none;
-  }
-  &.prepend {
-    border-right: none;
-  }
+  &.append { border-left: none; }
+  &.prepend { border-right: none; }
 }
 
 fieldset {
@@ -161,9 +162,8 @@ input[type="checkbox"] {
 }
 
 select {
-  background-color: $gray-lightest;
-  border: $gray-light 1px solid;
   @include border-radius(0);
+  background-color: $input-bg;
   line-height: $input-height;
   height: $input-height;
 }
@@ -190,7 +190,7 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .input_container,
-.uneditable-input {
+.immutable {
   background-color: $input-bg;
   @include border-radius($input-border-radius);
   @include transition(border linear .2s, box-shadow linear .2s);
@@ -213,12 +213,11 @@ input[type="color"],
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
     @include box-shadow(inset 0 1px 2px 0px lighten($error-border,30%));
-
   }
 }
 
 // For text that needs to appear as an input but should not be an input
-.uneditable-input {
+.immutable {
   overflow: hidden; // prevent text from wrapping, but still cut it off like an input does
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -252,27 +251,18 @@ input[type="color"],
 
 .disabled, *[disabled] {
   @include opacity(0.65);
-  @include no-select();
-}
-
-// make the immutable fields align properly
-.immutable {
-  cursor: help;
-  font-weight: 700;
-  line-height: 21px;
-  padding-top: 4px;
-  @include box-sizing('border-box');
+  @include user-select(none);
 }
 
 .form-search,
-.form-inline, 
+.form-inline,
 .form-horizontal {
   input,
   textarea,
-  select, 
+  select,
   .help-inline,
-  .uneditable-input, 
-  .input-prepend, 
+  .immutable,
+  .input-prepend,
   .input-append {
     display: inline-block;
     /* IE7 inline-block hack */
@@ -294,7 +284,7 @@ input[type="color"],
     margin-bottom: 20px;
     .field-label {
       float: left;
-      padding-top: 4px;
+      padding-top: 5px;
       text-align: right;
       width: $form-horz-label-width;
     }

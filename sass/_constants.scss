@@ -194,7 +194,7 @@ $table-foot-bg:             $white;
 // COMMON
 $button-padding:         #{4px/$base}em #{20px/$base}em;
 $button-font-size:       14px;
-$button-height:          30px;
+$button-height:          31px;
 
 $button-inline-height:   26px;
 $button-inline-padding:  8px;
@@ -296,11 +296,11 @@ $input-height:          31px;
 
 $input-bg:              $white;
 $input-color:           $gray;
+$input-border:          $gray-lighter;
 $input-disabled-color:  $gray-light;
 $input-shadow:          rgba(0,0,0,0.1);
 
 $input-border-radius:   0px;
-$input-border:          $gray-dark;
 $input-focus-border:    $prime;
 $input-active-border:   $prime;
 
