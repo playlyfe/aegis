@@ -19,13 +19,23 @@ you'll need the `sass` gem installed along with the `compass` framework.
 Install these with:
 
     gem install sass
-    gem install compass
+    gem install compass --pre
 
-Then, tell sass to watch your `aegis/sass` folder:
+_note: install version 0.13 (alpha) or greater of compass, as compass 0.12 doesn't have
+some mixins being used here_
 
-    sass --compass --watch sass:<output_dir>
+Then, run:
 
-and hack away!
+    grunt
+
+which will watch changes to your scss files, and automatically compile a development
+version of aegis into the root folder.
+
+When you are done, run
+
+    grunt build
+
+to compile the production versions of aegis, and push.
 
 ## Authors
 
