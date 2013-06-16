@@ -461,21 +461,30 @@
 
 /* line 19, sass/_utilities.scss */
 .no-top {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 /* line 20, sass/_utilities.scss */
 .no-bot {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 /* line 21, sass/_utilities.scss */
-.no-space, .unstyled, .form-errors, .form-horizontal .form-errors, .field-errors, .nav, body {
-  margin: 0;
-  padding: 0;
+.no-margin, .no-space {
+  margin: 0 !important;
 }
 
-/* line 26, sass/_utilities.scss */
+/* line 22, sass/_utilities.scss */
+.no-padding, .no-space {
+  padding: 0 !important;
+}
+
+/* line 23, sass/_utilities.scss */
+.no-space {
+  /* use with care, !important declarative */
+}
+
+/* line 28, sass/_utilities.scss */
 .no-anchor {
   text-decoration: none !important;
   outline: none;
@@ -485,63 +494,65 @@
   text-decoration: none !important;
 }
 
-/* line 29, sass/_utilities.scss */
+/* line 31, sass/_utilities.scss */
 .left {
   float: left !important;
 }
 
-/* line 32, sass/_utilities.scss */
+/* line 34, sass/_utilities.scss */
 .right {
   float: right !important;
 }
 
-/* line 35, sass/_utilities.scss */
+/* line 37, sass/_utilities.scss */
 .static-pos {
   position: static !important;
 }
 
-/* line 38, sass/_utilities.scss */
+/* line 40, sass/_utilities.scss */
 .abs-pos {
   position: absolute !important;
 }
 
-/* line 41, sass/_utilities.scss */
+/* line 43, sass/_utilities.scss */
 .fix-pos {
   position: fixed !important;
 }
 
-/* line 44, sass/_utilities.scss */
+/* line 46, sass/_utilities.scss */
 .width-auto {
   width: auto !important;
 }
 
-/* line 47, sass/_utilities.scss */
+/* line 49, sass/_utilities.scss */
 .inline {
   display: inline;
 }
 
-/* line 50, sass/_utilities.scss */
+/* line 52, sass/_utilities.scss */
 .block {
   display: block;
 }
 
-/* line 54, sass/_utilities.scss */
+/* line 56, sass/_utilities.scss */
 .icon-group, .attr-group {
   margin: 0 0.5em;
 }
 
-/* line 58, sass/_utilities.scss */
+/* line 60, sass/_utilities.scss */
 .attr-group {
   cursor: help;
 }
 
-/* line 62, sass/_utilities.scss */
+/* line 64, sass/_utilities.scss */
 .fade {
   opacity: 0.2;
 }
 
 /* line 6, sass/_list.scss */
 .unstyled, .form-errors, .form-horizontal .form-errors, .field-errors {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -559,6 +570,8 @@
 /* line 6, sass/_navigation.scss */
 .nav {
   *zoom: 1;
+  margin: 0;
+  padding: 0;
 }
 /* line 7, sass/_mixins.scss */
 .nav:before, .nav:after {
@@ -702,7 +715,7 @@
 
 /* line 38, sass/_modal.scss */
 .modal {
-  position: absolute;
+  position: fixed;
   width: 500px;
   margin-left: -250px;
   top: 15%;
@@ -931,6 +944,8 @@ html, body {
 
 /* line 40, sass/_typography.scss */
 body {
+  margin: 0;
+  padding: 0;
   border: none;
   font-size: 13px;
   line-height: 21px;
@@ -1126,19 +1141,8 @@ code {
   display: inline;
   margin-right: 0.7em;
 }
-/* line 27, sass/_icons.scss */
-[class^="icon-"].no-space, [class^="icon-"].unstyled, [class^="icon-"].form-errors, .form-horizontal [class^="icon-"].form-errors, [class^="icon-"].field-errors, [class^="icon-"].nav, body[class^="icon-"],
-[class*=" icon-"].no-space,
-[class*=" icon-"].unstyled,
-[class*=" icon-"].form-errors,
-.form-horizontal [class*=" icon-"].form-errors,
-[class*=" icon-"].field-errors,
-[class*=" icon-"].nav,
-body[class*=" icon-"] {
-  margin: 0;
-}
 
-/* line 32, sass/_icons.scss */
+/* line 29, sass/_icons.scss */
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   text-decoration: inherit;
@@ -1146,7 +1150,7 @@ body[class*=" icon-"] {
   speak: none;
 }
 
-/* line 41, sass/_icons.scss */
+/* line 38, sass/_icons.scss */
 a [class^="icon-"],
 a [class*=" icon-"],
 a [class^="icon-"]:before,
@@ -1155,365 +1159,365 @@ a [class*=" icon-"]:before {
 }
 
 /* makes the font 33% larger relative to the icon container */
-/* line 46, sass/_icons.scss */
+/* line 43, sass/_icons.scss */
 .icon-big:before {
   vertical-align: -10%;
   font-size: 1.5em;
 }
 
-/* line 50, sass/_icons.scss */
+/* line 47, sass/_icons.scss */
 .icon-2x {
   font-size: 2em;
 }
 
-/* line 51, sass/_icons.scss */
+/* line 48, sass/_icons.scss */
 .icon-3x {
   font-size: 3em;
 }
 
-/* line 52, sass/_icons.scss */
+/* line 49, sass/_icons.scss */
 .icon-4x {
   font-size: 4em;
 }
 
-/* line 54, sass/_icons.scss */
+/* line 51, sass/_icons.scss */
 .icon-add:before {
   content: '\E001';
 }
 
-/* line 55, sass/_icons.scss */
+/* line 52, sass/_icons.scss */
 .icon-subtract:before {
   content: '\E002';
 }
 
-/* line 56, sass/_icons.scss */
+/* line 53, sass/_icons.scss */
 .icon-edit:before {
   content: '\E003';
 }
 
-/* line 57, sass/_icons.scss */
+/* line 54, sass/_icons.scss */
 .icon-erase:before {
   content: '\E004';
 }
 
-/* line 58, sass/_icons.scss */
+/* line 55, sass/_icons.scss */
 .icon-tick:before {
   content: '\E005';
 }
 
-/* line 59, sass/_icons.scss */
+/* line 56, sass/_icons.scss */
 .icon-cross:before {
   content: '\E006';
 }
 
-/* line 60, sass/_icons.scss */
+/* line 57, sass/_icons.scss */
 .icon-view:before {
   content: '\E007';
 }
 
-/* line 61, sass/_icons.scss */
+/* line 58, sass/_icons.scss */
 .icon-delete:before {
   content: '\E008';
 }
 
-/* line 62, sass/_icons.scss */
+/* line 59, sass/_icons.scss */
 .icon-settings:before {
   content: '\E009';
 }
 
-/* line 63, sass/_icons.scss */
+/* line 60, sass/_icons.scss */
 .icon-menu:before {
   content: '\E00A';
 }
 
-/* line 64, sass/_icons.scss */
+/* line 61, sass/_icons.scss */
 .icon-calendar:before {
   content: '\E00B';
 }
 
-/* line 65, sass/_icons.scss */
+/* line 62, sass/_icons.scss */
 .icon-reset:before {
   content: '\E00C';
 }
 
-/* line 66, sass/_icons.scss */
+/* line 63, sass/_icons.scss */
 .icon-dead-face:before {
   content: '\E00D';
 }
 
-/* line 67, sass/_icons.scss */
+/* line 64, sass/_icons.scss */
 .icon-sad-face:before {
   content: '\E00E';
 }
 
-/* line 68, sass/_icons.scss */
+/* line 65, sass/_icons.scss */
 .icon-happy-face:before {
   content: '\E00F';
 }
 
-/* line 69, sass/_icons.scss */
+/* line 66, sass/_icons.scss */
 .icon-home:before {
   content: '\E010';
 }
 
-/* line 70, sass/_icons.scss */
+/* line 67, sass/_icons.scss */
 .icon-user:before {
   content: '\E011';
 }
 
-/* line 71, sass/_icons.scss */
+/* line 68, sass/_icons.scss */
 .icon-square:before {
   content: '\E012';
 }
 
-/* line 72, sass/_icons.scss */
+/* line 69, sass/_icons.scss */
 .icon-circle:before {
   content: '\E013';
 }
 
-/* line 73, sass/_icons.scss */
+/* line 70, sass/_icons.scss */
 .icon-up:before {
   content: '\E014';
 }
 
-/* line 74, sass/_icons.scss */
+/* line 71, sass/_icons.scss */
 .icon-down:before {
   content: '\E015';
 }
 
-/* line 75, sass/_icons.scss */
+/* line 72, sass/_icons.scss */
 .icon-right:before {
   content: '\E016';
 }
 
-/* line 76, sass/_icons.scss */
+/* line 73, sass/_icons.scss */
 .icon-left:before {
   content: '\E017';
 }
 
-/* line 77, sass/_icons.scss */
+/* line 74, sass/_icons.scss */
 .icon-grid:before {
   content: '\E018';
 }
 
-/* line 78, sass/_icons.scss */
+/* line 75, sass/_icons.scss */
 .icon-details:before {
   content: '\E019';
 }
 
-/* line 79, sass/_icons.scss */
+/* line 76, sass/_icons.scss */
 .icon-search:before {
   content: '\E01A';
 }
 
-/* line 80, sass/_icons.scss */
+/* line 77, sass/_icons.scss */
 .icon-roundtick:before {
   content: '\E01B';
 }
 
-/* line 81, sass/_icons.scss */
+/* line 78, sass/_icons.scss */
 .icon-roundcross:before {
   content: '\E01C';
 }
 
-/* line 82, sass/_icons.scss */
+/* line 79, sass/_icons.scss */
 .icon-warning:before {
   content: '\E01D';
 }
 
-/* line 83, sass/_icons.scss */
+/* line 80, sass/_icons.scss */
 .icon-help:before {
   content: '\E01E';
 }
 
-/* line 84, sass/_icons.scss */
+/* line 81, sass/_icons.scss */
 .icon-star:before {
   content: '\E01F';
 }
 
-/* line 85, sass/_icons.scss */
+/* line 82, sass/_icons.scss */
 .icon-sandbox:before {
   content: '\E020';
 }
 
-/* line 86, sass/_icons.scss */
+/* line 83, sass/_icons.scss */
 .icon-simulate:before {
   content: '\E021';
 }
 
-/* line 87, sass/_icons.scss */
+/* line 84, sass/_icons.scss */
 .icon-design:before {
   content: '\E022';
 }
 
-/* line 88, sass/_icons.scss */
+/* line 85, sass/_icons.scss */
 .icon-gateway:before {
   content: '\E023';
 }
 
-/* line 89, sass/_icons.scss */
+/* line 86, sass/_icons.scss */
 .icon-gateway-inclusive:before {
   content: '\E024';
 }
 
-/* line 90, sass/_icons.scss */
+/* line 87, sass/_icons.scss */
 .icon-activity:before {
   content: '\E025';
 }
 
-/* line 91, sass/_icons.scss */
+/* line 88, sass/_icons.scss */
 .icon-lane:before {
   content: '\E026';
 }
 
-/* line 92, sass/_icons.scss */
+/* line 89, sass/_icons.scss */
 .icon-loop:before {
   content: '\E027';
 }
 
-/* line 93, sass/_icons.scss */
+/* line 90, sass/_icons.scss */
 .icon-right-half:before {
   content: '\E028';
 }
 
 /* no sooner than */
-/* line 94, sass/_icons.scss */
+/* line 91, sass/_icons.scss */
 .icon-left-half:before {
   content: '\E029';
 }
 
 /* no later than */
-/* line 95, sass/_icons.scss */
+/* line 92, sass/_icons.scss */
 .icon-clock:before {
   content: '\E02A';
 }
 
-/* line 96, sass/_icons.scss */
+/* line 93, sass/_icons.scss */
 .icon-token:before {
   content: '\E02B';
 }
 
-/* line 97, sass/_icons.scss */
+/* line 94, sass/_icons.scss */
 .icon-code:before {
   content: '\E02C';
 }
 
-/* line 98, sass/_icons.scss */
+/* line 95, sass/_icons.scss */
 .icon-mail:before {
   content: '\E02D';
 }
 
-/* line 99, sass/_icons.scss */
+/* line 96, sass/_icons.scss */
 .icon-web:before {
   content: '\E02E';
 }
 
-/* line 100, sass/_icons.scss */
+/* line 97, sass/_icons.scss */
 .icon-twitter:before {
   content: '\E02F';
 }
 
-/* line 101, sass/_icons.scss */
+/* line 98, sass/_icons.scss */
 .icon-builder:before {
   content: '\E030';
 }
 
-/* line 102, sass/_icons.scss */
+/* line 99, sass/_icons.scss */
 .icon-settings:before {
   content: '\E031';
 }
 
-/* line 103, sass/_icons.scss */
+/* line 100, sass/_icons.scss */
 .icon-mechanics:before {
   content: '\E032';
 }
 
-/* line 104, sass/_icons.scss */
+/* line 101, sass/_icons.scss */
 .icon-dev-tools:before {
   content: '\E033';
 }
 
-/* line 105, sass/_icons.scss */
+/* line 102, sass/_icons.scss */
 .icon-pl:before {
   content: '\E034';
 }
 
-/* line 106, sass/_icons.scss */
+/* line 103, sass/_icons.scss */
 .icon-playlyfe:before {
   content: '\E035';
 }
 
-/* line 107, sass/_icons.scss */
+/* line 104, sass/_icons.scss */
 .icon-fullscreen:before {
   content: '\E036';
 }
 
-/* line 108, sass/_icons.scss */
+/* line 105, sass/_icons.scss */
 .icon-restore:before {
   content: '\E037';
 }
 
-/* line 109, sass/_icons.scss */
+/* line 106, sass/_icons.scss */
 .icon-properties:before {
   content: '\E038';
 }
 
-/* line 110, sass/_icons.scss */
+/* line 107, sass/_icons.scss */
 .icon-stats:before {
   content: '\E039';
 }
 
-/* line 111, sass/_icons.scss */
+/* line 108, sass/_icons.scss */
 .icon-copy:before {
   content: '\E03A';
 }
 
-/* line 112, sass/_icons.scss */
+/* line 109, sass/_icons.scss */
 .icon-regen:before {
   content: '\E03B';
 }
 
-/* line 113, sass/_icons.scss */
+/* line 110, sass/_icons.scss */
 .icon-tag:before {
   content: '\E03C';
 }
 
-/* line 114, sass/_icons.scss */
+/* line 111, sass/_icons.scss */
 .icon-rank:before {
   content: '\E03D';
 }
 
-/* line 115, sass/_icons.scss */
+/* line 112, sass/_icons.scss */
 .icon-badge:before {
   content: '\E03E';
 }
 
-/* line 116, sass/_icons.scss */
+/* line 113, sass/_icons.scss */
 .icon-point:before {
   content: '\E03F';
 }
 
-/* line 117, sass/_icons.scss */
+/* line 114, sass/_icons.scss */
 .icon-team:before {
   content: '\E040';
 }
 
-/* line 118, sass/_icons.scss */
+/* line 115, sass/_icons.scss */
 .icon-target:before {
   content: '\E041';
 }
 
-/* line 119, sass/_icons.scss */
+/* line 116, sass/_icons.scss */
 .icon-roundplus:before {
   content: '\E042';
 }
 
-/* line 120, sass/_icons.scss */
+/* line 117, sass/_icons.scss */
 .icon-roundminus:before {
   content: '\E043';
 }
 
-/* line 121, sass/_icons.scss */
+/* line 118, sass/_icons.scss */
 .icon-disabled:before {
   content: '\E044';
 }
@@ -1629,7 +1633,7 @@ label.error {
   position: absolute;
   left: -14px;
   display: block;
-  content: "\e005";
+  content: "\e006";
 }
 
 /* line 99, sass/_forms.scss */
@@ -1649,7 +1653,7 @@ input[type="datetime"], input[type="datetime-local"], input[type="date"],
 input[type="month"], input[type="time"], input[type="week"],
 input[type="number"], input[type="email"], input[type="url"],
 input[type="search"], input[type="tel"], input[type="color"],
-.add-on, .immutable {
+.immutable {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -1676,7 +1680,7 @@ input[type="datetime"].append, input[type="datetime-local"].append, input[type="
 input[type="month"].append, input[type="time"].append, input[type="week"].append,
 input[type="number"].append, input[type="email"].append, input[type="url"].append,
 input[type="search"].append, input[type="tel"].append, input[type="color"].append,
-.add-on.append, .immutable.append {
+.immutable.append {
   border-left: none;
 }
 /* line 126, sass/_forms.scss */
@@ -1685,7 +1689,7 @@ input[type="datetime"].prepend, input[type="datetime-local"].prepend, input[type
 input[type="month"].prepend, input[type="time"].prepend, input[type="week"].prepend,
 input[type="number"].prepend, input[type="email"].prepend, input[type="url"].prepend,
 input[type="search"].prepend, input[type="tel"].prepend, input[type="color"].prepend,
-.add-on.prepend, .immutable.prepend {
+.immutable.prepend {
   border-right: none;
 }
 
@@ -1827,23 +1831,39 @@ input[type="color"].active_container,
   box-shadow: inset 0 1px 2px 0 #cff186;
 }
 /* line 211, sass/_forms.scss */
-textarea.error,
+textarea.error, textarea:focus:invalid,
 input[type="text"].error,
+input[type="text"]:focus:invalid,
 input[type="password"].error,
+input[type="password"]:focus:invalid,
 input[type="datetime"].error,
+input[type="datetime"]:focus:invalid,
 input[type="datetime-local"].error,
+input[type="datetime-local"]:focus:invalid,
 input[type="date"].error,
+input[type="date"]:focus:invalid,
 input[type="month"].error,
+input[type="month"]:focus:invalid,
 input[type="time"].error,
+input[type="time"]:focus:invalid,
 input[type="week"].error,
+input[type="week"]:focus:invalid,
 input[type="number"].error,
+input[type="number"]:focus:invalid,
 input[type="email"].error,
+input[type="email"]:focus:invalid,
 input[type="url"].error,
+input[type="url"]:focus:invalid,
 input[type="search"].error,
+input[type="search"]:focus:invalid,
 input[type="tel"].error,
+input[type="tel"]:focus:invalid,
 input[type="color"].error,
+input[type="color"]:focus:invalid,
 .input_container.error,
-.immutable.error {
+.input_container:focus:invalid,
+.immutable.error,
+.immutable:focus:invalid {
   border-color: #e20000;
   outline: 0;
   outline: thin dotted \9;
@@ -1858,51 +1878,69 @@ input[type="color"].error,
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  cursor: not-allowed;
+  cursor: text;
   color: #888888 !important;
   border-color: #d5d5d5;
-  -webkit-box-shadow: inset 0 1px 2px #d5d5d5;
-  -moz-box-shadow: inset 0 1px 2px #d5d5d5;
-  box-shadow: inset 0 1px 2px #d5d5d5;
+  -webkit-box-shadow: inset 0 1px 2px #eeeeee;
+  -moz-box-shadow: inset 0 1px 2px #eeeeee;
+  box-shadow: inset 0 1px 2px #eeeeee;
 }
 
-/* line 230, sass/_forms.scss */
-.prepend {
-  -moz-border-radius-topright: 0;
-  -webkit-border-top-right-radius: 0;
-  border-top-right-radius: 0;
-  -moz-border-radius-bottomright: 0;
-  -webkit-border-bottom-right-radius: 0;
-  border-bottom-right-radius: 0;
+/* line 233, sass/_forms.scss */
+input[class*="col-"], select[class*="col-"], textarea[class*="col-"],
+.snippet[class*="col-"], .immutable[class*="col-"] {
+  float: none;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-/* line 234, sass/_forms.scss */
+/* line 241, sass/_forms.scss */
+.append input[class*="col-"], .append .snippet[class*="col-"], .append .immutable[class*="col-"], .prepend input[class*="col-"], .prepend .snippet[class*="col-"], .prepend .immutable[class*="col-"] {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 246, sass/_forms.scss */
 .append {
-  -moz-border-radius-topleft: 0;
-  -webkit-border-top-left-radius: 0;
-  border-top-left-radius: 0;
-  -moz-border-radius-bottomleft: 0;
-  -webkit-border-bottom-left-radius: 0;
-  border-bottom-left-radius: 0;
+  /* use .companion to extend append behaviour to other elements */
+}
+/* line 248, sass/_forms.scss */
+.append .add-on, .append .button, .append .companion {
+  margin-left: -1px;
 }
 
-/* line 239, sass/_forms.scss */
+/* line 253, sass/_forms.scss */
+.prepend .add-on, .prepend .button, .prepend .companion {
+  margin-right: -1px;
+}
+
+/* line 258, sass/_forms.scss */
 .add-on {
-  display: block;
-  background-color: #bbbbbb;
-  width: auto;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
-}
-/* line 244, sass/_forms.scss */
-.add-on.prepend {
-  text-align: right;
-}
-/* line 247, sass/_forms.scss */
-.add-on.append {
-  text-align: left;
+  text-align: center;
+  background-color: #dddddd;
+  line-height: 1.61538em;
+  height: 2.38462em;
+  width: auto;
+  min-width: 16px;
+  padding: 0.30769em;
+  border: 1px solid #bbbbbb;
 }
 
-/* line 252, sass/_forms.scss */
+/* line 272, sass/_forms.scss */
 .disabled, *[disabled] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
   opacity: 0.65;
@@ -1912,69 +1950,75 @@ input[type="color"].error,
   user-select: none;
 }
 
-/* line 266, sass/_forms.scss */
+/* line 286, sass/_forms.scss */
 .form-search input,
 .form-search textarea,
 .form-search select,
 .form-search .help-inline,
 .form-search .immutable,
-.form-search .input-prepend,
-.form-search .input-append,
+.form-search .prepend,
+.form-search .append,
 .form-inline input,
 .form-inline textarea,
 .form-inline select,
 .form-inline .help-inline,
 .form-inline .immutable,
-.form-inline .input-prepend,
-.form-inline .input-append,
+.form-inline .prepend,
+.form-inline .append,
 .form-horizontal input,
 .form-horizontal textarea,
 .form-horizontal select,
 .form-horizontal .help-inline,
 .form-horizontal .immutable,
-.form-horizontal .input-prepend,
-.form-horizontal .input-append {
+.form-horizontal .prepend,
+.form-horizontal .append {
+  display: -moz-inline-stack;
   display: inline-block;
-  /* IE7 inline-block hack */
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
   *display: inline;
-  *zoom: 1;
   margin-bottom: 0;
   vertical-align: middle;
 }
 
-/* line 277, sass/_forms.scss */
+/* line 294, sass/_forms.scss */
 .form-horizontal .form-errors, .form-horizontal .form-errors {
   margin-left: 155px;
 }
-/* line 283, sass/_forms.scss */
+/* line 300, sass/_forms.scss */
 .form-horizontal .form-row, .form-horizontal .form-errors, .form-horizontal .form-errors {
   margin-bottom: 20px;
 }
-/* line 285, sass/_forms.scss */
-.form-horizontal .form-row .field-label, .form-horizontal .form-errors .field-label, .form-horizontal .form-errors .field-label {
+/* line 302, sass/_forms.scss */
+.form-horizontal .form-row .field-label {
   float: left;
   padding-top: 5px;
   text-align: right;
   width: 135px;
 }
-/* line 292, sass/_forms.scss */
+/* line 309, sass/_forms.scss */
 .form-horizontal .field-wrapper, .form-horizontal .form-actions {
   *display: inline-block;
   *padding-left: 20px;
   margin-left: 155px;
   *margin-left: 0;
 }
-/* line 297, sass/_forms.scss */
+/* line 314, sass/_forms.scss */
 .form-horizontal .field-wrapper.pad, .form-horizontal .pad.form-actions {
   padding-top: 6px;
 }
-/* line 300, sass/_forms.scss */
+/* line 317, sass/_forms.scss */
 .form-horizontal .field-wrapper:first-child, .form-horizontal .form-actions:first-child {
   *padding-left: 155px;
 }
-/* line 303, sass/_forms.scss */
+/* line 320, sass/_forms.scss */
 .form-horizontal .field-wrapper .field-help, .form-horizontal .form-actions .field-help {
   top: 0;
+}
+/* line 324, sass/_forms.scss */
+.form-horizontal .append, .form-horizontal .prepend {
+  width: 100%;
 }
 
 /* line 1, sass/_tabs.scss */
@@ -2375,12 +2419,13 @@ input[type="color"].error,
   padding: 13px 0;
   border-top: 1px solid #80b314;
   background-color: white;
+  z-index: 700;
 }
-/* line 15, sass/_footer.scss */
+/* line 16, sass/_footer.scss */
 .footer .nav {
   text-align: center;
 }
-/* line 17, sass/_footer.scss */
+/* line 18, sass/_footer.scss */
 .footer .nav li {
   padding-left: 20px;
   padding-right: 20px;

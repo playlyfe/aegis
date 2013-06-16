@@ -40,7 +40,7 @@ html, body {
 body {
   // conditional style sheet for IE
   // font-size:100%;
-  @extend .no-space;
+  margin: 0; padding: 0;
   border: none;
   font-size: $base-font-size;
   line-height: $base-line-height;

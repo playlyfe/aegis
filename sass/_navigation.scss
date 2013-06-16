@@ -6,7 +6,7 @@
 .nav {
   @include clearfix();
   @extend .no-list;
-  @extend .no-space;
+  margin: 0; padding: 0;
   a {
     @include button-interaction();
     display: block;
