@@ -20,6 +20,8 @@ module.exports = (grunt) ->
         cwd: '.'
         src: 'aegis.css'
         dest: 'aegis.min.css'
+        options:
+          banner: "/* Aegis. Build #{new Date()} */"
 
     jade:
       docs:

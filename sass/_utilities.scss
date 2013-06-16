@@ -16,11 +16,13 @@
   display: block !important;
 }
 
-.no-top { margin-top: 0; }
-.no-bot { margin-bottom: 0 }
-.no-space {
-  margin: 0;
-  padding: 0;
+.no-top { margin-top: 0     !important; }
+.no-bot { margin-bottom: 0  !important; }
+.no-margin { margin: 0      !important; }
+.no-padding { padding: 0    !important; }
+.no-space { /* use with care, !important declarative */
+  @extend .no-margin;
+  @extend .no-padding;
 }
 
 .no-anchor {

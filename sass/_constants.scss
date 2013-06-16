@@ -325,9 +325,6 @@ $tag-hover-bg:          $prime-light;
 // MULTISELECT
 $multiselect-max-height: 200px;
 
-// OTHERS
-$addon-bg: $gray-lighter;
-
 // EXAMPLE BOX
 $example-text: "example";
 $example-bg: $accent;
@@ -337,6 +334,7 @@ $example-color: $white;
 
 // Z-INDICES
 $navbar-z:              1000;
+$footer-z:              700;
 $modal-mask-z:          900;
 $mask-z:                500;
 $dropdown-z:            400;

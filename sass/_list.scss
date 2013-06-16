@@ -4,7 +4,7 @@
 // 4.Jun.2013
 
 .unstyled {
-  @extend .no-space;
+  margin: 0; padding: 0;
   list-style: none;
 }
 .list-inline {
