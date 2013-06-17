@@ -1561,6 +1561,10 @@ textarea {
   margin-bottom: 5px;
   *zoom: 1;
 }
+/* line 43, sass/_forms.scss */
+.form-row .button, .form-errors .button, .form-horizontal .form-errors .button {
+  margin-bottom: 0.64286em;
+}
 /* line 7, sass/_mixins.scss */
 .form-row:before, .form-errors:before, .form-horizontal .form-errors:before, .form-row:after, .form-errors:after, .form-horizontal .form-errors:after {
   display: table;
@@ -1571,37 +1575,39 @@ textarea {
 .form-row:after, .form-errors:after, .form-horizontal .form-errors:after {
   clear: both;
 }
-/* line 40, sass/_forms.scss */
+/* line 47, sass/_forms.scss */
 .form-row .snippet, .form-errors .snippet, .form-horizontal .form-errors .snippet {
-  height: 31px;
-  line-height: 31px;
+  height: 2.38462em;
+  line-height: 2.38462em;
   padding-top: 0;
   padding-bottom: 0;
+  max-width: 100%;
+  margin: 0 0 0.64286em;
 }
 
-/* line 48, sass/_forms.scss */
+/* line 57, sass/_forms.scss */
 label {
   display: block;
   margin-bottom: 5px;
 }
-/* line 51, sass/_forms.scss */
+/* line 60, sass/_forms.scss */
 label.optional:after {
   content: '(optional)';
   margin-left: 3px;
   color: #259dff;
 }
-/* line 56, sass/_forms.scss */
+/* line 65, sass/_forms.scss */
 label.required:after {
   content: '*';
   margin-left: 3px;
   color: #259dff;
 }
-/* line 61, sass/_forms.scss */
+/* line 70, sass/_forms.scss */
 label.error {
   color: #e20000;
 }
 
-/* line 66, sass/_forms.scss */
+/* line 75, sass/_forms.scss */
 .form-errors, .form-horizontal .form-errors {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1612,22 +1618,22 @@ label.error {
   border: 1px solid #ffafaf;
 }
 
-/* line 76, sass/_forms.scss */
+/* line 85, sass/_forms.scss */
 .field-errors {
   margin-left: 15px;
 }
 
-/* line 81, sass/_forms.scss */
+/* line 90, sass/_forms.scss */
 .form-errors, .form-horizontal .form-errors, .field-errors {
   color: #e20000;
 }
-/* line 83, sass/_forms.scss */
+/* line 92, sass/_forms.scss */
 .form-errors li, .form-horizontal .form-errors li, .field-errors li {
   margin: 2px 4px;
   position: relative;
 }
 
-/* line 90, sass/_forms.scss */
+/* line 99, sass/_forms.scss */
 .field-errors li:before {
   font-family: "Lyfeicons";
   position: absolute;
@@ -1636,18 +1642,22 @@ label.error {
   content: "\e006";
 }
 
-/* line 99, sass/_forms.scss */
+/* line 108, sass/_forms.scss */
 .field-wrapper, .form-actions {
   position: relative;
   *display: block;
 }
 
-/* line 104, sass/_forms.scss */
+/* line 113, sass/_forms.scss */
 .form-actions {
   margin-top: 1em;
 }
+/* line 116, sass/_forms.scss */
+.form-actions .button {
+  margin-bottom: 0;
+}
 
-/* line 114, sass/_forms.scss */
+/* line 124, sass/_forms.scss */
 select, textarea, input[type="text"], input[type="password"],
 input[type="datetime"], input[type="datetime-local"], input[type="date"],
 input[type="month"], input[type="time"], input[type="week"],
@@ -1674,7 +1684,7 @@ input[type="search"], input[type="tel"], input[type="color"],
   color: #555555;
   line-height: 1.61538em;
 }
-/* line 125, sass/_forms.scss */
+/* line 135, sass/_forms.scss */
 select.append, textarea.append, input[type="text"].append, input[type="password"].append,
 input[type="datetime"].append, input[type="datetime-local"].append, input[type="date"].append,
 input[type="month"].append, input[type="time"].append, input[type="week"].append,
@@ -1683,7 +1693,7 @@ input[type="search"].append, input[type="tel"].append, input[type="color"].appen
 .immutable.append {
   border-left: none;
 }
-/* line 126, sass/_forms.scss */
+/* line 136, sass/_forms.scss */
 select.prepend, textarea.prepend, input[type="text"].prepend, input[type="password"].prepend,
 input[type="datetime"].prepend, input[type="datetime-local"].prepend, input[type="date"].prepend,
 input[type="month"].prepend, input[type="time"].prepend, input[type="week"].prepend,
@@ -1693,7 +1703,7 @@ input[type="search"].prepend, input[type="tel"].prepend, input[type="color"].pre
   border-right: none;
 }
 
-/* line 129, sass/_forms.scss */
+/* line 139, sass/_forms.scss */
 fieldset {
   padding: 0;
   margin: 0 0 21px;
@@ -1701,18 +1711,18 @@ fieldset {
   width: 100%;
 }
 
-/* line 136, sass/_forms.scss */
+/* line 146, sass/_forms.scss */
 .input_container {
   height: auto;
 }
 
-/* line 139, sass/_forms.scss */
+/* line 149, sass/_forms.scss */
 textarea {
   height: auto;
   resize: vertical;
 }
 
-/* line 146, sass/_forms.scss */
+/* line 156, sass/_forms.scss */
 input[type="radio"],
 input[type="checkbox"] {
   float: left;
@@ -1723,7 +1733,7 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-/* line 160, sass/_forms.scss */
+/* line 170, sass/_forms.scss */
 input[type="file"],
 input[type="image"],
 input[type="submit"],
@@ -1734,7 +1744,7 @@ input[type="checkbox"] {
   width: auto;
 }
 
-/* line 164, sass/_forms.scss */
+/* line 174, sass/_forms.scss */
 select {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1744,13 +1754,13 @@ select {
   height: 31px;
 }
 
-/* line 172, sass/_forms.scss */
+/* line 182, sass/_forms.scss */
 select[multiple],
 select[size] {
   height: auto;
 }
 
-/* line 193, sass/_forms.scss */
+/* line 203, sass/_forms.scss */
 textarea,
 input[type="text"],
 input[type="password"],
@@ -1778,7 +1788,7 @@ input[type="color"],
   -o-transition: border linear 0.2s, box-shadow linear 0.2s;
   transition: border linear 0.2s, box-shadow linear 0.2s;
 }
-/* line 199, sass/_forms.scss */
+/* line 209, sass/_forms.scss */
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -1804,7 +1814,7 @@ input[type="color"]:focus,
   -moz-box-shadow: inset 0 1px 2px 0px #cff186;
   box-shadow: inset 0 1px 2px 0px #cff186;
 }
-/* line 205, sass/_forms.scss */
+/* line 215, sass/_forms.scss */
 textarea.active_container,
 input[type="text"].active_container,
 input[type="password"].active_container,
@@ -1830,40 +1840,24 @@ input[type="color"].active_container,
   -moz-box-shadow: inset 0 1px 2px 0 #cff186;
   box-shadow: inset 0 1px 2px 0 #cff186;
 }
-/* line 211, sass/_forms.scss */
-textarea.error, textarea:focus:invalid,
+/* line 221, sass/_forms.scss */
+textarea.error,
 input[type="text"].error,
-input[type="text"]:focus:invalid,
 input[type="password"].error,
-input[type="password"]:focus:invalid,
 input[type="datetime"].error,
-input[type="datetime"]:focus:invalid,
 input[type="datetime-local"].error,
-input[type="datetime-local"]:focus:invalid,
 input[type="date"].error,
-input[type="date"]:focus:invalid,
 input[type="month"].error,
-input[type="month"]:focus:invalid,
 input[type="time"].error,
-input[type="time"]:focus:invalid,
 input[type="week"].error,
-input[type="week"]:focus:invalid,
 input[type="number"].error,
-input[type="number"]:focus:invalid,
 input[type="email"].error,
-input[type="email"]:focus:invalid,
 input[type="url"].error,
-input[type="url"]:focus:invalid,
 input[type="search"].error,
-input[type="search"]:focus:invalid,
 input[type="tel"].error,
-input[type="tel"]:focus:invalid,
 input[type="color"].error,
-input[type="color"]:focus:invalid,
 .input_container.error,
-.input_container:focus:invalid,
-.immutable.error,
-.immutable:focus:invalid {
+.immutable.error {
   border-color: #e20000;
   outline: 0;
   outline: thin dotted \9;
@@ -1873,20 +1867,19 @@ input[type="color"]:focus:invalid,
   box-shadow: inset 0 1px 2px 0px #ff7c7c;
 }
 
-/* line 220, sass/_forms.scss */
+/* line 230, sass/_forms.scss */
 .immutable {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   cursor: text;
-  color: #888888 !important;
   border-color: #d5d5d5;
   -webkit-box-shadow: inset 0 1px 2px #eeeeee;
   -moz-box-shadow: inset 0 1px 2px #eeeeee;
   box-shadow: inset 0 1px 2px #eeeeee;
 }
 
-/* line 233, sass/_forms.scss */
+/* line 242, sass/_forms.scss */
 input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[class*="col-"],
 .snippet[class*="col-"], .immutable[class*="col-"] {
   float: none;
@@ -1894,7 +1887,7 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   margin-right: 0;
 }
 
-/* line 241, sass/_forms.scss */
+/* line 250, sass/_forms.scss */
 .append input[class*="col-"], .append .snippet[class*="col-"], .append .immutable[class*="col-"], .prepend input[class*="col-"], .prepend .snippet[class*="col-"], .prepend .immutable[class*="col-"] {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1904,21 +1897,21 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   *display: inline;
 }
 
-/* line 246, sass/_forms.scss */
+/* line 255, sass/_forms.scss */
 .append {
   /* use .companion to extend append behaviour to other elements */
 }
-/* line 248, sass/_forms.scss */
+/* line 257, sass/_forms.scss */
 .append .add-on, .append .button, .append .companion {
   margin-left: -1px;
 }
 
-/* line 253, sass/_forms.scss */
+/* line 262, sass/_forms.scss */
 .prepend .add-on, .prepend .button, .prepend .companion {
   margin-right: -1px;
 }
 
-/* line 258, sass/_forms.scss */
+/* line 267, sass/_forms.scss */
 .add-on {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1940,7 +1933,7 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   border: 1px solid #bbbbbb;
 }
 
-/* line 272, sass/_forms.scss */
+/* line 281, sass/_forms.scss */
 .disabled, *[disabled] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
   opacity: 0.65;
@@ -1950,7 +1943,7 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   user-select: none;
 }
 
-/* line 286, sass/_forms.scss */
+/* line 295, sass/_forms.scss */
 .form-search input,
 .form-search textarea,
 .form-search select,
@@ -1982,41 +1975,41 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   vertical-align: middle;
 }
 
-/* line 294, sass/_forms.scss */
+/* line 303, sass/_forms.scss */
 .form-horizontal .form-errors, .form-horizontal .form-errors {
   margin-left: 155px;
 }
-/* line 300, sass/_forms.scss */
+/* line 309, sass/_forms.scss */
 .form-horizontal .form-row, .form-horizontal .form-errors, .form-horizontal .form-errors {
   margin-bottom: 20px;
 }
-/* line 302, sass/_forms.scss */
+/* line 311, sass/_forms.scss */
 .form-horizontal .form-row .field-label {
   float: left;
   padding-top: 5px;
   text-align: right;
   width: 135px;
 }
-/* line 309, sass/_forms.scss */
+/* line 318, sass/_forms.scss */
 .form-horizontal .field-wrapper, .form-horizontal .form-actions {
   *display: inline-block;
   *padding-left: 20px;
   margin-left: 155px;
   *margin-left: 0;
 }
-/* line 314, sass/_forms.scss */
+/* line 323, sass/_forms.scss */
 .form-horizontal .field-wrapper.pad, .form-horizontal .pad.form-actions {
   padding-top: 6px;
 }
-/* line 317, sass/_forms.scss */
+/* line 326, sass/_forms.scss */
 .form-horizontal .field-wrapper:first-child, .form-horizontal .form-actions:first-child {
   *padding-left: 155px;
 }
-/* line 320, sass/_forms.scss */
+/* line 329, sass/_forms.scss */
 .form-horizontal .field-wrapper .field-help, .form-horizontal .form-actions .field-help {
   top: 0;
 }
-/* line 324, sass/_forms.scss */
+/* line 333, sass/_forms.scss */
 .form-horizontal .append, .form-horizontal .prepend {
   width: 100%;
 }
@@ -2259,6 +2252,7 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   border-collapse: collapse;
   margin: 2em 0;
   width: 100%;
+  font-size: 13px;
   /* cell sizes for table cells */
   /*
    * constrain the width of long values
@@ -2273,137 +2267,137 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   /* without borders */
   /* the full width tables */
 }
-/* line 13, sass/_tables.scss */
+/* line 14, sass/_tables.scss */
 .table .cell-1 {
   width: 10%;
 }
-/* line 13, sass/_tables.scss */
+/* line 14, sass/_tables.scss */
 .table .cell-2 {
   width: 20%;
 }
-/* line 13, sass/_tables.scss */
+/* line 14, sass/_tables.scss */
 .table .cell-3 {
   width: 30%;
 }
-/* line 13, sass/_tables.scss */
+/* line 14, sass/_tables.scss */
 .table .cell-4 {
   width: 40%;
 }
-/* line 13, sass/_tables.scss */
+/* line 14, sass/_tables.scss */
 .table .cell-5 {
   width: 50%;
 }
-/* line 13, sass/_tables.scss */
+/* line 14, sass/_tables.scss */
 .table .cell-6 {
   width: 60%;
 }
-/* line 13, sass/_tables.scss */
+/* line 14, sass/_tables.scss */
 .table .cell-7 {
   width: 70%;
 }
-/* line 13, sass/_tables.scss */
+/* line 14, sass/_tables.scss */
 .table .cell-8 {
   width: 80%;
 }
-/* line 13, sass/_tables.scss */
+/* line 14, sass/_tables.scss */
 .table .cell-9 {
   width: 90%;
 }
-/* line 13, sass/_tables.scss */
+/* line 14, sass/_tables.scss */
 .table .cell-10 {
   width: 100%;
 }
-/* line 16, sass/_tables.scss */
+/* line 17, sass/_tables.scss */
 .table thead {
   background-color: white;
 }
-/* line 19, sass/_tables.scss */
+/* line 20, sass/_tables.scss */
 .table th {
   color: #888888;
   font-size: 14px;
-  border: 1px solid #bbbbbb;
+  border: 1px solid #dddddd;
   padding: 6px 8px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-align: left;
 }
-/* line 27, sass/_tables.scss */
+/* line 28, sass/_tables.scss */
 .table tbody {
   background-color: white;
 }
-/* line 30, sass/_tables.scss */
+/* line 31, sass/_tables.scss */
 .table td {
   vertical-align: top;
   padding: 4px 8px;
-  border: 1px solid #bbbbbb;
+  border: 1px solid #dddddd;
 }
-/* line 40, sass/_tables.scss */
+/* line 41, sass/_tables.scss */
 .table .constraint {
   max-width: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-/* line 46, sass/_tables.scss */
+/* line 47, sass/_tables.scss */
 .table .no-list > li, .table .nav > li {
   padding-bottom: 0em;
 }
-/* line 49, sass/_tables.scss */
+/* line 50, sass/_tables.scss */
 .table tfoot {
   background-color: white;
 }
-/* line 51, sass/_tables.scss */
+/* line 52, sass/_tables.scss */
 .table tfoot td {
   text-align: center;
   padding: 1.15385 0;
 }
-/* line 57, sass/_tables.scss */
+/* line 58, sass/_tables.scss */
 .table.condensed th, .table.condensed td {
   padding: 2px 4px;
 }
-/* line 63, sass/_tables.scss */
+/* line 64, sass/_tables.scss */
 .table.expanded th, .table.expanded td {
   padding: 10.5px 21px;
 }
-/* line 70, sass/_tables.scss */
+/* line 71, sass/_tables.scss */
 .table.listing > thead > tr > th {
   border: none;
   font-size: 16px;
 }
-/* line 74, sass/_tables.scss */
-.table.listing > tbody > tr {
-  border-bottom: 1px solid #bbbbbb;
-}
 /* line 75, sass/_tables.scss */
+.table.listing > tbody > tr {
+  border-bottom: 1px solid #dddddd;
+}
+/* line 76, sass/_tables.scss */
 .table.listing > tbody > tr > td {
   border: none;
 }
-/* line 81, sass/_tables.scss */
+/* line 82, sass/_tables.scss */
 .table.striped tr:nth-child(2n) {
   background-color: #eeeeee;
 }
-/* line 87, sass/_tables.scss */
+/* line 88, sass/_tables.scss */
 .table.highlight > tbody > tr:hover {
   background-color: #f1f9ff;
   color: #004d8b;
   border-bottom: 1px solid #259dff;
 }
-/* line 95, sass/_tables.scss */
+/* line 96, sass/_tables.scss */
 .table.borderless th {
   font-size: 1.23077em;
 }
-/* line 98, sass/_tables.scss */
+/* line 99, sass/_tables.scss */
 .table.borderless td, .table.borderless th {
   border: none;
 }
-/* line 103, sass/_tables.scss */
+/* line 104, sass/_tables.scss */
 .table.fixed {
   table-layout: fixed;
   width: 100%;
   min-width: 670px;
 }
-/* line 108, sass/_tables.scss */
+/* line 109, sass/_tables.scss */
 .table.shrunk {
   width: auto;
 }
