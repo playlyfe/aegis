@@ -208,7 +208,7 @@ input[type="color"],
     outline: thin dotted \9; /* IE6-9 */
     @include box-shadow(inset 0 1px 2px 0 lighten($input-active-border, 30%));
   }
-  &.error, &:focus:invalid {
+  &.error {
     border-color: $error-border;
     outline: 0;
     outline: thin dotted \9; /* IE6-9 */
@@ -228,7 +228,7 @@ input[type="color"],
 }
 
 // Grid style input sizes
-input, select, textarea,
+input, select, textarea, label,
 .snippet, .immutable {
   &[class*="col-"] {
     float: none;

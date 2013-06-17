@@ -1887,7 +1887,7 @@ input[type="color"]:focus:invalid,
 }
 
 /* line 233, sass/_forms.scss */
-input[class*="col-"], select[class*="col-"], textarea[class*="col-"],
+input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[class*="col-"],
 .snippet[class*="col-"], .immutable[class*="col-"] {
   float: none;
   margin-left: 0;
