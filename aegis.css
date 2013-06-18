@@ -461,22 +461,22 @@
 
 /* line 19, sass/_utilities.scss */
 .no-top {
-  margin-top: 0     !important;
+  margin-top: 0 !important;
 }
 
 /* line 20, sass/_utilities.scss */
 .no-bot {
-  margin-bottom: 0  !important;
+  margin-bottom: 0 !important;
 }
 
 /* line 21, sass/_utilities.scss */
 .no-margin, .no-space {
-  margin: 0      !important;
+  margin: 0 !important;
 }
 
 /* line 22, sass/_utilities.scss */
 .no-padding, .no-space {
-  padding: 0    !important;
+  padding: 0 !important;
 }
 
 /* line 23, sass/_utilities.scss */
@@ -550,7 +550,7 @@
 }
 
 /* line 6, sass/_list.scss */
-.unstyled, .form-errors, .field-errors {
+.list-unstyled, .nav, .form-errors, .form-horizontal .form-errors, .field-errors {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1560,26 +1560,26 @@ textarea {
 }
 
 /* line 37, sass/_forms.scss */
-.form-row, .form-errors {
+.form-row, .form-errors, .form-horizontal .form-errors {
   margin-bottom: 5px;
   *zoom: 1;
 }
 /* line 43, sass/_forms.scss */
-.form-row .button, .form-errors .button {
+.form-row .button, .form-errors .button, .form-horizontal .form-errors .button {
   margin-bottom: 0.64286em;
 }
 /* line 7, sass/_mixins.scss */
-.form-row:before, .form-errors:before, .form-row:after, .form-errors:after {
+.form-row:before, .form-errors:before, .form-horizontal .form-errors:before, .form-row:after, .form-errors:after, .form-horizontal .form-errors:after {
   display: table;
   line-height: 0;
   content: "";
 }
 /* line 12, sass/_mixins.scss */
-.form-row:after, .form-errors:after {
+.form-row:after, .form-errors:after, .form-horizontal .form-errors:after {
   clear: both;
 }
 /* line 47, sass/_forms.scss */
-.form-row .snippet, .form-errors .snippet {
+.form-row .snippet, .form-errors .snippet, .form-horizontal .form-errors .snippet {
   height: 2.38462em;
   line-height: 2.38462em;
   padding-top: 0;
@@ -1979,15 +1979,15 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
 }
 
 /* line 303, sass/_forms.scss */
-.form-horizontal .form-errors {
+.form-horizontal .form-errors, .form-horizontal .form-errors {
   margin-left: 155px;
 }
 /* line 309, sass/_forms.scss */
-.form-horizontal .form-row, .form-horizontal .form-errors {
+.form-horizontal .form-row, .form-horizontal .form-errors, .form-horizontal .form-errors {
   margin-bottom: 20px;
 }
 /* line 311, sass/_forms.scss */
-.form-horizontal .form-row .field-label, .form-horizontal .form-errors .field-label {
+.form-horizontal .form-row .field-label {
   float: left;
   padding-top: 5px;
   text-align: right;
@@ -2111,13 +2111,18 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0.30769em 1.53846em;
-  margin: 0 10px 0 0;
+  -webkit-transition: background 0.2s ease, color 0.1s ease, border 0.6s ease;
+  -webkit-transition-delay: 0.1s, 0.1s, 0.1s;
+  -moz-transition: background 0.2s ease 0.1s, color 0.1s ease 0.1s, border 0.6s ease 0.1s;
+  -o-transition: background 0.2s ease 0.1s, color 0.1s ease 0.1s, border 0.6s ease 0.1s;
+  transition: background 0.2s ease 0.1s, color 0.1s ease 0.1s, border 0.6s ease 0.1s;
   font-size: 14px;
   line-height: 21px;
   *line-height: 21px;
   height: 31px;
   text-align: center;
+  padding: 0.30769em 1.53846em;
+  margin: 0 10px 0 0;
   border-width: 1px;
   border-style: solid;
   color: #555555;
@@ -2129,22 +2134,22 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
 .button:hover {
   text-decoration: none !important;
 }
-/* line 29, sass/_buttons.scss */
+/* line 34, sass/_buttons.scss */
 .button [class^="icon-"] {
   margin-left: -0.2em;
 }
 
-/* line 34, sass/_buttons.scss */
+/* line 39, sass/_buttons.scss */
 .button.icon {
   /* smallest, icon-holder should be square */
   padding: 4px 7px;
   min-width: 31px;
 }
-/* line 37, sass/_buttons.scss */
+/* line 42, sass/_buttons.scss */
 .button.icon [class^="icon-"] {
   margin: 0;
 }
-/* line 39, sass/_buttons.scss */
+/* line 44, sass/_buttons.scss */
 .button.inline {
   /* medium, inline */
   margin: 0 5px;
@@ -2152,7 +2157,7 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   line-height: 26px;
   padding: 0 8px;
 }
-/* line 45, sass/_buttons.scss */
+/* line 50, sass/_buttons.scss */
 .button.titan {
   /* gigantic, block */
   font-size: 21px;
@@ -2160,7 +2165,7 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   line-height: 54px;
   padding: 0 27px;
 }
-/* line 51, sass/_buttons.scss */
+/* line 56, sass/_buttons.scss */
 .button.round {
   /* round buttons */
   width: 8em;
@@ -2171,79 +2176,74 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   line-height: 1.5em;
   font-size: 1.5em;
 }
-/* line 61, sass/_buttons.scss */
+/* line 66, sass/_buttons.scss */
 .button.important {
   color: white;
   background-color: #8fc717;
   border-color: #6e9912;
 }
-/* line 67, sass/_buttons.scss */
+/* line 72, sass/_buttons.scss */
 .button.important:hover {
   color: white;
   background-color: #6e9912;
   border-color: #4d6c0c;
 }
-/* line 75, sass/_buttons.scss */
+/* line 80, sass/_buttons.scss */
 .button.hazard {
   color: white;
   background-color: #e20000;
   border-color: #af0000;
 }
-/* line 81, sass/_buttons.scss */
+/* line 86, sass/_buttons.scss */
 .button.hazard:hover {
   color: white;
   background-color: #af0000;
   border-color: #7c0000;
 }
-/* line 89, sass/_buttons.scss */
+/* line 94, sass/_buttons.scss */
 .button.accent {
   color: white;
   background-color: #259dff;
   border-color: #0085f1;
 }
-/* line 95, sass/_buttons.scss */
+/* line 100, sass/_buttons.scss */
 .button.accent:hover {
   color: white;
   background-color: #0085f1;
   border-color: #0069be;
 }
-/* line 104, sass/_buttons.scss */
+/* line 109, sass/_buttons.scss */
 .button.disabled[class~="button"], .button.disabled[class~="button"]:hover, .button[disabled][class~="button"], .button[disabled][class~="button"]:hover {
   cursor: default;
   color: #555555;
   background-color: white;
   border-color: #d4d4d4;
 }
-/* line 114, sass/_buttons.scss */
+/* line 119, sass/_buttons.scss */
 .button:hover {
   text-decoration: none;
   color: #222222;
   background-color: #dddddd;
-  -webkit-transition: background 0.2s ease, color 0.1s ease, border 0.6s ease;
-  -webkit-transition-delay: 0.1s, 0.1s, 0.1s;
-  -moz-transition: background 0.2s ease 0.1s, color 0.1s ease 0.1s, border 0.6s ease 0.1s;
-  -o-transition: background 0.2s ease 0.1s, color 0.1s ease 0.1s, border 0.6s ease 0.1s;
-  transition: background 0.2s ease 0.1s, color 0.1s ease 0.1s, border 0.6s ease 0.1s;
 }
-/* line 127, sass/_buttons.scss */
+/* line 126, sass/_buttons.scss */
 .button:hover.primary {
   color: white;
   background-color: #8fc717;
   border-color: #6e9912;
 }
-/* line 134, sass/_buttons.scss */
+/* line 133, sass/_buttons.scss */
 .button:hover.info {
   color: white;
   background-color: #259dff;
   border-color: #0085f1;
 }
-/* line 141, sass/_buttons.scss */
+/* line 140, sass/_buttons.scss */
 .button:hover.alert {
   color: white;
   background-color: #e20000;
   border-color: #af0000;
 }
-/* line 149, sass/_buttons.scss */
+/* line 148, sass/_buttons.scss */
 .button:focus {
   outline: thin dotted #80b314;
   outline: 5px auto -webkit-focus-ring-color;
@@ -2343,7 +2343,7 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   overflow: hidden;
 }
 /* line 47, sass/_tables.scss */
-.table .no-list > li, .table .nav > li {
+.table .list-unstyled > li, .table .nav > li, .table .form-errors > li, .table .form-horizontal .form-errors > li, .form-horizontal .table .form-errors > li, .table .field-errors > li {
   padding-bottom: 0em;
 }
 /* line 50, sass/_tables.scss */
@@ -2460,11 +2460,14 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
 }
 
 /* line 39, sass/_tidbits.scss */
-.info-tag {
-  padding: 0.2em 0.4em;
-  background-color: #f1f9ff;
-  color: #0085f1;
-  border: 1px solid #259dff;
+.tag {
+  position: relative;
+  font-size: 12px;
+  color: white;
+  background-color: #71b1e6;
+  border: 1px solid #308eda;
+  padding: 0.33em 0.42em;
+  margin: 0.1em 0.7em 0.2em 0;
   -webkit-touch-callout: none;
   -moz-user-select: -moz-none;
   -webkit-user-select: none;
@@ -2475,61 +2478,32 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   cursor: pointer;
 }
 /* line 21, sass/_mixins.scss */
-.info-tag:hover {
+.tag:hover {
   text-decoration: none !important;
 }
-/* line 46, sass/_tidbits.scss */
-.info-tag:hover {
-  background-color: #a5d6ff;
-  color: #004d8b;
-  -webkit-transition: all 0.2s ease;
-  -webkit-transition-delay: 0.1s;
-  -moz-transition: all 0.2s ease 0.1s;
-  -o-transition: all 0.2s ease 0.1s;
-  transition: all 0.2s ease 0.1s;
-}
-/* line 51, sass/_tidbits.scss */
-.info-tag.alert {
-  color: #af0000;
-  background-color: #ff9696;
-  border: 1px solid #ff1616;
-}
-/* line 55, sass/_tidbits.scss */
-.info-tag.alert:hover {
-  color: #620000;
-  background-color: #ff4949;
-}
-/* line 60, sass/_tidbits.scss */
-.info-tag.inactive {
-  color: #888888;
-  background-color: #eeeeee;
-  border: 1px solid #aeaeae;
-}
-/* line 64, sass/_tidbits.scss */
-.info-tag.inactive:hover {
-  color: #6f6f6f;
-  background-color: #d4d4d4;
-  border-color: #959595;
+/* line 48, sass/_tidbits.scss */
+.tag:hover {
+  background-color: #2481cd;
 }
 
-/* line 73, sass/_tidbits.scss */
+/* line 55, sass/_tidbits.scss */
 hr.dotted {
   border: 0;
   margin: 5px auto;
   height: 1px;
   border-bottom: 2px dotted #eeeeee;
 }
-/* line 78, sass/_tidbits.scss */
+/* line 60, sass/_tidbits.scss */
 hr.dotted.fat {
   margin: 20px auto;
   border-width: 5px;
 }
-/* line 82, sass/_tidbits.scss */
+/* line 64, sass/_tidbits.scss */
 hr.dotted.dark {
   border-color: #333333;
 }
 
-/* line 91, sass/_tidbits.scss */
+/* line 73, sass/_tidbits.scss */
 .snippet {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2547,7 +2521,7 @@ hr.dotted.dark {
   text-overflow: ellipsis;
   font-weight: 700;
 }
-/* line 100, sass/_tidbits.scss */
+/* line 82, sass/_tidbits.scss */
 .snippet:hover {
   background-color: #8fc717;
   color: white;
@@ -2558,7 +2532,7 @@ hr.dotted.dark {
   transition: all 0.4s ease 0.1s;
 }
 
-/* line 108, sass/_tidbits.scss */
+/* line 90, sass/_tidbits.scss */
 .example {
   background-color: #fefefc;
   margin: 1em 0;
@@ -2569,7 +2543,7 @@ hr.dotted.dark {
   box-shadow: inset 0px -1px 5px 0px #f1f9ff;
   overflow: hidden;
 }
-/* line 115, sass/_tidbits.scss */
+/* line 97, sass/_tidbits.scss */
 .example:after {
   display: block;
   padding: 2px 5px;
