@@ -36,38 +36,20 @@
 // This partial gives you some extra elements
 // for your page. See the demo page for examples.
 //
-.info-tag {
-  padding: 0.2em 0.4em;
-  background-color: $infoTag-bg;
-  color: $infoTag-color;
-  border:1px solid lighten($infoTag-color,10%);
+.tag {
+  position: relative;
+  font-size: 12px;
+  color: $tag-color;
+  background-color: $tag-bg;
+  border: 1px solid darken($tag-bg, 15%);
+  padding: 0.33em 0.42em;
+  margin: 0.1em 0.7em 0.2em 0;
   @include button-interaction();
-
   &:hover {
-    background-color: $infoTag-bg-hover;
-    color: $infoTag-color-hover;
-    @include transition(all 0.2s ease 0.1s);
-  }
-  &.alert {
-    color: $infoTag-alert-color;
-    background-color: $infoTag-alert-bg;
-    border: 1px solid lighten($infoTag-alert-color, 20%);
-    &:hover {
-      color: darken($infoTag-alert-color, 15%);
-      background-color: darken($infoTag-alert-bg, 15%);
-    }
-  }
-  &.inactive {
-    color: $infoTag-inactive-color;
-    background-color: $infoTag-inactive-bg;
-    border: 1px solid lighten($infoTag-inactive-color, 15%);
-    &:hover {
-      color: darken($infoTag-inactive-color, 10%);
-      background-color: darken($infoTag-inactive-bg, 10%);
-      border-color: lighten($infoTag-inactive-color, 5%);
-    }
+    background-color: darken($tag-bg, 20%);
   }
 }
+
 
 // Dividers
 hr.dotted {

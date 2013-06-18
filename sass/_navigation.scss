@@ -5,7 +5,7 @@
 
 .nav {
   @include clearfix();
-  @extend .no-list;
+  @extend .list-unstyled;
   margin: 0; padding: 0;
   a {
     @include button-interaction();
