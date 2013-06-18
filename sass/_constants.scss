@@ -231,6 +231,10 @@ $button-accent-color:   $white;
 //  ===========================
 //
 
+// TAGS
+$tag-bg:                  lighten(desaturate($accent-dark,30%),20%);
+$tag-color:               $white;
+
 // INFOTAG
 $infoTag-color:           $accent-dark;
 $infoTag-color-hover:     $accent-darker;
@@ -315,12 +319,6 @@ $field-help-border:     $accent-lighter;
 $legend-color:          $gray-light;
 $legend-border:         $gray-lighter;
 
-// TAGS
-$tag-color:             $input-color;
-$tag-bg:                $prime-lightest;
-$tag-border:            $prime-light;
-$tag-hover-color:       $white;
-$tag-hover-bg:          $prime-light;
 
 // MULTISELECT
 $multiselect-max-height: 200px;

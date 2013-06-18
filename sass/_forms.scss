@@ -75,7 +75,7 @@ label {
 .form-errors {
   @include box-sizing('border-box');
   @extend .form-row;
-  @extend .unstyled;
+  @extend .list-unstyled;
   background-color: $error-bg;
   margin: 5px 0;
   padding: $base-line-height/2;
@@ -83,7 +83,7 @@ label {
 }
 
 .field-errors {
-  @extend .unstyled;
+  @extend .list-unstyled;
   margin-left: 15px;
 }
 
