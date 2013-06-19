@@ -12,7 +12,7 @@
 //
 
 $golden:                1.618;
-$min-screen-width:      1024px;
+$min-screen-width:      1024px !default;
 
 //
 //  ===========================
@@ -22,13 +22,13 @@ $min-screen-width:      1024px;
 
 // Grays
 $black:                 #000 !default;
-$gray-darker:           #222;
-$gray-dark:             #333;
-$gray:                  #555;
-$gray-light:            #888;
-$gray-lighter:          #bbb;
-$gray-lightest:         #ddd;
-$gray-ultralight:       #eee;
+$gray-darker:           #222 !default;
+$gray-dark:             #333 !default;
+$gray:                  #555 !default;
+$gray-light:            #888 !default;
+$gray-lighter:          #bbb !default;
+$gray-lightest:         #ddd !default;
+$gray-ultralight:       #eee !default;
 $white:                 #fff !default;
 
 // Accents
@@ -83,12 +83,12 @@ $error-border:         $red;
 //  TYPOGRAPHY
 //  ===========================
 //
-$base:             13px;
-$base-font-family: 'Droid Sans', 'sans serif';
-$mono-font-family: 'Droid Mono', 'Consolas', 'Lucida Console', 'Ubuntu Mono', monospace;
-$base-font-size:   $base;
-$base-line-height: 21px;
-$base-color:       $gray;
+$base:             13px !default;
+$base-line-height: 21px !default;
+$base-color:       $gray !default;
+$base-font-family: 'Droid Sans', 'sans serif' !default;
+$mono-font-family: 'Droid Mono', 'Consolas', 'Lucida Console', 'Ubuntu Mono', monospace !default;
+$icon-font-path: 'fonts' !default;
 
 $h6-size: 1.08em;
 $h5-size: 1.15em;

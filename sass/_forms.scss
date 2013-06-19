@@ -18,7 +18,7 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: $base-line-height;
-  font-size: $base-font-size * 1.5;
+  font-size: $base * 1.5;
   line-height: $base-line-height * 2;
   color: $gray-dark;
   border: 0;
@@ -31,7 +31,7 @@ input,
 button,
 select,
 textarea {
-  font: normal #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font: normal #{$base}/#{$base-line-height} $base-font-family;
 }
 
 .form-row {

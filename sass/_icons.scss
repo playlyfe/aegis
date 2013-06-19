@@ -5,12 +5,12 @@
 
 @font-face {
   font-family: 'Lyfeicons';
-  src: url('fonts/lyfeicons-webfont.eot');
+  src: url('#{$icon-font-path}/lyfeicons-webfont.eot');
   src: local('Lyfeicons'), local('lyfeiconsregular'),
-        url('fonts/lyfeicons-webfont.eot?#iefix') format('embedded-opentype'),
-       url('fonts/lyfeicons-webfont.woff') format('woff'),
-       url('fonts/lyfeicons-webfont.ttf') format('truetype'),
-       url('fonts/lyfeicons-webfont.svg#lyfeiconsregular') format('svg');
+        url('#{$icon-font-path}/lyfeicons-webfont.eot?#iefix') format('embedded-opentype'),
+       url('#{$icon-font-path}/lyfeicons-webfont.woff') format('woff'),
+       url('#{$icon-font-path}/lyfeicons-webfont.ttf') format('truetype'),
+       url('#{$icon-font-path}/lyfeicons-webfont.svg#lyfeiconsregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
