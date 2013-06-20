@@ -56,7 +56,7 @@ a [class*=" icon-"]:before {
 .icon-cross:before        { content: '\E006'; }
 .icon-view:before         { content: '\E007'; }
 .icon-delete:before       { content: '\E008'; }
-.icon-settings:before     { content: '\E009'; }
+.icon-cog:before          { content: '\E009'; }
 .icon-menu:before         { content: '\E00A'; }
 .icon-calendar:before     { content: '\E00B'; }
 .icon-reset:before        { content: '\E00C'; }
@@ -82,9 +82,10 @@ a [class*=" icon-"]:before {
 .icon-sandbox:before      { content: '\E020'; }
 .icon-simulate:before     { content: '\E021'; }
 .icon-design:before       { content: '\E022'; }
-.icon-gateway:before      { content: '\E023'; }
-.icon-gateway-inclusive:before  { content: '\E024'; }
-.icon-activity:before     { content: '\E025'; }
+.icon-exclusive:before    { content: '\E023'; }
+.icon-parallel:before     { content: '\E024'; }
+.icon-gateway:before      { content: '\E024'; } /* general icon */
+.icon-play:before         { content: '\E025'; }
 .icon-lane:before         { content: '\E026'; }
 .icon-loop:before         { content: '\E027'; }
 .icon-right-half:before   { content: '\E028'; } /* no sooner than */
@@ -116,3 +117,11 @@ a [class*=" icon-"]:before {
 .icon-roundplus:before    { content: '\E042'; }
 .icon-roundminus:before   { content: '\E043'; }
 .icon-disabled:before     { content: '\E044'; }
+.icon-link:before         { content: '\E045'; }
+.icon-unlink:before       { content: '\E046'; }
+.icon-add-node:before     { content: '\E047'; }
+.icon-delete-node:before  { content: '\E048'; }
+.icon-task:before         { content: '\E049'; }
+.icon-expand:before       { content: '\E04A'; }
+.icon-contract:before     { content: '\E04B'; }
+.icon-process:before      { content: '\E04C'; }
