@@ -36,9 +36,9 @@ $green:                 #95d905 !default;
 $blue:                  #1b5ddf !default;
 $sky:                   #259dff !default;
 $navy:                  #023c7c !default;
-$purple:                #68008c !default;
+$purple:                #8100ad !default;
 $red:                   #e20000 !default;
-$orange:                #e35905 !default;
+$orange:                #e85e07 !default;
 $gold:                  #da9100 !default;
 $yellow:                #ffcc00 !default;
 
@@ -192,7 +192,7 @@ $table-foot-bg:             $white;
 //
 
 // COMMON
-$button-padding:         #{4px/$base}em #{20px/$base}em;
+$button-padding:         20px;
 $button-font-size:       14px;
 $button-height:          31px;
 

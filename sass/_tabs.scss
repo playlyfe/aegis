@@ -12,11 +12,11 @@
   height: $tabbar-height;
   line-height: $tabbar-height;
   vertical-align: baseline;
-  width: 160px;
   border-bottom: 1px solid $tabbar-trim;
   /* shift the items 1px to sit on tabbar's border */
   margin-bottom: -1px;
   a {
+    padding: 0 5px;
     color: $tabbar-color;
     @include transition(color 0.2s ease 0.1s);
   }

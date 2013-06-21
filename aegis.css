@@ -948,7 +948,7 @@ body {
   padding: 0;
   border: none;
   font-size: 13px;
-  line-height: 21px;
+  line-height: 24px;
   color: #555555;
 }
 
@@ -1004,12 +1004,12 @@ h1.splash, h2.splash, h3.splash, h4.splash, h5.splash, h6.splash {
 
 /* line 77, sass/_typography.scss */
 h1, h2 {
-  line-height: 42px;
+  line-height: 48px;
 }
 
 /* line 80, sass/_typography.scss */
 h4, h5, h6, p {
-  line-height: 21px;
+  line-height: 24px;
 }
 
 /* line 84, sass/_typography.scss */
@@ -1030,7 +1030,7 @@ h2 {
 
 /* line 95, sass/_typography.scss */
 h3 {
-  line-height: 33.978px;
+  line-height: 38.832px;
   font-size: 2.08em;
 }
 
@@ -1168,19 +1168,19 @@ a [class*=" icon-"]:before {
 /* line 47, sass/_icons.scss */
 .icon-2x {
   font-size: 2em;
-  line-height: 42px;
+  line-height: 48px;
 }
 
 /* line 48, sass/_icons.scss */
 .icon-3x {
   font-size: 3em;
-  line-height: 42px;
+  line-height: 48px;
 }
 
 /* line 49, sass/_icons.scss */
 .icon-4x {
   font-size: 4em;
-  line-height: 63px;
+  line-height: 72px;
 }
 
 /* line 51, sass/_icons.scss */
@@ -1527,7 +1527,7 @@ a [class*=" icon-"]:before {
 
 /* line 6, sass/_forms.scss */
 form {
-  margin: 0 0 21px;
+  margin: 0 0 24px;
 }
 
 /* line 10, sass/_forms.scss */
@@ -1542,9 +1542,9 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 21px;
+  margin-bottom: 24px;
   font-size: 19.5px;
-  line-height: 42px;
+  line-height: 48px;
   color: #333333;
   border: 0;
   border-bottom: 1px solid #dddddd;
@@ -1556,7 +1556,7 @@ input,
 button,
 select,
 textarea {
-  font: normal 13px/21px "Droid Sans", "sans serif";
+  font: normal 13px/24px "Droid Sans", "sans serif";
 }
 
 /* line 37, sass/_forms.scss */
@@ -1617,7 +1617,7 @@ label.error {
   box-sizing: border-box;
   background-color: #ffe2e2;
   margin: 5px 0;
-  padding: 10.5px;
+  padding: 12px;
   border: 1px solid #ffafaf;
 }
 
@@ -1685,7 +1685,7 @@ input[type="search"], input[type="tel"], input[type="color"],
   margin: 0 0 0.69231em;
   border: 1px solid #bbbbbb;
   color: #555555;
-  line-height: 1.61538em;
+  line-height: 1.84615em;
 }
 /* line 135, sass/_forms.scss */
 select.append, textarea.append, input[type="text"].append, input[type="password"].append,
@@ -1709,7 +1709,7 @@ input[type="search"].prepend, input[type="tel"].prepend, input[type="color"].pre
 /* line 139, sass/_forms.scss */
 fieldset {
   padding: 0;
-  margin: 0 0 21px;
+  margin: 0 0 24px;
   border: none;
   width: 100%;
 }
@@ -1732,7 +1732,7 @@ input[type="checkbox"] {
   margin: 4px 7px 0 0;
   *margin-top: 0;
   /* IE7 */
-  line-height: 21px;
+  line-height: 24px;
   cursor: pointer;
 }
 
@@ -1928,7 +1928,7 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
   text-align: center;
   background-color: #dddddd;
-  line-height: 1.61538em;
+  line-height: 1.84615em;
   height: 2.38462em;
   width: auto;
   min-width: 16px;
@@ -2040,13 +2040,13 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   height: 25px;
   line-height: 25px;
   vertical-align: baseline;
-  width: 160px;
   border-bottom: 1px solid #dddddd;
   /* shift the items 1px to sit on tabbar's border */
   margin-bottom: -1px;
 }
-/* line 19, sass/_tabs.scss */
+/* line 18, sass/_tabs.scss */
 .tab-item a {
+  padding: 0 5px;
   color: #333333;
   -webkit-transition: color 0.2s ease;
   -webkit-transition-delay: 0.1s;
@@ -2117,11 +2117,11 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   -o-transition: background 0.2s ease 0.1s, color 0.1s ease 0.1s, border 0.6s ease 0.1s;
   transition: background 0.2s ease 0.1s, color 0.1s ease 0.1s, border 0.6s ease 0.1s;
   font-size: 14px;
-  line-height: 21px;
-  *line-height: 21px;
+  line-height: 31px;
+  *line-height: 31px;
   height: 31px;
   text-align: center;
-  padding: 0.30769em 1.53846em;
+  padding: 0 1.53846em;
   margin: 0 10px 0 0;
   border-width: 1px;
   border-style: solid;
@@ -2142,7 +2142,7 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
 /* line 39, sass/_buttons.scss */
 .button.icon {
   /* smallest, icon-holder should be square */
-  padding: 4px 7px;
+  padding: 0 7px;
   min-width: 31px;
 }
 /* line 42, sass/_buttons.scss */
@@ -2361,7 +2361,7 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
 }
 /* line 64, sass/_tables.scss */
 .table.expanded th, .table.expanded td {
-  padding: 10.5px 21px;
+  padding: 12px 24px;
 }
 /* line 71, sass/_tables.scss */
 .table.listing > thead > tr > th {
@@ -2487,23 +2487,27 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
 }
 
 /* line 55, sass/_tidbits.scss */
-hr.dotted {
-  border: 0;
-  margin: 5px auto;
+hr {
   height: 1px;
-  border-bottom: 2px dotted #eeeeee;
+  margin: 5px auto;
+  border: none;
+  border-bottom: 2px solid #eeeeee;
 }
 /* line 60, sass/_tidbits.scss */
-hr.dotted.fat {
-  margin: 20px auto;
-  border-width: 5px;
+hr.dark {
+  border-bottom-color: #333333;
 }
-/* line 64, sass/_tidbits.scss */
-hr.dotted.dark {
-  border-color: #333333;
+/* line 61, sass/_tidbits.scss */
+hr.dotted {
+  border-bottom-style: dotted;
+}
+/* line 62, sass/_tidbits.scss */
+hr.fat {
+  margin: 20px auto;
+  border-bottom-width: 5px;
 }
 
-/* line 73, sass/_tidbits.scss */
+/* line 72, sass/_tidbits.scss */
 .snippet {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2521,7 +2525,7 @@ hr.dotted.dark {
   text-overflow: ellipsis;
   font-weight: 700;
 }
-/* line 82, sass/_tidbits.scss */
+/* line 81, sass/_tidbits.scss */
 .snippet:hover {
   background-color: #8fc717;
   color: white;
@@ -2532,7 +2536,7 @@ hr.dotted.dark {
   transition: all 0.4s ease 0.1s;
 }
 
-/* line 90, sass/_tidbits.scss */
+/* line 89, sass/_tidbits.scss */
 .example {
   background-color: #fefefc;
   margin: 1em 0;
@@ -2543,7 +2547,7 @@ hr.dotted.dark {
   box-shadow: inset 0px -1px 5px 0px #f1f9ff;
   overflow: hidden;
 }
-/* line 97, sass/_tidbits.scss */
+/* line 96, sass/_tidbits.scss */
 .example:after {
   display: block;
   padding: 2px 5px;

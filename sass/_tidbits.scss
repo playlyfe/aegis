@@ -52,17 +52,16 @@
 
 
 // Dividers
-hr.dotted {
-  border: 0;
-  margin: 5px auto;
+hr {
   height: 1px;
-  border-bottom: $divider-width dotted $divider-light-color;
+  margin: 5px auto;
+  border: none;
+  border-bottom: $divider-width solid $divider-light-color;
+  &.dark { border-bottom-color: $divider-dark-color; }
+  &.dotted { border-bottom-style: dotted; }
   &.fat {
     margin: 4*$divider-fat-width auto;
-    border-width: $divider-fat-width;
-  }
-  &.dark {
-    border-color: $divider-dark-color;
+    border-bottom-width: $divider-fat-width;
   }
 }
 
