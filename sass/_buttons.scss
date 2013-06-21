@@ -13,12 +13,12 @@
     border 0.6s ease 0.1s
   );
   font-size:    $button-font-size;
-  line-height:  $base-line-height;
-  *line-height: $base-line-height;
+  line-height:  $button-height;
+  *line-height: $button-height;
   height:       $button-height;
   text-align:   center;
 
-  padding: $button-padding;
+  padding: 0 #{$button-padding/$base}em;
   margin: 0 10px 0 0;
   border: {
     width: 1px;
@@ -37,7 +37,7 @@
 
 .button { // Button sizes & colours
   &.icon { /* smallest, icon-holder should be square */
-    padding: 4px 7px;
+    padding: 0 7px;
     min-width: $button-height;
     [class^="icon-"] { margin: 0; }
   }

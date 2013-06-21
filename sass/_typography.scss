@@ -49,7 +49,7 @@ body {
 .fixed-width {
   width: $min-screen-width;
   margin: 0 auto;
-  @include clearfix;
+  @include clearfix();
 }
 .page-wrapper {
   @include box-sizing('border-box');
