@@ -44,9 +44,9 @@ a [class*=" icon-"]:before {
   vertical-align: -10%;
   font-size: 1.5em;
 }
-.icon-2x { font-size: 2em; line-height: $base-line-height * 2; }
-.icon-3x { font-size: 3em; line-height: $base-line-height * 2; }
-.icon-4x { font-size: 4em; line-height: $base-line-height * 3; }
+.icon-2x { font-size: 2em; line-height: 1em; }
+.icon-3x { font-size: 3em; line-height: 1em; }
+.icon-4x { font-size: 4em; line-height: 1em; }
 
 .icon-add:before          { content: '\E001'; }
 .icon-subtract:before     { content: '\E002'; }
