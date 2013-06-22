@@ -43,6 +43,7 @@
     @include box-sizing('border-box');
     padding: 6px 12px 5px 0;
     line-height: $navbar-height;
+    height: $navbar-height;
     color: transparent;
     &:hover {
       background-color: transparent;
