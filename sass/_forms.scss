@@ -23,6 +23,10 @@ legend {
   color: $gray-dark;
   border: 0;
   border-bottom: 1px solid $gray-lightest;
+  &.small {
+    font-size: $base+1 ; line-height: $base-line-height;
+    border-bottom: none; margin-bottom: 5px;
+  }
 }
 
 
@@ -257,6 +261,7 @@ input, select, textarea, label,
   .add-on, .button, .companion {
     margin-left: -1px;
   }
+  .button { margin-right: 0; }
 }
 .prepend {
   .add-on, .button, .companion {
