@@ -49,6 +49,9 @@
 .inline {
   display: inline;
 }
+.in-block {
+  @include inline-block();
+}
 .block {
   display: block;
 }
