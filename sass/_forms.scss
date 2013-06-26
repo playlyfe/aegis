@@ -7,23 +7,6 @@ form {
   margin: 0 0 $base-line-height;
 }
 
-legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: $base-line-height;
-  font-size: $base * 1.5;
-  line-height: $base-line-height * 2;
-  color: $gray-dark;
-  border: 0;
-  border-bottom: 1px solid $gray-lightest;
-  &.small {
-    font-size: $base+1 ; line-height: $base-line-height;
-    border-bottom: none; margin-bottom: 5px;
-  }
-}
-
-
 label,
 input,
 button,
@@ -32,13 +15,50 @@ textarea {
   font: normal #{$base}/#{$base-line-height} $base-font-family;
 }
 
+
+legend {
+  margin-bottom: $base-line-height;
+  font-size: $base * 1.5;
+  line-height: $base-line-height * 2;
+  color: $gray-dark;
+  border-bottom: 1px solid $gray-lightest;
+  &.small {
+    font-size: $base+1;
+    line-height: $base-line-height;
+    border-bottom: none;
+    margin-bottom: 5px;
+  }
+}
+
+fieldset {
+  padding: 0;
+  margin: 0 0 $base-line-height;
+  border: none;
+  width: 100%;
+  .framed {
+    position: relative;
+    padding: 30px 10px 10px;
+    border: 1px solid $gray-lightest;
+    margin-top: 20px;
+    > legend {
+      position: absolute;
+      top: -13px;
+      left: 10px;
+      font-size: $base+1;
+      height: $base-line-height;
+      line-height: $base-line-height;
+      text-align: center;
+      background-color: $white;
+      padding: 1px 5px 2px;
+      border: 1px solid $gray-lightest;
+      margin: 0;
+    }
+  }
+}
+
 .form-row {
   margin-bottom: 5px;
-  // input, input[type], select, textarea, .immutable, .snippet {
-  //   /* reset margins on these elements when inside a form-row */
-  //   margin-bottom: 0;
-  // }
-  .button {
+  button, .button {
     margin-bottom: #{9px/$button-font-size}em;
   }
   @include clearfix();
@@ -132,13 +152,6 @@ input[type="search"],   input[type="tel"],            input[type="color"],
   line-height: #{$base-line-height/$base}em;
   &.append { border-left: none; }
   &.prepend { border-right: none; }
-}
-
-fieldset {
-  padding: 0;
-  margin: 0 0 $base-line-height;
-  border: none;
-  width: 100%;
 }
 
 .input_container {
