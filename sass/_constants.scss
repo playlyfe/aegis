@@ -44,8 +44,8 @@ $yellow:                #ffcc00 !default;
 
 
 // MAIN COLOURS
-$prime-color:           $green;
-$accent-color:          $sky;
+$prime-color:           $green  !default;
+$accent-color:          $sky    !default;
 
 
 // Primaries
@@ -88,6 +88,7 @@ $base-line-height: 21px !default;
 $base-color:       $gray !default;
 $base-font-family: 'Droid Sans', 'sans serif' !default;
 $mono-font-family: 'Droid Mono', 'Consolas', 'Lucida Console', 'Ubuntu Mono', monospace !default;
+$heading-font-family: $base-font-family !default;
 $icon-font-path: 'fonts' !default;
 
 $h6-size: 1.08em;
@@ -269,7 +270,7 @@ $snippet-border:          1px dashed $prime-dark;
 $mask-color:          rgba(255,255,255,0.8);
 
 $modal-width:         500px;
-$modal-wide-width:    70%;
+$modal-wide-width:    800px;
 
 $modal-shadow:        rgba(0,0,0,0.15);
 $modal-bg:            $white;

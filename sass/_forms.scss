@@ -17,13 +17,14 @@ textarea {
 
 
 legend {
-  margin-bottom: $base-line-height;
   font-size: $base * 1.5;
   line-height: $base-line-height * 2;
   color: $gray-dark;
   border-bottom: 1px solid $gray-lightest;
+  margin-bottom: $base-line-height;
+  width: 100%;
   &.small {
-    font-size: $base+1;
+    font-size: $base + 1;
     line-height: $base-line-height;
     border-bottom: none;
     margin-bottom: 5px;
@@ -33,25 +34,27 @@ legend {
 fieldset {
   padding: 0;
   margin: 0 0 $base-line-height;
+  @include box-sizing('border-box');
   border: none;
   width: 100%;
-  .framed {
+  &.framed {
     position: relative;
     padding: 30px 10px 10px;
     border: 1px solid $gray-lightest;
     margin-top: 20px;
     > legend {
+      font-size: $base + 1;
+      line-height: $base-line-height;
       position: absolute;
       top: -13px;
       left: 10px;
-      font-size: $base+1;
+      width: auto;
       height: $base-line-height;
-      line-height: $base-line-height;
       text-align: center;
       background-color: $white;
       padding: 1px 5px 2px;
-      border: 1px solid $gray-lightest;
       margin: 0;
+      border: 1px solid $gray-lightest;
     }
   }
 }
