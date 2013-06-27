@@ -19,8 +19,8 @@ textarea {
 legend {
   font-size: $base * 1.5;
   line-height: $base-line-height * 2;
-  color: $gray-dark;
-  border-bottom: 1px solid $gray-lightest;
+  color: $legend-color;
+  border-bottom: 1px solid $legend-border;
   margin-bottom: $base-line-height;
   width: 100%;
   &.small {
@@ -317,18 +317,18 @@ input, select, textarea, label,
 .form-horizontal {
   .form-errors {
     @extend .form-errors;
-    margin-left: $form-horz-label-width + 20;
+    margin-left: $formHorz-label-width + 20;
   }
   // only right align the form labels
   // not checkbox & radio texts
   .form-row {
     margin-bottom: 20px;
-    .field-label {
-      float: left;
-      padding-top: 5px;
-      text-align: right;
-      width: $form-horz-label-width;
-    }
+  }
+  .field-label {
+    float: left;
+    padding-top: 5px;
+    text-align: right;
+    width: $form-horz-label-width;
   }
   .field-wrapper {
     *display: inline-block;
