@@ -1,21 +1,32 @@
 # Aegis UI
 
 ## Usage
-To use the css styles as-is, just copy the aegis.css file from `docs/assets/css` folder
-to your project and serve it hot with your html files with this line:
 
-    <link rel="stylesheet" href="css/aegis.css">
+### Bower
+To use aegis as a bower package, write:
 
-We also recommend you to use a CSS reset stylesheet such as [normalize](http://necolas.github.io/normalize.css/). Include this stylesheet before aegis:
+    bower install aegis --save
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/aegis.css">
+### Download
+Download aegis using this link:
+[Download Aegis](https://raw.github.com/playlyfe/aegis/master/aegis.min.css)
+
+To use Aegis as-is, use the minified file `aegis.min.css`.
+For development, you'd be better off using the unminified `aegis.css` file.
+
+Add the css to your project and serve it hot with your html files with this line:
+
+    <link rel="stylesheet" href="css/aegis.min.css">
+
+We also recommend you to use a CSS reset stylesheet such as [normalize](http://necolas.github.io/normalize.css/).
 
 
 ## Contributing
 
-If you want to modify Aegis for yourself, or want to contribute to the project,
-you'll need the `sass` gem installed along with the `compass` framework.
+If you want to modify Aegis to suit your needs, or want to contribute to the project,
+fork this repo.
+
+You'll need the `sass` gem installed along with `compass` `v0.13-alpha`.
 Install these with:
 
     gem install sass
@@ -31,11 +42,11 @@ Then, run:
 which will watch changes to your scss files, and automatically compile a development
 version of aegis into the root folder.
 
-When you are done, run
+When you are done with your changes, submit a pull request to us.
+Also, you can compile the production version of the styles with
 
     grunt build
 
-to compile the production versions of aegis, and push.
 
 ## Authors
 
@@ -63,4 +74,6 @@ limitations under the License.
 
 
 
-###### FROM PLAYLYFE
+###### <kbd>FROM PLAYLYFE</kbd>
+
+![Playlyfe](http://www.playlyfe.com/favicon.ico)

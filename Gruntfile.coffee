@@ -88,4 +88,5 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'default', ['watch:css']
 
-  grunt.registerTask 'build', ['clean', 'compass', 'cssmin', 'jade:docs', 'coffee:plugins', 'coffee:test']
+  grunt.registerTask 'build', ['clean', 'compass', 'cssmin']
+  grunt.registerTask 'buildAll', ['clean', 'compass', 'cssmin', 'jade:docs', 'coffee:plugins', 'coffee:test']
