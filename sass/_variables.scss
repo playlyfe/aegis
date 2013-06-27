@@ -1,5 +1,5 @@
 //
-// constants partial
+// variables partial
 // Aegis UI (derived from Playlyfe Sandbox)
 // Kumar Harsh / Johny Jose
 // 20.Jan.2013
@@ -66,16 +66,10 @@ $accent-light:          lighten($accent, 10%);
 $accent-lighter:        lighten($accent, 25%);
 $accent-lightest:       lighten($accent, 40%);
 
-
-
-//
-//  ===========================
-//  COMMON
-//  ===========================
-//
-$error-bg:             lighten($red,50%);
-$error-color:          $red;
-$error-border:         $red;
+$error:                $red     !default;
+$error-bg:             lighten($error,50%);
+$error-color:          $error;
+$error-border:         $error;
 
 
 //
@@ -86,17 +80,19 @@ $error-border:         $red;
 $base:             13px !default;
 $base-line-height: 21px !default;
 $base-color:       $gray !default;
-$base-font-family: 'Droid Sans', 'sans serif' !default;
+$base-font-family: 'Droid Sans', 'sans-serif' !default;
 $mono-font-family: 'Droid Mono', 'Consolas', 'Lucida Console', 'Ubuntu Mono', monospace !default;
-$heading-font-family: $base-font-family !default;
-$icon-font-path: 'fonts' !default;
+$heading-font-family: 'Droid Sans', 'sans-serif' !default;
 
-$h6-size: 1.08em;
-$h5-size: 1.15em;
-$h4-size: 1.62em;
-$h3-size: 2.08em;
-$h2-size: 2.62em;
-$h1-size: 3.38em;
+$icon-font-path:   'fonts' !default;
+$icon-font-family: 'Lyfeicons' !default;
+
+$h6-size: 1.08em    !default;
+$h5-size: 1.15em    !default;
+$h4-size: 1.62em    !default;
+$h3-size: 2.08em    !default;
+$h2-size: 2.62em    !default;
+$h1-size: 3.38em    !default;
 
 // Text colours
 $link-color:              $prime-dark  !default;
@@ -110,15 +106,14 @@ $code-color:              $accent;
 //  GENERAL PAGE LAYOUT
 //  ===========================
 //
-$navbar-pos:            fixed;
-$navbar-height:         40px;
+$navbar-height:         40px !default;
 $navbar-icon-height:    16px;
-$navbar-color:          $white;
-$navbar-bg:             $prime;
-$navbar-hover-bg:       $prime-dark;
-$navbar-border:         $prime-dark;
+$navbar-color:          $white !default;
+$navbar-bg:             $prime !default;
+$navbar-hover-bg:       $prime-dark !default;
+$navbar-border:         $prime-dark !default;
 
-$content-padding:       40px;
+$page-paddingV:         40px !default;
 
 // keep in mind, footer has a border-box sizing
 $footer-height:         50px;
@@ -218,7 +213,7 @@ $button-disabled-bg:    $white;
 $button-prime-bg:       $prime;
 $button-prime-color:    $white;
 
-$button-alert-bg:       $error-color;
+$button-alert-bg:       $error;
 $button-alert-color:    $white;
 
 $button-accent-bg:      $accent;
@@ -265,7 +260,6 @@ $snippet-border:          1px dashed $prime-dark;
 //  ===========================
 //
 
-
 // MODAL
 $mask-color:          rgba(255,255,255,0.8);
 
@@ -287,53 +281,36 @@ $dropdown-bg:           $white;
 $dropdown-border:       $gray-ultralight;
 
 
-
 //
 //  ===========================
 //  FORMS
 //  ===========================
 //
+$formHorz-label-width:  135px   !default;
 
-$form-horz-label-width: 135px;
-
-// INPUTS
-$input-height:          31px;
-
-$input-bg:              $white;
-$input-color:           $gray;
-$input-border:          $gray-lighter;
-$input-disabled-color:  $gray-light;
-$input-shadow:          rgba(0,0,0,0.1);
-
-$input-border-radius:   0px;
+$input-height:          31px    !default;
+$input-bg:              $white  !default;
+$input-color:           $gray   !default;
+$input-border:          $gray-lighter !default;
+$input-disabled-color:  $gray-light   !default;
+$input-shadow:          rgba(0,0,0,0.1) !default;
+$input-border-radius:   0px     !default;
 $input-focus-border:    $prime;
 $input-active-border:   $prime;
 
-// INPUT FIELD TIPS
-$field-help-min-width:  200px;
-$field-help-color:      $gray-light;
-$field-help-link-color: $accent;
-$field-help-bg:         $accent-lightest;
-$field-help-border:     $accent-lighter;
-
-// LEGEND
-$legend-color:          $gray-light;
-$legend-border:         $gray-lighter;
-
-
-// MULTISELECT
-$multiselect-max-height: 200px;
+$legend-color:          $input-color;
+$legend-border:         $gray-lightest;
 
 // EXAMPLE BOX
 $example-text: "example";
-$example-bg: $accent;
+$example-bg:    $accent;
 $example-color: $white;
 
 
 
 // Z-INDICES
-$navbar-z:              1000;
-$footer-z:              700;
-$modal-mask-z:          900;
-$mask-z:                500;
-$dropdown-z:            400;
+$navbar-z:              1000 !default;
+$footer-z:              700  !default;
+$modal-mask-z:          900  !default;
+$mask-z:                500  !default;
+$dropdown-z:            400  !default;

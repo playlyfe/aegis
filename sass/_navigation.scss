@@ -13,7 +13,7 @@
   }
 }
 .navbar {
-  position: $navbar-pos;
+  position: fixed;
   @include box-sizing('border-box');
   background-color: $navbar-bg;
   border-bottom: 1px solid $navbar-border;
