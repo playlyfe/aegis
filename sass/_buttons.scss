@@ -149,3 +149,16 @@
     @include tab-focus();
   }
 }
+
+.button-group {
+  @include inline-block();
+  white-space: nowrap;
+  font-size: 0; // eliminate space from inline-block elements
+  .button { margin: 0; }
+  .button ~ .button {
+    margin-left: -1px; // join all subsequent buttons
+  }
+  + .button-group {
+    margin-right: 10px;
+  }
+}

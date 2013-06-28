@@ -64,6 +64,10 @@ fieldset {
   button, .button {
     margin-bottom: #{9px/$button-font-size}em;
   }
+  .button-group {
+    margin-bottom: 9px;
+    > .button { margin-bottom: 0; }
+  }
   @include clearfix();
   .snippet {
     // align snippets with inputs
@@ -105,7 +109,8 @@ label {
 
 .field-errors {
   @extend .list-unstyled;
-  margin-left: 15px;
+  // -ve top margin to cling to the input field
+  margin: -0.5em 0 0.5em 15px;
 }
 
 .form-errors, .field-errors {
