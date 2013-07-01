@@ -18,7 +18,10 @@
     li {
       padding-left: 20px;
       padding-right: 20px;
-      color: $prime-darker;
+      color: $gray;
+      a { color: $gray-light;
+        &:hover { color: $prime-dark; }
+      }
     }
   }
 }

@@ -66,10 +66,10 @@ $accent-light:          lighten($accent, 10%);
 $accent-lighter:        lighten($accent, 25%);
 $accent-lightest:       lighten($accent, 40%);
 
-$error:                $red     !default;
-$error-bg:             lighten($error,50%);
-$error-color:          $error;
-$error-border:         $error;
+$alert:                $red     !default;
+$error-bg:             lighten($alert,50%);
+$error-color:          $alert;
+$error-border:         $alert;
 
 
 //
@@ -213,7 +213,7 @@ $button-disabled-bg:    $white;
 $button-prime-bg:       $prime;
 $button-prime-color:    $white;
 
-$button-alert-bg:       $error;
+$button-alert-bg:       $alert;
 $button-alert-color:    $white;
 
 $button-accent-bg:      $accent;

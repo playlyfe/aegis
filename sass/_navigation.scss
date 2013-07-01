@@ -11,6 +11,12 @@
     @include button-interaction();
     display: block;
   }
+  &.nav-inline {
+    > li {
+      @include inline-block();
+      padding: 0;
+    }
+  }
 }
 .navbar {
   position: fixed;
@@ -66,7 +72,7 @@
     border-top: none;
     z-index: $dropdown-z;
   }
-  &:hover {
+  &:hover, &.active {
     .dropdown-nav, .dropdown-wrapper {
       display: block;
     }
