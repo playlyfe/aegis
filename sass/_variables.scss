@@ -22,10 +22,11 @@ $min-screen-width:      1024px !default;
 
 // Grays
 $black:                 #000 !default;
-$gray-darker:           #222 !default;
-$gray-dark:             #333 !default;
-$gray:                  #555 !default;
-$gray-light:            #888 !default;
+$gray-darkest:          #222 !default;
+$gray-darker:           #333 !default;
+$gray-dark:             #555 !default;
+$gray:                  #777 !default;
+$gray-light:            #999 !default;
 $gray-lighter:          #bbb !default;
 $gray-lightest:         #ddd !default;
 $gray-ultralight:       #eee !default;
@@ -79,7 +80,7 @@ $error-border:         $alert;
 //
 $base:             13px !default;
 $base-line-height: 21px !default;
-$base-color:       $gray !default;
+$base-color:       $gray-dark !default;
 $base-font-family: 'Droid Sans', 'sans-serif' !default;
 $mono-font-family: 'Droid Mono', 'Consolas', 'Lucida Console', 'Ubuntu Mono', monospace !default;
 $heading-font-family: 'Droid Sans', 'sans-serif' !default;
@@ -137,7 +138,7 @@ $side-bg:                   $white;
 $side-font-size:            $base;
 
 // MAIN-MENU
-$side-color:                $gray-dark;
+$side-color:                $gray-darker;
 $side-trim:                 $gray-lightest;
 $side-hover-color:          $prime;
 $side-hover-trim:           $prime;
@@ -202,10 +203,10 @@ $button-round-radius:    4em;
 
 
 // COLOURS
-$button-color:          $gray;
+$button-color:          $gray-dark;
 $button-bg:             $gray-ultralight;
 $button-border:         darken($gray-ultralight,10%);
-$button-hover-color:    $gray-darker;
+$button-hover-color:    $gray-darkest;
 $button-hover-bg:       $gray-lightest;
 
 $button-disabled-bg:    $white;
@@ -290,7 +291,7 @@ $formHorz-label-width:  135px   !default;
 
 $input-height:          31px    !default;
 $input-bg:              $white  !default;
-$input-color:           $gray   !default;
+$input-color:           $gray-dark    !default;
 $input-border:          $gray-lighter !default;
 $input-disabled-color:  $gray-light   !default;
 $input-shadow:          rgba(0,0,0,0.1) !default;

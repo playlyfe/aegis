@@ -68,11 +68,11 @@
 
   /* tables suited for lists */
   &.listing {
-    & > thead > tr > th {
+    > thead > tr > th {
       border: none;
       font-size: $table-head-font-size + 2;
     }
-    & > tbody > tr {
+    > tbody > tr {
       & > td { border: none; }
       border-bottom: 1px solid $table-border;
     }
@@ -85,7 +85,7 @@
   }
   /* with row highlights */
   &.highlight {
-    & > tbody > tr:hover {
+    > tbody > tr:hover {
       background-color: $accent-lightest;
       color: $accent-darker;
       border-bottom: 1px solid $accent;
