@@ -14,7 +14,6 @@
   );
   font-size:    $button-font-size;
   line-height:  $button-height;
-  *line-height: $button-height;
   height:       $button-height;
   text-align:   center;
 
@@ -30,8 +29,9 @@
     $border: $button-border
   );
 
-  *border: 0; // Remove the border to prevent IE7's black border on input:focus
-  [class^="icon-"], [class*="icon-"] { margin-left: -0.2em; } // visually center icon+text combo
+  [class^="icon-"], [class*="icon-"] {
+    margin-left: -0.2em; // visually center icon+text combo
+  }
 }
 
 

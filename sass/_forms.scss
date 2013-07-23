@@ -175,7 +175,6 @@ input[type="radio"],
 input[type="checkbox"] {
   float: left;
   margin: 4px 7px 0 0;
-  *margin-top: 0; /* IE7 */
   line-height: $base-line-height;
   cursor: pointer;
 }
@@ -247,7 +246,7 @@ input[type="color"],
 
 // For text that needs to appear as an input but should not be an input
 .immutable {
-  overflow: hidden; // prevent text from wrapping, but still cut it off like an input does
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   cursor: text;
@@ -337,15 +336,9 @@ input, select, textarea, label,
     width: $formHorz-label-width;
   }
   .field-wrapper {
-    *display: inline-block;
-    *padding-left: 20px;
     margin-left: $formHorz-label-width + 20;
-    *margin-left: 0;
     &.pad { // for wrapping checkboxes and radios
       padding-top:6px;
-    }
-    &:first-child {
-     *padding-left: $formHorz-label-width + 20;
     }
     .field-help {
       top: 0;
