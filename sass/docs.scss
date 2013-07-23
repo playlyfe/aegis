@@ -55,9 +55,9 @@
   a {
     @extend .no-anchor;
     @include button-interaction();
-    color: $gray-dark;
+    color: $gray-darker;
     &:hover {
-      color: mix($gray-dark, $accent, 60%);
+      color: mix($gray-darker, $accent, 60%);
     }
   }
 }

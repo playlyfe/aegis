@@ -103,7 +103,7 @@ label {
   @extend .list-unstyled;
   background-color: $error-bg;
   margin: 5px 0;
-  padding: $base-line-height/2;
+  padding: 5px 0;
   border: 1px solid darken($error-bg,10%);
 }
 

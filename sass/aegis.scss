@@ -4,11 +4,9 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 
-// include compass
-@import "compass";
-
 // include partials
 @import "variables";
+@import "compass";
 @import "grid";
 @import "mixins";
 @import "utilities";
