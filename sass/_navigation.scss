@@ -11,11 +11,11 @@
     @include button-interaction();
     display: block;
   }
-  &.nav-inline {
-    > li {
-      @include inline-block();
-      padding: 0;
-    }
+}
+.nav-inline {
+  > li {
+    @include inline-block();
+    padding: 0;
   }
 }
 .navbar {
