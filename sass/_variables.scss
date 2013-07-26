@@ -272,6 +272,18 @@ $modal-bg:            $white;
 $modal-border:        $gray-lightest;
 $modal-inner-border:  $gray-ultralight;
 
+//
+//  ===========================
+//  TOOLTIP
+//  ===========================
+//
+$tooltip-padding:     0.15em 1em;
+$tooltip-max-width:   300px;
+$tooltip-bg:          $white;
+$tooltip-color:       $gray;
+$tooltip-border:      $prime;
+
+
 
 //
 //  ===========================
@@ -310,6 +322,7 @@ $example-color: $white;
 
 
 // Z-INDICES
+$tooltip-z:             9999 !default;
 $navbar-z:              1000 !default;
 $footer-z:              700  !default;
 $modal-mask-z:          900  !default;

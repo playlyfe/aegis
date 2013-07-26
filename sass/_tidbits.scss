@@ -109,3 +109,23 @@ hr {
     right: -1px;
   }
 }
+
+// Tooltip
+.tooltip {
+  position: absolute;
+  display: none;
+  max-width: $tooltip-max-width;
+  background-color: $tooltip-bg;
+  font-size: 0.85em;
+  color: $tooltip-color;
+  padding: $tooltip-padding;
+  border: 1px solid $tooltip-border;
+  z-index: $tooltip-z;
+  @include box-shadow(0 0 4px -1px $tooltip-border);
+}
+.tooltip-error {
+  background-color: $alert;
+  color: $white;
+  border: darken($alert, 10%);
+  @include box-shadow(0 0 4px -1px rgba($alert, 0.5));
+}
