@@ -32,6 +32,9 @@
   }
 }
 
+// Button-type interaction for elements
+.as-button { @include button-interaction(); }
+
 //
 // This partial gives you some extra elements
 // for your page. See the demo page for examples.
