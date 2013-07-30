@@ -256,8 +256,7 @@ input[type="color"],
 }
 
 // Grid style input sizes
-input, select, textarea, label,
-.snippet, .immutable {
+input, select, textarea, label, .snippet, .immutable {
   &[class*="col-"] {
     float: none;
     margin-left: 0;
@@ -265,7 +264,7 @@ input, select, textarea, label,
   }
 }
 .append, .prepend {
-  label, input, .snippet, .immutable {
+  label, input, select, .snippet, .immutable {
     &[class*="col-"] {
       @include inline-block();
     }

@@ -135,6 +135,7 @@ code, pre {
   border: 1px solid darken($code-bg, 10%);
   margin-bottom: 1em;
   white-space: pre-wrap;
+  overflow-wrap: break-word;
   word-wrap: break-word;
   &:empty {
     display: none;
