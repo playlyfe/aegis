@@ -111,6 +111,7 @@ label {
   @extend .list-unstyled;
   // -ve top margin to cling to the input field
   margin: -0.5em 0 0.5em 15px;
+  font-size: $base - 1;
 }
 
 .form-errors, .field-errors {
@@ -269,6 +270,8 @@ input, select, textarea, label,
       @include inline-block();
     }
   }
+  // align nicely with the adjacent input boxes
+  label { margin: 0 0 #{9px/$base}em; }
 }
 .append {
   /* use .companion to extend append behaviour to other elements */
