@@ -22,10 +22,11 @@ $min-screen-width:      1024px !default;
 
 // Grays
 $black:                 #000 !default;
-$gray-darker:           #222 !default;
-$gray-dark:             #333 !default;
-$gray:                  #555 !default;
-$gray-light:            #888 !default;
+$gray-darkest:          #222 !default;
+$gray-darker:           #333 !default;
+$gray-dark:             #555 !default;
+$gray:                  #777 !default;
+$gray-light:            #999 !default;
 $gray-lighter:          #bbb !default;
 $gray-lightest:         #ddd !default;
 $gray-ultralight:       #eee !default;
@@ -66,10 +67,10 @@ $accent-light:          lighten($accent, 10%);
 $accent-lighter:        lighten($accent, 25%);
 $accent-lightest:       lighten($accent, 40%);
 
-$error:                $red     !default;
-$error-bg:             lighten($error,50%);
-$error-color:          $error;
-$error-border:         $error;
+$alert:                $red     !default;
+$error-bg:             lighten($alert,50%);
+$error-color:          $alert;
+$error-border:         $alert;
 
 
 //
@@ -79,7 +80,7 @@ $error-border:         $error;
 //
 $base:             13px !default;
 $base-line-height: 21px !default;
-$base-color:       $gray !default;
+$base-color:       $gray-dark !default;
 $base-font-family: 'Droid Sans', 'sans-serif' !default;
 $mono-font-family: 'Droid Mono', 'Consolas', 'Lucida Console', 'Ubuntu Mono', monospace !default;
 $heading-font-family: 'Droid Sans', 'sans-serif' !default;
@@ -137,7 +138,7 @@ $side-bg:                   $white;
 $side-font-size:            $base;
 
 // MAIN-MENU
-$side-color:                $gray-dark;
+$side-color:                $gray-darker;
 $side-trim:                 $gray-lightest;
 $side-hover-color:          $prime;
 $side-hover-trim:           $prime;
@@ -202,10 +203,10 @@ $button-round-radius:    4em;
 
 
 // COLOURS
-$button-color:          $gray;
+$button-color:          $gray-dark;
 $button-bg:             $gray-ultralight;
 $button-border:         darken($gray-ultralight,10%);
-$button-hover-color:    $gray-darker;
+$button-hover-color:    $gray-darkest;
 $button-hover-bg:       $gray-lightest;
 
 $button-disabled-bg:    $white;
@@ -213,7 +214,7 @@ $button-disabled-bg:    $white;
 $button-prime-bg:       $prime;
 $button-prime-color:    $white;
 
-$button-alert-bg:       $error;
+$button-alert-bg:       $alert;
 $button-alert-color:    $white;
 
 $button-accent-bg:      $accent;
@@ -245,7 +246,7 @@ $infoTag-inactive-bg:     $gray-ultralight;
 // HR / DIVIDER
 $divider-light-color:     $gray-ultralight;
 $divider-dark-color:      $gray-dark;
-$divider-width:           2px;
+$divider-width:           1px;
 $divider-fat-width:       5px;
 
 // SNIPPET
@@ -271,6 +272,18 @@ $modal-bg:            $white;
 $modal-border:        $gray-lightest;
 $modal-inner-border:  $gray-ultralight;
 
+//
+//  ===========================
+//  TOOLTIP
+//  ===========================
+//
+$tooltip-padding:     0.15em 1em;
+$tooltip-max-width:   300px;
+$tooltip-bg:          $white;
+$tooltip-color:       $gray;
+$tooltip-border:      $prime;
+
+
 
 //
 //  ===========================
@@ -290,7 +303,7 @@ $formHorz-label-width:  135px   !default;
 
 $input-height:          31px    !default;
 $input-bg:              $white  !default;
-$input-color:           $gray   !default;
+$input-color:           $gray-dark    !default;
 $input-border:          $gray-lighter !default;
 $input-disabled-color:  $gray-light   !default;
 $input-shadow:          rgba(0,0,0,0.1) !default;
@@ -309,8 +322,9 @@ $example-color: $white;
 
 
 // Z-INDICES
+$tooltip-z:             9999 !default;
 $navbar-z:              1000 !default;
 $footer-z:              700  !default;
-$modal-mask-z:          900  !default;
+$modal-mask-z:          2000 !default;
 $mask-z:                500  !default;
 $dropdown-z:            400  !default;

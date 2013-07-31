@@ -32,6 +32,9 @@
   }
 }
 
+// Button-type interaction for elements
+.as-button { @include button-interaction(); }
+
 //
 // This partial gives you some extra elements
 // for your page. See the demo page for examples.
@@ -53,7 +56,7 @@
 
 // Dividers
 hr {
-  height: 1px;
+  height: 0px;
   margin: 5px auto;
   border: none;
   border-bottom: $divider-width solid $divider-light-color;
@@ -81,7 +84,10 @@ hr {
   &:hover {
     background-color: $snippet-hover-fill;
     color: $snippet-hover-color;
-    @include transition(all 0.4s ease 0.1s);
+    @include transition(
+      color 0.4s ease 0.1s,
+      background-color 0.4s ease 0.1s
+    );
   }
 }
 
@@ -105,4 +111,24 @@ hr {
     top: -1px;
     right: -1px;
   }
+}
+
+// Tooltip
+.tooltip {
+  position: absolute;
+  display: none;
+  max-width: $tooltip-max-width;
+  background-color: $tooltip-bg;
+  font-size: 0.85em;
+  color: $tooltip-color;
+  padding: $tooltip-padding;
+  border: 1px solid $tooltip-border;
+  z-index: $tooltip-z;
+  @include box-shadow(0 0 4px -1px $tooltip-border);
+}
+.tooltip-error {
+  background-color: $alert;
+  color: $white;
+  border: darken($alert, 10%);
+  @include box-shadow(0 0 4px -1px rgba($alert, 0.5));
 }

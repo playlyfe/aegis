@@ -64,6 +64,10 @@ fieldset {
   button, .button {
     margin-bottom: #{9px/$button-font-size}em;
   }
+  .button-group {
+    margin-bottom: 9px;
+    > .button { margin-bottom: 0; }
+  }
   @include clearfix();
   .snippet {
     // align snippets with inputs
@@ -99,13 +103,15 @@ label {
   @extend .list-unstyled;
   background-color: $error-bg;
   margin: 5px 0;
-  padding: $base-line-height/2;
+  padding: 5px 0;
   border: 1px solid darken($error-bg,10%);
 }
 
 .field-errors {
   @extend .list-unstyled;
-  margin-left: 15px;
+  // -ve top margin to cling to the input field
+  margin: -0.5em 0 0.5em 15px;
+  font-size: $base - 1;
 }
 
 .form-errors, .field-errors {
@@ -122,7 +128,7 @@ label {
     position: absolute;
     left: -14px;
     display: block;
-    content: "\e006";
+    content: "\E006";
   }
 }
 
@@ -170,7 +176,6 @@ input[type="radio"],
 input[type="checkbox"] {
   float: left;
   margin: 4px 7px 0 0;
-  *margin-top: 0; /* IE7 */
   line-height: $base-line-height;
   cursor: pointer;
 }
@@ -242,7 +247,7 @@ input[type="color"],
 
 // For text that needs to appear as an input but should not be an input
 .immutable {
-  overflow: hidden; // prevent text from wrapping, but still cut it off like an input does
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   cursor: text;
@@ -251,8 +256,7 @@ input[type="color"],
 }
 
 // Grid style input sizes
-input, select, textarea, label,
-.snippet, .immutable {
+input, select, textarea, label, .snippet, .immutable {
   &[class*="col-"] {
     float: none;
     margin-left: 0;
@@ -260,11 +264,13 @@ input, select, textarea, label,
   }
 }
 .append, .prepend {
-  label, input, .snippet, .immutable {
+  label, input, select, .snippet, .immutable {
     &[class*="col-"] {
       @include inline-block();
     }
   }
+  // align nicely with the adjacent input boxes
+  label { margin: 0 0 #{9px/$base}em; }
 }
 .append {
   /* use .companion to extend append behaviour to other elements */
@@ -296,6 +302,7 @@ input, select, textarea, label,
 .disabled, *[disabled] {
   @include opacity(0.65);
   @include user-select(none);
+  cursor: not-allowed;
 }
 
 .form-search,
@@ -331,15 +338,9 @@ input, select, textarea, label,
     width: $formHorz-label-width;
   }
   .field-wrapper {
-    *display: inline-block;
-    *padding-left: 20px;
     margin-left: $formHorz-label-width + 20;
-    *margin-left: 0;
     &.pad { // for wrapping checkboxes and radios
       padding-top:6px;
-    }
-    &:first-child {
-     *padding-left: $formHorz-label-width + 20;
     }
     .field-help {
       top: 0;

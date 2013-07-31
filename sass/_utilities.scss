@@ -24,10 +24,14 @@
   @extend .no-margin;
   @extend .no-padding;
 }
-
 .no-anchor {
   @include no-anchor;
 }
+
+.auto-width { width: auto !important; }
+.full-width { width: 100%; }
+.full-height { height: 100%; }
+
 .left {
   float: left !important;
 }
@@ -43,9 +47,6 @@
 .fix-pos {
   position: fixed !important;
 }
-.width-auto {
-  width: auto !important;
-}
 .inline {
   display: inline;
 }
@@ -55,15 +56,9 @@
 .block {
   display: block;
 }
-// styles for the descriptive icons
-.icon-group {
-  // for 16x16 icons
-  margin: 0 0.5em;
-}
-.attr-group {
-  cursor: help;
-  @extend .icon-group;
-}
-.fade {
-  opacity: 0.2;
+
+@for $i from 1 through 9 {
+  .fade-#{$i} {
+    opacity: 0.1*$i;
+  }
 }

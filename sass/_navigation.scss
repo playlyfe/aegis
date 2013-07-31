@@ -12,6 +12,12 @@
     display: block;
   }
 }
+.nav-inline {
+  > li {
+    @include inline-block();
+    padding: 0;
+  }
+}
 .navbar {
   position: fixed;
   @include box-sizing('border-box');
@@ -38,8 +44,9 @@
     }
   }
   .crest {
-    float: left;
     display: block;
+    float: left;
+    @include button-interaction();
     @include box-sizing('border-box');
     padding: 6px 12px 5px 0;
     line-height: $navbar-height;
@@ -66,7 +73,7 @@
     border-top: none;
     z-index: $dropdown-z;
   }
-  &:hover {
+  &:hover, &.active {
     .dropdown-nav, .dropdown-wrapper {
       display: block;
     }
