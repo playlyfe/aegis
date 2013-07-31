@@ -1,6 +1,6 @@
 {
   "name": "Aegis",
-  "version": "0.1.1",
+  "version": "0.3",
   "description": "Aegis CSS Framework",
   "devDependencies": {
     "grunt": "*",

@@ -1,7 +1,11 @@
 # CHANGELOG
 
-### Edge
+### v0.3 / 31-Jul-2013
 -----
+* Expanded icon-set
+* Removed IE7 support
+* Added tooltip classes
+* Updated modal and tabs
 * Added range of fade classes (0.9 to 0.1) opacity
 * Added a button-group
 * Field error's margins rejigged to be closer to the sibling input
@@ -12,7 +16,7 @@
     .0 -- .2 .3 -- .5 -- .7   --   .9 -- .b -- .d .e .f
     b     ds dr    dk    gr        lt    lr    ls lut w  <-- new gray shades (s=-est, r=-er, k,t -> DarK, LighT)
 
-### v2.0
+### v0.2
 -----
 * Redid all forms
 * Added a media object class for general usage
