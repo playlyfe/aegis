@@ -1,5 +1,8 @@
 # CHANGELOG
 
+### v0.3.1 / 1-Aug
+* Fixed semver incompatible version number for aegis
+
 ### v0.3 / 31-Jul-2013
 -----
 * Expanded icon-set
