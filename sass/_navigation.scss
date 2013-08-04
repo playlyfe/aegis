@@ -33,7 +33,7 @@
     float: left;
     display: block;
     @include transition(background 0.2s ease, 0.1s);
-    &:hover { background-color: $navbar-hover-bg; }
+    &:hover, &.active { background-color: $navbar-hover-bg; }
   }
   a {
     color: $navbar-color;
