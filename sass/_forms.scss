@@ -301,7 +301,7 @@ input, select, textarea, label, .snippet, .immutable {
 
 .disabled, *[disabled] {
   @include opacity(0.65);
-  @include user-select(none);
+  @include no-select();
   cursor: not-allowed;
 }
 

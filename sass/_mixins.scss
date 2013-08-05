@@ -25,7 +25,10 @@
 // make the text unselectable (in supported browsers)
 @mixin no-select() {
   -webkit-touch-callout: none;
-  @include user-select(none);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; // unsupported yet.
 }
 
 // give non-button elements properties of a button
