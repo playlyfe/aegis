@@ -1,5 +1,11 @@
 # CHANGELOG
 
+### v0.3.2 / 6-Aug
+* Removed docs and plugins folders. Docs is completely moved to gh-pages branch
+* Fixed typography mixing and the @font-face declarations.
+* Added an active state to navbars.
+* Removed user-select() mixin, replaced with manual styles (a problem in Docpad compilation forced my hand)
+
 ### v0.3.1 / 1-Aug
 * Fixed semver incompatible version number for aegis
 

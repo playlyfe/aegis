@@ -1,13 +1,11 @@
 {
   "name": "Aegis",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Aegis CSS Framework",
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-clean": "*",
-    "grunt-contrib-coffee": "*",
     "grunt-contrib-compass": "*",
-    "grunt-contrib-jade": "*",
     "grunt-contrib-watch": "~0.3.1",
     "grunt-contrib-cssmin": "~0.6.1"
   }
