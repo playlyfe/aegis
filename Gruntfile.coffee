@@ -1,12 +1,19 @@
 module.exports = (grunt) ->
 
+  # read the config options from bower.json file
+  opts = grunt.file.readJSON 'bower.json', encoding: 'utf8'
+
   grunt.initConfig {
+
     compass:
-      docs:
+      dist:
         options:
           sassDir: "sass"
-          cssDir: "docs/assets/css"
+          cssDir: "."
+          specify: "sass/aegis.scss"
           environment: "production"
+          outputStyle: "expanded"
+          debugInfo: false
       dev:
         options:
           sassDir: "sass"
@@ -21,72 +28,24 @@ module.exports = (grunt) ->
         src: 'aegis.css'
         dest: 'aegis.min.css'
         options:
-          banner: "/* Aegis. Build #{new Date()} */"
-
-    jade:
-      docs:
-        options:
-          client: false
-          pretty: true
-        files: [
-          expand: true
-          flatten: true
-          cwd: 'templates'
-          src: ['**/*.jade', '!**/layout*.jade']
-          dest: 'docs/'
-          ext: '.html'
-        ]
-
-    coffee:
-      test:
-        expand: true
-        flatten: true
-        cwd: 'plugins/test'
-        src: ['src/*.coffee']
-        dest: 'plugins/test/spec/'
-        ext: '.spec.js'
-      plugins:
-        expand: true
-        flatten: true
-        cwd: 'plugins/src'
-        src: ['*.coffee']
-        dest: 'docs/assets/js/'
-        ext: '.js'
-        options:
-          bare: true
+          banner: "/* Aegis v#{opts.version}. Build #{new Date()} */"
 
     clean:
-      plugins: ['docs/assets/js/*.js']
-      css: ['docs/assets/css/aegis.css', 'docs/assets/css/docs.css']
-      tests: ['plugins/test/spec']
+      css: ['aegis.css', 'aegis.min.css']
 
     watch:
-      tests:
-        files: ['plugins/**/*.coffee']
-        tasks: ['coffee:test', 'coffee:plugins']
-        options:
-          nospawn: true
       css:
         files: ['sass/*.scss']
         tasks: ['compass:dev']
-        options:
-          nospawn: true
-      docs:
-        files: ['templates/**/*.jade', 'sass/*.scss']
-        tasks: ['jade:docs','compass:docs']
         options:
           nospawn: true
   }
 
 
   grunt.loadNpmTasks 'grunt-contrib-clean'
-  grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-compass'
   grunt.loadNpmTasks 'grunt-contrib-watch'
-  grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
 
   grunt.registerTask 'default', ['watch:css']
-
-  grunt.registerTask 'build', ['clean', 'compass', 'cssmin']
-  grunt.registerTask 'buildAll', ['clean', 'compass', 'cssmin', 'jade:docs', 'coffee:plugins', 'coffee:test']
+  grunt.registerTask 'build', ['clean', 'compass:dist', 'cssmin']
