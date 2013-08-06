@@ -3,35 +3,28 @@
 // Johny Jose / Kumar Harsh
 // 23.Jan.2013
 
-@font-face {
-  font-family: 'Droid Serif';
-  font-style: bold;
-  font-weight: 700;
-  src: local('Droid Serif Bold'), local('DroidSerif-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidserif/v3/QQt14e8dY39u-eYBZmppwTqR_3kx9_hJXbbyU8S6IN0.woff) format('woff');
+@if index($base-font-family, 'Droid Sans') or index($heading-font-family, 'Droid Sans') {
+  // only define driods when droids are required
+  @font-face {
+    font-family: 'Droid Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
+  }
+  @font-face {
+    font-family: 'Droid Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/EFpQQyG9GqCrobXxL-KRMQFhaRv2pGgT5Kf0An0s4MM.woff) format('woff');
+  }
 }
-@font-face {
-  font-family: 'Droid Serif';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Droid Serif'), local('DroidSerif'), url(http://themes.googleusercontent.com/static/fonts/droidserif/v3/0AKsP294HTD-nvJgucYTaIbN6UDyHWBl620a-IRfuBk.woff) format('woff');
-}
-@font-face {
-  font-family: 'Droid Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
-}
-@font-face {
-  font-family: 'Droid Sans';
-  font-style: bold;
-  font-weight: 700;
-  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/EFpQQyG9GqCrobXxL-KRMQFhaRv2pGgT5Kf0An0s4MM.woff) format('woff');
-}
-@font-face {
-  font-family: 'Droid Sans Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Droid Sans Mono'), local('DroidSansMono'), url(http://themes.googleusercontent.com/static/fonts/droidsansmono/v4/ns-m2xQYezAtqh7ai59hJUYuTAAIFFn5GTWtryCmBQ4.woff) format('woff');
+@if index($mono-font-family, 'Droid Sans Mono') {
+  @font-face {
+    font-family: 'Droid Sans Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Droid Sans Mono'), local('DroidSansMono'), url(http://themes.googleusercontent.com/static/fonts/droidsansmono/v4/ns-m2xQYezAtqh7ai59hJUYuTAAIFFn5GTWtryCmBQ4.woff) format('woff');
+  }
 }
 
 html, body {
