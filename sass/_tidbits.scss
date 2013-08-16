@@ -125,10 +125,74 @@ hr {
   border: 1px solid $tooltip-border;
   z-index: $tooltip-z;
   @include box-shadow(0 0 4px -1px $tooltip-border);
-}
-.tooltip-error {
-  background-color: $alert;
-  color: $white;
-  border: darken($alert, 10%);
-  @include box-shadow(0 0 4px -1px rgba($alert, 0.5));
+
+  &:before, &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    width: 0; height: 0;
+    border: 5px solid transparent;
+    z-index: 2;
+  }
+  &:after {
+    border-width: 7px;
+    z-index: 1;
+    margin-left: -12px;
+  }
+  &.north {
+    &:before, &:after {
+      top: -5px;
+      border-top: 0;
+    }
+    &:before { border-bottom-color: $tooltip-bg; }
+    &:after { top: -7px; border-bottom-color: $tooltip-border; }
+  }
+  &.south {
+    &:before, &:after {
+      bottom: -5px;
+      border-bottom: 0;
+    }
+    &:before { border-top-color: $tooltip-bg; }
+    &:after { bottom: -7px; border-top-color: $tooltip-border; }
+  }
+  &.east {
+    &:before, &:after { right: 20px; left: auto; margin-left: 0; }
+    &:after { margin-right: -2px; }
+  }
+  &.west {
+    &:before, &:after { left: 10px; margin-left: 0; }
+    &:after { margin-left: -2px; }
+  }
+
+  &.type-alert {
+    background-color: $alert;
+    color: $white;
+    border-color: darken($alert, 10%);
+    @include box-shadow(0 0 4px -1px rgba($alert, 0.5));
+    &.north {
+      &:before { border-bottom-color: $alert; }
+      &:after { border-bottom-color: darken($alert, 10%); }
+    }
+    &.south {
+      &:before { border-top-color: $alert; }
+      &:after { border-top-color: darken($alert, 10%); }
+    }
+  }
+
+  &.type-info {
+    background-color: $accent;
+    color: $white;
+    border-color: $accent-dark;
+    @include box-shadow(0 0 4px -1px rgba($accent, 0.5));
+    &.north {
+      &:before { border-bottom-color: $accent; }
+      &:after { border-bottom-color: $accent-dark; }
+    }
+    &.south {
+      &:before { border-bottom-color: $accent; }
+      &:after { border-bottom-color: $accent-dark; }
+    }
+  }
 }

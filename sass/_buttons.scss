@@ -116,7 +116,7 @@
     }
   }
 
-  &:hover {
+  &:hover, &:active, &.active {
     text-decoration: none;
     @include button-style(
       $button-hover-color,
