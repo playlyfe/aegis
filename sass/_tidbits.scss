@@ -141,7 +141,7 @@ hr {
     z-index: 1;
     margin-left: -12px;
   }
-  &.south {
+  &.north {
     &:before, &:after {
       top: -5px;
       border-top: 0;
@@ -149,7 +149,7 @@ hr {
     &:before { border-bottom-color: $tooltip-bg; }
     &:after { top: -7px; border-bottom-color: $tooltip-border; }
   }
-  &.north {
+  &.south {
     &:before, &:after {
       bottom: -5px;
       border-bottom: 0;
@@ -157,11 +157,11 @@ hr {
     &:before { border-top-color: $tooltip-bg; }
     &:after { bottom: -7px; border-top-color: $tooltip-border; }
   }
-  &.west {
+  &.east {
     &:before, &:after { right: 20px; left: auto; margin-left: 0; }
     &:after { margin-right: -2px; }
   }
-  &.east {
+  &.west {
     &:before, &:after { left: 10px; margin-left: 0; }
     &:after { margin-left: -2px; }
   }
@@ -171,11 +171,11 @@ hr {
     color: $white;
     border-color: darken($alert, 10%);
     @include box-shadow(0 0 4px -1px rgba($alert, 0.5));
-    &.south {
+    &.north {
       &:before { border-bottom-color: $alert; }
       &:after { border-bottom-color: darken($alert, 10%); }
     }
-    &.north {
+    &.south {
       &:before { border-top-color: $alert; }
       &:after { border-top-color: darken($alert, 10%); }
     }
@@ -186,5 +186,13 @@ hr {
     color: $white;
     border-color: $accent-dark;
     @include box-shadow(0 0 4px -1px rgba($accent, 0.5));
+    &.north {
+      &:before { border-bottom-color: $accent; }
+      &:after { border-bottom-color: $accent-dark; }
+    }
+    &.south {
+      &:before { border-bottom-color: $accent; }
+      &:after { border-bottom-color: $accent-dark; }
+    }
   }
 }
