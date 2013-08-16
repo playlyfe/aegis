@@ -1,5 +1,5 @@
 /*
- * The Aegis CSS Framework v0.3.2
+ * The Aegis CSS Framework v0.3.5
  * Licensed under Apache.
  * http://www.apache.org/licenses/LICENSE-2.0
  */
@@ -723,7 +723,7 @@
   position: relative;
   width: 200px;
   height: auto;
-  padding: 2em 0 !important;
+  padding: 2em 0;
   background: white;
   border-right: 1px solid #dddddd;
   font-size: 13px;
@@ -2022,22 +2022,22 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   background-color: white;
   border-color: #d4d4d4;
 }
-.button:hover {
+.button:hover, .button:active, .button.active {
   text-decoration: none;
   color: #222222;
   background-color: #dddddd;
 }
-.button:hover.primary {
+.button:hover.primary, .button:active.primary, .button.active.primary {
   color: white;
   background-color: #8fc717;
   border-color: #6e9912;
 }
-.button:hover.info {
+.button:hover.info, .button:active.info, .button.active.info {
   color: white;
   background-color: #259dff;
   border-color: #0085f1;
 }
-.button:hover.alert {
+.button:hover.alert, .button:active.alert, .button.active.alert {
   color: white;
   background-color: #e20000;
   border-color: #af0000;
@@ -2357,19 +2357,103 @@ hr.fat {
   background-color: white;
   font-size: 0.85em;
   color: #777777;
-  padding: 0.15em 1em;
+  padding: 2px 10px;
   border: 1px solid #8fc717;
   z-index: 9999;
   -webkit-box-shadow: 0 0 4px -1px #8fc717;
   -moz-box-shadow: 0 0 4px -1px #8fc717;
   box-shadow: 0 0 4px -1px #8fc717;
 }
-
-.tooltip-error {
+.tooltip:before, .tooltip:after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  z-index: 2;
+}
+.tooltip:after {
+  border-width: 7px;
+  z-index: 1;
+  margin-left: -12px;
+}
+.tooltip.north:before, .tooltip.north:after {
+  top: -5px;
+  border-top: 0;
+}
+.tooltip.north:before {
+  border-bottom-color: white;
+}
+.tooltip.north:after {
+  top: -7px;
+  border-bottom-color: #8fc717;
+}
+.tooltip.south:before, .tooltip.south:after {
+  bottom: -5px;
+  border-bottom: 0;
+}
+.tooltip.south:before {
+  border-top-color: white;
+}
+.tooltip.south:after {
+  bottom: -7px;
+  border-top-color: #8fc717;
+}
+.tooltip.east:before, .tooltip.east:after {
+  right: 20px;
+  left: auto;
+  margin-left: 0;
+}
+.tooltip.east:after {
+  margin-right: -2px;
+}
+.tooltip.west:before, .tooltip.west:after {
+  left: 10px;
+  margin-left: 0;
+}
+.tooltip.west:after {
+  margin-left: -2px;
+}
+.tooltip.type-alert {
   background-color: #e20000;
   color: white;
-  border: #af0000;
+  border-color: #af0000;
   -webkit-box-shadow: 0 0 4px -1px rgba(226, 0, 0, 0.5);
   -moz-box-shadow: 0 0 4px -1px rgba(226, 0, 0, 0.5);
   box-shadow: 0 0 4px -1px rgba(226, 0, 0, 0.5);
+}
+.tooltip.type-alert.north:before {
+  border-bottom-color: #e20000;
+}
+.tooltip.type-alert.north:after {
+  border-bottom-color: #af0000;
+}
+.tooltip.type-alert.south:before {
+  border-top-color: #e20000;
+}
+.tooltip.type-alert.south:after {
+  border-top-color: #af0000;
+}
+.tooltip.type-info {
+  background-color: #259dff;
+  color: white;
+  border-color: #0085f1;
+  -webkit-box-shadow: 0 0 4px -1px rgba(37, 157, 255, 0.5);
+  -moz-box-shadow: 0 0 4px -1px rgba(37, 157, 255, 0.5);
+  box-shadow: 0 0 4px -1px rgba(37, 157, 255, 0.5);
+}
+.tooltip.type-info.north:before {
+  border-bottom-color: #259dff;
+}
+.tooltip.type-info.north:after {
+  border-bottom-color: #0085f1;
+}
+.tooltip.type-info.south:before {
+  border-bottom-color: #259dff;
+}
+.tooltip.type-info.south:after {
+  border-bottom-color: #0085f1;
 }

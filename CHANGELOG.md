@@ -1,5 +1,8 @@
 # CHANGELOG
 
+### v0.3.5 / 16 Aug
+* Tooltips added
+
 ### v0.3.2 / 6-Aug
 * Removed docs and plugins folders. Docs is completely moved to gh-pages branch
 * Fixed typography mixing and the @font-face declarations.
