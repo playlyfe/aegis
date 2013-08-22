@@ -128,10 +128,11 @@ a [class*=" icon-"]:before {
 .icon-expand:before       { content: '\E04A'; }
 .icon-contract:before     { content: '\E04B'; }
 .icon-process:before      { content: '\E04C'; }
-.icon-sub_process:before  { content: '\E04C'; }
+.icon-sub_process:before  { content: '\E04C'; } // same as process
 .icon-pointer:before      { content: '\E04D'; }
 .icon-console:before      { content: '\E04E'; }
 .icon-leaderboard:before  { content: '\E04F'; }
 .icon-metric:before       { content: '\E050'; }
+.icon-rule:before         { content: '\E038'; } // makeshift until an icon for rule comes around
 .icon-screen:before       { content: '\E051'; }
 .icon-mobile:before       { content: '\E052'; }
