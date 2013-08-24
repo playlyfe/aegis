@@ -130,16 +130,16 @@ hr {
     display: block;
     content: '';
     position: absolute;
-    left: 50%;
-    margin-left: -10px;
     width: 0; height: 0;
     border: 5px solid transparent;
+    left: 50%;
+    margin-left: -5px;
     z-index: 2;
   }
   &:after {
     border-width: 7px;
+    margin-left: -7px;
     z-index: 1;
-    margin-left: -12px;
   }
   &.north {
     &:before, &:after {
@@ -158,7 +158,7 @@ hr {
     &:after { bottom: -7px; border-top-color: $tooltip-border; }
   }
   &.east {
-    &:before, &:after { right: 20px; left: auto; margin-left: 0; }
+    &:before, &:after { right: 10px; left: auto; margin-left: 0; }
     &:after { margin-right: -2px; }
   }
   &.west {
