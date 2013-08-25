@@ -1,5 +1,8 @@
 # CHANGELOG
 
+### v0.4.0 / 25 Aug
+* Minor brushups and bug-fixes
+
 ### v0.3.5 / 16 Aug
 * Tooltips added
 
