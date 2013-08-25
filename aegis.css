@@ -1,5 +1,5 @@
 /*
- * The Aegis CSS Framework v0.3.5
+ * The Aegis CSS Framework v0.4.0
  * Licensed under Apache.
  * http://www.apache.org/licenses/LICENSE-2.0
  */
@@ -771,19 +771,16 @@
   border-left: 5px solid #333333;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  -webkit-transition: -webkit-transform, 1s, ease, 0.1s;
-  -moz-transition: -moz-transform, 1s, ease, 0.1s;
-  -o-transition: -o-transform, 1s, ease, 0.1s;
-  transition: transform, 1s, ease, 0.1s;
+  -webkit-transition: -webkit-transform 1s ease;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition: -moz-transform 1s ease 0.1s;
+  -o-transition: -o-transform 1s ease 0.1s;
+  transition: transform 1s ease 0.1s;
 }
 .sidewinder .unwound > a {
   color: #333333;
 }
 .sidewinder .unwound .arrow {
-  -webkit-transition: -webkit-transform, 1s, ease, 0.1s;
-  -moz-transition: -moz-transform, 1s, ease, 0.1s;
-  -o-transition: -o-transform, 1s, ease, 0.1s;
-  transition: transform, 1s, ease, 0.1s;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -1139,7 +1136,7 @@ a [class*=" icon-"]:before {
   content: '\E018';
 }
 
-.icon-details:before {
+.icon-list:before {
   content: '\E019';
 }
 
@@ -1372,6 +1369,10 @@ a [class*=" icon-"]:before {
 
 .icon-metric:before {
   content: '\E050';
+}
+
+.icon-rule:before {
+  content: '\E038';
 }
 
 .icon-screen:before {
@@ -2152,7 +2153,7 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
 }
 .table tfoot td {
   text-align: center;
-  padding: 1.15385 0;
+  padding: 1.15385em 0;
 }
 .table.condensed th, .table.condensed td {
   padding: 2px 4px;
@@ -2265,8 +2266,15 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   color: white;
   background-color: #71b1e6;
   border: 1px solid #308eda;
-  padding: 0.33em 0.42em;
+  padding: 0.1em 0.4em 0;
   margin: 0.1em 0.7em 0.2em 0;
+  opacity: 0.8;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
   -webkit-touch-callout: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -2280,7 +2288,7 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   text-decoration: none !important;
 }
 .tag:hover {
-  background-color: #2481cd;
+  opacity: 1;
 }
 
 hr {
@@ -2368,17 +2376,17 @@ hr.fat {
   display: block;
   content: '';
   position: absolute;
-  left: 50%;
-  margin-left: -10px;
   width: 0;
   height: 0;
   border: 5px solid transparent;
+  left: 50%;
+  margin-left: -5px;
   z-index: 2;
 }
 .tooltip:after {
   border-width: 7px;
+  margin-left: -7px;
   z-index: 1;
-  margin-left: -12px;
 }
 .tooltip.north:before, .tooltip.north:after {
   top: -5px;
@@ -2403,7 +2411,7 @@ hr.fat {
   border-top-color: #8fc717;
 }
 .tooltip.east:before, .tooltip.east:after {
-  right: 20px;
+  right: 10px;
   left: auto;
   margin-left: 0;
 }
