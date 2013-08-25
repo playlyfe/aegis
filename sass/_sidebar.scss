@@ -42,7 +42,7 @@
       border-left: 5px solid $side-color;
       border-top: 5px solid transparent;
       border-bottom: 5px solid transparent;
-      @include transition(transform, 1.0s, ease, 0.1s);
+      @include transition(transform 1.0s ease 0.1s);
     }
   }
   .unwound {
@@ -50,7 +50,6 @@
       color: $side-color;
     }
     .arrow {
-      @include transition(transform, 1.0s, ease, 0.1s);
       @include rotateZ(90deg);
     }
     &:hover {
