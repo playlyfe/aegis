@@ -261,6 +261,8 @@ input, select, textarea, label, .snippet, .immutable {
     float: none;
     margin-left: 0;
     margin-right: 0;
+    &.no-alpha { margin-left: 1%; }
+    &.no-omega { margin-right: 1%; }
   }
 }
 .append, .prepend {
