@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### v0.9.0 / 12 Sept
+* Getting ready for major realease 1.0.0
+* Mostly minor tweaks, removal of some classes and debugs
+
 ### v0.4.0 / 25 Aug
 * Minor brushups and bug-fixes
 
