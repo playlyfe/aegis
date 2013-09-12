@@ -1,16 +1,9 @@
 /*
- * The Aegis CSS Framework v0.4.0
+ * The Aegis CSS Framework
  * Licensed under Apache.
  * http://www.apache.org/licenses/LICENSE-2.0
  */
-/*
-  Variable Grid System (Fluid Version).
-  Learn more ~ http://www.spry-soft.com/grids/
-  Based on 960 Grid System - http://960.gs/ & 960 Fluid - http://www.designinfluences.com/
-  Licensed under GPL and MIT.
-*/
-.grid-12,
-.grid-16 {
+.grid-12 {
   width: 92%;
   margin-left: 4%;
   margin-right: 4%;
@@ -27,23 +20,19 @@
   margin-right: 1%;
 }
 
-.grid-12 .col-3,
-.grid-16 .col-4 {
+.grid-12 .col-3 {
   width: 23%;
 }
 
-.grid-12 .col-6,
-.grid-16 .col-8 {
+.grid-12 .col-6 {
   width: 48%;
 }
 
-.grid-12 .col-9,
-.grid-16 .col-12 {
+.grid-12 .col-9 {
   width: 73%;
 }
 
-.grid-12 .col-12,
-.grid-16 .col-16 {
+.grid-12 .col-12 {
   width: 98%;
 }
 
@@ -80,55 +69,15 @@
   width: 89.666%;
 }
 
-.grid-16 .col-1 {
-  width: 4.25%;
-}
-.grid-16 .col-2 {
-  width: 10.5%;
-}
-.grid-16 .col-3 {
-  width: 16.75%;
-}
-.grid-16 .col-5 {
-  width: 29.25%;
-}
-.grid-16 .col-6 {
-  width: 35.5%;
-}
-.grid-16 .col-7 {
-  width: 41.75%;
-}
-.grid-16 .col-9 {
-  width: 54.25%;
-}
-.grid-16 .col-10 {
-  width: 60.5%;
-}
-.grid-16 .col-11 {
-  width: 66.75%;
-}
-.grid-16 .col-13 {
-  width: 79.25%;
-}
-.grid-16 .col-14 {
-  width: 85.5%;
-}
-.grid-16 .col-15 {
-  width: 91.75%;
-}
-
-.grid-12 .pfx-3,
-.grid-16 .pfx-4 {
+.grid-12 .pfx-3 {
   padding-left: 25%;
 }
 
-.grid-12 .pfx-6,
-.grid-16 .pfx-8 {
+.grid-12 .pfx-6 {
   padding-left: 50%;
 }
 
-.grid-12 .pfx-9,
-.grid-16 .pfx-12 {
+.grid-12 .pfx-9 {
   padding-left: 75%;
 }
 
@@ -157,55 +106,15 @@
   padding-left: 91.666%;
 }
 
-.grid-16 .pfx-1 {
-  padding-left: 6.25%;
-}
-.grid-16 .pfx-2 {
-  padding-left: 12.5%;
-}
-.grid-16 .pfx-3 {
-  padding-left: 18.75%;
-}
-.grid-16 .pfx-5 {
-  padding-left: 31.25%;
-}
-.grid-16 .pfx-6 {
-  padding-left: 37.5%;
-}
-.grid-16 .pfx-7 {
-  padding-left: 43.75%;
-}
-.grid-16 .pfx-9 {
-  padding-left: 56.25%;
-}
-.grid-16 .pfx-10 {
-  padding-left: 62.5%;
-}
-.grid-16 .pfx-11 {
-  padding-left: 68.75%;
-}
-.grid-16 .pfx-13 {
-  padding-left: 81.25%;
-}
-.grid-16 .pfx-14 {
-  padding-left: 87.5%;
-}
-.grid-16 .pfx-15 {
-  padding-left: 93.75%;
-}
-
-.grid-12 .sfx-3,
-.grid-16 .sfx-4 {
+.grid-12 .sfx-3 {
   padding-right: 25%;
 }
 
-.grid-12 .sfx-6,
-.grid-16 .sfx-8 {
+.grid-12 .sfx-6 {
   padding-right: 50%;
 }
 
-.grid-12 .sfx-9,
-.grid-16 .sfx-12 {
+.grid-12 .sfx-9 {
   padding-right: 75%;
 }
 
@@ -232,43 +141,6 @@
 }
 .grid-12 .sfx-11 {
   padding-right: 91.666%;
-}
-
-.grid-16 .sfx-1 {
-  padding-right: 6.25%;
-}
-.grid-16 .sfx-2 {
-  padding-right: 16.5%;
-}
-.grid-16 .sfx-3 {
-  padding-right: 18.75%;
-}
-.grid-16 .sfx-5 {
-  padding-right: 31.25%;
-}
-.grid-16 .sfx-6 {
-  padding-right: 37.5%;
-}
-.grid-16 .sfx-7 {
-  padding-right: 43.75%;
-}
-.grid-16 .sfx-9 {
-  padding-right: 56.25%;
-}
-.grid-16 .sfx-10 {
-  padding-right: 62.5%;
-}
-.grid-16 .sfx-11 {
-  padding-right: 68.75%;
-}
-.grid-16 .sfx-13 {
-  padding-right: 81.25%;
-}
-.grid-16 .sfx-14 {
-  padding-right: 87.5%;
-}
-.grid-16 .sfx-15 {
-  padding-right: 93.75%;
 }
 
 .grid-12 .push-1 {
@@ -401,6 +273,10 @@
 
 .right {
   float: right !important;
+}
+
+.no-float {
+  float: none !important;
 }
 
 .static-pos {
@@ -538,10 +414,11 @@
 .navbar li {
   float: left;
   display: block;
-  -webkit-transition: background 0.2s ease, 0.1s;
-  -moz-transition: background 0.2s ease, 0.1s;
-  -o-transition: background 0.2s ease, 0.1s;
-  transition: background 0.2s ease, 0.1s;
+  -webkit-transition: background 0.2s ease;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition: background 0.2s ease 0.1s;
+  -o-transition: background 0.2s ease 0.1s;
+  transition: background 0.2s ease 0.1s;
 }
 .navbar li:hover, .navbar li.active {
   background-color: #80b314;
@@ -1520,7 +1397,6 @@ label.error {
 
 .field-wrapper, .form-actions {
   position: relative;
-  *display: block;
 }
 
 .form-actions {
@@ -1732,6 +1608,12 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   float: none;
   margin-left: 0;
   margin-right: 0;
+}
+input[class*="col-"].no-alpha, select[class*="col-"].no-alpha, textarea[class*="col-"].no-alpha, label[class*="col-"].no-alpha, .snippet[class*="col-"].no-alpha, .immutable[class*="col-"].no-alpha {
+  margin-left: 1%;
+}
+input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="col-"].no-omega, label[class*="col-"].no-omega, .snippet[class*="col-"].no-omega, .immutable[class*="col-"].no-omega {
+  margin-right: 1%;
 }
 
 .append label[class*="col-"], .append input[class*="col-"], .append select[class*="col-"], .append .snippet[class*="col-"], .append .immutable[class*="col-"], .prepend label[class*="col-"], .prepend input[class*="col-"], .prepend select[class*="col-"], .prepend .snippet[class*="col-"], .prepend .immutable[class*="col-"] {
@@ -2065,9 +1947,6 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
 .button-group .button ~ .button {
   margin-left: -1px;
 }
-.button-group + .button-group {
-  margin-right: 10px;
-}
 
 .table {
   border-collapse: collapse;
@@ -2153,7 +2032,6 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
 }
 .table tfoot td {
   text-align: center;
-  padding: 1.15385em 0;
 }
 .table.condensed th, .table.condensed td {
   padding: 2px 4px;
@@ -2224,7 +2102,6 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
 .media {
   margin: 10px;
   overflow: hidden;
-  _overflow: visible;
   zoom: 1;
 }
 .media .content {
@@ -2265,7 +2142,7 @@ input[class*="col-"], select[class*="col-"], textarea[class*="col-"], label[clas
   font-size: 12px;
   color: white;
   background-color: #71b1e6;
-  border: 1px solid #308eda;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 0.1em 0.4em 0;
   margin: 0.1em 0.7em 0.2em 0;
   opacity: 0.8;
@@ -2333,29 +2210,6 @@ hr.fat {
   -moz-transition: color 0.4s ease 0.1s, background-color 0.4s ease 0.1s;
   -o-transition: color 0.4s ease 0.1s, background-color 0.4s ease 0.1s;
   transition: color 0.4s ease 0.1s, background-color 0.4s ease 0.1s;
-}
-
-.example {
-  background-color: #fefefc;
-  margin: 1em 0;
-  padding: 2em 2em 1em;
-  border: 1px solid #bee2ff;
-  -webkit-box-shadow: inset 0px -1px 5px 0px #f1f9ff;
-  -moz-box-shadow: inset 0px -1px 5px 0px #f1f9ff;
-  box-shadow: inset 0px -1px 5px 0px #f1f9ff;
-  overflow: hidden;
-}
-.example:after {
-  display: block;
-  padding: 2px 5px;
-  content: "example";
-  text-transform: uppercase;
-  background-color: #259dff;
-  border: #0085f1;
-  color: white;
-  position: absolute;
-  top: -1px;
-  right: -1px;
 }
 
 .tooltip {
