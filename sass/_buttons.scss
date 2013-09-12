@@ -34,7 +34,6 @@
   }
 }
 
-
 .button { // Button sizes & colours
   &.icon { /* smallest, icon-holder should be square */
     padding: 0 7px;
@@ -60,7 +59,6 @@
     line-height: 1.5em;
     font-size: 1.5em;
   }
-
 
   // Button colours
   &.important {
@@ -155,10 +153,5 @@
   white-space: nowrap;
   font-size: 0; // eliminate space from inline-block elements
   .button { margin: 0; }
-  .button ~ .button {
-    margin-left: -1px; // join all subsequent buttons
-  }
-  + .button-group {
-    margin-right: 10px;
-  }
+  .button ~ .button { margin-left: -1px; }
 }
