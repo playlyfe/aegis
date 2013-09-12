@@ -1,15 +1,8 @@
 {
   "name": "aegis",
-  "version": "0.4.0",
+  "version": "0.9.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/playlyfe/aegis.git"
-  },
-  "devDependencies": {
-    "jquery": "~1.9.0",
-    "mocha": "*",
-    "chai": "*",
-    "chai-jquery": "*",
-    "sinon": "*"
   }
 }
