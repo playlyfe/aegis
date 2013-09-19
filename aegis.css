@@ -251,20 +251,17 @@
   text-decoration: none !important;
   outline: none;
 }
-.no-anchor:hover {
-  text-decoration: none !important;
-}
 
 .auto-width {
   width: auto !important;
 }
 
 .full-width {
-  width: 100%;
+  width: 100% !important;
 }
 
 .full-height {
-  height: 100%;
+  height: 100% !important;
 }
 
 .left {
@@ -291,21 +288,17 @@
   position: fixed !important;
 }
 
+.block {
+  display: block !important;
+}
+
 .inline {
-  display: inline;
+  display: inline !important;
 }
 
 .in-block {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-}
-
-.block {
-  display: block;
 }
 
 .fade-1 {
@@ -351,12 +344,8 @@
 }
 
 .list-inline > li {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   padding: 0 0.5em;
 }
 
@@ -383,17 +372,10 @@
   cursor: pointer;
   display: block;
 }
-.nav a:hover {
-  text-decoration: none !important;
-}
 
 .nav-inline > li {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   padding: 0;
 }
 
@@ -417,7 +399,6 @@
   -webkit-transition: background 0.2s ease;
   -webkit-transition-delay: 0.1s;
   -moz-transition: background 0.2s ease 0.1s;
-  -o-transition: background 0.2s ease 0.1s;
   transition: background 0.2s ease 0.1s;
 }
 .navbar li:hover, .navbar li.active {
@@ -449,9 +430,6 @@
   line-height: 40px;
   height: 40px;
   color: transparent;
-}
-.navbar .crest:hover {
-  text-decoration: none !important;
 }
 .navbar .crest:hover {
   background-color: transparent;
@@ -521,7 +499,6 @@
   -moz-box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.15);
   box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.15);
   -webkit-background-clip: padding;
-  -moz-background-clip: padding;
   background-clip: padding-box;
 }
 .modal.lined .modal-header {
@@ -572,9 +549,6 @@
   color: #dddddd;
 }
 .modal-close:hover {
-  text-decoration: none !important;
-}
-.modal-close:hover {
   color: #e20000;
 }
 
@@ -613,14 +587,12 @@
   padding: 5px 0 5px 10px;
   -webkit-transition: background, 0.3s, ease, 0.3s;
   -moz-transition: background, 0.3s, ease, 0.3s;
-  -o-transition: background, 0.3s, ease, 0.3s;
   transition: background, 0.3s, ease, 0.3s;
 }
 .sidewinder a:hover {
   color: #8fc717;
   -webkit-transition: border-color, 0.3s, ease, 0.2s;
   -moz-transition: border-color, 0.3s, ease, 0.2s;
-  -o-transition: border-color, 0.3s, ease, 0.2s;
   transition: border-color, 0.3s, ease, 0.2s;
 }
 .sidewinder .sw-l1 {
@@ -651,7 +623,6 @@
   -webkit-transition: -webkit-transform 1s ease;
   -webkit-transition-delay: 0.1s;
   -moz-transition: -moz-transform 1s ease 0.1s;
-  -o-transition: -o-transform 1s ease 0.1s;
   transition: transform 1s ease 0.1s;
 }
 .sidewinder .unwound > a {
@@ -661,7 +632,6 @@
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .sidewinder .unwound:hover > a, .sidewinder .unwound:hover .arrow {
@@ -1412,12 +1382,8 @@ input[type="month"], input[type="time"], input[type="week"],
 input[type="number"], input[type="email"], input[type="url"],
 input[type="search"], input[type="tel"], input[type="color"],
 .immutable {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1478,7 +1444,6 @@ input[type="checkbox"] {
 
 select {
   -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
   background-color: white;
   line-height: 31px;
@@ -1509,12 +1474,10 @@ input[type="color"],
 .immutable {
   background-color: white;
   -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
   border-radius: 0px;
   -webkit-transition: border linear, box-shadow linear;
   -webkit-transition-delay: 0.2s, 0.2s;
   -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
   transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 textarea:focus,
@@ -1617,12 +1580,8 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
 }
 
 .append label[class*="col-"], .append input[class*="col-"], .append select[class*="col-"], .append .snippet[class*="col-"], .append .immutable[class*="col-"], .prepend label[class*="col-"], .prepend input[class*="col-"], .prepend select[class*="col-"], .prepend .snippet[class*="col-"], .prepend .immutable[class*="col-"] {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
 }
 .append label, .prepend label {
   margin: 0 0 0.69231em;
@@ -1643,12 +1602,8 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
 }
 
 .add-on {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1664,7 +1619,6 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
 }
 
 .disabled, *[disabled] {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
   opacity: 0.65;
   -webkit-touch-callout: none;
   -moz-user-select: none;
@@ -1695,12 +1649,8 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
 .form-horizontal .immutable,
 .form-horizontal .prepend,
 .form-horizontal .append {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   margin-bottom: 0;
   vertical-align: middle;
 }
@@ -1743,7 +1693,6 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   -webkit-transition: border-color 0.3s ease;
   -webkit-transition-delay: 0.1s;
   -moz-transition: border-color 0.3s ease 0.1s;
-  -o-transition: border-color 0.3s ease 0.1s;
   transition: border-color 0.3s ease 0.1s;
   float: left;
   display: block;
@@ -1761,7 +1710,6 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   -webkit-transition: color 0.2s ease;
   -webkit-transition-delay: 0.1s;
   -moz-transition: color 0.2s ease 0.1s;
-  -o-transition: color 0.2s ease 0.1s;
   transition: color 0.2s ease 0.1s;
 }
 .tab-item:hover {
@@ -1776,7 +1724,6 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   -webkit-transition: border-width 0.3s ease;
   -webkit-transition-delay: 0.1s;
   -moz-transition: border-width 0.3s ease 0.1s;
-  -o-transition: border-width 0.3s ease 0.1s;
   transition: border-width 0.3s ease 0.1s;
 }
 .tab-item.live a {
@@ -1796,12 +1743,8 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
 }
 
 .button {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   -webkit-touch-callout: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -1816,7 +1759,6 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   -webkit-transition: background 0.2s ease, color 0.1s ease, border 0.6s ease;
   -webkit-transition-delay: 0.1s, 0.1s, 0.1s;
   -moz-transition: background 0.2s ease 0.1s, color 0.1s ease 0.1s, border 0.6s ease 0.1s;
-  -o-transition: background 0.2s ease 0.1s, color 0.1s ease 0.1s, border 0.6s ease 0.1s;
   transition: background 0.2s ease 0.1s, color 0.1s ease 0.1s, border 0.6s ease 0.1s;
   font-size: 14px;
   line-height: 31px;
@@ -1829,9 +1771,6 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   color: #555555;
   background-color: #eeeeee;
   border-color: #d4d4d4;
-}
-.button:hover {
-  text-decoration: none !important;
 }
 .button [class^="icon-"], .button [class*="icon-"] {
   margin-left: -0.2em;
@@ -1864,7 +1803,6 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   width: 8em;
   height: 8em;
   -webkit-border-radius: 4em;
-  -moz-border-radius: 4em;
   border-radius: 4em;
   line-height: 1.5em;
   font-size: 1.5em;
@@ -1932,12 +1870,8 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
 }
 
 .button-group {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   white-space: nowrap;
   font-size: 0;
 }
@@ -2133,9 +2067,6 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   outline: none;
   cursor: pointer;
 }
-.as-button:hover {
-  text-decoration: none !important;
-}
 
 .tag {
   position: relative;
@@ -2146,12 +2077,8 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   padding: 0.1em 0.4em 0;
   margin: 0.1em 0.7em 0.2em 0;
   opacity: 0.8;
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   -webkit-touch-callout: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -2160,9 +2087,6 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   text-decoration: none !important;
   outline: none;
   cursor: pointer;
-}
-.tag:hover {
-  text-decoration: none !important;
 }
 .tag:hover {
   opacity: 1;
@@ -2189,12 +2113,8 @@ hr.fat {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   max-width: 400px;
   padding: 0.2em 0.5em;
   border: 1px dashed #80b314;
@@ -2208,7 +2128,6 @@ hr.fat {
   -webkit-transition: color 0.4s ease, background-color 0.4s ease;
   -webkit-transition-delay: 0.1s, 0.1s;
   -moz-transition: color 0.4s ease 0.1s, background-color 0.4s ease 0.1s;
-  -o-transition: color 0.4s ease 0.1s, background-color 0.4s ease 0.1s;
   transition: color 0.4s ease 0.1s, background-color 0.4s ease 0.1s;
 }
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### v0.9.1 / 19 Sept
+* Removed default support for old browsers
+* Made all utility classes !important, due to their atomic nature
+
 ### v0.9.0 / 12 Sept
 * Getting ready for major realease 1.0.0
 * Mostly minor tweaks, removal of some classes and debugs
