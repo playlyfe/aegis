@@ -4,6 +4,13 @@
  * http://www.apache.org/licenses/LICENSE-2.0
  */
 
+// set build options. Keeps final stylesheet smaller.
+$support-for-original-webkit-gradients : false; // no old grads
+$experimental-support-for-opera : false; // opera sux kok with layouts + blink now
+$experimental-support-for-khtml : false; // konqe-duh
+$legacy-support-for-mozilla: false; // extinct
+$legacy-support-for-ie: false; // lol no
+
 // include partials
 @import "variables";
 @import "compass";
