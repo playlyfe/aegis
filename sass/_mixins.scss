@@ -17,9 +17,6 @@
 @mixin no-anchor {
   text-decoration: none !important;
   outline: none;
-  &:hover {
-    text-decoration: none !important;
-  }
 }
 
 // make the text unselectable (in supported browsers)
@@ -47,15 +44,9 @@
 }
 
 @mixin button-style($color: null, $bg: null, $border: null) {
-  @if $color != null {
-    color: $color;
-  }
-  @if $bg != null {
-    background-color: $bg;
-  }
-  @if $border != null {
-    border-color: $border;
-  }
+  @if $color != null  { color: $color; }
+  @if $bg != null     { background-color: $bg; }
+  @if $border != null { border-color: $border; }
 }
 
 // animation mixins

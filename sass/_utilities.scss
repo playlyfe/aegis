@@ -9,12 +9,8 @@
 .clearfix {
   @include clearfix();
 }
-.hide {
-  display: none !important;
-}
-.show {
-  display: block !important;
-}
+.hide { display: none  !important; }
+.show { display: block !important; }
 
 .no-top { margin-top: 0     !important; }
 .no-bot { margin-bottom: 0  !important; }
@@ -28,40 +24,22 @@
   @include no-anchor;
 }
 
-.auto-width { width: auto !important; }
-.full-width { width: 100%; }
-.full-height { height: 100%; }
+.auto-width  { width: auto  !important; }
+.full-width  { width: 100%  !important; }
+.full-height { height: 100% !important; }
 
-.left {
-  float: left !important;
-}
-.right {
-  float: right !important;
-}
-.no-float {
-  float: none !important;
-}
-.static-pos {
-  position: static !important;
-}
-.abs-pos {
-  position: absolute !important;
-}
-.fix-pos {
-  position: fixed !important;
-}
-.inline {
-  display: inline;
-}
-.in-block {
-  @include inline-block();
-}
-.block {
-  display: block;
-}
+.left     { float: left  !important; }
+.right    { float: right !important; }
+.no-float { float: none  !important; }
+
+.static-pos { position: static   !important; }
+.abs-pos    { position: absolute !important; }
+.fix-pos    { position: fixed    !important; }
+
+.block    { display: block !important; }
+.inline   { display: inline !important; }
+.in-block { @include inline-block(); }
 
 @for $i from 1 through 9 {
-  .fade-#{$i} {
-    opacity: 0.1*$i;
-  }
+  .fade-#{$i} { opacity: 0.1*$i; }
 }
