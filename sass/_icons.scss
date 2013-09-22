@@ -113,6 +113,7 @@ a [class*=" icon-"]:before {
 .icon-regen:before        { content: '\E03B'; }
 .icon-tag:before          { content: '\E03C'; }
 .icon-rank:before         { content: '\E03D'; }
+.icon-state:before        { content: '\E03D'; } // same as rank as of now
 .icon-badge:before        { content: '\E03E'; }
 .icon-point:before        { content: '\E03F'; }
 .icon-team:before         { content: '\E040'; }
