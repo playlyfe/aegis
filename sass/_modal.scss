@@ -75,6 +75,7 @@
   position: absolute;
   top: 4px; right: 0;
   font-size: 1.5em;
+  z-index: 1;
   color: $modal-border;
   &:hover {
     color: $red;
