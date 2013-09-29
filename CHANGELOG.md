@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### v0.9.2 / 29 Sept
+* Fixed minor bugs in tooltip, modals
+* Added an 'ellipsis' class in typography for dealing with common text-overflow problems.
+
 ### v0.9.1 / 19 Sept
 * Removed default support for old browsers
 * Made all utility classes !important, due to their atomic nature

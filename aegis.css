@@ -280,6 +280,10 @@
   position: static !important;
 }
 
+.rel-pos {
+  position: relative !important;
+}
+
 .abs-pos {
   position: absolute !important;
 }
@@ -546,14 +550,16 @@
   top: 4px;
   right: 0;
   font-size: 1.5em;
+  z-index: 1;
   color: #dddddd;
 }
 .modal-close:hover {
   color: #e20000;
 }
 
-.modal-header, .modal-body, .modal-footer {
+.modal-section {
   padding: 1em 2em;
+  position: relative;
   overflow: hidden;
 }
 
@@ -831,6 +837,12 @@ code {
 
 .text-justify {
   text-align: justify;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @font-face {
@@ -1135,6 +1147,10 @@ a [class*=" icon-"]:before {
 }
 
 .icon-rank:before {
+  content: '\E03D';
+}
+
+.icon-state:before {
   content: '\E03D';
 }
 
@@ -2233,8 +2249,8 @@ hr.fat {
   border-bottom-color: #0085f1;
 }
 .tooltip.type-info.south:before {
-  border-bottom-color: #259dff;
+  border-top-color: #259dff;
 }
 .tooltip.type-info.south:after {
-  border-bottom-color: #0085f1;
+  border-top-color: #0085f1;
 }
