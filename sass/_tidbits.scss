@@ -166,8 +166,8 @@ hr {
       &:after { border-bottom-color: $accent-dark; }
     }
     &.south {
-      &:before { border-bottom-color: $accent; }
-      &:after { border-bottom-color: $accent-dark; }
+      &:before { border-top-color: $accent; }
+      &:after { border-top-color: $accent-dark; }
     }
   }
 }

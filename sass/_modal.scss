@@ -75,13 +75,15 @@
   position: absolute;
   top: 4px; right: 0;
   font-size: 1.5em;
+  z-index: 1;
   color: $modal-border;
   &:hover {
     color: $red;
   }
 }
-.modal-header, .modal-body, .modal-footer {
+.modal-section {
   padding: 1em 2em;
+  position: relative;
   overflow: hidden;
 }
 .modal-header { padding-top:0; padding-bottom: 0; }

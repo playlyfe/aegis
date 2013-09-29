@@ -143,3 +143,8 @@ code {
 .text-right   { text-align: right;   }
 .text-center  { text-align: center;  }
 .text-justify { text-align: justify; }
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
