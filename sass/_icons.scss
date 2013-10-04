@@ -107,7 +107,7 @@ a [class*=" icon-"]:before {
 .icon-properties:before   { content: '\E038'; }
 .icon-stats:before        { content: '\E039'; }
 .icon-copy:before         { content: '\E03A'; }
-.icon-regen:before        { content: '\E03B'; }
+.icon-refresh:before      { content: '\E03B'; }
 .icon-tag:before          { content: '\E03C'; }
 .icon-rank:before         { content: '\E03D'; }
 .icon-badge:before        { content: '\E03E'; }
@@ -152,5 +152,5 @@ a [class*=" icon-"]:before {
 .icon-team:before         { content: '\E060'; }
 .icon-asterisk:before     { content: '\E061'; }
 .icon-game:before         { content: '\E062'; }
-.icon-next:before         { content: '\E063'; }
-.icon-prev:before         { content: '\E064'; }
+.icon-double-right:before { content: '\E063'; }
+.icon-double-left:before  { content: '\E064'; }
