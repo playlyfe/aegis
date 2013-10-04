@@ -55,7 +55,7 @@ a [class*=" icon-"]:before {
 .icon-tick:before         { content: '\E005'; }
 .icon-cross:before        { content: '\E006'; }
 .icon-view:before         { content: '\E007'; }
-
+.icon-cloud:before        { content: '\E008'; }
 .icon-cog:before          { content: '\E009'; }
 .icon-menu:before         { content: '\E00A'; }
 .icon-calendar:before     { content: '\E00B'; }
@@ -80,7 +80,7 @@ a [class*=" icon-"]:before {
 .icon-help:before         { content: '\E01E'; }
 .icon-star:before         { content: '\E01F'; }
 .icon-sandbox:before      { content: '\E020'; }
-.icon-simulate:before     { content: '\E021'; }
+.icon-launch:before       { content: '\E021'; }
 .icon-design:before       { content: '\E022'; }
 .icon-exclusive:before    { content: '\E023'; }
 .icon-parallel:before     { content: '\E024'; }
@@ -110,10 +110,9 @@ a [class*=" icon-"]:before {
 .icon-regen:before        { content: '\E03B'; }
 .icon-tag:before          { content: '\E03C'; }
 .icon-rank:before         { content: '\E03D'; }
-.icon-state:before        { content: '\E03D'; } // same as rank as of now
 .icon-badge:before        { content: '\E03E'; }
 .icon-point:before        { content: '\E03F'; }
-.icon-team:before         { content: '\E040'; }
+.icon-state:before        { content: '\E040'; }
 .icon-target:before       { content: '\E041'; }
 .icon-roundplus:before    { content: '\E042'; }
 .icon-roundminus:before   { content: '\E043'; }
@@ -134,3 +133,24 @@ a [class*=" icon-"]:before {
 .icon-rule:before         { content: '\E038'; } // makeshift until an icon for rule comes around
 .icon-screen:before       { content: '\E051'; }
 .icon-mobile:before       { content: '\E052'; }
+.icon-carat-up:before     { content: '\E053'; }
+.icon-carat-down:before   { content: '\E054'; }
+.icon-carat-right:before  { content: '\E055'; }
+.icon-carat-left:before   { content: '\E056'; }
+.icon-lock:before         { content: '\E057'; }
+.icon-unlock:before       { content: '\E058'; }
+.icon-restricted:before   { content: '\E059'; }
+.icon-private:before      { content: '\E059'; }
+.icon-key:before          { content: '\E05A'; }
+.icon-protected:before    { content: '\E05A'; }
+.icon-world:before        { content: '\E05B'; }
+.icon-public:before       { content: '\E05B'; }
+.icon-upload:before       { content: '\E05C'; }
+.icon-download:before     { content: '\E05D'; }
+.icon-simulate:before     { content: '\E05E'; }
+.icon-insert:before       { content: '\E05F'; }
+.icon-team:before         { content: '\E060'; }
+.icon-asterisk:before     { content: '\E061'; }
+.icon-game:before         { content: '\E062'; }
+.icon-next:before         { content: '\E063'; }
+.icon-prev:before         { content: '\E064'; }
