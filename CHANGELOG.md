@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### v0.9.3 / 5 Oct
+* Added new icons to the font
+* Improved hinting and design of old icons
+
 ### v0.9.2 / 29 Sept
 * Fixed minor bugs in tooltip, modals
 * Added an 'ellipsis' class in typography for dealing with common text-overflow problems.

@@ -220,7 +220,7 @@
 }
 
 .hide {
-  display: none !important;
+  display: none  !important;
 }
 
 .show {
@@ -228,19 +228,19 @@
 }
 
 .no-top {
-  margin-top: 0 !important;
+  margin-top: 0     !important;
 }
 
 .no-bot {
-  margin-bottom: 0 !important;
+  margin-bottom: 0  !important;
 }
 
 .no-margin, .no-space {
-  margin: 0 !important;
+  margin: 0      !important;
 }
 
 .no-padding, .no-space {
-  padding: 0 !important;
+  padding: 0    !important;
 }
 
 .no-space {
@@ -253,11 +253,11 @@
 }
 
 .auto-width {
-  width: auto !important;
+  width: auto  !important;
 }
 
 .full-width {
-  width: 100% !important;
+  width: 100%  !important;
 }
 
 .full-height {
@@ -265,7 +265,7 @@
 }
 
 .left {
-  float: left !important;
+  float: left  !important;
 }
 
 .right {
@@ -273,11 +273,11 @@
 }
 
 .no-float {
-  float: none !important;
+  float: none  !important;
 }
 
 .static-pos {
-  position: static !important;
+  position: static   !important;
 }
 
 .rel-pos {
@@ -289,7 +289,7 @@
 }
 
 .fix-pos {
-  position: fixed !important;
+  position: fixed    !important;
 }
 
 .block {
@@ -568,7 +568,7 @@
   padding-bottom: 0;
 }
 
-.spinner {
+.overlay-spinner {
   position: relative;
   top: 50%;
   margin-top: -45px;
@@ -855,7 +855,7 @@ code {
 
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: "Lyfeicons";
+  font-family: 'Lyfeicons';
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -911,7 +911,7 @@ a [class*=" icon-"]:before {
   content: '\E003';
 }
 
-.icon-erase:before {
+.icon-delete:before {
   content: '\E004';
 }
 
@@ -927,7 +927,7 @@ a [class*=" icon-"]:before {
   content: '\E007';
 }
 
-.icon-delete:before {
+.icon-cloud:before {
   content: '\E008';
 }
 
@@ -1027,7 +1027,7 @@ a [class*=" icon-"]:before {
   content: '\E020';
 }
 
-.icon-simulate:before {
+.icon-launch:before {
   content: '\E021';
 }
 
@@ -1138,7 +1138,7 @@ a [class*=" icon-"]:before {
   content: '\E03A';
 }
 
-.icon-regen:before {
+.icon-refresh:before {
   content: '\E03B';
 }
 
@@ -1150,10 +1150,6 @@ a [class*=" icon-"]:before {
   content: '\E03D';
 }
 
-.icon-state:before {
-  content: '\E03D';
-}
-
 .icon-badge:before {
   content: '\E03E';
 }
@@ -1162,7 +1158,7 @@ a [class*=" icon-"]:before {
   content: '\E03F';
 }
 
-.icon-team:before {
+.icon-state:before {
   content: '\E040';
 }
 
@@ -1246,6 +1242,90 @@ a [class*=" icon-"]:before {
   content: '\E052';
 }
 
+.icon-carat-up:before {
+  content: '\E053';
+}
+
+.icon-carat-down:before {
+  content: '\E054';
+}
+
+.icon-carat-right:before {
+  content: '\E055';
+}
+
+.icon-carat-left:before {
+  content: '\E056';
+}
+
+.icon-lock:before {
+  content: '\E057';
+}
+
+.icon-unlock:before {
+  content: '\E058';
+}
+
+.icon-restricted:before {
+  content: '\E059';
+}
+
+.icon-private:before {
+  content: '\E059';
+}
+
+.icon-key:before {
+  content: '\E05A';
+}
+
+.icon-protected:before {
+  content: '\E05A';
+}
+
+.icon-world:before {
+  content: '\E05B';
+}
+
+.icon-public:before {
+  content: '\E05B';
+}
+
+.icon-upload:before {
+  content: '\E05C';
+}
+
+.icon-download:before {
+  content: '\E05D';
+}
+
+.icon-simulate:before {
+  content: '\E05E';
+}
+
+.icon-insert:before {
+  content: '\E05F';
+}
+
+.icon-team:before {
+  content: '\E060';
+}
+
+.icon-asterisk:before {
+  content: '\E061';
+}
+
+.icon-game:before {
+  content: '\E062';
+}
+
+.icon-double-right:before {
+  content: '\E063';
+}
+
+.icon-double-left:before {
+  content: '\E064';
+}
+
 form {
   margin: 0 0 21px;
 }
@@ -1306,10 +1386,10 @@ fieldset.framed > legend {
 .form-row, .form-errors, .form-horizontal .form-errors {
   margin-bottom: 5px;
 }
-.form-row button, .form-errors button, .form-horizontal .form-errors button, .form-row .button, .form-errors .button, .form-horizontal .form-errors .button {
+.form-row button, .form-errors button, .form-horizontal .form-errors button, .form-row .button, .form-errors .button {
   margin-bottom: 0.64286em;
 }
-.form-row .button-group, .form-errors .button-group, .form-horizontal .form-errors .button-group {
+.form-row .button-group, .form-errors .button-group {
   margin-bottom: 9px;
 }
 .form-row .button-group > .button, .form-errors .button-group > .button {
@@ -1323,7 +1403,7 @@ fieldset.framed > legend {
 .form-row:after, .form-errors:after, .form-horizontal .form-errors:after {
   clear: both;
 }
-.form-row .snippet, .form-errors .snippet, .form-horizontal .form-errors .snippet {
+.form-row .snippet, .form-errors .snippet {
   height: 2.38462em;
   line-height: 2.38462em;
   padding-top: 0;
@@ -1671,10 +1751,10 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   vertical-align: middle;
 }
 
-.form-horizontal .form-errors, .form-horizontal .form-errors {
+.form-horizontal .form-errors {
   margin-left: 155px;
 }
-.form-horizontal .form-row, .form-horizontal .form-errors, .form-horizontal .form-errors {
+.form-horizontal .form-row, .form-horizontal .form-errors {
   margin-bottom: 20px;
 }
 .form-horizontal .field-label {
@@ -1974,7 +2054,7 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.table .list-unstyled > li, .table .nav > li, .table .form-errors > li, .table .form-horizontal .form-errors > li, .form-horizontal .table .form-errors > li, .table .field-errors > li {
+.table .list-unstyled > li, .table .nav > li, .table .form-errors > li, .table .field-errors > li {
   padding-bottom: 0em;
 }
 .table tfoot {
