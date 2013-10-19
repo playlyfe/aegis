@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### v1.0.0 / 20 Oct
+* Feels like its mature enough for v1.
+* Minor fixes
+
 ### v0.9.3 / 5 Oct
 * Added new icons to the font
 * Improved hinting and design of old icons
