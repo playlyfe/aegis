@@ -347,10 +347,14 @@
   list-style: none;
 }
 
+.list-inline {
+  word-spacing: -0.26em;
+}
 .list-inline > li {
   display: inline-block;
   vertical-align: middle;
   padding: 0 0.5em;
+  word-spacing: normal;
 }
 
 .nav {
@@ -1174,7 +1178,7 @@ a [class*=" icon-"]:before {
   content: '\E043';
 }
 
-.icon-disabled:before {
+.icon-disable:before {
   content: '\E044';
 }
 
@@ -1463,6 +1467,7 @@ label.error {
 
 .field-wrapper, .form-actions {
   position: relative;
+  overflow: hidden;
 }
 
 .form-actions {
@@ -1974,8 +1979,8 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
 .button-group .button {
   margin: 0;
 }
-.button-group .button ~ .button {
-  margin-left: -1px;
+.button-group .button:nth-of-type(n+2) {
+  border-left-width: 0;
 }
 
 .table {
@@ -1996,6 +2001,9 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   /* with row highlights */
   /* without borders */
   /* the full width tables */
+}
+.table[class*='col-'] {
+  display: table;
 }
 .table .cell-1 {
   width: 10%;
