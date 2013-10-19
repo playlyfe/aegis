@@ -4,7 +4,7 @@
 // 24.Jan.2013
 
 .button {
-  @include inline-block();
+  @include inline-block(middle);
   @include button-interaction();
   @include box-sizing(border-box);
   @include transition(
@@ -149,9 +149,9 @@
 }
 
 .button-group {
-  @include inline-block();
+  @include inline-block(middle);
   white-space: nowrap;
   font-size: 0; // eliminate space from inline-block elements
   .button { margin: 0; }
-  .button ~ .button { margin-left: -1px; }
+  .button:nth-of-type(n+2) { border-left-width: 0; }
 }
