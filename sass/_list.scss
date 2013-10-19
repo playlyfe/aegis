@@ -8,8 +8,10 @@
   list-style: none;
 }
 .list-inline {
+  word-spacing: -0.26em;
   > li {
     @include inline-block();
     padding: 0 0.5em;
+    word-spacing: normal;
   }
 }

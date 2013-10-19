@@ -9,6 +9,9 @@
   width: 100%;
   font-size: $base;
 
+  // reset table's display for col-* classes
+  &[class*='col-'] { display: table; }
+
   /* cell sizes for table cells */
   @for $i from 1 through 10 {
     .cell-#{$i} { width: $i * 10%; }
