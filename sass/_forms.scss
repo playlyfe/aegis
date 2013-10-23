@@ -57,6 +57,7 @@ fieldset {
       border: 1px solid $gray-lightest;
     }
   }
+  &[class*='col-'] { display: block; }
 }
 
 .form-row {
