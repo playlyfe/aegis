@@ -104,15 +104,11 @@
     }
   }
   &.disabled, &[disabled] {
-    &, &:hover {
-      opacity: 0.95;
-      cursor: default;
-      @include button-style(
-        $color: $button-disabled-color,
-        $bg: $button-disabled-bg,
-        $border: $button-border
-      );
-    }
+    opacity: 0.95;
+    cursor: default !important;
+    color: $button-disabled-color !important;
+    background-color: $button-disabled-bg !important;
+    border-color: $button-border !important;
   }
 
   &:hover, &:active, &.active {
