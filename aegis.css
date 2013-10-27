@@ -1386,6 +1386,9 @@ fieldset.framed > legend {
   margin: 0;
   border: 1px solid #dddddd;
 }
+fieldset[class*='col-'] {
+  display: block;
+}
 
 .form-row, .form-errors, .form-horizontal .form-errors {
   margin-bottom: 5px;
@@ -1938,11 +1941,12 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   background-color: #0085f1;
   border-color: #0069be;
 }
-.button.disabled[class~="button"], .button.disabled[class~="button"]:hover, .button[disabled][class~="button"], .button[disabled][class~="button"]:hover {
-  cursor: default;
-  color: #555555;
-  background-color: white;
-  border-color: #d4d4d4;
+.button.disabled, .button[disabled] {
+  opacity: 0.95;
+  cursor: default !important;
+  color: #bbbbbb !important;
+  background-color: #fbfbfb !important;
+  border-color: #d4d4d4 !important;
 }
 .button:hover, .button:active, .button.active {
   text-decoration: none;
@@ -2001,9 +2005,7 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   /* with row highlights */
   /* without borders */
   /* the full width tables */
-}
-.table[class*='col-'] {
-  display: table;
+  /* reset for grid column classes */
 }
 .table .cell-1 {
   width: 10%;
@@ -2108,6 +2110,9 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
 }
 .table.shrunk {
   width: auto;
+}
+.table table[class*='col-'] {
+  display: table;
 }
 
 .footer {
