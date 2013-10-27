@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### v1.0.1 / 27 Oct
+* Fixed display of some elements when used with grid col-* classes
+* Fixed button's disabled styles when combined with other button classes
+
 ### v1.0.0 / 20 Oct
 * Feels like its mature enough for v1.
 * Minor fixes

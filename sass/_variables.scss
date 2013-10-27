@@ -208,7 +208,8 @@ $button-border:         darken($gray-ultralight,10%);
 $button-hover-color:    $gray-darkest;
 $button-hover-bg:       $gray-lightest;
 
-$button-disabled-bg:    $white;
+$button-disabled-bg:    lighten($gray-ultralight, 5%);
+$button-disabled-color: $gray-lighter;
 
 $button-prime-bg:       $prime;
 $button-prime-color:    $white;
