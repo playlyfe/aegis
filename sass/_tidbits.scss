@@ -170,4 +170,18 @@ hr {
       &:after { border-top-color: $accent-dark; }
     }
   }
+  &.type-prime {
+    background-color: $prime;
+    color: $white;
+    border-color: $prime-dark;
+    @include box-shadow(0 0 4px -1px rgba($prime, 0.5));
+    &.north {
+      &:before { border-bottom-color: $prime; }
+      &:after { border-bottom-color: $prime-dark; }
+    }
+    &.south {
+      &:before { border-top-color: $prime; }
+      &:after { border-top-color: $prime-dark; }
+    }
+  }
 }
