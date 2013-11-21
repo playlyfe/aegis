@@ -2004,7 +2004,6 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   /* alternating stripes */
   /* with row highlights */
   /* without borders */
-  /* the full width tables */
   /* reset for grid column classes */
 }
 .table .cell-1 {
@@ -2105,8 +2104,6 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
 }
 .table.fixed {
   table-layout: fixed;
-  width: 100%;
-  min-width: 670px;
 }
 .table.shrunk {
   width: auto;
@@ -2241,18 +2238,17 @@ hr.fat {
 }
 
 .tooltip {
-  position: absolute;
   display: none;
-  max-width: 300px;
+  position: absolute;
   background-color: white;
   font-size: 0.85em;
   color: #777777;
   padding: 2px 10px;
-  border: 1px solid #8fc717;
+  border: 1px solid #dddddd;
   z-index: 9999;
-  -webkit-box-shadow: 0 0 4px -1px #8fc717;
-  -moz-box-shadow: 0 0 4px -1px #8fc717;
-  box-shadow: 0 0 4px -1px #8fc717;
+  -webkit-box-shadow: 0 0 4px -1px #dddddd;
+  -moz-box-shadow: 0 0 4px -1px #dddddd;
+  box-shadow: 0 0 4px -1px #dddddd;
 }
 .tooltip:before, .tooltip:after {
   display: block;
@@ -2279,7 +2275,7 @@ hr.fat {
 }
 .tooltip.north:after {
   top: -7px;
-  border-bottom-color: #8fc717;
+  border-bottom-color: #dddddd;
 }
 .tooltip.south:before, .tooltip.south:after {
   bottom: -5px;
@@ -2290,7 +2286,7 @@ hr.fat {
 }
 .tooltip.south:after {
   bottom: -7px;
-  border-top-color: #8fc717;
+  border-top-color: #dddddd;
 }
 .tooltip.east:before, .tooltip.east:after {
   right: 10px;
@@ -2346,4 +2342,24 @@ hr.fat {
 }
 .tooltip.type-info.south:after {
   border-top-color: #0085f1;
+}
+.tooltip.type-prime {
+  background-color: #8fc717;
+  color: white;
+  border-color: #80b314;
+  -webkit-box-shadow: 0 0 4px -1px rgba(143, 199, 23, 0.5);
+  -moz-box-shadow: 0 0 4px -1px rgba(143, 199, 23, 0.5);
+  box-shadow: 0 0 4px -1px rgba(143, 199, 23, 0.5);
+}
+.tooltip.type-prime.north:before {
+  border-bottom-color: #8fc717;
+}
+.tooltip.type-prime.north:after {
+  border-bottom-color: #80b314;
+}
+.tooltip.type-prime.south:before {
+  border-top-color: #8fc717;
+}
+.tooltip.type-prime.south:after {
+  border-top-color: #80b314;
 }
