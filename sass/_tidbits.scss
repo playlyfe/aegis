@@ -91,9 +91,8 @@ hr {
 
 // Tooltip
 .tooltip {
-  position: absolute;
   display: none;
-  max-width: $tooltip-max-width;
+  position: absolute;
   background-color: $tooltip-bg;
   font-size: 0.85em;
   color: $tooltip-color;
