@@ -100,11 +100,8 @@
       border: none;
     }
   }
-  /* the full width tables */
   &.fixed {
     table-layout: fixed;
-    width: 100%;
-    min-width: 670px;
   }
   &.shrunk {
     width: auto;

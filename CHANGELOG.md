@@ -1,5 +1,9 @@
 # CHANGELOG
 
+### v1.0.2 / 21 Nov
+* Improved the default tooltip's border colours
+* Removed unnecessary max-widths from tooltip and table
+
 ### v1.0.1 / 27 Oct
 * Fixed display of some elements when used with grid col-* classes
 * Fixed button's disabled styles when combined with other button classes
