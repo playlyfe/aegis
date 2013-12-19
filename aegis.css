@@ -1975,9 +1975,8 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   border-color: #d4d4d4 !important;
 }
 .button:focus {
-  outline: thin dotted #80b314;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+  outline: 3px solid rgba(218, 145, 0, 0.5);
+  outline-offset: -3px;
 }
 
 .button-group {

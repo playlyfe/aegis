@@ -2,6 +2,7 @@
 
 ### v1.0.3 / 19 Dec
 * Fixed some buttons not having a proper active state
+* Fixed diverging focus styles for webkit and other browsers
 * Removed font size from tables
 
 ### v1.0.2 / 21 Nov
