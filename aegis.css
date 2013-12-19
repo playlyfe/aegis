@@ -1906,40 +1906,66 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   /* round buttons */
   width: 8em;
   height: 8em;
-  -webkit-border-radius: 4em;
-  border-radius: 4em;
   line-height: 1.5em;
   font-size: 1.5em;
+  -webkit-border-radius: 4em;
+  border-radius: 4em;
 }
-.button.important {
+.button:hover, .button.hover {
+  text-decoration: none;
+  color: #222222;
+  background-color: #dddddd;
+}
+.button:active, .button.active {
+  text-decoration: none;
+  color: #222222;
+  background-color: #d0d0d0;
+  border-color: #c8c8c8;
+}
+.button.important, .button.primary:hover, .button.primary.hover {
   color: white;
   background-color: #8fc717;
   border-color: #6e9912;
 }
-.button.important:hover {
+.button.important:hover, .button.important.hover, .button.primary:active, .button.primary.active {
   color: white;
   background-color: #6e9912;
   border-color: #4d6c0c;
 }
-.button.hazard {
+.button.important:active, .button.important.active {
   color: white;
-  background-color: #e20000;
-  border-color: #af0000;
+  background-color: #5d820f;
+  border-color: #3d550a;
 }
-.button.hazard:hover {
-  color: white;
-  background-color: #af0000;
-  border-color: #7c0000;
-}
-.button.accent {
+.button.accent, .button.info:hover, .button.info.hover {
   color: white;
   background-color: #259dff;
   border-color: #0085f1;
 }
-.button.accent:hover {
+.button.accent:hover, .button.accent.hover, .button.info:active, .button.info.active {
   color: white;
   background-color: #0085f1;
   border-color: #0069be;
+}
+.button.accent:active, .button.accent.active {
+  color: white;
+  background-color: #0077d7;
+  border-color: #005ba4;
+}
+.button.hazard, .button.alert:hover, .button.alert.hover {
+  color: white;
+  background-color: #e20000;
+  border-color: #af0000;
+}
+.button.hazard:hover, .button.hazard.hover, .button.alert:active, .button.alert.active {
+  color: white;
+  background-color: #af0000;
+  border-color: #7c0000;
+}
+.button.hazard:active, .button.hazard.active {
+  color: white;
+  background-color: #960000;
+  border-color: #620000;
 }
 .button.disabled, .button[disabled] {
   opacity: 0.95;
@@ -1948,30 +1974,9 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   background-color: #fbfbfb !important;
   border-color: #d4d4d4 !important;
 }
-.button:hover, .button:active, .button.active {
-  text-decoration: none;
-  color: #222222;
-  background-color: #dddddd;
-}
-.button:hover.primary, .button:active.primary, .button.active.primary {
-  color: white;
-  background-color: #8fc717;
-  border-color: #6e9912;
-}
-.button:hover.info, .button:active.info, .button.active.info {
-  color: white;
-  background-color: #259dff;
-  border-color: #0085f1;
-}
-.button:hover.alert, .button:active.alert, .button.active.alert {
-  color: white;
-  background-color: #e20000;
-  border-color: #af0000;
-}
 .button:focus {
-  outline: thin dotted #80b314;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+  outline: 3px solid rgba(218, 145, 0, 0.5);
+  outline-offset: -3px;
 }
 
 .button-group {
@@ -1991,7 +1996,6 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   border-collapse: collapse;
   margin: 2em 0;
   width: 100%;
-  font-size: 13px;
   /* cell sizes for table cells */
   /*
    * constrain the width of long values
