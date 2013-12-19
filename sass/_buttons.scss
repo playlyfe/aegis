@@ -23,11 +23,9 @@
     width: 1px;
     style: solid;
   }
-  @include button-style(
-    $color: $button-color,
-    $bg: $button-bg,
-    $border: $button-border
-  );
+  color: $button-color;
+  background-color: $button-bg;
+  border-color: $button-border;
 
   [class^="icon-"], [class*="icon-"] {
     margin-left: -0.2em; // visually center icon+text combo
@@ -55,90 +53,83 @@
   &.round { /* round buttons */
     width: 2*$button-round-radius;
     height: 2*$button-round-radius;
-    @include border-radius($button-round-radius);
     line-height: 1.5em;
     font-size: 1.5em;
+    @include border-radius($button-round-radius);
   }
 
-  // Button colours
-  &.important {
-    @include button-style(
-      $color: $button-prime-color,
-      $bg: $button-prime-bg,
-      $border: darken($button-prime-bg,10%)
-    );
-    &:hover {
-      @include button-style(
-        $color: $button-prime-color,
-        $bg: darken($button-prime-bg, 10%),
-        $border: darken($button-prime-bg, 20%)
-      );
-    }
+  // Button states
+  &:hover, &.hover {
+    text-decoration: none;
+    color: $button-hover-color;
+    background-color: $button-hover-bg;
   }
-  &.hazard {
-    @include button-style(
-      $button-alert-color,
-      $button-alert-bg,
-      darken($button-alert-bg, 10%)
-    );
-    &:hover {
-      @include button-style(
-        $color: $button-alert-color,
-        $bg: darken($button-alert-bg, 10%),
-        $border: darken($red,20%)
-      );
-    }
+  &:active, &.active {
+    text-decoration: none;
+    color: $button-hover-color;
+    background-color: darken($button-hover-bg, 5%);
+    border-color: darken($button-border, 5%);
   }
-  &.accent {
-    @include button-style(
-      $button-accent-color,
-      $button-accent-bg,
-      darken($button-accent-bg, 10%)
-    );
-    &:hover {
-      @include button-style(
-        $color: $button-accent-color,
-        $bg: darken($button-accent-bg, 10%),
-        $border: darken($button-accent-bg, 20%)
-      );
-    }
+
+  // Main Button Shades
+
+  // Important / Primary Action buttons
+  &.important, &.primary:hover, &.primary.hover {
+    color: $button-prime-color;
+    background-color: $button-prime-bg;
+    border-color: darken($button-prime-bg,10%);
   }
+  &.important:hover, &.important.hover, &.primary:active, &.primary.active {
+    color: $button-prime-color;
+    background-color: darken($button-prime-bg, 10%);
+    border-color: darken($button-prime-bg, 20%);
+  }
+  &.important:active, &.important.active {
+    color: $button-prime-color;
+    background-color: darken($button-prime-bg, 15%);
+    border-color: darken($button-prime-bg, 25%);
+  }
+
+  // Secondary action button
+  &.accent, &.info:hover, &.info.hover {
+    color: $button-accent-color;
+    background-color: $button-accent-bg;
+    border-color: darken($button-accent-bg, 10%);
+  }
+  &.accent:hover, &.accent.hover, &.info:active, &.info.active {
+    color: $button-accent-color;
+    background-color: darken($button-accent-bg, 10%);
+    border-color: darken($button-accent-bg, 20%);
+  }
+  &.accent:active, &.accent.active {
+    color: $button-accent-color;
+    background-color: darken($button-accent-bg, 15%);
+    border-color: darken($button-accent-bg, 25%);
+  }
+
+  // Error / Alert buttons
+  &.hazard, &.alert:hover, &.alert.hover {
+    color: $button-alert-color;
+    background-color: $button-alert-bg;
+    border-color: darken($button-alert-bg, 10%);
+  }
+  &.hazard:hover, &.hazard.hover, &.alert:active, &.alert.active {
+    color: $button-alert-color;
+    background-color: darken($button-alert-bg, 10%);
+    border-color: darken($red, 20%);
+  }
+  &.hazard:active, &.hazard.active {
+    color: $button-alert-color;
+    background-color: darken($button-alert-bg, 15%);
+    border-color: darken($red, 25%);
+  }
+
   &.disabled, &[disabled] {
     opacity: 0.95;
     cursor: default !important;
     color: $button-disabled-color !important;
     background-color: $button-disabled-bg !important;
     border-color: $button-border !important;
-  }
-
-  &:hover, &:active, &.active {
-    text-decoration: none;
-    @include button-style(
-      $button-hover-color,
-      $button-hover-bg
-    );
-    // Chameleonic buttons
-    &.primary {
-      @include button-style(
-        $button-prime-color,
-        $button-prime-bg,
-        darken($button-prime-bg, 10%)
-      )
-    }
-    &.info {
-      @include button-style(
-        $button-accent-color,
-        $button-accent-bg,
-        darken($button-accent-bg, 10%)
-      );
-    }
-    &.alert {
-      @include button-style(
-        $button-alert-color,
-        $button-alert-bg,
-        darken($button-alert-bg, 10%)
-      );
-    }
   }
   &:focus {
     @include tab-focus();
