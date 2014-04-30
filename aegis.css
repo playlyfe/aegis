@@ -369,7 +369,8 @@
 .nav:after {
   clear: both;
 }
-.nav a {
+
+.nav-link, .navbar .navbar-link, .navbar .navbar-item > a, .tab-item a {
   -webkit-touch-callout: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -401,7 +402,7 @@
 .navbar .navbar-inner {
   height: 40px;
 }
-.navbar li {
+.navbar .navbar-item {
   float: left;
   display: block;
   -webkit-transition: background 0.2s ease;
@@ -409,15 +410,15 @@
   -moz-transition: background 0.2s ease 0.1s;
   transition: background 0.2s ease 0.1s;
 }
-.navbar li:hover, .navbar li.active {
+.navbar .navbar-item:hover, .navbar .navbar-item.active {
   background-color: #80b314;
 }
-.navbar a {
+.navbar .navbar-link, .navbar .navbar-item > a {
   color: white;
   line-height: 40px;
   padding: 0 12px;
 }
-.navbar a:hover {
+.navbar .navbar-link:hover, .navbar .navbar-item > a:hover {
   color: white;
 }
 .navbar .crest {
@@ -822,7 +823,7 @@ code:empty, pre:empty {
 }
 
 code {
-  padding: 4px 5px 1px;
+  padding: 0.31em 0.38em 0.08em;
   margin: 0 0.2em;
 }
 
