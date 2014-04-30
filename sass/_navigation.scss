@@ -7,10 +7,10 @@
   @include clearfix();
   @extend .list-unstyled;
   margin: 0; padding: 0;
-  a {
-    @include button-interaction();
-    display: block;
-  }
+}
+.nav-link { // a
+  @include button-interaction();
+  display: block;
 }
 .nav-inline {
   > li {
@@ -29,13 +29,14 @@
   .navbar-inner {
     height: $navbar-height;
   }
-  li {
+  .navbar-item { // li
     float: left;
     display: block;
     @include transition(background 0.2s ease 0.1s);
     &:hover, &.active { background-color: $navbar-hover-bg; }
   }
-  a {
+  .navbar-link, .navbar-item > a { // a
+    @extend .nav-link;
     color: $navbar-color;
     line-height: $navbar-height;
     padding: 0 ($navbar-height - $navbar-icon-height)/2;
@@ -43,6 +44,8 @@
       color: $navbar-color;
     }
   }
+
+  // styles for the website logo
   .crest {
     display: block;
     float: left;
