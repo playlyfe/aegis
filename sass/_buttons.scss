@@ -3,6 +3,12 @@
 // Kumar Harsh / Johny Jose
 // 24.Jan.2013
 
+//
+// The button has two sets of classes:
+// 1. one defining the external/internal sizing and dimensions
+// 2. and another defining the skin (colour/border colour, etc)
+// These two "class" of classes can be mix-and-matched
+
 .button {
   @include inline-block(middle);
   @include button-interaction();

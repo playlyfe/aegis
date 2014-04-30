@@ -16,6 +16,7 @@
   /* shift the items 1px to sit on tabbar's border */
   margin-bottom: -1px;
   a {
+    @extend .nav-link;
     padding: 0 1em;
     color: $tabbar-color;
     @include transition(color 0.2s ease 0.1s);
