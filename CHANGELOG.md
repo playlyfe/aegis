@@ -1,5 +1,11 @@
 # CHANGELOG
 
+### 28Apr
+* _navigation.scss:
+  + add a `nav-link` class to `a` inside `.nav`
+  + add a `navbar-item` class to `li` inside `.navbar`
+  + add a `navbar-link` class to `a` inside `.navbar`
+
 ### v1.0.3 / 19 Dec
 * Fixed some buttons not having a proper active state
 * Fixed diverging focus styles for webkit and other browsers
