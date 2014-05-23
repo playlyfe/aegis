@@ -36,6 +36,7 @@ body {
   margin: 0; padding: 0;
   border: none;
   font-size: $base;
+  font-weight: $base-font-weight;
   line-height: $base-line-height;
   color: $base-color;
 }
@@ -61,6 +62,7 @@ p, body, textarea, input, select {
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
   text-rendering: optimizeLegibility;
   margin: $base 0;
   &.splash {
