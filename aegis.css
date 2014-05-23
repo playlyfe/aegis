@@ -698,6 +698,7 @@ body {
   padding: 0;
   border: none;
   font-size: 13px;
+  font-weight: 400;
   line-height: 21px;
   color: #555555;
 }
@@ -729,12 +730,14 @@ body {
   padding-bottom: 50px;
 }
 
-h1, h2, h3, h4, h5, h6, p, body, textarea, input, select {
+p, body, textarea, input, select {
   font-family: "Droid Sans", "sans-serif";
   font-weight: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Droid Sans", "sans-serif";
+  font-weight: 400;
   text-rendering: optimizeLegibility;
   margin: 13px 0;
 }
@@ -780,8 +783,8 @@ h5 {
 
 h6 {
   font-size: 1.08em;
-  text-transform: uppercase;
   font-weight: bold;
+  text-transform: uppercase;
   margin: 2px 0;
 }
 
@@ -1872,6 +1875,8 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   margin: 0 10px 0 0;
   border-width: 1px;
   border-style: solid;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
   color: #555555;
   background-color: #eeeeee;
   border-color: #d4d4d4;
