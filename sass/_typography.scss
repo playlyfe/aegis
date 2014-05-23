@@ -101,8 +101,9 @@ h5 {
 }
 h6 {
   font-size: $h6-size;
-  text-transform: uppercase;
+  // Make the h6 fat
   font-weight: bold;
+  text-transform: uppercase;
   margin: 2px 0;
 }
 p  {
