@@ -36,6 +36,7 @@ body {
   margin: 0; padding: 0;
   border: none;
   font-size: $base;
+  font-weight: $base-font-weight;
   line-height: $base-line-height;
   color: $base-color;
 }
@@ -55,11 +56,13 @@ body {
   padding-bottom: $footer-height;
 }
 
-h1, h2, h3, h4, h5, h6, p, body, textarea, input, select {
-  font-family: $heading-font-family;
+p, body, textarea, input, select {
+  font-family: $base-font-family;
   font-weight: normal;
 }
 h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
   text-rendering: optimizeLegibility;
   margin: $base 0;
   &.splash {
@@ -98,8 +101,9 @@ h5 {
 }
 h6 {
   font-size: $h6-size;
-  text-transform: uppercase;
+  // Make the h6 fat
   font-weight: bold;
+  text-transform: uppercase;
   margin: 2px 0;
 }
 p  {

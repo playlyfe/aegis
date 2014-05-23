@@ -29,6 +29,7 @@
     width: 1px;
     style: solid;
   }
+  @include border-radius($button-radius);
   color: $button-color;
   background-color: $button-bg;
   border-color: $button-border;

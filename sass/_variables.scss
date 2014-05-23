@@ -44,14 +44,13 @@ $gold:                  #da9100 !default;
 $yellow:                #ffcc00 !default;
 
 
-// MAIN COLOURS
-$prime-color:           $green  !default;
-$accent-color:          $sky    !default;
-
-
 // Primaries
 // TODOKHS: normalize the colours
-$prime:                 desaturate($prime-color, $golden * 10);
+$prime:                 desaturate($green, $golden * 10) !default;
+$accent:                $sky !default;
+$alert:                 $red !default;
+
+
 $prime-darkest:         mix($black, $prime, 100% / $golden);
 $prime-darker:          mix($black, $prime, 30%);
 $prime-dark:            mix($black, $prime, 10%);
@@ -59,7 +58,6 @@ $prime-light:           mix($white, $prime, 100% / ( $golden * $golden * $golden
 $prime-lighter:         mix($white, $prime, 70%);
 $prime-lightest:        mix($white, $prime, 85%);
 
-$accent:                $accent-color;
 $accent-darkest:        darken($accent, 50%);
 $accent-darker:         darken($accent, 30%);
 $accent-dark:           darken($accent, 10%);
@@ -67,10 +65,9 @@ $accent-light:          lighten($accent, 10%);
 $accent-lighter:        lighten($accent, 25%);
 $accent-lightest:       lighten($accent, 40%);
 
-$alert:                $red     !default;
-$error-bg:             lighten($alert,50%);
-$error-color:          $alert;
-$error-border:         $alert;
+$error-bg:              lighten($alert,50%);
+$error-color:           $alert;
+$error-border:          $alert;
 
 
 //
@@ -78,12 +75,14 @@ $error-border:         $alert;
 //  TYPOGRAPHY
 //  ===========================
 //
-$base:             13px !default;
-$base-line-height: 21px !default;
-$base-color:       $gray-dark !default;
-$base-font-family: 'Droid Sans', 'sans-serif' !default;
-$mono-font-family: 'Droid Sans Mono', 'Consolas', 'Lucida Console', 'Ubuntu Mono', monospace !default;
+$base:                13px !default;
+$base-line-height:    21px !default;
+$base-color:          $gray-dark !default;
+$base-font-family:    'Droid Sans', 'sans-serif' !default;
+$mono-font-family:    'Droid Sans Mono', 'Consolas', 'Lucida Console', 'Ubuntu Mono', monospace !default;
 $heading-font-family: 'Droid Sans', 'sans-serif' !default;
+$base-font-weight:    400 !default;
+$heading-font-weight: 400 !default;
 
 $icon-font-path:   'fonts' !default;
 
@@ -98,8 +97,8 @@ $h1-size: 3.38em    !default;
 $link-color:              $prime-dark  !default;
 $link-hover-color:        $accent-dark !default;
 
-$code-bg:                 lighten($gray-ultralight,5%);
-$code-color:              $accent;
+$code-bg:                 lighten($gray-ultralight,5%) !default;
+$code-color:              $accent !default;
 
 //
 //  ===========================
@@ -107,7 +106,7 @@ $code-color:              $accent;
 //  ===========================
 //
 $navbar-height:         40px !default;
-$navbar-icon-height:    16px;
+$navbar-icon-height:    16px !default;
 $navbar-color:          $white !default;
 $navbar-bg:             $prime !default;
 $navbar-hover-bg:       $prime-dark !default;
@@ -116,10 +115,10 @@ $navbar-border:         $prime-dark !default;
 $page-paddingV:         40px !default;
 
 // keep in mind, footer has a border-box sizing
-$footer-height:         50px;
-$footer-paddingV:       13px;
-$footer-border:         $prime-dark;
-$footer-bg:             $white;
+$footer-height:         50px !default;
+$footer-paddingV:       13px !default;
+$footer-border:         $prime-dark !default;
+$footer-bg:             $white !default;
 
 
 //
@@ -169,13 +168,13 @@ $tabbar-active-color:       $side-active-color;
 //  ===========================
 //
 
-$table-head-bg:             $white;
-$table-head-color:          $gray-light;
-$table-head-font-size:      14px;
-$table-border:              $gray-lightest;
-$table-body-bg:             $white;
-$table-body-alt-bg:         $gray-ultralight;
-$table-foot-bg:             $white;
+$table-head-bg:             $white !default;
+$table-head-color:          $gray-light !default;
+$table-head-font-size:      14px !default;
+$table-border:              $gray-lightest !default;
+$table-body-bg:             $white !default;
+$table-body-alt-bg:         $gray-ultralight !default;
+$table-foot-bg:             $white !default;
 
 // Z-Index order
 
@@ -188,37 +187,38 @@ $table-foot-bg:             $white;
 //
 
 // COMMON
-$button-padding:         20px;
-$button-font-size:       14px;
-$button-height:          31px;
+$button-padding:         20px !default;
+$button-font-size:       14px !default;
+$button-height:          31px !default;
+$button-radius:          0px !default;
 
-$button-inline-height:   26px;
-$button-inline-padding:  8px;
+$button-inline-height:   26px !default;
+$button-inline-padding:  8px !default;
 
-$button-titan-font-size: 21px;
-$button-titan-height:    54px;
+$button-titan-font-size: 21px !default;
+$button-titan-height:    54px !default;
 
-$button-round-radius:    4em;
+$button-round-radius:    4em !default;
 
 
 // COLOURS
-$button-color:          $gray-dark;
-$button-bg:             $gray-ultralight;
-$button-border:         darken($gray-ultralight,10%);
-$button-hover-color:    $gray-darkest;
-$button-hover-bg:       $gray-lightest;
+$button-color:          $gray-dark !default;
+$button-bg:             $gray-ultralight !default;
+$button-border:         darken($gray-ultralight,10%) !default;
+$button-hover-color:    $gray-darkest !default;
+$button-hover-bg:       $gray-lightest !default;
 
-$button-disabled-bg:    lighten($gray-ultralight, 5%);
-$button-disabled-color: $gray-lighter;
+$button-disabled-bg:    lighten($gray-ultralight, 5%) !default;
+$button-disabled-color: $gray-lighter !default;
 
-$button-prime-bg:       $prime;
-$button-prime-color:    $white;
+$button-prime-bg:       $prime !default;
+$button-prime-color:    $white !default;
 
-$button-alert-bg:       $alert;
-$button-alert-color:    $white;
+$button-alert-bg:       $alert !default;
+$button-alert-color:    $white !default;
 
-$button-accent-bg:      $accent;
-$button-accent-color:   $white;
+$button-accent-bg:      $accent !default;
+$button-accent-color:   $white !default;
 
 
 
@@ -229,30 +229,30 @@ $button-accent-color:   $white;
 //
 
 // TAGS
-$tag-bg:                  lighten(desaturate($accent-dark,30%),20%);
-$tag-color:               $white;
+$tag-bg:                  lighten(desaturate($accent-dark,30%),20%) !default;
+$tag-color:               $white !default;
 
 // INFOTAG
-$infoTag-color:           $accent-dark;
-$infoTag-color-hover:     $accent-darker;
-$infoTag-alert-color:     darken($red,10%);
-$infoTag-inactive-color:  $gray-light;
+$infoTag-color:           $accent-dark !default;
+$infoTag-color-hover:     $accent-darker !default;
+$infoTag-alert-color:     darken($red,10%) !default;
+$infoTag-inactive-color:  $gray-light !default;
 
-$infoTag-bg:              $accent-lightest;
-$infoTag-bg-hover:        $accent-lighter;
-$infoTag-alert-bg:        lighten($red,35%);
-$infoTag-inactive-bg:     $gray-ultralight;
+$infoTag-bg:              $accent-lightest !default;
+$infoTag-bg-hover:        $accent-lighter !default;
+$infoTag-alert-bg:        lighten($red,35%) !default;
+$infoTag-inactive-bg:     $gray-ultralight !default;
 
 // HR / DIVIDER
-$divider-light-color:     $gray-ultralight;
-$divider-dark-color:      $gray-dark;
-$divider-width:           1px;
-$divider-fat-width:       5px;
+$divider-light-color:     $gray-ultralight !default;
+$divider-dark-color:      $gray-dark !default;
+$divider-width:           1px !default;
+$divider-fat-width:       5px !default;
 
 // SNIPPET
-$snippet-hover-color:     $white;
-$snippet-hover-fill:      $prime;
-$snippet-border:          1px dashed $prime-dark;
+$snippet-hover-color:     $white !default;
+$snippet-hover-fill:      $prime !default;
+$snippet-border:          1px dashed $prime-dark !default;
 
 
 //
@@ -262,25 +262,25 @@ $snippet-border:          1px dashed $prime-dark;
 //
 
 // MODAL
-$mask-color:          rgba(255,255,255,0.8);
+$mask-color:          rgba(255,255,255,0.8) !default;
 
-$modal-width:         500px;
-$modal-wide-width:    800px;
+$modal-width:         500px !default;
+$modal-wide-width:    800px !default;
 
-$modal-shadow:        rgba(0,0,0,0.15);
-$modal-bg:            $white;
-$modal-border:        $gray-lightest;
-$modal-inner-border:  $gray-ultralight;
+$modal-shadow:        rgba(0,0,0,0.15) !default;
+$modal-bg:            $white !default;
+$modal-border:        $gray-lightest !default;
+$modal-inner-border:  $gray-ultralight !default;
 
 //
 //  ===========================
 //  TOOLTIP
 //  ===========================
 //
-$tooltip-padding:     2px 10px;
-$tooltip-bg:          $white;
-$tooltip-color:       $gray;
-$tooltip-border:      $gray-lightest;
+$tooltip-padding:     2px 10px !default;
+$tooltip-bg:          $white !default;
+$tooltip-color:       $gray !default;
+$tooltip-border:      $gray-lightest !default;
 
 
 
@@ -289,8 +289,8 @@ $tooltip-border:      $gray-lightest;
 //  DROPDOWNS
 //  ===========================
 //
-$dropdown-bg:           $white;
-$dropdown-border:       $gray-ultralight;
+$dropdown-bg:           $white !default;
+$dropdown-border:       $gray-ultralight !default;
 
 
 //
@@ -307,11 +307,11 @@ $input-border:          $gray-lighter !default;
 $input-disabled-color:  $gray-light   !default;
 $input-shadow:          rgba(0,0,0,0.1) !default;
 $input-border-radius:   0px     !default;
-$input-focus-border:    $prime;
-$input-active-border:   $prime;
+$input-focus-border:    $prime !default;
+$input-active-border:   $prime !default;
 
-$legend-color:          $input-color;
-$legend-border:         $gray-lightest;
+$legend-color:          $input-color !default;
+$legend-border:         $gray-lightest !default;
 
 // EXAMPLE BOX
 $example-text: "example";
