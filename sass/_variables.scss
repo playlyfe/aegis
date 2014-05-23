@@ -44,14 +44,13 @@ $gold:                  #da9100 !default;
 $yellow:                #ffcc00 !default;
 
 
-// MAIN COLOURS
-$prime-color:           $green  !default;
-$accent-color:          $sky    !default;
-
-
 // Primaries
 // TODOKHS: normalize the colours
-$prime:                 desaturate($prime-color, $golden * 10);
+$prime:                 desaturate($green, $golden * 10) !default;
+$accent:                $sky !default;
+$alert:                 $red !default;
+
+
 $prime-darkest:         mix($black, $prime, 100% / $golden);
 $prime-darker:          mix($black, $prime, 30%);
 $prime-dark:            mix($black, $prime, 10%);
@@ -59,7 +58,6 @@ $prime-light:           mix($white, $prime, 100% / ( $golden * $golden * $golden
 $prime-lighter:         mix($white, $prime, 70%);
 $prime-lightest:        mix($white, $prime, 85%);
 
-$accent:                $accent-color;
 $accent-darkest:        darken($accent, 50%);
 $accent-darker:         darken($accent, 30%);
 $accent-dark:           darken($accent, 10%);
@@ -67,10 +65,9 @@ $accent-light:          lighten($accent, 10%);
 $accent-lighter:        lighten($accent, 25%);
 $accent-lightest:       lighten($accent, 40%);
 
-$alert:                $red     !default;
-$error-bg:             lighten($alert,50%);
-$error-color:          $alert;
-$error-border:         $alert;
+$error-bg:              lighten($alert,50%);
+$error-color:           $alert;
+$error-border:          $alert;
 
 
 //
