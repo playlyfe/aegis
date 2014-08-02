@@ -126,10 +126,10 @@ label {
 .field-errors {
   li:before {
     font-family: "Lyfeicons";
+    @extend .icon-cross:before;
     position: absolute;
     left: -14px;
     display: block;
-    content: "\E006";
   }
 }
 
