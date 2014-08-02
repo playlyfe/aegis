@@ -59,14 +59,14 @@ a [class*=" icon-"]:before {
 .icon-cog:before                    { content: '\E009'; }
 .icon-cog-double:before             { content: '\E00A'; }
 .icon-eye:before                    { content: '\E00B'; }
-.icon-reset:before                  { content: '\E00C'; }
+.icon-retry:before                  { content: '\E00C'; }
 .icon-hellipsis:before              { content: '\E00D'; }
 .icon-vellipsis:before              { content: '\E00E'; }
 .icon-cloud:before                  { content: '\E00F'; }
 .icon-new:before                    { content: '\E010'; }
 .icon-trash:before                  { content: '\E011'; }
 .icon-copy:before                   { content: '\E012'; }
-.icon-logout:before                 { content: '\E013'; }
+.icon-exit:before                   { content: '\E013'; }
 .icon-loop:before                   { content: '\E014'; }
 .icon-refresh:before                { content: '\E015'; }
 .icon-feed:before                   { content: '\E016'; }
@@ -78,12 +78,12 @@ a [class*=" icon-"]:before {
 .icon-triskelion-light:before       { content: '\E01C'; }
 .icon-triskelion-dark:before        { content: '\E01D'; }
 .icon-trophy:before                 { content: '\E01E'; }
-.icon-arrow-left:before             { content: '\E01F'; }
-.icon-arrow-right:before            { content: '\E020'; }
-.icon-arrow-up:before               { content: '\E021'; }
-.icon-arrow-down:before             { content: '\E022'; }
-.icon-arrow-double-right:before     { content: '\E023'; }
-.icon-arrow-double-left:before      { content: '\E024'; }
+.icon-left:before                   { content: '\E01F'; }
+.icon-right:before                  { content: '\E020'; }
+.icon-up:before                     { content: '\E021'; }
+.icon-down:before                   { content: '\E022'; }
+.icon-double-right:before           { content: '\E023'; }
+.icon-double-left:before            { content: '\E024'; }
 .icon-round-question:before         { content: '\E025'; }
 .icon-round-question-fill:before    { content: '\E026'; }
 .icon-round-warning:before          { content: '\E027'; }
@@ -128,13 +128,13 @@ a [class*=" icon-"]:before {
 .icon-set:before                    { content: '\E04E'; }
 .icon-state:before                  { content: '\E04F'; }
 .icon-badge:before                  { content: '\E050'; }
-.icon-star:before                   { content: '\E051'; }
-.icon-star-hollow:before            { content: '\E052'; }
-.icon-circle-hollow:before          { content: '\E053'; }
-.icon-circle:before                 { content: '\E054'; }
+.icon-star-fill:before              { content: '\E051'; }
+.icon-star:before                   { content: '\E052'; }
+.icon-circle:before                 { content: '\E053'; }
+.icon-circle-fill:before            { content: '\E054'; }
 .icon-circle-half-pre:before        { content: '\E055'; }
 .icon-circle-half-post:before       { content: '\E056'; }
-.icon-tocken:before                 { content: '\E057'; }
+.icon-token:before                  { content: '\E057'; }
 .icon-code:before                   { content: '\E058'; }
 .icon-user-plus:before              { content: '\E059'; }
 .icon-user-minus:before             { content: '\E05A'; }
@@ -149,6 +149,7 @@ a [class*=" icon-"]:before {
 .icon-gateway-parallel:before       { content: '\E063'; }
 .icon-link:before                   { content: '\E064'; }
 .icon-unlink:before                 { content: '\E065'; }
+.icon-role:before,
 .icon-bow:before                    { content: '\E066'; }
 .icon-lane:before                   { content: '\E067'; }
 .icon-shuttle:before                { content: '\E068'; }
@@ -156,7 +157,9 @@ a [class*=" icon-"]:before {
 .icon-rank:before                   { content: '\E06A'; }
 .icon-crown:before                  { content: '\E06B'; }
 .icon-podium:before                 { content: '\E06C'; }
+.icon-download:before,
 .icon-cloud-down:before             { content: '\E06D'; }
+.icon-upload:before,
 .icon-cloud-up:before               { content: '\E06E'; }
 .icon-document:before               { content: '\E06F'; }
 .icon-pie:before                    { content: '\E070'; }
@@ -186,17 +189,17 @@ a [class*=" icon-"]:before {
 .icon-rules:before                  { content: '\E088'; }
 .icon-grid:before                   { content: '\E089'; }
 .icon-list:before                   { content: '\E08A'; }
-.icon-round-disable-hollow:before   { content: '\E08B'; }
+.icon-round-disable:before          { content: '\E08B'; }
 .icon-round-disable-fill:before     { content: '\E08C'; }
 .icon-paper-plane:before            { content: '\E08D'; }
+.icon-flag:before                   { content: '\E08F'; }
 .icon-flag-fill:before              { content: '\E08E'; }
-.icon-flag-hollow:before            { content: '\E08F'; }
 .icon-camera:before                 { content: '\E090'; }
 .icon-bookmark:before               { content: '\E091'; }
+.icon-heart:before                  { content: '\E093'; }
 .icon-heart-fill:before             { content: '\E092'; }
-.icon-heart-hollow:before           { content: '\E093'; }
-.icon-back:before                   { content: '\E094'; }
-.icon-forward:before                { content: '\E095'; }
+.icon-undo:before                   { content: '\E094'; }
+.icon-redo:before                   { content: '\E095'; }
 .icon-bag:before                    { content: '\E096'; }
 .icon-marker:before                 { content: '\E097'; }
 .icon-pin-small:before              { content: '\E098'; }
