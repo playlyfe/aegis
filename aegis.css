@@ -341,7 +341,7 @@
   opacity: 0.9;
 }
 
-.list-unstyled, .nav, .form-errors, .field-errors {
+.list-unstyled, .nav, .form-errors, .form-horizontal .form-errors, .field-errors {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -922,7 +922,7 @@ a [class*=" icon-"]:before {
   content: '\E004';
 }
 
-.icon-cross:before {
+.icon-cross:before, .field-errors li:before {
   content: '\E005';
 }
 
@@ -950,7 +950,7 @@ a [class*=" icon-"]:before {
   content: '\E00B';
 }
 
-.icon-reset:before {
+.icon-retry:before {
   content: '\E00C';
 }
 
@@ -978,7 +978,7 @@ a [class*=" icon-"]:before {
   content: '\E012';
 }
 
-.icon-logout:before {
+.icon-exit:before {
   content: '\E013';
 }
 
@@ -1026,27 +1026,27 @@ a [class*=" icon-"]:before {
   content: '\E01E';
 }
 
-.icon-arrow-left:before {
+.icon-left:before {
   content: '\E01F';
 }
 
-.icon-arrow-right:before {
+.icon-right:before {
   content: '\E020';
 }
 
-.icon-arrow-up:before {
+.icon-up:before {
   content: '\E021';
 }
 
-.icon-arrow-down:before {
+.icon-down:before {
   content: '\E022';
 }
 
-.icon-arrow-double-right:before {
+.icon-double-right:before {
   content: '\E023';
 }
 
-.icon-arrow-double-left:before {
+.icon-double-left:before {
   content: '\E024';
 }
 
@@ -1226,19 +1226,19 @@ a [class*=" icon-"]:before {
   content: '\E050';
 }
 
-.icon-star:before {
+.icon-star-fill:before {
   content: '\E051';
 }
 
-.icon-star-hollow:before {
+.icon-star:before {
   content: '\E052';
 }
 
-.icon-circle-hollow:before {
+.icon-circle:before {
   content: '\E053';
 }
 
-.icon-circle:before {
+.icon-circle-fill:before {
   content: '\E054';
 }
 
@@ -1250,7 +1250,7 @@ a [class*=" icon-"]:before {
   content: '\E056';
 }
 
-.icon-tocken:before {
+.icon-token:before {
   content: '\E057';
 }
 
@@ -1310,6 +1310,7 @@ a [class*=" icon-"]:before {
   content: '\E065';
 }
 
+.icon-role:before,
 .icon-bow:before {
   content: '\E066';
 }
@@ -1338,10 +1339,12 @@ a [class*=" icon-"]:before {
   content: '\E06C';
 }
 
+.icon-download:before,
 .icon-cloud-down:before {
   content: '\E06D';
 }
 
+.icon-upload:before,
 .icon-cloud-up:before {
   content: '\E06E';
 }
@@ -1458,7 +1461,7 @@ a [class*=" icon-"]:before {
   content: '\E08A';
 }
 
-.icon-round-disable-hollow:before {
+.icon-round-disable:before {
   content: '\E08B';
 }
 
@@ -1470,12 +1473,12 @@ a [class*=" icon-"]:before {
   content: '\E08D';
 }
 
-.icon-flag-fill:before {
-  content: '\E08E';
+.icon-flag:before {
+  content: '\E08F';
 }
 
-.icon-flag-hollow:before {
-  content: '\E08F';
+.icon-flag-fill:before {
+  content: '\E08E';
 }
 
 .icon-camera:before {
@@ -1486,19 +1489,19 @@ a [class*=" icon-"]:before {
   content: '\E091';
 }
 
+.icon-heart:before {
+  content: '\E093';
+}
+
 .icon-heart-fill:before {
   content: '\E092';
 }
 
-.icon-heart-hollow:before {
-  content: '\E093';
-}
-
-.icon-back:before {
+.icon-undo:before {
   content: '\E094';
 }
 
-.icon-forward:before {
+.icon-redo:before {
   content: '\E095';
 }
 
@@ -1598,10 +1601,10 @@ fieldset[class*='col-'] {
   display: block;
 }
 
-.form-row, .form-errors {
+.form-row, .form-errors, .form-horizontal .form-errors {
   margin-bottom: 5px;
 }
-.form-row button, .form-errors button, .form-row .button, .form-errors .button {
+.form-row button, .form-errors button, .form-horizontal .form-errors button, .form-row .button, .form-errors .button {
   margin-bottom: 0.64286em;
 }
 .form-row .button-group, .form-errors .button-group {
@@ -1610,12 +1613,12 @@ fieldset[class*='col-'] {
 .form-row .button-group > .button, .form-errors .button-group > .button {
   margin-bottom: 0;
 }
-.form-row:before, .form-errors:before, .form-row:after, .form-errors:after {
+.form-row:before, .form-errors:before, .form-horizontal .form-errors:before, .form-row:after, .form-errors:after, .form-horizontal .form-errors:after {
   display: table;
   line-height: 0;
   content: "";
 }
-.form-row:after, .form-errors:after {
+.form-row:after, .form-errors:after, .form-horizontal .form-errors:after {
   clear: both;
 }
 .form-row .snippet, .form-errors .snippet {
@@ -1673,7 +1676,6 @@ label.error {
   position: absolute;
   left: -14px;
   display: block;
-  content: "\E006";
 }
 
 .field-wrapper, .form-actions {
