@@ -19,7 +19,7 @@
     border 0.6s ease 0.1s
   );
   font-size:    $button-font-size;
-  line-height:  $button-height;
+  line-height:  #{$button-height - 2px};
   height:       $button-height;
   text-align:   center;
 
