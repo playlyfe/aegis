@@ -868,7 +868,7 @@ code {
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   display: inline;
-  margin-right: 0.7em;
+  margin-right: 0.4em;
 }
 
 [class^="icon-"]:before,
@@ -966,7 +966,8 @@ a [class*=" icon-"]:before {
   content: '\E00F';
 }
 
-.icon-new:before {
+.icon-approval:before,
+.icon-dodecagram:before {
   content: '\E010';
 }
 
@@ -1050,6 +1051,7 @@ a [class*=" icon-"]:before {
   content: '\E024';
 }
 
+.icon-help:before,
 .icon-round-question:before {
   content: '\E025';
 }
@@ -1074,6 +1076,7 @@ a [class*=" icon-"]:before {
   content: '\E02A';
 }
 
+.icon-about:before,
 .icon-round-info:before {
   content: '\E02B';
 }
@@ -1086,6 +1089,7 @@ a [class*=" icon-"]:before {
   content: '\E02D';
 }
 
+.icon-new:before,
 .icon-round-asterisk-fill:before {
   content: '\E02E';
 }
@@ -1146,6 +1150,7 @@ a [class*=" icon-"]:before {
   content: '\E03C';
 }
 
+.icon-activity:before,
 .icon-hourglass:before {
   content: '\E03D';
 }
@@ -1158,10 +1163,12 @@ a [class*=" icon-"]:before {
   content: '\E03F';
 }
 
+.icon-public:before,
 .icon-world:before {
   content: '\E040';
 }
 
+.icon-private:before,
 .icon-lock:before {
   content: '\E041';
 }
@@ -1170,6 +1177,7 @@ a [class*=" icon-"]:before {
   content: '\E042';
 }
 
+.icon-protected:before,
 .icon-key:before {
   content: '\E043';
 }
@@ -1274,7 +1282,7 @@ a [class*=" icon-"]:before {
   content: '\E05C';
 }
 
-.icon-subprocess:before {
+.icon-sub_process:before {
   content: '\E05D';
 }
 
@@ -1319,10 +1327,12 @@ a [class*=" icon-"]:before {
   content: '\E067';
 }
 
+.icon-launch:before,
 .icon-shuttle:before {
   content: '\E068';
 }
 
+.icon-simulate:before,
 .icon-shuttle-loop:before {
   content: '\E069';
 }
@@ -1361,6 +1371,7 @@ a [class*=" icon-"]:before {
   content: '\E071';
 }
 
+.icon-invite:before,
 .icon-mail:before {
   content: '\E072';
 }
@@ -1497,6 +1508,7 @@ a [class*=" icon-"]:before {
   content: '\E092';
 }
 
+.icon-reset:before,
 .icon-undo:before {
   content: '\E094';
 }
@@ -1525,6 +1537,7 @@ a [class*=" icon-"]:before {
   content: '\E09A';
 }
 
+.icon-bootstrap:before,
 .icon-shine:before {
   content: '\E09B';
 }
@@ -2075,7 +2088,7 @@ input[class*="col-"].no-omega, select[class*="col-"].no-omega, textarea[class*="
   -moz-transition: background 0.2s ease 0.1s, color 0.1s ease 0.1s, border 0.6s ease 0.1s;
   transition: background 0.2s ease 0.1s, color 0.1s ease 0.1s, border 0.6s ease 0.1s;
   font-size: 14px;
-  line-height: 31px;
+  line-height: 29px;
   height: 31px;
   text-align: center;
   padding: 0 1.53846em;
