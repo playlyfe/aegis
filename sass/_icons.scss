@@ -63,7 +63,8 @@ a [class*=" icon-"]:before {
 .icon-hellipsis:before              { content: '\E00D'; }
 .icon-vellipsis:before              { content: '\E00E'; }
 .icon-cloud:before                  { content: '\E00F'; }
-.icon-new:before                    { content: '\E010'; }
+.icon-approval:before,
+.icon-dodecagram:before             { content: '\E010'; }
 .icon-trash:before                  { content: '\E011'; }
 .icon-copy:before                   { content: '\E012'; }
 .icon-exit:before                   { content: '\E013'; }
@@ -84,15 +85,18 @@ a [class*=" icon-"]:before {
 .icon-down:before                   { content: '\E022'; }
 .icon-double-right:before           { content: '\E023'; }
 .icon-double-left:before            { content: '\E024'; }
+.icon-help:before,
 .icon-round-question:before         { content: '\E025'; }
 .icon-round-question-fill:before    { content: '\E026'; }
 .icon-round-warning:before          { content: '\E027'; }
 .icon-round-warning-fill:before     { content: '\E028'; }
 .icon-warning:before                { content: '\E029'; }
 .icon-warning-fill:before           { content: '\E02A'; }
+.icon-about:before,
 .icon-round-info:before             { content: '\E02B'; }
 .icon-round-info-fill:before        { content: '\E02C'; }
 .icon-round-asterisk:before         { content: '\E02D'; }
+.icon-new:before,
 .icon-round-asterisk-fill:before    { content: '\E02E'; }
 .icon-round-plus:before             { content: '\E02F'; }
 .icon-round-plus-fill:before        { content: '\E030'; }
@@ -108,12 +112,16 @@ a [class*=" icon-"]:before {
 .icon-bell:before                   { content: '\E03A'; }
 .icon-target:before                 { content: '\E03B'; }
 .icon-checklist:before              { content: '\E03C'; }
+.icon-activity:before,
 .icon-hourglass:before              { content: '\E03D'; }
 .icon-round-hourglass:before        { content: '\E03E'; }
 .icon-power-off:before              { content: '\E03F'; }
+.icon-public:before,
 .icon-world:before                  { content: '\E040'; }
+.icon-private:before,
 .icon-lock:before                   { content: '\E041'; }
 .icon-unlock:before                 { content: '\E042'; }
+.icon-protected:before,
 .icon-key:before                    { content: '\E043'; }
 .icon-object:before                 { content: '\E044'; }
 .icon-mobile:before                 { content: '\E045'; }
@@ -140,7 +148,7 @@ a [class*=" icon-"]:before {
 .icon-user-minus:before             { content: '\E05A'; }
 .icon-team:before                   { content: '\E05B'; }
 .icon-process:before                { content: '\E05C'; }
-.icon-subprocess:before             { content: '\E05D'; }
+.icon-sub_process:before             { content: '\E05D'; }
 .icon-node-plus:before              { content: '\E05E'; }
 .icon-node-cross:before             { content: '\E05F'; }
 .icon-node-minus:before             { content: '\E060'; }
@@ -152,7 +160,9 @@ a [class*=" icon-"]:before {
 .icon-role:before,
 .icon-bow:before                    { content: '\E066'; }
 .icon-lane:before                   { content: '\E067'; }
+.icon-launch:before,
 .icon-shuttle:before                { content: '\E068'; }
+.icon-simulate:before,
 .icon-shuttle-loop:before           { content: '\E069'; }
 .icon-rank:before                   { content: '\E06A'; }
 .icon-crown:before                  { content: '\E06B'; }
@@ -164,6 +174,7 @@ a [class*=" icon-"]:before {
 .icon-document:before               { content: '\E06F'; }
 .icon-pie:before                    { content: '\E070'; }
 .icon-bars:before                   { content: '\E071'; }
+.icon-invite:before,
 .icon-mail:before                   { content: '\E072'; }
 .icon-wand:before                   { content: '\E073'; }
 .icon-tag:before                    { content: '\E074'; }
@@ -198,6 +209,7 @@ a [class*=" icon-"]:before {
 .icon-bookmark:before               { content: '\E091'; }
 .icon-heart:before                  { content: '\E093'; }
 .icon-heart-fill:before             { content: '\E092'; }
+.icon-reset:before,
 .icon-undo:before                   { content: '\E094'; }
 .icon-redo:before                   { content: '\E095'; }
 .icon-bag:before                    { content: '\E096'; }
@@ -205,6 +217,7 @@ a [class*=" icon-"]:before {
 .icon-pin-small:before              { content: '\E098'; }
 .icon-pin-big:before                { content: '\E099'; }
 .icon-pin-disable:before            { content: '\E09A'; }
+.icon-bootstrap:before,
 .icon-shine:before                  { content: '\E09B'; }
 .icon-gamepad:before                { content: '\E09C'; }
 .icon-blackboard:before             { content: '\E09D'; }
