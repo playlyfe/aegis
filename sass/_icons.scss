@@ -211,8 +211,10 @@ a [class*=" icon-"]:before {
 .icon-heart:before                  { content: '\E093'; }
 .icon-heart-fill:before             { content: '\E092'; }
 .icon-reset:before,
-.icon-undo:before                   { content: '\E094'; }
-.icon-redo:before                   { content: '\E095'; }
+.icon-undo:before,
+.icon-back:before                   { content: '\E094'; }
+.icon-redo:before,
+.icon-forward:before                { content: '\E095'; }
 .icon-bag:before                    { content: '\E096'; }
 .icon-marker:before                 { content: '\E097'; }
 .icon-pin-small:before              { content: '\E098'; }

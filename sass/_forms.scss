@@ -126,7 +126,7 @@ label {
 .field-errors {
   li:before {
     font-family: "Lyfeicons";
-    @extend .icon-cross:before;
+    @extend .icon-warning:before;
     position: absolute;
     left: -14px;
     display: block;
