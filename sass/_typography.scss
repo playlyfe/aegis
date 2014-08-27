@@ -3,29 +3,8 @@
 // Johny Jose / Kumar Harsh
 // 23.Jan.2013
 
-@if index($base-font-family, 'Droid Sans') or index($heading-font-family, 'Droid Sans') {
-  // only define driods when droids are required
-  @font-face {
-    font-family: 'Droid Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Droid Sans'), local('DroidSans'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciBsxEYwM7FgeyaSgU71cLG0.woff) format('woff');
-  }
-  @font-face {
-    font-family: 'Droid Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/EFpQQyG9GqCrobXxL-KRMQFhaRv2pGgT5Kf0An0s4MM.woff) format('woff');
-  }
-}
-@if index($mono-font-family, 'Droid Sans Mono') {
-  @font-face {
-    font-family: 'Droid Sans Mono';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Droid Sans Mono'), local('DroidSansMono'), url(http://themes.googleusercontent.com/static/fonts/droidsansmono/v4/ns-m2xQYezAtqh7ai59hJUYuTAAIFFn5GTWtryCmBQ4.woff) format('woff');
-  }
-}
+// Goes best with DroidSans, so include this line in the html
+// <link rel="stylesheet" href='//fonts.googleapis.com/css?family=Open+Sans:400,700,700italic,400italic,300,300italic' type='text/css'>
 
 html, body {
   height: 100%;
