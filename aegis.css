@@ -668,27 +668,6 @@
   border-left-color: #259dff;
 }
 
-@font-face {
-  font-family: 'Droid Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Droid Sans"), local("DroidSans"), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/s-BiyweUPV0v-yRb-cjciBsxEYwM7FgeyaSgU71cLG0.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Droid Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Droid Sans Bold"), local("DroidSans-Bold"), url(http://themes.googleusercontent.com/static/fonts/droidsans/v3/EFpQQyG9GqCrobXxL-KRMQFhaRv2pGgT5Kf0An0s4MM.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Droid Sans Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Droid Sans Mono"), local("DroidSansMono"), url(http://themes.googleusercontent.com/static/fonts/droidsansmono/v4/ns-m2xQYezAtqh7ai59hJUYuTAAIFFn5GTWtryCmBQ4.woff) format("woff");
-}
-
 html, body {
   height: 100%;
 }
@@ -922,7 +901,7 @@ a [class*=" icon-"]:before {
   content: '\E004';
 }
 
-.icon-cross:before, .field-errors li:before {
+.icon-cross:before {
   content: '\E005';
 }
 
@@ -1068,7 +1047,7 @@ a [class*=" icon-"]:before {
   content: '\E028';
 }
 
-.icon-warning:before {
+.icon-warning:before, .field-errors li:before {
   content: '\E029';
 }
 
@@ -1345,6 +1324,7 @@ a [class*=" icon-"]:before {
   content: '\E06B';
 }
 
+.icon-leaderboard:before,
 .icon-podium:before {
   content: '\E06C';
 }
@@ -1509,11 +1489,13 @@ a [class*=" icon-"]:before {
 }
 
 .icon-reset:before,
-.icon-undo:before {
+.icon-undo:before,
+.icon-back:before {
   content: '\E094';
 }
 
-.icon-redo:before {
+.icon-redo:before,
+.icon-forward:before {
   content: '\E095';
 }
 
