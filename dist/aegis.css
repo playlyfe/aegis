@@ -1,8 +1,11 @@
-/*
- * The Aegis CSS Framework
- * Licensed under Apache.
- * http://www.apache.org/licenses/LICENSE-2.0
- */
+/**
+ * Aegis - Aegis CSS Framework
+ * version: 1.2.4
+ * repository: http://github.com/playlyfe/aegis
+ * license: MIT
+ * author: Kumar Harsh (khs@playlyfe.com)
+ * build: Mon Sep 01 2014 16:36:55 GMT+0530 (IST)
+**/
 .grid-12 {
   width: 92%;
   margin-left: 4%;
@@ -405,10 +408,10 @@
 .navbar .navbar-item {
   float: left;
   display: block;
-  -webkit-transition: background 0.2s ease;
-  -webkit-transition-delay: 0.1s;
-  -moz-transition: background 0.2s ease 0.1s;
-  transition: background 0.2s ease 0.1s;
+  -webkit-transition: background 200ms ease-out;
+  -webkit-transition-delay: 100ms;
+  -moz-transition: background 200ms ease-out 100ms;
+  transition: background 200ms ease-out 100ms;
 }
 .navbar .navbar-item:hover, .navbar .navbar-item.active {
   background-color: #80b314;
@@ -417,6 +420,10 @@
   color: white;
   line-height: 40px;
   padding: 0 12px;
+  -webkit-transition: color 200ms ease-out;
+  -webkit-transition-delay: 100ms;
+  -moz-transition: color 200ms ease-out 100ms;
+  transition: color 200ms ease-out 100ms;
 }
 .navbar .navbar-link:hover, .navbar .navbar-item > a:hover {
   color: white;

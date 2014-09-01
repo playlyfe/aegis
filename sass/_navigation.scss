@@ -32,7 +32,7 @@
   .navbar-item { // li
     float: left;
     display: block;
-    @include transition(background 0.2s ease 0.1s);
+    @include transition(background 200ms ease-out 100ms);
     &:hover, &.active { background-color: $navbar-hover-bg; }
   }
   .navbar-link, .navbar-item > a { // a
@@ -40,8 +40,9 @@
     color: $navbar-color;
     line-height: $navbar-height;
     padding: 0 ($navbar-height - $navbar-icon-height)/2;
+    @include transition(color 200ms ease-out 100ms);
     &:hover {
-      color: $navbar-color;
+      color: $navbar-hover-color;
     }
   }
 
