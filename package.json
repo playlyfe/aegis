@@ -1,6 +1,6 @@
 {
   "name": "Aegis",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Aegis CSS Framework",
   "devDependencies": {
     "gulp": "^3.8.7",
