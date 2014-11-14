@@ -1,10 +1,10 @@
 /**
  * Aegis - Aegis CSS Framework
- * version: 1.3.0
+ * version: 1.3.1
  * repository: http://github.com/playlyfe/aegis
  * license: MIT
  * author: Kumar Harsh (khs@playlyfe.com)
- * build: Mon Nov 10 2014 17:04:37 GMT+0530 (India Standard Time)
+ * build: Fri Nov 14 2014 19:48:46 GMT+0530 (IST)
 **/
 .grid-12 {
   width: 92%;
@@ -344,7 +344,7 @@
   opacity: 0.9;
 }
 
-.list-unstyled, .nav, .form-errors, .field-errors {
+.list-unstyled, .nav, .form-errors, .form-horizontal .form-errors, .field-errors {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1077,6 +1077,7 @@ a [class*=" icon-"]:before {
   content: '\E02D';
 }
 
+.icon-help:before,
 .icon-round-question:before {
   content: '\E02E';
 }
@@ -1635,10 +1636,10 @@ fieldset[class*='col-'] {
   display: block;
 }
 
-.form-row, .form-errors {
+.form-row, .form-errors, .form-horizontal .form-errors {
   margin-bottom: 5px;
 }
-.form-row button, .form-errors button, .form-row .button, .form-errors .button {
+.form-row button, .form-errors button, .form-horizontal .form-errors button, .form-row .button, .form-errors .button {
   margin-bottom: 0.64286em;
 }
 .form-row .button-group, .form-errors .button-group {
@@ -1647,12 +1648,12 @@ fieldset[class*='col-'] {
 .form-row .button-group > .button, .form-errors .button-group > .button {
   margin-bottom: 0;
 }
-.form-row:before, .form-errors:before, .form-row:after, .form-errors:after {
+.form-row:before, .form-errors:before, .form-horizontal .form-errors:before, .form-row:after, .form-errors:after, .form-horizontal .form-errors:after {
   display: table;
   line-height: 0;
   content: "";
 }
-.form-row:after, .form-errors:after {
+.form-row:after, .form-errors:after, .form-horizontal .form-errors:after {
   clear: both;
 }
 .form-row .snippet, .form-errors .snippet {
