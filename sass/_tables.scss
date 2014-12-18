@@ -78,7 +78,7 @@
   }
   /* alternating stripes */
   &.striped {
-    tr:nth-child(2n) {
+    > tbody > tr:nth-child(2n+1) {
       background-color: $table-body-alt-bg;
     }
   }
