@@ -1,5 +1,5 @@
 # Aegis UI
-
+[![CDNJS](https://img.shields.io/cdnjs/v/aegis.svg)](https://cdnjs.com/libraries/aegis)
 ## Usage
 
 ### Bower
